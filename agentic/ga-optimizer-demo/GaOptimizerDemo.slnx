@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/GeneticOptimizer/GeneticOptimizer.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/GeneticOptimizer.Tests/GeneticOptimizer.Tests.csproj" />
+  </Folder>
+</Solution>

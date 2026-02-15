@@ -1,0 +1,11 @@
+{
+  "input_audio": "/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest.wav",
+  "model_size": "small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "language": "en",
+  "segments": 38,
+  "duration_seconds": 157.9,
+  "srt_path": "/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest.srt",
+  "transcript_path": "/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest_transcript.txt"
+}

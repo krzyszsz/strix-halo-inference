@@ -1,0 +1,25 @@
+[2026-02-15T16:04:56Z] watchdog start max_seconds=3600 idle_seconds=1800 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env MODE=multi MODEL_ID=/mnt/hf/models/qwen-image-edit-2511 HEIGHT=512 WIDTH=512 STEPS=12 TRUE_CFG_SCALE=2.0 SEED=3456 MEMORY_SWAP=140g INPUT_IMAGE_A=/home/kj/strix-halo-inference/qwen-image-edit/input/qwen_image_2512_person_a_512_seed1234.png INPUT_IMAGE_B=/home/kj/strix-halo-inference/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png PROMPT='Take the person from image A and insert them into image B. Keep the original person from image B. Place the inserted person on the left side of image B, standing naturally near the other person. Preserve both faces, match lighting and perspective, keep the coffee shop background unchanged, sharp focus.' OUT_PATH=/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps12_cfg2_seed3456_75g_swap140_2026-02-13.png bash /home/kj/strix-halo-inference/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
+128c8c2b356424ba429e06a3fc141e5746e4fc89fcf9ca4a2c08ff7559c55ca4
+Waiting for container health on port 8012 (retries=240, sleep=5s)...
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+Waiting for edit request to finish... (pid=779499)
+/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps12_cfg2_seed3456_75g_swap140_2026-02-13.png 384435
+[2026-02-15T16:15:27Z] watchdog finished cmd_status=0

@@ -1,0 +1,25 @@
+{
+  "date": "2026-02-15",
+  "base_url": "https://www.bbc.co.uk/",
+  "output_dir": "/home/kj/strix-halo-inference/mcp/out/bbc_reliable_2026-02-15",
+  "pages": [
+    {
+      "url": "https://www.bbc.co.uk/news",
+      "blocked": false,
+      "markdown": "mcp/out/bbc_reliable_2026-02-15/bbc_news.md",
+      "screenshot": "mcp/out/bbc_reliable_2026-02-15/bbc_news.png"
+    },
+    {
+      "url": "https://www.bbc.co.uk/sport",
+      "blocked": false,
+      "markdown": "mcp/out/bbc_reliable_2026-02-15/bbc_sport.md",
+      "screenshot": "mcp/out/bbc_reliable_2026-02-15/bbc_sport.png"
+    },
+    {
+      "url": "https://www.bbc.co.uk/weather",
+      "blocked": false,
+      "markdown": "mcp/out/bbc_reliable_2026-02-15/bbc_weather.md",
+      "screenshot": "mcp/out/bbc_reliable_2026-02-15/bbc_weather.png"
+    }
+  ]
+}

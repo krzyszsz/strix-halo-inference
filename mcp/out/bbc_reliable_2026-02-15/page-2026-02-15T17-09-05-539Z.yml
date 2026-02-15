@@ -1,0 +1,39 @@
+- <changed> banner [ref=e7]:
+  - region "Cookies on the BBC website" [ref=e3407]:
+    - generic [ref=e3409]:
+      - generic [ref=e3410]:
+        - heading "Cookies on the BBC website" [active] [level=2] [ref=e3411]
+        - paragraph [ref=e3414]:
+          - link "We use cookies" [ref=e3415] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/
+          - text: to give you the best online experience. Strictly necessary cookies are on by default. Additional cookies are off by default.
+      - generic [ref=e3416]:
+        - button "Accept additional cookies" [ref=e3417]
+        - button "Reject additional cookies" [ref=e3418]
+        - link "Let me choose" [ref=e3419] [cursor=pointer]:
+          - /url: https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/
+          - generic [ref=e3420]: Let me choose
+  - navigation "BBC" [ref=e8]:
+    - generic [ref=e10]:
+      - ref=e12 [unchanged]
+      - generic:
+        - list:
+          - listitem:
+            - ref=e17 [unchanged]
+          - listitem:
+            - ref=e18 [unchanged]
+      - generic [ref=e19]:
+        - list [ref=e20]:
+          - listitem [ref=e21]:
+            - link "Sign in" [ref=e3421] [cursor=pointer]:
+              - /url: https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2F&sequenceId=637d6cd6-f061-4b00-99b7-e566815d1620
+              - img [ref=e3423]
+              - text: Sign in
+          - ref=e29 [unchanged]
+        - ref=e36 [unchanged]
+      - ref=e104 [unchanged]
+  - ref=e114 [unchanged]
+- <changed> paragraph [ref=e2890]
+- <changed> paragraph [ref=e2934]
+- <changed> paragraph [ref=e2978]
+- <changed> paragraph [ref=e3022]

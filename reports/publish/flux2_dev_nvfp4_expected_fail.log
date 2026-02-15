@@ -1,0 +1,23 @@
+[2026-02-15T14:25:25Z] watchdog start max_seconds=900 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; set +e; env MODEL_ID=/mnt/hf/models/flux2-dev-nvfp4 HEIGHT=512 WIDTH=512 STEPS=4 GUIDANCE=3.0 DTYPE=bfloat16 MODEL_CPU_OFFLOAD=1 USE_REMOTE_TEXT_ENCODER=0 MAX_SEQUENCE_LENGTH=128 OUT_PATH=/home/kj/strix-halo-inference/stable-diffusion/out/flux2_dev_nvfp4_expected_fail.png bash /home/kj/strix-halo-inference/stable-diffusion/scripts/test_flux2_dev_bnb4_probe.sh; exit 0
+/opt/venv/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+loading pipeline from /mnt/hf/models/flux2-dev-nvfp4 ...
+Traceback (most recent call last):
+  File "/repo/stable-diffusion/scripts/flux2_dev_bnb4_probe.py", line 198, in <module>
+    main()
+  File "/repo/stable-diffusion/scripts/flux2_dev_bnb4_probe.py", line 111, in main
+    pipe = Flux2Pipeline.from_pretrained(model_id, **load_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/diffusers/pipelines/pipeline_utils.py", line 890, in from_pretrained
+    config_dict = cls.load_config(cached_folder, dduf_entries=dduf_entries)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/diffusers/configuration_utils.py", line 386, in load_config
+    raise EnvironmentError(
+OSError: Error no file named model_index.json found in directory /mnt/hf/models/flux2-dev-nvfp4.
+[2026-02-15T14:25:55Z] watchdog finished cmd_status=0

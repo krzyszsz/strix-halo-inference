@@ -1,0 +1,26 @@
+[2026-02-15T14:21:55Z] watchdog start max_seconds=3600 idle_seconds=1800 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env MODEL_ID=/mnt/hf/models/flux2-dev-bnb4 HEIGHT=512 WIDTH=512 STEPS=4 GUIDANCE=3.0 DTYPE=bfloat16 MODEL_CPU_OFFLOAD=1 USE_REMOTE_TEXT_ENCODER=0 MAX_SEQUENCE_LENGTH=128 INIT_IMAGE=qwen-image/out/qwen_image_512_75g_retest2.png,qwen-image/out/qwen_image_2512_512_2026-02-11.png PROMPT='blend both reference images into one coherent cinematic scene with realistic lighting' OUT_PATH=/home/kj/strix-halo-inference/stable-diffusion/out/flux2_dev_bnb4_512_multi_reconfirm_2026-02-12.png bash /home/kj/strix-halo-inference/stable-diffusion/scripts/test_flux2_dev_bnb4_probe.sh
+/opt/venv/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+using 2 init image(s): /repo/qwen-image/out/qwen_image_512_75g_retest2.png,/repo/qwen-image/out/qwen_image_2512_512_2026-02-11.png
+loading pipeline from /mnt/hf/models/flux2-dev-bnb4 ...
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.34s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.78s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.71s/it]
+Loading pipeline components...:  40%|████      | 2/5 [00:06<00:09,  3.09s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][A
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:09,  3.07s/it][A
+Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.36s/it][A
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.04s/it][A
+Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.44s/it][ALoading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.78s/it]
+Loading pipeline components...:  60%|██████    | 3/5 [00:14<00:10,  5.35s/it]Loading pipeline components...:  80%|████████  | 4/5 [00:15<00:03,  3.58s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:15<00:00,  3.06s/it]
+enabling model CPU offload ...
+running generation ...
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:03<00:10,  3.36s/it]step 1/4
+step 2/4
+step 3/4
+step 4/4
+100%|██████████| 4/4 [00:03<00:00,  1.16it/s]
+saved /out/flux2_dev_bnb4_512_multi_reconfirm_2026-02-12.png
+Saved: /home/kj/strix-halo-inference/stable-diffusion/out/flux2_dev_bnb4_512_multi_reconfirm_2026-02-12.png
+[2026-02-15T14:25:25Z] watchdog finished cmd_status=0

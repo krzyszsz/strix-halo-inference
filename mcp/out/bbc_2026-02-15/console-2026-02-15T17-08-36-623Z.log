@@ -1,0 +1,5 @@
+[      29ms] [WARNING] Error with Feature-Policy header: Unrecognized feature: 'document-domain'. @ :0
+[      29ms] [WARNING] Error with Feature-Policy header: Some features are specified in both Feature-Policy and Permissions-Policy header: accelerometer, autoplay, camera, encrypted-media, fullscreen, geolocation, gyroscope, magnetometer, microphone, midi, payment, picture-in-picture, screen-wake-lock, sync-xhr, usb, xr-spatial-tracking. Values defined in Permissions-Policy header will be used. @ :0
+[      29ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'document-domain'. @ :0
+[     526ms] [ERROR] [OPTIMIZELY] - ERROR 2026-02-15T17:08:37.148Z PROJECT_CONFIG: Experiment key newswb_sfv_swiping_onboarding_13 is not in datafile. @ https://static.files.bbci.co.uk/core/bundle-vendor-optimizely.02cba33aecfea65584ca.js:0
+[     526ms] [ERROR] [OPTIMIZELY] - ERROR 2026-02-15T17:08:37.148Z PROJECT_CONFIG: Experiment key newswb_sfv_swiping_onboarding_13 is not in datafile. @ https://static.files.bbci.co.uk/core/bundle-vendor-optimizely.02cba33aecfea65584ca.js:0

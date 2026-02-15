@@ -1,0 +1,23 @@
+[2026-02-15T14:58:26Z] watchdog start max_seconds=3600 idle_seconds=1800 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env OUT_PATH=/home/kj/strix-halo-inference/stable-diffusion/out/playground_v25_1024_2026-02-12.png bash /home/kj/strix-halo-inference/stable-diffusion/scripts/test_playground_v25_sample.sh
+Starting stable-diffusion server container:
+  model=/mnt/hf/models/playground-v2.5-1024px-aesthetic
+  dtype=float16
+  port=8006
+  mem_limit=75g mem_swap=75g mem_reservation=67g oom_score_adj=500
+69384b4131e0220feeb5d9bc2c81e154195c4b6600798a51e225ece753674722
+Waiting for /health...
+Requesting generation (1024x1024, steps=20, guidance=3.0). This can take a while...
+  generation still running... elapsed=60s
+  generation still running... elapsed=120s
+  generation still running... elapsed=180s
+  generation still running... elapsed=240s
+  generation still running... elapsed=300s
+  generation still running... elapsed=360s
+  generation still running... elapsed=420s
+  generation still running... elapsed=480s
+  generation still running... elapsed=540s
+  generation still running... elapsed=600s
+  generation still running... elapsed=660s
+  generation still running... elapsed=720s
+/home/kj/strix-halo-inference/stable-diffusion/out/playground_v25_1024_2026-02-12.png 1108969
+[2026-02-15T15:10:56Z] watchdog finished cmd_status=0

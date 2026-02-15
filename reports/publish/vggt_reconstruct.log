@@ -1,0 +1,10 @@
+[2026-02-15T16:51:58Z] watchdog start max_seconds=3600 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; test -d /home/kj/strix-halo-inference/reconstruction-3d/data/south_building/images || bash /home/kj/strix-halo-inference/reconstruction-3d/scripts/download_south_building_views.sh && bash /home/kj/strix-halo-inference/reconstruction-3d/scripts/run_vggt_reconstruct.sh
+/home/kj/strix-halo-inference/reconstruction-3d/scripts/reconstruct_scene.py:66: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(dtype=dtype):
+/home/kj/strix-halo-inference/reconstruction-3d/out/south_building/south_building_summary.json
+/home/kj/strix-halo-inference/reconstruction-3d/out/south_building/south_building_points.ply
+/home/kj/strix-halo-inference/reconstruction-3d/out/south_building/south_building_points_preview.png
+/home/kj/strix-halo-inference/reconstruction-3d/out/south_building/south_building_summary.json
+/home/kj/strix-halo-inference/reconstruction-3d/out/south_building/south_building_points.ply
+/home/kj/strix-halo-inference/reconstruction-3d/out/south_building/south_building_points_preview.png
+[2026-02-15T16:54:58Z] watchdog finished cmd_status=0

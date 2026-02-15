@@ -1,0 +1,75 @@
+# Secrets
+hf.key
+.git.backup-*
+
+# Internal planning docs (kept locally; not published).
+PLAN.md
+**/PLAN.md
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs and locks
+*.log
+*.lock
+.aider*
+
+# Published evidence logs (referenced from README).
+!reports/**/*.log
+!**/out/**/*.log
+
+# Reports: publish evidence is committed; noisy maintenance logs are ignored by default.
+reports/cleanup/**
+reports/watchdog/**
+reports/retest_*/
+
+# VS Code / Electron caches (local only)
+omni/
+Cache/
+CachedData/
+CachedConfigurations/
+CachedProfilesData/
+Code Cache/
+Cookies
+Cookies-journal
+Crashpad/
+DIPS
+DIPS-wal
+DawnGraphiteCache/
+DawnWebGPUCache/
+Dictionaries/
+GPUCache/
+Local Storage/
+Network Persistent State
+Preferences
+Service Worker/
+Shared Dictionary/
+SharedStorage
+SharedStorage-wal
+TransportSecurity
+Trust Tokens
+Trust Tokens-journal
+User/
+WebStorage/
+logs/
+machineid
+Backups/
+languagepacks.json
+
+# Misc
+*.tmp
+*.pt
+*.pth
+*.zip
+audio/out/*.clip.wav
+Session Storage/
+.org.chromium*
+
+# Downloaded datasets (repro is scripted; keep repo lean)
+reconstruction-3d/data/**/images/
+reconstruction-3d/data/**/images_raw/
+
+# .NET build outputs
+**/bin/
+**/obj/

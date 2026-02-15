@@ -1,0 +1,2811 @@
+- generic [ref=e4]:
+  - banner [ref=e7]:
+    - navigation "BBC" [ref=e8]:
+      - generic [ref=e10]:
+        - link "BBC Homepage" [ref=e12] [cursor=pointer]:
+          - /url: https://www.bbc.co.uk
+          - generic [ref=e13]:
+            - img [ref=e14]
+            - generic [ref=e16]: BBC Homepage
+        - generic:
+          - list:
+            - listitem:
+              - link "Skip to content" [ref=e17] [cursor=pointer]:
+                - /url: "#main-heading"
+            - listitem:
+              - link "Accessibility Help" [ref=e18] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/accessibility/
+        - generic [ref=e19]:
+          - list [ref=e20]:
+            - listitem [ref=e21]:
+              - generic [ref=e22]:
+                - link:
+                  - /url: https://account.bbc.com/account?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport
+                  - generic:
+                    - img
+                  - text: Your account
+            - listitem [ref=e29]:
+              - link "Notifications" [ref=e30] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/notifications
+                - generic [ref=e31]:
+                  - img [ref=e32]
+                  - generic [ref=e34]: Notifications
+          - list [ref=e36]:
+            - listitem [ref=e37]:
+              - link "Home" [ref=e38] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk
+                - generic [ref=e39]: Home
+            - listitem [ref=e40]:
+              - link "News" [ref=e41] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/news
+                - generic [ref=e42]:
+                  - img [ref=e44]
+                  - text: News
+            - listitem [ref=e49]:
+              - link "Sport" [ref=e50] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/sport
+                - generic [ref=e51]:
+                  - img [ref=e53]
+                  - text: Sport
+            - listitem [ref=e58]:
+              - link "Weather" [ref=e59] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/weather
+                - generic [ref=e60]:
+                  - img [ref=e62]
+                  - text: Weather
+            - listitem [ref=e67]:
+              - link "iPlayer" [ref=e68] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/iplayer
+                - generic [ref=e69]:
+                  - img [ref=e71]
+                  - text: iPlayer
+            - listitem [ref=e77]:
+              - link "Sounds" [ref=e78] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/sounds
+                - generic [ref=e79]:
+                  - img [ref=e81]
+                  - text: Sounds
+            - listitem [ref=e86]:
+              - link "Bitesize" [ref=e87] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/bitesize
+                - generic [ref=e88]:
+                  - img [ref=e90]
+                  - text: Bitesize
+            - listitem [ref=e95]:
+              - button "More menu" [ref=e96] [cursor=pointer]:
+                - generic [ref=e98]:
+                  - img [ref=e99]
+                  - generic [ref=e102]: More menu
+        - search "Search BBC" [ref=e104]:
+          - link "Search BBC" [ref=e105] [cursor=pointer]:
+            - /url: /search?d=SPORT_PS
+            - img [ref=e107]
+            - generic [ref=e109]: Search BBC
+    - generic [ref=e110]:
+      - link "BBC Sport" [ref=e115] [cursor=pointer]:
+        - /url: /sport
+        - img [ref=e116]
+        - generic [ref=e118]: BBC Sport
+      - navigation "BBC Sport" [ref=e119]:
+        - generic [ref=e123]:
+          - list [ref=e125]:
+            - listitem [ref=e126]:
+              - link "Home" [ref=e127] [cursor=pointer]:
+                - /url: /sport
+                - generic [ref=e128]: Home
+            - listitem [ref=e129]:
+              - link "Football" [ref=e130] [cursor=pointer]:
+                - /url: /sport/football
+                - generic [ref=e131]: Football
+            - listitem [ref=e132]:
+              - link "Cricket" [ref=e133] [cursor=pointer]:
+                - /url: /sport/cricket
+                - generic [ref=e134]: Cricket
+            - listitem [ref=e135]:
+              - link "Winter Olympics" [ref=e136] [cursor=pointer]:
+                - /url: /sport/winter-olympics
+                - generic [ref=e137]: Winter Olympics
+            - listitem [ref=e138]:
+              - link "Formula 1" [ref=e139] [cursor=pointer]:
+                - /url: /sport/formula1
+                - generic [ref=e140]: Formula 1
+            - listitem [ref=e141]:
+              - link "Rugby U" [ref=e142] [cursor=pointer]:
+                - /url: /sport/rugby-union
+                - generic [ref=e143]: Rugby U
+            - listitem [ref=e144]:
+              - link "Rugby L" [ref=e145] [cursor=pointer]:
+                - /url: /sport/rugby-league
+                - generic [ref=e146]: Rugby L
+            - listitem [ref=e147]:
+              - link "Tennis" [ref=e148] [cursor=pointer]:
+                - /url: /sport/tennis
+                - generic [ref=e149]: Tennis
+            - listitem [ref=e150]:
+              - link "Golf" [ref=e151] [cursor=pointer]:
+                - /url: /sport/golf
+                - generic [ref=e152]: Golf
+            - listitem [ref=e153]:
+              - link "Boxing" [ref=e154] [cursor=pointer]:
+                - /url: /sport/boxing
+                - generic [ref=e155]: Boxing
+            - listitem [ref=e156]:
+              - link "My Sport" [ref=e157] [cursor=pointer]:
+                - /url: /sport/my
+                - generic [ref=e158]: My Sport
+          - button "More" [ref=e160] [cursor=pointer]:
+            - img [ref=e162]
+            - text: More
+        - list [ref=e167]:
+          - listitem [ref=e168]:
+            - link "Home" [ref=e169] [cursor=pointer]:
+              - /url: /sport
+              - generic [ref=e170]: Home
+              - img [ref=e172]
+          - listitem [ref=e174]:
+            - link "Winter Olympics Guide" [ref=e175] [cursor=pointer]:
+              - /url: /sport/articles/c338y36kngzo
+              - generic [ref=e176]: Winter Olympics Guide
+          - listitem [ref=e177]:
+            - link "Six Nations" [ref=e178] [cursor=pointer]:
+              - /url: /sport/rugby-union
+              - generic [ref=e179]: Six Nations
+          - listitem [ref=e180]:
+            - link "FA Cup" [ref=e181] [cursor=pointer]:
+              - /url: /sport/football/fa-cup
+              - generic [ref=e182]: FA Cup
+    - region "Sign In Banner" [ref=e183]:
+      - generic [ref=e184]: Sign In Banner
+      - generic [ref=e188]:
+        - generic [ref=e189]:
+          - heading "Discover your BBC" [level=2] [ref=e190]
+          - paragraph [ref=e191]: Sign in or create an account to watch, listen and join in
+        - generic [ref=e193]:
+          - generic [ref=e195]:
+            - img [ref=e197]
+            - generic [ref=e199]: Sign in
+          - generic [ref=e200]: or
+          - generic [ref=e201]: Register
+        - button "Close sign in banner" [ref=e204]:
+          - generic [ref=e205]:
+            - img [ref=e206]
+            - generic [ref=e208]: Close sign in banner
+  - main [ref=e211]:
+    - heading "BBC Sport" [level=1] [ref=e213]
+    - list [ref=e219]:
+      - listitem [ref=e220]:
+        - generic [ref=e223]:
+          - generic [ref=e224]:
+            - generic [ref=e225]:
+              - 'heading "Live . Winter Olympics: GB''s Weston bids for second medal in mixed team skeleton - build-up" [level=3] [ref=e226]':
+                - 'link "Live . Winter Olympics: GB''s Weston bids for second medal in mixed team skeleton - build-up" [ref=e227] [cursor=pointer]':
+                  - /url: /sport/winter-olympics/live/cr7jxj0knlxt
+                  - generic [ref=e228]:
+                    - generic [ref=e230]:
+                      - img [ref=e232]
+                      - text: Live
+                      - generic [ref=e235]: .
+                    - paragraph [ref=e236]: "Winter Olympics: GB's Weston bids for second medal in mixed team skeleton - build-up"
+              - paragraph [ref=e237]: Follow live text, BBC TV coverage, radio commentary, reaction and updates from the Winter Olympics in Milan-Cortina.
+            - list [ref=e240]:
+              - listitem [ref=e241]:
+                - generic [ref=e242]: Attribution
+                - link "Winter Olympics" [ref=e245] [cursor=pointer]:
+                  - /url: /sport/winter-olympics
+                  - generic [ref=e246]: Winter Olympics
+          - img "Matt Weston" [ref=e251]
+      - listitem [ref=e252]:
+        - generic [ref=e255]:
+          - generic [ref=e256]:
+            - 'heading "Live . FA Cup fourth round: Arsenal hit four within 30 minutes against Wigan" [level=3] [ref=e258]':
+              - 'link "Live . FA Cup fourth round: Arsenal hit four within 30 minutes against Wigan" [ref=e259] [cursor=pointer]':
+                - /url: /sport/football/live/cdree8627net
+                - generic [ref=e260]:
+                  - generic [ref=e262]:
+                    - img [ref=e264]
+                    - text: Live
+                    - generic [ref=e267]: .
+                  - paragraph [ref=e268]: "FA Cup fourth round: Arsenal hit four within 30 minutes against Wigan"
+            - list [ref=e271]:
+              - listitem [ref=e272]:
+                - generic [ref=e273]: Attribution
+                - link "FA Cup" [ref=e276] [cursor=pointer]:
+                  - /url: /sport/football/fa-cup
+                  - generic [ref=e277]: FA Cup
+          - img "Arsenal celebrate against Wigan" [ref=e282]
+      - listitem [ref=e283]:
+        - generic [ref=e286]:
+          - generic [ref=e287]:
+            - 'heading "Live . Six Nations: Eight-try France hammer Wales in Cardiff - watch, listen & reaction live" [level=3] [ref=e289]':
+              - 'link "Live . Six Nations: Eight-try France hammer Wales in Cardiff - watch, listen & reaction live" [ref=e290] [cursor=pointer]':
+                - /url: /sport/rugby-union/live/c4g5d4ygex8t
+                - generic [ref=e291]:
+                  - generic [ref=e293]:
+                    - img [ref=e295]
+                    - text: Live
+                    - generic [ref=e298]: .
+                  - paragraph [ref=e299]: "Six Nations: Eight-try France hammer Wales in Cardiff - watch, listen & reaction live"
+            - list [ref=e302]:
+              - listitem [ref=e303]:
+                - generic [ref=e304]: Attribution
+                - link "Wales" [ref=e307] [cursor=pointer]:
+                  - /url: /sport/rugby-union/teams/wales
+                  - generic [ref=e308]: Wales
+          - img "Taine Plumtree looks dejected" [ref=e313]
+      - listitem [ref=e314]:
+        - generic [ref=e317]:
+          - generic [ref=e318]:
+            - 'heading "Live . Scottish Premiership: Braga powers Hearts ahead against Rangers in Ibrox thriller" [level=3] [ref=e320]':
+              - 'link "Live . Scottish Premiership: Braga powers Hearts ahead against Rangers in Ibrox thriller" [ref=e321] [cursor=pointer]':
+                - /url: /sport/football/live/c204n6yydn0t
+                - generic [ref=e322]:
+                  - generic [ref=e324]:
+                    - img [ref=e326]
+                    - text: Live
+                    - generic [ref=e329]: .
+                  - paragraph [ref=e330]: "Scottish Premiership: Braga powers Hearts ahead against Rangers in Ibrox thriller"
+            - list [ref=e333]:
+              - listitem [ref=e334]:
+                - generic [ref=e335]: Attribution
+                - link "Scottish Prem" [ref=e338] [cursor=pointer]:
+                  - /url: /sport/football/scottish-premiership
+                  - generic [ref=e339]: Scottish Prem
+          - img "Rangers equaliser" [ref=e344]
+      - listitem [ref=e345]:
+        - generic [ref=e348]:
+          - generic [ref=e349]:
+            - heading "GB's Bankes & Nightingale win historic snowboard cross gold" [level=3] [ref=e351]:
+              - link "GB's Bankes & Nightingale win historic snowboard cross gold" [ref=e352] [cursor=pointer]:
+                - /url: /sport/articles/cx245x1xnxlo
+                - paragraph [ref=e354]: GB's Bankes & Nightingale win historic snowboard cross gold
+            - list [ref=e357]:
+              - listitem [ref=e358]:
+                - generic [ref=e359]: Attribution
+                - link "Winter Olympics" [ref=e362] [cursor=pointer]:
+                  - /url: /sport/winter-olympics
+                  - generic [ref=e363]: Winter Olympics
+              - generic [ref=e364]:
+                - listitem [ref=e365]:
+                  - generic [ref=e366]: Posted
+                  - generic [ref=e369]:
+                    - generic [ref=e370]: 2 hours ago
+                    - text: 2h
+                - listitem [ref=e371]:
+                  - generic [ref=e372]: Comments
+                  - link "286" [ref=e375] [cursor=pointer]:
+                    - /url: /sport/articles/cx245x1xnxlo#comments
+                    - generic [ref=e376]:
+                      - img [ref=e378]
+                      - text: "286"
+          - img "Charlotte Bankes and Huw Nightingale on the podium" [ref=e384]
+      - listitem [ref=e385]:
+        - generic [ref=e388]:
+          - generic [ref=e389]:
+            - 'heading "Live . T20 World Cup: India thrash woeful Pakistan by 61 runs - reaction" [level=3] [ref=e391]':
+              - 'link "Live . T20 World Cup: India thrash woeful Pakistan by 61 runs - reaction" [ref=e392] [cursor=pointer]':
+                - /url: /sport/cricket/live/c9vxpy8x89dt
+                - generic [ref=e393]:
+                  - generic [ref=e395]:
+                    - img [ref=e397]
+                    - text: Live
+                    - generic [ref=e400]: .
+                  - paragraph [ref=e401]: "T20 World Cup: India thrash woeful Pakistan by 61 runs - reaction"
+            - list [ref=e404]:
+              - listitem [ref=e405]:
+                - generic [ref=e406]: Attribution
+                - link "Cricket" [ref=e409] [cursor=pointer]:
+                  - /url: /sport/cricket
+                  - generic [ref=e410]: Cricket
+          - img "India's Hardik Pandya (L) and captain Suryakumar Yadav celebrate after their team's win at the end of the 2026 ICC Men's T20 Cricket World Cup group stage match between India and Pakistan in the R Premadasa Stadium, Colombo" [ref=e415]
+      - listitem [ref=e416]:
+        - generic [ref=e419]:
+          - generic [ref=e420]:
+            - heading "Bankes and Nightingale win snowboard cross gold for Team GB. Video, 00:03:10" [level=3] [ref=e422]:
+              - link "Bankes and Nightingale win snowboard cross gold for Team GB. Video, 00:03:10" [ref=e423] [cursor=pointer]:
+                - /url: /sport/videos/cm2x71g1edyo
+                - paragraph [ref=e425]:
+                  - generic [ref=e426]: Bankes and Nightingale win snowboard cross gold for Team GB. Video, 00:03:10
+                  - text: Bankes and Nightingale win snowboard cross gold for Team GB
+            - list [ref=e429]:
+              - listitem [ref=e430]:
+                - generic [ref=e431]: Attribution
+                - link "Winter Olympics" [ref=e434] [cursor=pointer]:
+                  - /url: /sport/winter-olympics
+                  - generic [ref=e435]: Winter Olympics
+              - listitem [ref=e437]:
+                - generic [ref=e438]: Posted
+                - generic [ref=e441]:
+                  - generic [ref=e442]: 2 hours ago
+                  - text: 2h
+          - generic [ref=e444]:
+            - generic [ref=e446]:
+              - img [ref=e448]
+              - generic [ref=e450]: 3:10
+            - img "Charlotte Bankes" [ref=e453]
+    - generic [ref=e456]:
+      - heading "Must-see video" [level=2] [ref=e460]:
+        - link "Must-see video" [ref=e461] [cursor=pointer]:
+          - /url: /sport/video
+          - text: Must-see video
+          - img [ref=e463]
+      - list [ref=e466]:
+        - listitem [ref=e467]:
+          - generic [ref=e470]:
+            - generic [ref=e471]:
+              - heading "From last to first - how Bankes & Nightingale won historic GB gold. Video, 00:09:19" [level=3] [ref=e473]:
+                - link "From last to first - how Bankes & Nightingale won historic GB gold. Video, 00:09:19" [ref=e474] [cursor=pointer]:
+                  - /url: /sport/videos/cm213zgdk4mo
+                  - paragraph [ref=e476]:
+                    - generic [ref=e477]: From last to first - how Bankes & Nightingale won historic GB gold. Video, 00:09:19
+                    - text: From last to first - how Bankes & Nightingale won historic GB gold
+              - list [ref=e480]:
+                - listitem [ref=e481]:
+                  - generic [ref=e482]: Attribution
+                  - link "Winter Olympics" [ref=e485] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e486]: Winter Olympics
+                - listitem [ref=e488]:
+                  - generic [ref=e489]: Posted
+                  - generic [ref=e492]:
+                    - generic [ref=e493]: 1 hour ago
+                    - text: 1h
+            - generic [ref=e495]:
+              - generic [ref=e497]:
+                - img [ref=e499]
+                - generic [ref=e501]: 9:19
+              - img "Charlotte Bankes and Huw Nightingale" [ref=e504]
+        - listitem [ref=e505]:
+          - generic [ref=e508]:
+            - generic [ref=e509]:
+              - heading "France score 'devastating' try inside two minutes. Video, 00:00:32" [level=3] [ref=e511]:
+                - link "France score 'devastating' try inside two minutes. Video, 00:00:32" [ref=e512] [cursor=pointer]:
+                  - /url: /sport/rugby-union/videos/cvg18rr74pno
+                  - paragraph [ref=e514]:
+                    - generic [ref=e515]: France score 'devastating' try inside two minutes. Video, 00:00:32
+                    - text: France score 'devastating' try inside two minutes
+              - list [ref=e518]:
+                - listitem [ref=e519]:
+                  - generic [ref=e520]: Attribution
+                  - link "Wales" [ref=e523] [cursor=pointer]:
+                    - /url: /sport/rugby-union/teams/wales
+                    - generic [ref=e524]: Wales
+                - listitem [ref=e526]:
+                  - generic [ref=e527]: Posted
+                  - generic [ref=e530]:
+                    - generic [ref=e531]: 1 hour ago
+                    - text: 1h
+            - generic [ref=e533]:
+              - generic [ref=e535]:
+                - img [ref=e537]
+                - generic [ref=e539]: 0:32
+              - img "France centre Emilien Gailleton scores against Wales" [ref=e542]
+        - listitem [ref=e543]:
+          - generic [ref=e546]:
+            - generic [ref=e547]:
+              - heading "'We're going for gold, nothing else' - Bankes & Nightingale on gold. Video, 00:03:57" [level=3] [ref=e549]:
+                - link "'We're going for gold, nothing else' - Bankes & Nightingale on gold. Video, 00:03:57" [ref=e550] [cursor=pointer]:
+                  - /url: /sport/videos/c1kgm0m1vwxo
+                  - paragraph [ref=e552]:
+                    - generic [ref=e553]: "'We're going for gold, nothing else' - Bankes & Nightingale on gold. Video, 00:03:57"
+                    - text: "'We're going for gold, nothing else' - Bankes & Nightingale on gold"
+              - list [ref=e556]:
+                - listitem [ref=e557]:
+                  - generic [ref=e558]: Attribution
+                  - link "Winter Olympics" [ref=e561] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e562]: Winter Olympics
+                - listitem [ref=e564]:
+                  - generic [ref=e565]: Posted
+                  - generic [ref=e568]:
+                    - generic [ref=e569]: 17 minutes ago
+                    - text: 17min
+            - generic [ref=e571]:
+              - generic [ref=e573]:
+                - img [ref=e575]
+                - generic [ref=e577]: 3:57
+              - img "Charlotte Bankes and Huw Nightingale" [ref=e580]
+        - listitem [ref=e581]:
+          - generic [ref=e584]:
+            - generic [ref=e585]:
+              - heading "'The best ever!' Klaebo wins historic ninth Winter Olympics gold. Video, 00:01:08" [level=3] [ref=e587]:
+                - link "'The best ever!' Klaebo wins historic ninth Winter Olympics gold. Video, 00:01:08" [ref=e588] [cursor=pointer]:
+                  - /url: /sport/videos/cjd9e2ddzrmo
+                  - paragraph [ref=e590]:
+                    - generic [ref=e591]: "'The best ever!' Klaebo wins historic ninth Winter Olympics gold. Video, 00:01:08"
+                    - text: "'The best ever!' Klaebo wins historic ninth Winter Olympics gold"
+              - list [ref=e594]:
+                - listitem [ref=e595]:
+                  - generic [ref=e596]: Attribution
+                  - link "Winter Olympics" [ref=e599] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e600]: Winter Olympics
+                - listitem [ref=e602]:
+                  - generic [ref=e603]: Posted
+                  - generic [ref=e606]:
+                    - generic [ref=e607]: 4 hours ago
+                    - text: 4h
+            - generic [ref=e609]:
+              - generic [ref=e611]:
+                - img [ref=e613]
+                - generic [ref=e615]: 1:08
+              - img "Johannes Hoesflot Klaebo" [ref=e618]
+        - listitem [ref=e619]:
+          - generic [ref=e622]:
+            - generic [ref=e623]:
+              - heading "'He's cleaned him up!' - Axar bowls Babar to leave Pakistan 'floating adrift' Video, 00:00:24" [level=3] [ref=e625]:
+                - link "'He's cleaned him up!' - Axar bowls Babar to leave Pakistan 'floating adrift' Video, 00:00:24" [ref=e626] [cursor=pointer]:
+                  - /url: /sport/cricket/videos/c4gjz24n1d0o
+                  - paragraph [ref=e628]:
+                    - generic [ref=e629]: "'He's cleaned him up!' - Axar bowls Babar to leave Pakistan 'floating adrift' Video, 00:00:24"
+                    - text: "'He's cleaned him up!' - Axar bowls Babar to leave Pakistan 'floating adrift'"
+              - list [ref=e632]:
+                - listitem [ref=e633]:
+                  - generic [ref=e634]: Attribution
+                  - link "Cricket" [ref=e637] [cursor=pointer]:
+                    - /url: /sport/cricket
+                    - generic [ref=e638]: Cricket
+                - listitem [ref=e640]:
+                  - generic [ref=e641]: Posted
+                  - generic [ref=e644]:
+                    - generic [ref=e645]: 1 hour ago
+                    - text: 1h
+            - generic [ref=e647]:
+              - generic [ref=e649]:
+                - img [ref=e651]
+                - generic [ref=e653]: 0:24
+              - img "Axar Patel" [ref=e656]
+      - generic "Must-see video" [ref=e657]:
+        - link "View more" [ref=e658] [cursor=pointer]:
+          - /url: /sport/video
+    - generic [ref=e661]:
+      - heading "More top stories" [level=2] [ref=e665]
+      - list [ref=e667]:
+        - listitem [ref=e668]:
+          - generic [ref=e671]:
+            - generic [ref=e672]:
+              - generic [ref=e673]:
+                - heading "Celtic crash in 97th-minute winner to crush Kilmarnock" [level=3] [ref=e674]:
+                  - link "Celtic crash in 97th-minute winner to crush Kilmarnock" [ref=e675] [cursor=pointer]:
+                    - /url: /sport/football/live/cg5n633ng5vt
+                    - paragraph [ref=e677]: Celtic crash in 97th-minute winner to crush Kilmarnock
+                - paragraph [ref=e678]: Julian Araujo is the Celtic hero as his 97th-minute strike downs Kilmarnock for a vital Scottish Premiership win.
+              - list [ref=e681]:
+                - listitem [ref=e682]:
+                  - generic [ref=e683]: Attribution
+                  - link "Scottish Prem" [ref=e686] [cursor=pointer]:
+                    - /url: /sport/football/scottish-premiership
+                    - generic [ref=e687]: Scottish Prem
+                - listitem [ref=e689]:
+                  - generic [ref=e690]: Posted
+                  - generic [ref=e693]:
+                    - generic [ref=e694]: 1 hour ago
+                    - text: 1h
+            - img "Araujo scores winner" [ref=e699]
+        - listitem [ref=e700]:
+          - generic [ref=e703]:
+            - generic [ref=e704]:
+              - heading "Wolves edge past Grimsby on mudbath to reach fifth round" [level=3] [ref=e706]:
+                - link "Wolves edge past Grimsby on mudbath to reach fifth round" [ref=e707] [cursor=pointer]:
+                  - /url: /sport/football/live/c1d65yy6zq1t
+                  - paragraph [ref=e709]: Wolves edge past Grimsby on mudbath to reach fifth round
+              - list [ref=e712]:
+                - listitem [ref=e713]:
+                  - generic [ref=e714]: Attribution
+                  - link "FA Cup" [ref=e717] [cursor=pointer]:
+                    - /url: /sport/football/fa-cup
+                    - generic [ref=e718]: FA Cup
+                - generic [ref=e719]:
+                  - listitem [ref=e720]:
+                    - generic [ref=e721]: Posted
+                    - generic [ref=e724]:
+                      - generic [ref=e725]: 1 hour ago
+                      - text: 1h
+                  - listitem [ref=e726]:
+                    - generic [ref=e727]: Comments
+                    - link "238" [ref=e730] [cursor=pointer]:
+                      - /url: /sport/football/live/c1d65yy6zq1t#comments
+                      - generic [ref=e731]:
+                        - img [ref=e733]
+                        - text: "238"
+            - img "Santiago Bueno celebrates scoring for Wolves at Grimsby in the FA Cup" [ref=e739]
+        - listitem [ref=e740]:
+          - generic [ref=e743]:
+            - generic [ref=e744]:
+              - heading "GB curlers sweep aside Germany to edge closer to semis" [level=3] [ref=e746]:
+                - link "GB curlers sweep aside Germany to edge closer to semis" [ref=e747] [cursor=pointer]:
+                  - /url: /sport/articles/c15xzvll0vzo
+                  - paragraph [ref=e749]: GB curlers sweep aside Germany to edge closer to semis
+              - list [ref=e752]:
+                - listitem [ref=e753]:
+                  - generic [ref=e754]: Attribution
+                  - link "Winter Olympics" [ref=e757] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e758]: Winter Olympics
+                - generic [ref=e759]:
+                  - listitem [ref=e760]:
+                    - generic [ref=e761]: Posted
+                    - generic [ref=e764]:
+                      - generic [ref=e765]: 1 hour ago
+                      - text: 1h
+                  - listitem [ref=e766]:
+                    - generic [ref=e767]: Comments
+                    - link "150" [ref=e770] [cursor=pointer]:
+                      - /url: /sport/articles/c15xzvll0vzo#comments
+                      - generic [ref=e771]:
+                        - img [ref=e773]
+                        - text: "150"
+            - img "Team GB curlers playing Germany" [ref=e779]
+        - listitem [ref=e780]:
+          - generic [ref=e783]:
+            - generic [ref=e784]:
+              - heading "Wigan start with hard-fought win at Castleford" [level=3] [ref=e786]:
+                - link "Wigan start with hard-fought win at Castleford" [ref=e787] [cursor=pointer]:
+                  - /url: /sport/rugby-league/articles/c363nd47400o
+                  - paragraph [ref=e789]: Wigan start with hard-fought win at Castleford
+              - list [ref=e792]:
+                - listitem [ref=e793]:
+                  - generic [ref=e794]: Attribution
+                  - link "Rugby League" [ref=e797] [cursor=pointer]:
+                    - /url: /sport/rugby-league
+                    - generic [ref=e798]: Rugby League
+                - generic [ref=e799]:
+                  - listitem [ref=e800]:
+                    - generic [ref=e801]: Posted
+                    - generic [ref=e804]:
+                      - generic [ref=e805]: 3 minutes ago
+                      - text: 3min
+                  - listitem [ref=e806]:
+                    - generic [ref=e807]: Comments
+                    - link "9" [ref=e810] [cursor=pointer]:
+                      - /url: /sport/rugby-league/articles/c363nd47400o#comments
+                      - generic [ref=e811]:
+                        - img [ref=e813]
+                        - text: "9"
+            - img "Wigan's Bevan French (right) has the ball in his right hand as two Castleford players including Daejarn Asi (left) try to tackle him" [ref=e819]
+        - listitem [ref=e820]:
+          - generic [ref=e823]:
+            - generic [ref=e824]:
+              - heading "Leeds beat Birmingham in penalty shootout in FA Cup" [level=3] [ref=e826]:
+                - link "Leeds beat Birmingham in penalty shootout in FA Cup" [ref=e827] [cursor=pointer]:
+                  - /url: /sport/football/live/c3v7kyy7dd2t
+                  - paragraph [ref=e829]: Leeds beat Birmingham in penalty shootout in FA Cup
+              - list [ref=e832]:
+                - listitem [ref=e833]:
+                  - generic [ref=e834]: Attribution
+                  - link "FA Cup" [ref=e837] [cursor=pointer]:
+                    - /url: /sport/football/fa-cup
+                    - generic [ref=e838]: FA Cup
+                - generic [ref=e839]:
+                  - listitem [ref=e840]:
+                    - generic [ref=e841]: Posted
+                    - generic [ref=e844]:
+                      - generic [ref=e845]: 2 hours ago
+                      - text: 2h
+                  - listitem [ref=e846]:
+                    - generic [ref=e847]: Comments
+                    - link "407" [ref=e850] [cursor=pointer]:
+                      - /url: /sport/football/live/c3v7kyy7dd2t#comments
+                      - generic [ref=e851]:
+                        - img [ref=e853]
+                        - text: "407"
+            - img "Sean Longstaff celebrates scoring the winning penalty" [ref=e859]
+        - listitem [ref=e860]:
+          - generic [ref=e863]:
+            - generic [ref=e864]:
+              - heading "Spurs thrash Villa in 10-goal WSL thriller" [level=3] [ref=e866]:
+                - link "Spurs thrash Villa in 10-goal WSL thriller" [ref=e867] [cursor=pointer]:
+                  - /url: /sport/football/live/c4g84yy8v7lt
+                  - paragraph [ref=e869]: Spurs thrash Villa in 10-goal WSL thriller
+              - list [ref=e872]:
+                - listitem [ref=e873]:
+                  - generic [ref=e874]: Attribution
+                  - link "Women's Football" [ref=e877] [cursor=pointer]:
+                    - /url: /sport/football/womens
+                    - generic [ref=e878]: Women's Football
+                - generic [ref=e879]:
+                  - listitem [ref=e880]:
+                    - generic [ref=e881]: Posted
+                    - generic [ref=e884]:
+                      - generic [ref=e885]: 3 hours ago
+                      - text: 3h
+                  - listitem [ref=e886]:
+                    - generic [ref=e887]: Comments
+                    - link "66" [ref=e890] [cursor=pointer]:
+                      - /url: /sport/football/live/c4g84yy8v7lt#comments
+                      - generic [ref=e891]:
+                        - img [ref=e893]
+                        - text: "66"
+            - img "Tottenham players celebrate beating Aston Villa in the WSL" [ref=e899]
+        - listitem [ref=e900]:
+          - generic [ref=e903]:
+            - generic [ref=e904]:
+              - heading "Kishan scores quickfire 77 for India. Video, 00:02:45" [level=3] [ref=e906]:
+                - link "Kishan scores quickfire 77 for India. Video, 00:02:45" [ref=e907] [cursor=pointer]:
+                  - /url: /sport/cricket/videos/cj6d5xz19lgo
+                  - paragraph [ref=e909]:
+                    - generic [ref=e910]: Kishan scores quickfire 77 for India. Video, 00:02:45
+                    - text: Kishan scores quickfire 77 for India
+              - list [ref=e913]:
+                - listitem [ref=e914]:
+                  - generic [ref=e915]: Attribution
+                  - link "Cricket" [ref=e918] [cursor=pointer]:
+                    - /url: /sport/cricket
+                    - generic [ref=e919]: Cricket
+                - listitem [ref=e921]:
+                  - generic [ref=e922]: Posted
+                  - generic [ref=e925]:
+                    - generic [ref=e926]: 2 hours ago
+                    - text: 2h
+            - generic [ref=e928]:
+              - generic [ref=e930]:
+                - img [ref=e932]
+                - generic [ref=e934]: 2:45
+              - img "Ishan Kishan" [ref=e937]
+    - generic [ref=e939]:
+      - heading "Winter Olympics bite-sized video" [level=2] [ref=e944]
+      - group [ref=e946]:
+        - generic [ref=e949]:
+          - button "Scroll to previous item" [disabled] [ref=e950]:
+            - generic [ref=e951]:
+              - img [ref=e952]
+              - generic [ref=e954]: Scroll to previous item
+          - button "Scroll to next item, 7 of 20" [ref=e955]:
+            - generic [ref=e956]:
+              - img [ref=e957]
+              - generic [ref=e959]: Scroll to next item, 7 of 20
+        - list [ref=e960]:
+          - listitem [ref=e961]:
+            - button "Great Britain win gold in mixed team snowboard cross. 00:01:46, play video Charlotte Bankes" [ref=e963] [cursor=pointer]:
+              - generic [ref=e965]:
+                - generic [ref=e966]:
+                  - img [ref=e968]
+                  - text: 1:46
+                - generic [ref=e970]: Great Britain win gold in mixed team snowboard cross. 00:01:46, play video
+                - generic [ref=e971]: Great Britain win gold in mixed team snowboard cross
+              - img "Charlotte Bankes" [ref=e974]
+          - listitem [ref=e975]:
+            - button "'It's gold!' - inside the comm box for Team GB's snowboard cross win. 00:01:01, play video Tim Warwood and Ed Leigh" [ref=e977] [cursor=pointer]:
+              - generic [ref=e979]:
+                - generic [ref=e980]:
+                  - img [ref=e982]
+                  - text: 1:01
+                - generic [ref=e984]: "'It's gold!' - inside the comm box for Team GB's snowboard cross win. 00:01:01, play video"
+                - generic [ref=e985]: "'It's gold!' - inside the comm box for Team GB's snowboard cross win"
+              - img "Tim Warwood and Ed Leigh" [ref=e988]
+          - listitem [ref=e989]:
+            - button "Fans go wild for GB's snowboard gold. 00:00:38, play video GB fans" [ref=e991] [cursor=pointer]:
+              - generic [ref=e993]:
+                - generic [ref=e994]:
+                  - img [ref=e996]
+                  - text: 0:38
+                - generic [ref=e998]: Fans go wild for GB's snowboard gold. 00:00:38, play video
+                - generic [ref=e999]: Fans go wild for GB's snowboard gold
+              - img "GB fans" [ref=e1002]
+          - listitem [ref=e1003]:
+            - button "Proud parents revel in GB gold. 00:00:20, play video Huw Nightingale's father" [ref=e1005] [cursor=pointer]:
+              - generic [ref=e1007]:
+                - generic [ref=e1008]:
+                  - img [ref=e1010]
+                  - text: 0:20
+                - generic [ref=e1012]: Proud parents revel in GB gold. 00:00:20, play video
+                - generic [ref=e1013]: Proud parents revel in GB gold
+              - img "Huw Nightingale's father" [ref=e1016]
+          - listitem [ref=e1017]:
+            - button "Bankes & Nightingale get their gold medals. 00:00:34, play video Charlotte Bankes and Huw Nightingale" [ref=e1019] [cursor=pointer]:
+              - generic [ref=e1021]:
+                - generic [ref=e1022]:
+                  - img [ref=e1024]
+                  - text: 0:34
+                - generic [ref=e1026]: Bankes & Nightingale get their gold medals. 00:00:34, play video
+                - generic [ref=e1027]: Bankes & Nightingale get their gold medals
+              - img "Charlotte Bankes and Huw Nightingale" [ref=e1030]
+          - listitem [ref=e1031]:
+            - button "'The best there's ever been' - Klaebo wins historic ninth gold. 00:00:34, play video Johannes Hoesflot Klaebo" [ref=e1033] [cursor=pointer]:
+              - generic [ref=e1035]:
+                - generic [ref=e1036]:
+                  - img [ref=e1038]
+                  - text: 0:34
+                - generic [ref=e1040]: "'The best there's ever been' - Klaebo wins historic ninth gold. 00:00:34, play video"
+                - generic [ref=e1041]: "'The best there's ever been' - Klaebo wins historic ninth gold"
+              - img "Johannes Hoesflot Klaebo" [ref=e1044]
+          - listitem [ref=e1045]:
+            - button "Athletes celebrate with their children after moguls final. 00:00:21, play video Mikael Kingsbury holding his child in one arm and gold medal in his other hand" [ref=e1047] [cursor=pointer]:
+              - generic [ref=e1049]:
+                - generic [ref=e1050]:
+                  - img [ref=e1052]
+                  - text: 0:21
+                - generic [ref=e1054]: Athletes celebrate with their children after moguls final. 00:00:21, play video
+                - generic [ref=e1055]: Athletes celebrate with their children after moguls final
+              - img "Mikael Kingsbury holding his child in one arm and gold medal in his other hand" [ref=e1058]
+          - listitem [ref=e1059]:
+            - button "So wholesome! 00:00:32, play video Proposal at big air" [ref=e1061] [cursor=pointer]:
+              - generic [ref=e1063]:
+                - generic [ref=e1064]:
+                  - img [ref=e1066]
+                  - text: 0:32
+                - generic [ref=e1068]: So wholesome! 00:00:32, play video
+                - generic [ref=e1069]: So wholesome!
+              - img "Proposal at big air" [ref=e1072]
+          - listitem [ref=e1073]:
+            - button "Passion personified from Canada's speed skating coach. 00:00:15, play video Canadian speed skating coach" [ref=e1075] [cursor=pointer]:
+              - generic [ref=e1077]:
+                - generic [ref=e1078]:
+                  - img [ref=e1080]
+                  - text: 0:15
+                - generic [ref=e1082]: Passion personified from Canada's speed skating coach. 00:00:15, play video
+                - generic [ref=e1083]: Passion personified from Canada's speed skating coach
+              - img "Canadian speed skating coach" [ref=e1086]
+          - listitem [ref=e1087]:
+            - button "Came for the high-five, left with the glove. 00:00:17, play video Marie-Philip Poulin has her glove taken off by a fan" [ref=e1089] [cursor=pointer]:
+              - generic [ref=e1091]:
+                - generic [ref=e1092]:
+                  - img [ref=e1094]
+                  - text: 0:17
+                - generic [ref=e1096]: Came for the high-five, left with the glove. 00:00:17, play video
+                - generic [ref=e1097]: Came for the high-five, left with the glove
+              - img "Marie-Philip Poulin has her glove taken off by a fan" [ref=e1100]
+          - listitem [ref=e1101]:
+            - button "'This is absolutely incredible' - USA goalkeeper fooled by wonder goal. 00:00:57, play video Nicholas Jensen" [ref=e1103] [cursor=pointer]:
+              - generic [ref=e1105]:
+                - generic [ref=e1106]:
+                  - img [ref=e1108]
+                  - text: 0:57
+                - generic [ref=e1110]: "'This is absolutely incredible' - USA goalkeeper fooled by wonder goal. 00:00:57, play video"
+                - generic [ref=e1111]: "'This is absolutely incredible' - USA goalkeeper fooled by wonder goal"
+              - img "Nicholas Jensen" [ref=e1114]
+          - listitem [ref=e1115]:
+            - button "Crash, dash and silver! 00:01:23, play video Ebba Andersson" [ref=e1117] [cursor=pointer]:
+              - generic [ref=e1119]:
+                - generic [ref=e1120]:
+                  - img [ref=e1122]
+                  - text: 1:23
+                - generic [ref=e1124]: Crash, dash and silver! 00:01:23, play video
+                - generic [ref=e1125]: Crash, dash and silver!
+              - img "Ebba Andersson" [ref=e1128]
+          - listitem [ref=e1129]:
+            - button "Matt Weston wins Team GB's first medal with skeleton gold. 00:01:04, play video Matt Weston" [ref=e1131] [cursor=pointer]:
+              - generic [ref=e1133]:
+                - generic [ref=e1134]:
+                  - img [ref=e1136]
+                  - text: 1:04
+                - generic [ref=e1138]: Matt Weston wins Team GB's first medal with skeleton gold. 00:01:04, play video
+                - generic [ref=e1139]: Matt Weston wins Team GB's first medal with skeleton gold
+              - img "Matt Weston" [ref=e1142]
+          - listitem [ref=e1143]:
+            - button "German team swap ice hockey for football. 00:00:17, play video German ice hockey team" [ref=e1145] [cursor=pointer]:
+              - generic [ref=e1147]:
+                - generic [ref=e1148]:
+                  - img [ref=e1150]
+                  - text: 0:17
+                - generic [ref=e1152]: German team swap ice hockey for football. 00:00:17, play video
+                - generic [ref=e1153]: German team swap ice hockey for football
+              - img "German ice hockey team" [ref=e1156]
+          - listitem [ref=e1157]:
+            - button "The tightest call for ice hockey VAR. 00:00:32, play video Ice Hockey" [ref=e1159] [cursor=pointer]:
+              - generic [ref=e1161]:
+                - generic [ref=e1162]:
+                  - img [ref=e1164]
+                  - text: 0:32
+                - generic [ref=e1166]: The tightest call for ice hockey VAR. 00:00:32, play video
+                - generic [ref=e1167]: The tightest call for ice hockey VAR
+              - img "Ice Hockey" [ref=e1170]
+          - listitem [ref=e1171]:
+            - button "Inside the commentary box with Ed and Tim at Milan-Cortina. 00:00:50, play video Tim Warwood and Ed Leigh fist bump in commentary box" [ref=e1173] [cursor=pointer]:
+              - generic [ref=e1175]:
+                - generic [ref=e1176]:
+                  - img [ref=e1178]
+                  - text: 0:50
+                - generic [ref=e1180]: Inside the commentary box with Ed and Tim at Milan-Cortina. 00:00:50, play video
+                - generic [ref=e1181]: Inside the commentary box with Ed and Tim at Milan-Cortina
+              - img "Tim Warwood and Ed Leigh fist bump in commentary box" [ref=e1184]
+          - listitem [ref=e1185]:
+            - button "Curlers clash over 'double tap' 00:00:59, play video Marc Kennedy" [ref=e1187] [cursor=pointer]:
+              - generic [ref=e1189]:
+                - generic [ref=e1190]:
+                  - img [ref=e1192]
+                  - text: 0:59
+                - generic [ref=e1194]: Curlers clash over 'double tap' 00:00:59, play video
+                - generic [ref=e1195]: Curlers clash over 'double tap'
+              - img "Marc Kennedy" [ref=e1198]
+          - listitem [ref=e1199]:
+            - button "'Hopefully I did you proud' - Weston elated after winning skeleton title. 00:00:49, play video Matt Weston" [ref=e1201] [cursor=pointer]:
+              - generic [ref=e1203]:
+                - generic [ref=e1204]:
+                  - img [ref=e1206]
+                  - text: 0:49
+                - generic [ref=e1208]: "'Hopefully I did you proud' - Weston elated after winning skeleton title. 00:00:49, play video"
+                - generic [ref=e1209]: "'Hopefully I did you proud' - Weston elated after winning skeleton title"
+              - img "Matt Weston" [ref=e1212]
+          - listitem [ref=e1213]:
+            - button "Team GB's Weston celebrates with family after gold victory. 00:00:47, play video Matt Weston celebrating with his fiancé" [ref=e1215] [cursor=pointer]:
+              - generic [ref=e1217]:
+                - generic [ref=e1218]:
+                  - img [ref=e1220]
+                  - text: 0:47
+                - generic [ref=e1222]: Team GB's Weston celebrates with family after gold victory. 00:00:47, play video
+                - generic [ref=e1223]: Team GB's Weston celebrates with family after gold victory
+              - img "Matt Weston celebrating with his fiancé" [ref=e1226]
+          - listitem [ref=e1227]:
+            - button "'What's going on here?' - Gold medal favourite Malinin finishes eighth. 00:00:44, play video Ilia Malinin of USA" [ref=e1229] [cursor=pointer]:
+              - generic [ref=e1231]:
+                - generic [ref=e1232]:
+                  - img [ref=e1234]
+                  - text: 0:44
+                - generic [ref=e1236]: "'What's going on here?' - Gold medal favourite Malinin finishes eighth. 00:00:44, play video"
+                - generic [ref=e1237]: "'What's going on here?' - Gold medal favourite Malinin finishes eighth"
+              - img "Ilia Malinin of USA" [ref=e1240]
+    - generic [ref=e1243]:
+      - heading "More video" [level=2] [ref=e1247]:
+        - link "More video" [ref=e1248] [cursor=pointer]:
+          - /url: /sport/video
+          - text: More video
+          - img [ref=e1250]
+      - list [ref=e1253]:
+        - listitem [ref=e1254]:
+          - generic [ref=e1257]:
+            - generic [ref=e1258]:
+              - heading "Leeds beat Birmingham on penalties in FA Cup. Video, 00:05:02" [level=3] [ref=e1260]:
+                - link "Leeds beat Birmingham on penalties in FA Cup. Video, 00:05:02" [ref=e1261] [cursor=pointer]:
+                  - /url: /sport/football/videos/c98qyd0vdeeo
+                  - paragraph [ref=e1263]:
+                    - generic [ref=e1264]: Leeds beat Birmingham on penalties in FA Cup. Video, 00:05:02
+                    - text: Leeds beat Birmingham on penalties in FA Cup
+              - list [ref=e1267]:
+                - listitem [ref=e1268]:
+                  - generic [ref=e1269]: Attribution
+                  - link "Birmingham" [ref=e1272] [cursor=pointer]:
+                    - /url: /sport/football/teams/birmingham-city
+                    - generic [ref=e1273]: Birmingham
+                - listitem [ref=e1275]:
+                  - generic [ref=e1276]: Posted
+                  - generic [ref=e1279]:
+                    - generic [ref=e1280]: 19 minutes ago
+                    - text: 19min
+            - generic [ref=e1282]:
+              - generic [ref=e1284]:
+                - img [ref=e1286]
+                - generic [ref=e1288]: 5:02
+              - img "Lucas Perri and Dominic Calvert-Lewin" [ref=e1291]
+        - listitem [ref=e1292]:
+          - generic [ref=e1295]:
+            - generic [ref=e1296]:
+              - heading "Sensational Scotland stun England to seal Calcutta Cup glory. Video, 00:10:58" [level=3] [ref=e1298]:
+                - link "Sensational Scotland stun England to seal Calcutta Cup glory. Video, 00:10:58" [ref=e1299] [cursor=pointer]:
+                  - /url: /sport/rugby-union/videos/c301e0262veo
+                  - paragraph [ref=e1301]:
+                    - generic [ref=e1302]: Sensational Scotland stun England to seal Calcutta Cup glory. Video, 00:10:58
+                    - text: Sensational Scotland stun England to seal Calcutta Cup glory
+              - list [ref=e1305]:
+                - listitem [ref=e1306]:
+                  - generic [ref=e1307]: Attribution
+                  - link "Scottish Rugby" [ref=e1310] [cursor=pointer]:
+                    - /url: /sport/rugby-union/scottish
+                    - generic [ref=e1311]: Scottish Rugby
+                - listitem [ref=e1313]:
+                  - generic [ref=e1314]: Posted
+                  - generic [ref=e1317]:
+                    - generic [ref=e1318]: 17 hours ago
+                    - text: 17h
+            - generic [ref=e1320]:
+              - generic [ref=e1322]:
+                - img [ref=e1324]
+                - generic [ref=e1326]: 10:58
+              - img "Huw Jones" [ref=e1329]
+        - listitem [ref=e1330]:
+          - generic [ref=e1333]:
+            - generic [ref=e1334]:
+              - heading "'One of worst decisions I've ever seen' - Rooney on Digne handball. Video, 00:01:42" [level=3] [ref=e1336]:
+                - link "'One of worst decisions I've ever seen' - Rooney on Digne handball. Video, 00:01:42" [ref=e1337] [cursor=pointer]:
+                  - /url: /sport/football/videos/ce3gn1v4rk4o
+                  - paragraph [ref=e1339]:
+                    - generic [ref=e1340]: "'One of worst decisions I've ever seen' - Rooney on Digne handball. Video, 00:01:42"
+                    - text: "'One of worst decisions I've ever seen' - Rooney on Digne handball"
+              - list [ref=e1343]:
+                - listitem [ref=e1344]:
+                  - generic [ref=e1345]: Attribution
+                  - link "FA Cup" [ref=e1348] [cursor=pointer]:
+                    - /url: /sport/football/fa-cup
+                    - generic [ref=e1349]: FA Cup
+                - listitem [ref=e1351]:
+                  - generic [ref=e1352]: Posted
+                  - generic [ref=e1355]:
+                    - generic [ref=e1356]: 19 hours ago
+                    - text: 19h
+            - generic [ref=e1358]:
+              - generic [ref=e1360]:
+                - img [ref=e1362]
+                - generic [ref=e1364]: 1:42
+              - img "Wayne Rooney" [ref=e1367]
+        - listitem [ref=e1368]:
+          - generic [ref=e1371]:
+            - generic [ref=e1372]:
+              - heading "Relive the best moments of Team GB's Skeleton gold - 'Weston' style. Video, 00:03:41" [level=3] [ref=e1374]:
+                - link "Relive the best moments of Team GB's Skeleton gold - 'Weston' style. Video, 00:03:41" [ref=e1375] [cursor=pointer]:
+                  - /url: /sport/videos/ckg1ng351l8o
+                  - paragraph [ref=e1377]:
+                    - generic [ref=e1378]: Relive the best moments of Team GB's Skeleton gold - 'Weston' style. Video, 00:03:41
+                    - text: Relive the best moments of Team GB's Skeleton gold - 'Weston' style
+              - list [ref=e1381]:
+                - listitem [ref=e1382]:
+                  - generic [ref=e1383]: Attribution
+                  - link "Winter Olympics" [ref=e1386] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e1387]: Winter Olympics
+                - listitem [ref=e1389]:
+                  - generic [ref=e1390]: Posted
+                  - generic [ref=e1393]:
+                    - generic [ref=e1394]: 20 hours ago
+                    - text: 20h
+            - generic [ref=e1396]:
+              - generic [ref=e1398]:
+                - img [ref=e1400]
+                - generic [ref=e1402]: 3:41
+              - img "Matt Weston" [ref=e1405]
+        - listitem [ref=e1406]:
+          - generic [ref=e1409]:
+            - generic [ref=e1410]:
+              - heading "Salah shines as Liverpool comfortably beat Brighton. Video, 00:03:04" [level=3] [ref=e1412]:
+                - link "Salah shines as Liverpool comfortably beat Brighton. Video, 00:03:04" [ref=e1413] [cursor=pointer]:
+                  - /url: /sport/football/videos/c5yg5x9yx3jo
+                  - paragraph [ref=e1415]:
+                    - generic [ref=e1416]: Salah shines as Liverpool comfortably beat Brighton. Video, 00:03:04
+                    - text: Salah shines as Liverpool comfortably beat Brighton
+              - list [ref=e1419]:
+                - listitem [ref=e1420]:
+                  - generic [ref=e1421]: Attribution
+                  - link "FA Cup" [ref=e1424] [cursor=pointer]:
+                    - /url: /sport/football/fa-cup
+                    - generic [ref=e1425]: FA Cup
+                - listitem [ref=e1427]:
+                  - generic [ref=e1428]: Posted
+                  - generic [ref=e1431]:
+                    - generic [ref=e1432]: 17 hours ago
+                    - text: 17h
+            - generic [ref=e1434]:
+              - generic [ref=e1436]:
+                - img [ref=e1438]
+                - generic [ref=e1440]: 3:04
+              - img "Mohammed Salah" [ref=e1443]
+      - generic "More video" [ref=e1444]:
+        - link "View more" [ref=e1445] [cursor=pointer]:
+          - /url: /sport/video
+    - generic [ref=e1448]:
+      - heading "Winter Olympics" [level=2] [ref=e1452]:
+        - link "Winter Olympics" [ref=e1453] [cursor=pointer]:
+          - /url: /sport/winter-olympics
+          - text: Winter Olympics
+          - img [ref=e1455]
+      - list [ref=e1458]:
+        - listitem [ref=e1459]:
+          - generic [ref=e1462]:
+            - generic [ref=e1463]:
+              - heading "Norway's Klaebo wins record ninth Winter Olympic gold" [level=3] [ref=e1465]:
+                - link "Norway's Klaebo wins record ninth Winter Olympic gold" [ref=e1466] [cursor=pointer]:
+                  - /url: /sport/articles/cy4wmyjnlz1o
+                  - paragraph [ref=e1468]: Norway's Klaebo wins record ninth Winter Olympic gold
+              - list [ref=e1471]:
+                - listitem [ref=e1472]:
+                  - generic [ref=e1473]: Attribution
+                  - link "Winter Olympics" [ref=e1476] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e1477]: Winter Olympics
+                - listitem [ref=e1479]:
+                  - generic [ref=e1480]: Posted
+                  - generic [ref=e1483]:
+                    - generic [ref=e1484]: 4 hours ago
+                    - text: 4h
+            - img "Johannes Hoesflot Klaebo" [ref=e1489]
+        - listitem [ref=e1490]:
+          - generic [ref=e1493]:
+            - generic [ref=e1494]:
+              - heading "The GB medallist now representing Jamaica in bobsleigh" [level=3] [ref=e1496]:
+                - link "The GB medallist now representing Jamaica in bobsleigh" [ref=e1497] [cursor=pointer]:
+                  - /url: /sport/articles/ckgl52gej21o
+                  - paragraph [ref=e1499]: The GB medallist now representing Jamaica in bobsleigh
+              - list [ref=e1502]:
+                - listitem [ref=e1503]:
+                  - generic [ref=e1504]: Attribution
+                  - link "Winter Olympics" [ref=e1507] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e1508]: Winter Olympics
+                - generic [ref=e1509]:
+                  - listitem [ref=e1510]:
+                    - generic [ref=e1511]: Posted
+                    - generic [ref=e1514]:
+                      - generic [ref=e1515]: 18 hours ago
+                      - text: 18h
+                  - listitem [ref=e1516]:
+                    - generic [ref=e1517]: Comments
+                    - link "112" [ref=e1520] [cursor=pointer]:
+                      - /url: /sport/articles/ckgl52gej21o#comments
+                      - generic [ref=e1521]:
+                        - img [ref=e1523]
+                        - text: "112"
+            - img "Joel Fearon smiles while wearing his training kit" [ref=e1529]
+        - listitem [ref=e1530]:
+          - generic [ref=e1533]:
+            - generic [ref=e1534]:
+              - heading "Less human, more AI - how figure skating judging can fight bias claims" [level=3] [ref=e1536]:
+                - link "Less human, more AI - how figure skating judging can fight bias claims" [ref=e1537] [cursor=pointer]:
+                  - /url: /sport/articles/clyzgq89d2xo
+                  - paragraph [ref=e1539]: Less human, more AI - how figure skating judging can fight bias claims
+              - list [ref=e1542]:
+                - listitem [ref=e1543]:
+                  - generic [ref=e1544]: Attribution
+                  - link "Winter Olympics" [ref=e1547] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e1548]: Winter Olympics
+                - listitem [ref=e1550]:
+                  - generic [ref=e1551]: Posted
+                  - generic [ref=e1554]:
+                    - generic [ref=e1555]: 1 day ago
+                    - text: 1d
+            - img "Madison Chock and Evan Bates" [ref=e1560]
+        - listitem [ref=e1561]:
+          - generic [ref=e1564]:
+            - generic [ref=e1565]:
+              - heading "GB target skeleton team medal - Sunday's guide" [level=3] [ref=e1567]:
+                - link "GB target skeleton team medal - Sunday's guide" [ref=e1568] [cursor=pointer]:
+                  - /url: /sport/articles/c338y36kngzo
+                  - paragraph [ref=e1570]: GB target skeleton team medal - Sunday's guide
+              - list [ref=e1573]:
+                - listitem [ref=e1574]:
+                  - generic [ref=e1575]: Attribution
+                  - link "Winter Olympics" [ref=e1578] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e1579]: Winter Olympics
+                - listitem [ref=e1581]:
+                  - generic [ref=e1582]: Posted
+                  - generic [ref=e1585]:
+                    - generic [ref=e1586]: 18 hours ago
+                    - text: 18h
+            - img "Winter Olympics daily guide graphic" [ref=e1591]
+        - listitem [ref=e1592]:
+          - generic [ref=e1595]:
+            - generic [ref=e1596]:
+              - 'heading "In Pictures: The best of the Winter Olympics - day by day" [level=3] [ref=e1598]':
+                - 'link "In Pictures: The best of the Winter Olympics - day by day" [ref=e1599] [cursor=pointer]':
+                  - /url: /sport/articles/c78v857elp9o
+                  - paragraph [ref=e1601]: "In Pictures: The best of the Winter Olympics - day by day"
+              - list [ref=e1604]:
+                - listitem [ref=e1605]:
+                  - generic [ref=e1606]: Attribution
+                  - link "Winter Olympics" [ref=e1609] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e1610]: Winter Olympics
+                - listitem [ref=e1612]:
+                  - generic [ref=e1613]: Posted
+                  - generic [ref=e1616]:
+                    - generic [ref=e1617]: 23 hours ago
+                    - text: 23h
+            - img "Snowboarder against a night sky" [ref=e1622]
+      - generic "Winter Olympics" [ref=e1623]:
+        - link "View more" [ref=e1624] [cursor=pointer]:
+          - /url: /sport/winter-olympics
+    - generic [ref=e1627]:
+      - heading "Six Nations" [level=2] [ref=e1631]:
+        - link "Six Nations" [ref=e1632] [cursor=pointer]:
+          - /url: /sport/rugby-union
+          - text: Six Nations
+          - img [ref=e1634]
+      - list [ref=e1637]:
+        - listitem [ref=e1638]:
+          - generic [ref=e1641]:
+            - generic [ref=e1642]:
+              - heading "'Murrayfield pain will make England a better team'" [level=3] [ref=e1644]:
+                - link "'Murrayfield pain will make England a better team'" [ref=e1645] [cursor=pointer]:
+                  - /url: /sport/rugby-union/articles/ckgz7549vkyo
+                  - paragraph [ref=e1647]: "'Murrayfield pain will make England a better team'"
+              - list [ref=e1650]:
+                - listitem [ref=e1651]:
+                  - generic [ref=e1652]: Attribution
+                  - link "Rugby Union" [ref=e1655] [cursor=pointer]:
+                    - /url: /sport/rugby-union
+                    - generic [ref=e1656]: Rugby Union
+                - generic [ref=e1657]:
+                  - listitem [ref=e1658]:
+                    - generic [ref=e1659]: Posted
+                    - generic [ref=e1662]:
+                      - generic [ref=e1663]: 5 hours ago
+                      - text: 5h
+                  - listitem [ref=e1664]:
+                    - generic [ref=e1665]: Comments
+                    - link "820" [ref=e1668] [cursor=pointer]:
+                      - /url: /sport/rugby-union/articles/ckgz7549vkyo#comments
+                      - generic [ref=e1669]:
+                        - img [ref=e1671]
+                        - text: "820"
+            - img "Former England scrum-half Matt Dawson" [ref=e1677]
+        - listitem [ref=e1678]:
+          - generic [ref=e1681]:
+            - generic [ref=e1682]:
+              - heading "Bewildering, bewitching, brilliant - Scotland's perfect day" [level=3] [ref=e1684]:
+                - link "Bewildering, bewitching, brilliant - Scotland's perfect day" [ref=e1685] [cursor=pointer]:
+                  - /url: /sport/rugby-union/articles/cp8r21m7zlvo
+                  - paragraph [ref=e1687]: Bewildering, bewitching, brilliant - Scotland's perfect day
+              - list [ref=e1690]:
+                - listitem [ref=e1691]:
+                  - generic [ref=e1692]: Attribution
+                  - link "Scotland" [ref=e1695] [cursor=pointer]:
+                    - /url: /sport/rugby-union/teams/scotland
+                    - generic [ref=e1696]: Scotland
+                - generic [ref=e1697]:
+                  - listitem [ref=e1698]:
+                    - generic [ref=e1699]: Posted
+                    - generic [ref=e1702]:
+                      - generic [ref=e1703]: 19 hours ago
+                      - text: 19h
+                  - listitem [ref=e1704]:
+                    - generic [ref=e1705]: Comments
+                    - link "1468" [ref=e1708] [cursor=pointer]:
+                      - /url: /sport/rugby-union/articles/cp8r21m7zlvo#comments
+                      - generic [ref=e1709]:
+                        - img [ref=e1711]
+                        - text: "1468"
+            - img "Scotland players celebrate with the Calcutta Cup" [ref=e1717]
+        - listitem [ref=e1718]:
+          - generic [ref=e1721]:
+            - generic [ref=e1722]:
+              - heading "Error-strewn England flunk oldest Test at Murrayfield" [level=3] [ref=e1724]:
+                - link "Error-strewn England flunk oldest Test at Murrayfield" [ref=e1725] [cursor=pointer]:
+                  - /url: /sport/rugby-union/articles/cm21e2r3xx0o
+                  - paragraph [ref=e1727]: Error-strewn England flunk oldest Test at Murrayfield
+              - list [ref=e1730]:
+                - listitem [ref=e1731]:
+                  - generic [ref=e1732]: Attribution
+                  - link "England" [ref=e1735] [cursor=pointer]:
+                    - /url: /sport/rugby-union/teams/england
+                    - generic [ref=e1736]: England
+                - generic [ref=e1737]:
+                  - listitem [ref=e1738]:
+                    - generic [ref=e1739]: Posted
+                    - generic [ref=e1742]:
+                      - generic [ref=e1743]: 20 hours ago
+                      - text: 20h
+                  - listitem [ref=e1744]:
+                    - generic [ref=e1745]: Comments
+                    - link "1668" [ref=e1748] [cursor=pointer]:
+                      - /url: /sport/rugby-union/articles/cm21e2r3xx0o#comments
+                      - generic [ref=e1749]:
+                        - img [ref=e1751]
+                        - text: "1668"
+            - img "England react to defeat by Scotland" [ref=e1757]
+        - listitem [ref=e1758]:
+          - generic [ref=e1761]:
+            - generic [ref=e1762]:
+              - heading "Can people fall back in love with Welsh rugby?" [level=3] [ref=e1764]:
+                - link "Can people fall back in love with Welsh rugby?" [ref=e1765] [cursor=pointer]:
+                  - /url: /sport/rugby-union/articles/cg5n230n863o
+                  - paragraph [ref=e1767]: Can people fall back in love with Welsh rugby?
+              - list [ref=e1770]:
+                - listitem [ref=e1771]:
+                  - generic [ref=e1772]: Attribution
+                  - link "Wales" [ref=e1775] [cursor=pointer]:
+                    - /url: /sport/rugby-union/teams/wales
+                    - generic [ref=e1776]: Wales
+                - generic [ref=e1777]:
+                  - listitem [ref=e1778]:
+                    - generic [ref=e1779]: Posted
+                    - generic [ref=e1782]:
+                      - generic [ref=e1783]: 12 hours ago
+                      - text: 12h
+                  - listitem [ref=e1784]:
+                    - generic [ref=e1785]: Comments
+                    - link "418" [ref=e1788] [cursor=pointer]:
+                      - /url: /sport/rugby-union/articles/cg5n230n863o#comments
+                      - generic [ref=e1789]:
+                        - img [ref=e1791]
+                        - text: "418"
+            - img "Wales players in a huddle against England" [ref=e1797]
+        - listitem [ref=e1798]:
+          - generic [ref=e1801]:
+            - generic [ref=e1802]:
+              - heading "I think Crowley starts against England - Murray" [level=3] [ref=e1804]:
+                - link "I think Crowley starts against England - Murray" [ref=e1805] [cursor=pointer]:
+                  - /url: /sport/rugby-union/articles/cy8lpx3qgwxo
+                  - paragraph [ref=e1807]: I think Crowley starts against England - Murray
+              - list [ref=e1810]:
+                - listitem [ref=e1811]:
+                  - generic [ref=e1812]: Attribution
+                  - link "Irish Rugby" [ref=e1815] [cursor=pointer]:
+                    - /url: /sport/rugby-union/irish
+                    - generic [ref=e1816]: Irish Rugby
+                - listitem [ref=e1818]:
+                  - generic [ref=e1819]: Posted
+                  - generic [ref=e1822]:
+                    - generic [ref=e1823]: 6 hours ago
+                    - text: 6h
+            - img "Jack Crowley" [ref=e1828]
+      - generic "Six Nations" [ref=e1829]:
+        - link "View more" [ref=e1830] [cursor=pointer]:
+          - /url: /sport/rugby-union
+    - generic [ref=e1833]:
+      - heading "T20 Cricket World Cup" [level=2] [ref=e1837]:
+        - link "T20 Cricket World Cup" [ref=e1838] [cursor=pointer]:
+          - /url: /sport/cricket
+          - text: T20 Cricket World Cup
+          - img [ref=e1840]
+      - list [ref=e1843]:
+        - listitem [ref=e1844]:
+          - generic [ref=e1847]:
+            - generic [ref=e1848]:
+              - heading "West Indies reach Super 8s and USA stay in contention" [level=3] [ref=e1850]:
+                - link "West Indies reach Super 8s and USA stay in contention" [ref=e1851] [cursor=pointer]:
+                  - /url: /sport/cricket/articles/c9q5jwvjd27o
+                  - paragraph [ref=e1853]: West Indies reach Super 8s and USA stay in contention
+              - list [ref=e1856]:
+                - listitem [ref=e1857]:
+                  - generic [ref=e1858]: Attribution
+                  - link "West Indies" [ref=e1861] [cursor=pointer]:
+                    - /url: /sport/cricket/teams/west-indies
+                    - generic [ref=e1862]: West Indies
+                - listitem [ref=e1864]:
+                  - generic [ref=e1865]: Posted
+                  - generic [ref=e1868]:
+                    - generic [ref=e1869]: 3 hours ago
+                    - text: 3h
+            - img "West Indies' Shimron Hetmyer (L) and captain Shai Hope (R) in action" [ref=e1874]
+        - listitem [ref=e1875]:
+          - generic [ref=e1878]:
+            - generic [ref=e1879]:
+              - heading "Bocelli on the bus & Balotelli at the airport - Italy's World Cup" [level=3] [ref=e1881]:
+                - link "Bocelli on the bus & Balotelli at the airport - Italy's World Cup" [ref=e1882] [cursor=pointer]:
+                  - /url: /sport/cricket/articles/cgrznxv8qneo
+                  - paragraph [ref=e1884]: Bocelli on the bus & Balotelli at the airport - Italy's World Cup
+              - list [ref=e1887]:
+                - listitem [ref=e1888]:
+                  - generic [ref=e1889]: Attribution
+                  - link "Cricket" [ref=e1892] [cursor=pointer]:
+                    - /url: /sport/cricket
+                    - generic [ref=e1893]: Cricket
+                - listitem [ref=e1895]:
+                  - generic [ref=e1896]: Posted
+                  - generic [ref=e1899]:
+                    - generic [ref=e1900]: 4 hours ago
+                    - text: 4h
+            - img "Italy's Justin (left) and Anthony (right) Mosca at the T20 World Cup" [ref=e1905]
+        - listitem [ref=e1906]:
+          - generic [ref=e1909]:
+            - generic [ref=e1910]:
+              - heading "'Older, more mature, better' - how Banton built breakthrough knock" [level=3] [ref=e1912]:
+                - link "'Older, more mature, better' - how Banton built breakthrough knock" [ref=e1913] [cursor=pointer]:
+                  - /url: /sport/cricket/articles/crl43lxdkndo
+                  - paragraph [ref=e1915]: "'Older, more mature, better' - how Banton built breakthrough knock"
+              - list [ref=e1918]:
+                - listitem [ref=e1919]:
+                  - generic [ref=e1920]: Attribution
+                  - link "England" [ref=e1923] [cursor=pointer]:
+                    - /url: /sport/cricket/teams/england
+                    - generic [ref=e1924]: England
+                - listitem [ref=e1926]:
+                  - generic [ref=e1927]: Posted
+                  - generic [ref=e1930]:
+                    - generic [ref=e1931]: 9 hours ago
+                    - text: 9h
+            - img "Tom Banton" [ref=e1936]
+        - listitem [ref=e1937]:
+          - generic [ref=e1940]:
+            - generic [ref=e1941]:
+              - heading "Markram smashes Proteas to dominant win over New Zealand" [level=3] [ref=e1943]:
+                - link "Markram smashes Proteas to dominant win over New Zealand" [ref=e1944] [cursor=pointer]:
+                  - /url: /sport/cricket/articles/cdxgz5wn9d7o
+                  - paragraph [ref=e1946]: Markram smashes Proteas to dominant win over New Zealand
+              - list [ref=e1949]:
+                - listitem [ref=e1950]:
+                  - generic [ref=e1951]: Attribution
+                  - link "Cricket" [ref=e1954] [cursor=pointer]:
+                    - /url: /sport/cricket
+                    - generic [ref=e1955]: Cricket
+                - listitem [ref=e1957]:
+                  - generic [ref=e1958]: Posted
+                  - generic [ref=e1961]:
+                    - generic [ref=e1962]: 23 hours ago
+                    - text: 23h
+            - img "Aiden Markram" [ref=e1967]
+        - listitem [ref=e1968]:
+          - generic [ref=e1971]:
+            - generic [ref=e1972]:
+              - heading "Men's T20 World Cup tables, top run-scorers & wicket-takers" [level=3] [ref=e1974]:
+                - link "Men's T20 World Cup tables, top run-scorers & wicket-takers" [ref=e1975] [cursor=pointer]:
+                  - /url: /sport/cricket/articles/crl433ljkw4o
+                  - paragraph [ref=e1977]: Men's T20 World Cup tables, top run-scorers & wicket-takers
+              - list [ref=e1980]:
+                - listitem [ref=e1981]:
+                  - generic [ref=e1982]: Attribution
+                  - link "Cricket" [ref=e1985] [cursor=pointer]:
+                    - /url: /sport/cricket
+                    - generic [ref=e1986]: Cricket
+                - listitem [ref=e1988]:
+                  - generic [ref=e1989]: Posted
+                  - generic [ref=e1992]:
+                    - generic [ref=e1993]: 23 hours ago
+                    - text: 23h
+            - img "USA's Shadley van Schalkwyk (L) and New Zealand's Tim Seifert (R)" [ref=e1998]
+      - generic "T20 Cricket World Cup" [ref=e1999]:
+        - link "View more" [ref=e2000] [cursor=pointer]:
+          - /url: /sport/cricket
+    - generic [ref=e2003]:
+      - heading "More sports news" [level=2] [ref=e2007]
+      - list [ref=e2009]:
+        - listitem [ref=e2010]:
+          - generic [ref=e2013]:
+            - generic [ref=e2014]:
+              - generic [ref=e2015]:
+                - 'heading "Live . Watch: Torino v Bologna in Serie A" [level=3] [ref=e2016]':
+                  - 'link "Live . Watch: Torino v Bologna in Serie A" [ref=e2017] [cursor=pointer]':
+                    - /url: /sport/football/live/cp32966221zt
+                    - generic [ref=e2018]:
+                      - generic [ref=e2020]:
+                        - img [ref=e2022]
+                        - text: Live
+                        - generic [ref=e2025]: .
+                      - paragraph [ref=e2026]: "Watch: Torino v Bologna in Serie A"
+                - paragraph [ref=e2027]: Watch BBC Alba coverage and follow live text commentary, score updates and match stats from Torino vs Bologna in Serie A.
+              - list [ref=e2030]:
+                - listitem [ref=e2031]:
+                  - generic [ref=e2032]: Attribution
+                  - link "Italian Serie A" [ref=e2035] [cursor=pointer]:
+                    - /url: /sport/football/italian-serie-a
+                    - generic [ref=e2036]: Italian Serie A
+            - img "Torino and Bologna badges" [ref=e2041]
+        - listitem [ref=e2042]:
+          - generic [ref=e2045]:
+            - generic [ref=e2046]:
+              - heading "Late Reed strike gives Fulham comeback win at Stoke" [level=3] [ref=e2048]:
+                - link "Late Reed strike gives Fulham comeback win at Stoke" [ref=e2049] [cursor=pointer]:
+                  - /url: /sport/football/live/c07jnyyjplpt
+                  - paragraph [ref=e2051]: Late Reed strike gives Fulham comeback win at Stoke
+              - list [ref=e2054]:
+                - listitem [ref=e2055]:
+                  - generic [ref=e2056]: Attribution
+                  - link "FA Cup" [ref=e2059] [cursor=pointer]:
+                    - /url: /sport/football/fa-cup
+                    - generic [ref=e2060]: FA Cup
+                - generic [ref=e2061]:
+                  - listitem [ref=e2062]:
+                    - generic [ref=e2063]: Posted
+                    - generic [ref=e2066]:
+                      - generic [ref=e2067]: 54 minutes ago
+                      - text: 54min
+                  - listitem [ref=e2068]:
+                    - generic [ref=e2069]: Comments
+                    - link "50" [ref=e2072] [cursor=pointer]:
+                      - /url: /sport/football/live/c07jnyyjplpt#comments
+                      - generic [ref=e2073]:
+                        - img [ref=e2075]
+                        - text: "50"
+            - img "Fulham midfielder Harrison Reed scores" [ref=e2081]
+        - listitem [ref=e2082]:
+          - generic [ref=e2085]:
+            - generic [ref=e2086]:
+              - heading "Sunderland see off Oxford challenge to reach FA Cup fifth round" [level=3] [ref=e2088]:
+                - link "Sunderland see off Oxford challenge to reach FA Cup fifth round" [ref=e2089] [cursor=pointer]:
+                  - /url: /sport/football/live/c0e51yy5qxqt
+                  - paragraph [ref=e2091]: Sunderland see off Oxford challenge to reach FA Cup fifth round
+              - list [ref=e2094]:
+                - listitem [ref=e2095]:
+                  - generic [ref=e2096]: Attribution
+                  - link "FA Cup" [ref=e2099] [cursor=pointer]:
+                    - /url: /sport/football/fa-cup
+                    - generic [ref=e2100]: FA Cup
+                - generic [ref=e2101]:
+                  - listitem [ref=e2102]:
+                    - generic [ref=e2103]: Posted
+                    - generic [ref=e2106]:
+                      - generic [ref=e2107]: 1 hour ago
+                      - text: 1h
+                  - listitem [ref=e2108]:
+                    - generic [ref=e2109]: Comments
+                    - link "63" [ref=e2112] [cursor=pointer]:
+                      - /url: /sport/football/live/c0e51yy5qxqt#comments
+                      - generic [ref=e2113]:
+                        - img [ref=e2115]
+                        - text: "63"
+            - img "Sunderland goal" [ref=e2121]
+        - listitem [ref=e2122]:
+          - generic [ref=e2125]:
+            - generic [ref=e2126]:
+              - heading "'I'm buzzing' - Man Utd's Skinner toasts seventh-straight win" [level=3] [ref=e2128]:
+                - link "'I'm buzzing' - Man Utd's Skinner toasts seventh-straight win" [ref=e2129] [cursor=pointer]:
+                  - /url: /sport/football/articles/cze0pyjl6jlo
+                  - paragraph [ref=e2131]: "'I'm buzzing' - Man Utd's Skinner toasts seventh-straight win"
+              - list [ref=e2134]:
+                - listitem [ref=e2135]:
+                  - generic [ref=e2136]: Attribution
+                  - link "Women's Football" [ref=e2139] [cursor=pointer]:
+                    - /url: /sport/football/womens
+                    - generic [ref=e2140]: Women's Football
+                - generic [ref=e2141]:
+                  - listitem [ref=e2142]:
+                    - generic [ref=e2143]: Posted
+                    - generic [ref=e2146]:
+                      - generic [ref=e2147]: 1 hour ago
+                      - text: 1h
+                  - listitem [ref=e2148]:
+                    - generic [ref=e2149]: Comments
+                    - link "16" [ref=e2152] [cursor=pointer]:
+                      - /url: /sport/football/articles/cze0pyjl6jlo#comments
+                      - generic [ref=e2153]:
+                        - img [ref=e2155]
+                        - text: "16"
+            - img "Man Utd celebrating" [ref=e2161]
+        - listitem [ref=e2162]:
+          - generic [ref=e2165]:
+            - generic [ref=e2166]:
+              - heading "Pereira announced as Forest boss on 18-month deal" [level=3] [ref=e2168]:
+                - link "Pereira announced as Forest boss on 18-month deal" [ref=e2169] [cursor=pointer]:
+                  - /url: /sport/football/articles/c62678ldqmpo
+                  - paragraph [ref=e2171]: Pereira announced as Forest boss on 18-month deal
+              - list [ref=e2174]:
+                - listitem [ref=e2175]:
+                  - generic [ref=e2176]: Attribution
+                  - link "Nottm Forest" [ref=e2179] [cursor=pointer]:
+                    - /url: /sport/football/teams/nottingham-forest
+                    - generic [ref=e2180]: Nottm Forest
+                - generic [ref=e2181]:
+                  - listitem [ref=e2182]:
+                    - generic [ref=e2183]: Posted
+                    - generic [ref=e2186]:
+                      - generic [ref=e2187]: 3 hours ago
+                      - text: 3h
+                  - listitem [ref=e2188]:
+                    - generic [ref=e2189]: Comments
+                    - link "508" [ref=e2192] [cursor=pointer]:
+                      - /url: /sport/football/articles/c62678ldqmpo#comments
+                      - generic [ref=e2193]:
+                        - img [ref=e2195]
+                        - text: "508"
+            - img "New Nottingham Forest manager Vitor Pereira" [ref=e2201]
+        - listitem [ref=e2202]:
+          - generic [ref=e2205]:
+            - generic [ref=e2206]:
+              - heading "Late Harrison kick seals Saracens win over Bristol" [level=3] [ref=e2208]:
+                - link "Late Harrison kick seals Saracens win over Bristol" [ref=e2209] [cursor=pointer]:
+                  - /url: /sport/rugby-union/articles/c2lr07llz7do
+                  - paragraph [ref=e2211]: Late Harrison kick seals Saracens win over Bristol
+              - list [ref=e2214]:
+                - listitem [ref=e2215]:
+                  - generic [ref=e2216]: Attribution
+                  - link "Rugby Union" [ref=e2219] [cursor=pointer]:
+                    - /url: /sport/rugby-union
+                    - generic [ref=e2220]: Rugby Union
+                - listitem [ref=e2222]:
+                  - generic [ref=e2223]: Posted
+                  - generic [ref=e2226]:
+                    - generic [ref=e2227]: 1 hour ago
+                    - text: 1h
+            - img "Zoe Harrison putting the ball on the tee" [ref=e2232]
+        - listitem [ref=e2233]:
+          - generic [ref=e2236]:
+            - generic [ref=e2237]:
+              - heading "James inspires Chelsea success over Liverpool" [level=3] [ref=e2239]:
+                - link "James inspires Chelsea success over Liverpool" [ref=e2240] [cursor=pointer]:
+                  - /url: /sport/football/live/ce94j554pxnt
+                  - paragraph [ref=e2242]: James inspires Chelsea success over Liverpool
+              - list [ref=e2245]:
+                - listitem [ref=e2246]:
+                  - generic [ref=e2247]: Attribution
+                  - link "Women's Football" [ref=e2250] [cursor=pointer]:
+                    - /url: /sport/football/womens
+                    - generic [ref=e2251]: Women's Football
+                - generic [ref=e2252]:
+                  - listitem [ref=e2253]:
+                    - generic [ref=e2254]: Posted
+                    - generic [ref=e2257]:
+                      - generic [ref=e2258]: 2 hours ago
+                      - text: 2h
+                  - listitem [ref=e2259]:
+                    - generic [ref=e2260]: Comments
+                    - link "35" [ref=e2263] [cursor=pointer]:
+                      - /url: /sport/football/live/ce94j554pxnt#comments
+                      - generic [ref=e2264]:
+                        - img [ref=e2266]
+                        - text: "35"
+            - img "lauren james" [ref=e2272]
+    - generic [ref=e2275]:
+      - heading "More video" [level=2] [ref=e2279]:
+        - link "More video" [ref=e2280] [cursor=pointer]:
+          - /url: /sport/video
+          - text: More video
+          - img [ref=e2282]
+      - list [ref=e2285]:
+        - listitem [ref=e2286]:
+          - generic [ref=e2289]:
+            - generic [ref=e2290]:
+              - heading "GB's Muir qualifies for women's big air final. Video, 00:01:18" [level=3] [ref=e2292]:
+                - link "GB's Muir qualifies for women's big air final. Video, 00:01:18" [ref=e2293] [cursor=pointer]:
+                  - /url: /sport/videos/c8egd62345po
+                  - paragraph [ref=e2295]:
+                    - generic [ref=e2296]: GB's Muir qualifies for women's big air final. Video, 00:01:18
+                    - text: GB's Muir qualifies for women's big air final
+              - list [ref=e2299]:
+                - listitem [ref=e2300]:
+                  - generic [ref=e2301]: Attribution
+                  - link "Winter Olympics" [ref=e2304] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e2305]: Winter Olympics
+                - listitem [ref=e2307]:
+                  - generic [ref=e2308]: Posted
+                  - generic [ref=e2311]:
+                    - generic [ref=e2312]: 6 hours ago
+                    - text: 6h
+            - generic [ref=e2314]:
+              - generic [ref=e2316]:
+                - img [ref=e2318]
+                - generic [ref=e2320]: 1:18
+              - img "Kirsty Muir" [ref=e2323]
+        - listitem [ref=e2324]:
+          - generic [ref=e2327]:
+            - generic [ref=e2328]:
+              - heading "Treacy penalised as Team GB short track medal slips away. Video, 00:03:02" [level=3] [ref=e2330]:
+                - link "Treacy penalised as Team GB short track medal slips away. Video, 00:03:02" [ref=e2331] [cursor=pointer]:
+                  - /url: /sport/videos/c0j5nwwp3zeo
+                  - paragraph [ref=e2333]:
+                    - generic [ref=e2334]: Treacy penalised as Team GB short track medal slips away. Video, 00:03:02
+                    - text: Treacy penalised as Team GB short track medal slips away
+              - list [ref=e2337]:
+                - listitem [ref=e2338]:
+                  - generic [ref=e2339]: Attribution
+                  - link "Winter Olympics" [ref=e2342] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e2343]: Winter Olympics
+                - listitem [ref=e2345]:
+                  - generic [ref=e2346]: Posted
+                  - generic [ref=e2349]:
+                    - generic [ref=e2350]: 16 hours ago
+                    - text: 16h
+            - generic [ref=e2352]:
+              - generic [ref=e2354]:
+                - img [ref=e2356]
+                - generic [ref=e2358]: 3:02
+              - img "Great Britain's Niall Treacy" [ref=e2361]
+        - listitem [ref=e2362]:
+          - generic [ref=e2365]:
+            - generic [ref=e2366]:
+              - heading "Alexander-Arnold assists opener as Real Madrid thrash Sociedad. Video, 00:01:56" [level=3] [ref=e2368]:
+                - link "Alexander-Arnold assists opener as Real Madrid thrash Sociedad. Video, 00:01:56" [ref=e2369] [cursor=pointer]:
+                  - /url: /sport/football/videos/cn0ey24djjxo
+                  - paragraph [ref=e2371]:
+                    - generic [ref=e2372]: Alexander-Arnold assists opener as Real Madrid thrash Sociedad. Video, 00:01:56
+                    - text: Alexander-Arnold assists opener as Real Madrid thrash Sociedad
+              - list [ref=e2375]:
+                - listitem [ref=e2376]:
+                  - generic [ref=e2377]: Attribution
+                  - link "Football" [ref=e2380] [cursor=pointer]:
+                    - /url: /sport/football
+                    - generic [ref=e2381]: Football
+                - listitem [ref=e2383]:
+                  - generic [ref=e2384]: Posted
+                  - generic [ref=e2387]:
+                    - generic [ref=e2388]: 3 hours ago
+                    - text: 3h
+            - generic [ref=e2390]:
+              - generic [ref=e2392]:
+                - img [ref=e2394]
+                - generic [ref=e2396]: 1:56
+              - img "Gonzalo Garcia and Trent Alexander-Arnold" [ref=e2399]
+        - listitem [ref=e2400]:
+          - generic [ref=e2403]:
+            - generic [ref=e2404]:
+              - heading "Ayub dismisses Varma and Pandya in back-to-back balls. Video, 00:00:39" [level=3] [ref=e2406]:
+                - link "Ayub dismisses Varma and Pandya in back-to-back balls. Video, 00:00:39" [ref=e2407] [cursor=pointer]:
+                  - /url: /sport/cricket/videos/cm2x7d31ngvo
+                  - paragraph [ref=e2409]:
+                    - generic [ref=e2410]: Ayub dismisses Varma and Pandya in back-to-back balls. Video, 00:00:39
+                    - text: Ayub dismisses Varma and Pandya in back-to-back balls
+              - list [ref=e2413]:
+                - listitem [ref=e2414]:
+                  - generic [ref=e2415]: Attribution
+                  - link "Cricket" [ref=e2418] [cursor=pointer]:
+                    - /url: /sport/cricket
+                    - generic [ref=e2419]: Cricket
+                - listitem [ref=e2421]:
+                  - generic [ref=e2422]: Posted
+                  - generic [ref=e2425]:
+                    - generic [ref=e2426]: 1 hour ago
+                    - text: 1h
+            - generic [ref=e2428]:
+              - generic [ref=e2430]:
+                - img [ref=e2432]
+                - generic [ref=e2434]: 0:39
+              - img "Saim Ayub" [ref=e2437]
+        - listitem [ref=e2438]:
+          - generic [ref=e2441]:
+            - generic [ref=e2442]:
+              - heading "'She's running with the ski under her arm' - Sweden survive crash chaos to win silver. Video, 00:01:44" [level=3] [ref=e2444]:
+                - link "'She's running with the ski under her arm' - Sweden survive crash chaos to win silver. Video, 00:01:44" [ref=e2445] [cursor=pointer]:
+                  - /url: /sport/videos/ckg283lzp4vo
+                  - paragraph [ref=e2447]:
+                    - generic [ref=e2448]: "'She's running with the ski under her arm' - Sweden survive crash chaos to win silver. Video, 00:01:44"
+                    - text: "'She's running with the ski under her arm' - Sweden survive crash chaos to win silver"
+              - list [ref=e2451]:
+                - listitem [ref=e2452]:
+                  - generic [ref=e2453]: Attribution
+                  - link "Winter Olympics" [ref=e2456] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e2457]: Winter Olympics
+                - listitem [ref=e2459]:
+                  - generic [ref=e2460]: Posted
+                  - generic [ref=e2463]:
+                    - generic [ref=e2464]: 1 day ago
+                    - text: 1d
+            - generic [ref=e2466]:
+              - generic [ref=e2468]:
+                - img [ref=e2470]
+                - generic [ref=e2472]: 1:44
+              - img "Sweden Ski Cross Country Team" [ref=e2475]
+      - generic "More video" [ref=e2476]:
+        - link "View more" [ref=e2477] [cursor=pointer]:
+          - /url: /sport/video
+    - generic [ref=e2480]:
+      - heading "Also in Sport" [level=2] [ref=e2484]
+      - list [ref=e2486]:
+        - listitem [ref=e2487]:
+          - generic [ref=e2490]:
+            - generic [ref=e2491]:
+              - generic [ref=e2492]:
+                - heading "Captain Van Dijk wants 'so important' Salah to stay" [level=3] [ref=e2493]:
+                  - link "Captain Van Dijk wants 'so important' Salah to stay" [ref=e2494] [cursor=pointer]:
+                    - /url: /sport/football/articles/c0k158g7700o
+                    - paragraph [ref=e2496]: Captain Van Dijk wants 'so important' Salah to stay
+                - paragraph [ref=e2497]: Liverpool captain hails the importance of Mohamed Salah, why the Egyptian brings more than goals and his desire for Salah to stay beyond the summer
+              - list [ref=e2500]:
+                - listitem [ref=e2501]:
+                  - generic [ref=e2502]: Attribution
+                  - link "Liverpool" [ref=e2505] [cursor=pointer]:
+                    - /url: /sport/football/teams/liverpool
+                    - generic [ref=e2506]: Liverpool
+                - listitem [ref=e2508]:
+                  - generic [ref=e2509]: Posted
+                  - generic [ref=e2512]:
+                    - generic [ref=e2513]: 5 hours ago
+                    - text: 5h
+            - img "Virgil van Dijk and Mohamed Salah" [ref=e2518]
+        - listitem [ref=e2519]:
+          - generic [ref=e2522]:
+            - generic [ref=e2523]:
+              - heading "Man Utd come from behind to beat London City" [level=3] [ref=e2525]:
+                - link "Man Utd come from behind to beat London City" [ref=e2526] [cursor=pointer]:
+                  - /url: /sport/football/live/cy7j833j2m0t
+                  - paragraph [ref=e2528]: Man Utd come from behind to beat London City
+              - list [ref=e2531]:
+                - listitem [ref=e2532]:
+                  - generic [ref=e2533]: Attribution
+                  - link "Women's Football" [ref=e2536] [cursor=pointer]:
+                    - /url: /sport/football/womens
+                    - generic [ref=e2537]: Women's Football
+                - generic [ref=e2538]:
+                  - listitem [ref=e2539]:
+                    - generic [ref=e2540]: Posted
+                    - generic [ref=e2543]:
+                      - generic [ref=e2544]: 3 hours ago
+                      - text: 3h
+                  - listitem [ref=e2545]:
+                    - generic [ref=e2546]: Comments
+                    - link "23" [ref=e2549] [cursor=pointer]:
+                      - /url: /sport/football/live/cy7j833j2m0t#comments
+                      - generic [ref=e2550]:
+                        - img [ref=e2552]
+                        - text: "23"
+            - img "Jess Park" [ref=e2558]
+        - listitem [ref=e2559]:
+          - generic [ref=e2562]:
+            - generic [ref=e2563]:
+              - heading "Hayashi scores as Everton claim third straight WSL win" [level=3] [ref=e2565]:
+                - link "Hayashi scores as Everton claim third straight WSL win" [ref=e2566] [cursor=pointer]:
+                  - /url: /sport/football/live/ceqvnddvp9lt
+                  - paragraph [ref=e2568]: Hayashi scores as Everton claim third straight WSL win
+              - list [ref=e2571]:
+                - listitem [ref=e2572]:
+                  - generic [ref=e2573]: Attribution
+                  - link "Women's Football" [ref=e2576] [cursor=pointer]:
+                    - /url: /sport/football/womens
+                    - generic [ref=e2577]: Women's Football
+                - listitem [ref=e2579]:
+                  - generic [ref=e2580]: Posted
+                  - generic [ref=e2583]:
+                    - generic [ref=e2584]: 3 hours ago
+                    - text: 3h
+            - img "Everton players celebrate after taking the lead against West Ham" [ref=e2589]
+        - listitem [ref=e2590]:
+          - generic [ref=e2593]:
+            - generic [ref=e2594]:
+              - heading "Is Zubimendi Arsenal's best player?" [level=3] [ref=e2596]:
+                - link "Is Zubimendi Arsenal's best player?" [ref=e2597] [cursor=pointer]:
+                  - /url: /sport/football/articles/c2lr9rp9q12o
+                  - paragraph [ref=e2599]: Is Zubimendi Arsenal's best player?
+              - list [ref=e2602]:
+                - listitem [ref=e2603]:
+                  - generic [ref=e2604]: Attribution
+                  - link "Arsenal" [ref=e2607] [cursor=pointer]:
+                    - /url: /sport/football/teams/arsenal
+                    - generic [ref=e2608]: Arsenal
+                - generic [ref=e2609]:
+                  - listitem [ref=e2610]:
+                    - generic [ref=e2611]: Posted
+                    - generic [ref=e2614]:
+                      - generic [ref=e2615]: 10 hours ago
+                      - text: 10h
+                  - listitem [ref=e2616]:
+                    - generic [ref=e2617]: Comments
+                    - link "347" [ref=e2620] [cursor=pointer]:
+                      - /url: /sport/football/articles/c2lr9rp9q12o#comments
+                      - generic [ref=e2621]:
+                        - img [ref=e2623]
+                        - text: "347"
+            - img "Martin Zubimendi celebrates a goal" [ref=e2629]
+        - listitem [ref=e2630]:
+          - generic [ref=e2633]:
+            - generic [ref=e2634]:
+              - heading "FA Cup winners' medal, Odegaard's armband and Pictionary with Arteta" [level=3] [ref=e2636]:
+                - link "FA Cup winners' medal, Odegaard's armband and Pictionary with Arteta" [ref=e2637] [cursor=pointer]:
+                  - /url: /sport/football/articles/c87r285p1x7o
+                  - paragraph [ref=e2639]: FA Cup winners' medal, Odegaard's armband and Pictionary with Arteta
+              - list [ref=e2642]:
+                - listitem [ref=e2643]:
+                  - generic [ref=e2644]: Attribution
+                  - link "Football" [ref=e2647] [cursor=pointer]:
+                    - /url: /sport/football
+                    - generic [ref=e2648]: Football
+                - generic [ref=e2649]:
+                  - listitem [ref=e2650]:
+                    - generic [ref=e2651]: Posted
+                    - generic [ref=e2654]:
+                      - generic [ref=e2655]: 8 hours ago
+                      - text: 8h
+                  - listitem [ref=e2656]:
+                    - generic [ref=e2657]: Comments
+                    - link "50" [ref=e2660] [cursor=pointer]:
+                      - /url: /sport/football/articles/c87r285p1x7o#comments
+                      - generic [ref=e2661]:
+                        - img [ref=e2663]
+                        - text: "50"
+            - img "Matt Smith and Bukayo Saka celebrate Arsenal's 2-1 FA Cup Final win over Chelsea at Wembley in 2020" [ref=e2669]
+        - listitem [ref=e2670]:
+          - generic [ref=e2673]:
+            - generic [ref=e2674]:
+              - heading "Hodgkinson smashes own indoor record and sets sights on world best" [level=3] [ref=e2676]:
+                - link "Hodgkinson smashes own indoor record and sets sights on world best" [ref=e2677] [cursor=pointer]:
+                  - /url: /sport/athletics/articles/cx24n2n2vy2o
+                  - paragraph [ref=e2679]: Hodgkinson smashes own indoor record and sets sights on world best
+              - list [ref=e2682]:
+                - listitem [ref=e2683]:
+                  - generic [ref=e2684]: Attribution
+                  - link "Athletics" [ref=e2687] [cursor=pointer]:
+                    - /url: /sport/athletics
+                    - generic [ref=e2688]: Athletics
+                - listitem [ref=e2690]:
+                  - generic [ref=e2691]: Posted
+                  - generic [ref=e2694]:
+                    - generic [ref=e2695]: 10 hours ago
+                    - text: 10h
+            - img "Keely Hodgkinson in action in the 800m at the UK Athletics Indoor Championships" [ref=e2700]
+        - listitem [ref=e2701]:
+          - generic [ref=e2704]:
+            - generic [ref=e2705]:
+              - heading "'Overwhelmed' Kim takes first win after 12 years away" [level=3] [ref=e2707]:
+                - link "'Overwhelmed' Kim takes first win after 12 years away" [ref=e2708] [cursor=pointer]:
+                  - /url: /sport/golf/articles/ce3gl4gdln3o
+                  - paragraph [ref=e2710]: "'Overwhelmed' Kim takes first win after 12 years away"
+              - list [ref=e2713]:
+                - listitem [ref=e2714]:
+                  - generic [ref=e2715]: Attribution
+                  - link "Golf" [ref=e2718] [cursor=pointer]:
+                    - /url: /sport/golf
+                    - generic [ref=e2719]: Golf
+                - listitem [ref=e2721]:
+                  - generic [ref=e2722]: Posted
+                  - generic [ref=e2725]:
+                    - generic [ref=e2726]: 8 hours ago
+                    - text: 8h
+            - img "American Anthony Kim on the way to victory at the LIV Golf event in Adelaide" [ref=e2731]
+    - generic [ref=e2733]:
+      - heading "Bite-sized video" [level=2] [ref=e2738]
+      - group [ref=e2740]:
+        - generic [ref=e2743]:
+          - button "Scroll to previous item" [disabled] [ref=e2744]:
+            - generic [ref=e2745]:
+              - img [ref=e2746]
+              - generic [ref=e2748]: Scroll to previous item
+          - button "Scroll to next item, 7 of 20" [ref=e2749]:
+            - generic [ref=e2750]:
+              - img [ref=e2751]
+              - generic [ref=e2753]: Scroll to next item, 7 of 20
+        - list [ref=e2754]:
+          - listitem [ref=e2755]:
+            - button "The bar that puts women's sport first. 00:01:27, play video The bar that puts women's sport first" [ref=e2757] [cursor=pointer]:
+              - generic [ref=e2759]:
+                - generic [ref=e2760]:
+                  - img [ref=e2762]
+                  - text: 1:27
+                - generic [ref=e2764]: The bar that puts women's sport first. 00:01:27, play video
+                - generic [ref=e2765]: The bar that puts women's sport first
+              - img "The bar that puts women's sport first" [ref=e2768]
+          - listitem [ref=e2769]:
+            - button "'Inscrutable behind the glasses' - Princess Anne spotted in the crowd. 00:00:05, play video Princess Anne" [ref=e2771] [cursor=pointer]:
+              - generic [ref=e2773]:
+                - generic [ref=e2774]:
+                  - img [ref=e2776]
+                  - text: 0:05
+                - generic [ref=e2778]: "'Inscrutable behind the glasses' - Princess Anne spotted in the crowd. 00:00:05, play video"
+                - generic [ref=e2779]: "'Inscrutable behind the glasses' - Princess Anne spotted in the crowd"
+              - img "Princess Anne" [ref=e2782]
+          - listitem [ref=e2783]:
+            - button "Rooney & fellow pundits in disbelief at decisions. 00:01:42, play video Wayne Rooney" [ref=e2785] [cursor=pointer]:
+              - generic [ref=e2787]:
+                - generic [ref=e2788]:
+                  - img [ref=e2790]
+                  - text: 1:42
+                - generic [ref=e2792]: Rooney & fellow pundits in disbelief at decisions. 00:01:42, play video
+                - generic [ref=e2793]: Rooney & fellow pundits in disbelief at decisions
+              - img "Wayne Rooney" [ref=e2796]
+          - listitem [ref=e2797]:
+            - button "Trafford talks about being second choice at Man City. 00:00:33, play video James Trafford" [ref=e2799] [cursor=pointer]:
+              - generic [ref=e2801]:
+                - generic [ref=e2802]:
+                  - img [ref=e2804]
+                  - text: 0:33
+                - generic [ref=e2806]: Trafford talks about being second choice at Man City. 00:00:33, play video
+                - generic [ref=e2807]: Trafford talks about being second choice at Man City
+              - img "James Trafford" [ref=e2810]
+          - listitem [ref=e2811]:
+            - button "'Scored by Jones, improvised by Russell' 00:00:20, play video Finn Russel" [ref=e2813] [cursor=pointer]:
+              - generic [ref=e2815]:
+                - generic [ref=e2816]:
+                  - img [ref=e2818]
+                  - text: 0:20
+                - generic [ref=e2820]: "'Scored by Jones, improvised by Russell' 00:00:20, play video"
+                - generic [ref=e2821]: "'Scored by Jones, improvised by Russell'"
+              - img "Finn Russel" [ref=e2824]
+          - listitem [ref=e2825]:
+            - button "England 'blown away' by Scotland - Dawson. 00:00:51, play video Matt Dawson" [ref=e2827] [cursor=pointer]:
+              - generic [ref=e2829]:
+                - generic [ref=e2830]:
+                  - img [ref=e2832]
+                  - text: 0:51
+                - generic [ref=e2834]: England 'blown away' by Scotland - Dawson. 00:00:51, play video
+                - generic [ref=e2835]: England 'blown away' by Scotland - Dawson
+              - img "Matt Dawson" [ref=e2838]
+          - listitem [ref=e2839]:
+            - button "Do you know the non 'big six' FA Cup finalists since 2008? 00:01:39, play video Jason Mohammed" [ref=e2841] [cursor=pointer]:
+              - generic [ref=e2843]:
+                - generic [ref=e2844]:
+                  - img [ref=e2846]
+                  - text: 1:39
+                - generic [ref=e2848]: Do you know the non 'big six' FA Cup finalists since 2008? 00:01:39, play video
+                - generic [ref=e2849]: Do you know the non 'big six' FA Cup finalists since 2008?
+              - img "Jason Mohammed" [ref=e2852]
+          - listitem [ref=e2853]:
+            - button "Banton smashes three sixes off Watt. 00:00:18, play video Tom Banton" [ref=e2855] [cursor=pointer]:
+              - generic [ref=e2857]:
+                - generic [ref=e2858]:
+                  - img [ref=e2860]
+                  - text: 0:18
+                - generic [ref=e2862]: Banton smashes three sixes off Watt. 00:00:18, play video
+                - generic [ref=e2863]: Banton smashes three sixes off Watt
+              - img "Tom Banton" [ref=e2866]
+          - listitem [ref=e2867]:
+            - button "Wayne wants to party with Newcastle. 00:00:29, play video Wayne Rooney" [ref=e2869] [cursor=pointer]:
+              - generic [ref=e2871]:
+                - generic [ref=e2872]:
+                  - img [ref=e2874]
+                  - text: 0:29
+                - generic [ref=e2876]: Wayne wants to party with Newcastle. 00:00:29, play video
+                - generic [ref=e2877]: Wayne wants to party with Newcastle
+              - img "Wayne Rooney" [ref=e2880]
+          - listitem [ref=e2881]:
+            - button "Davidson makes Six Nations history. 00:00:15, play video Holly Davidson" [ref=e2883] [cursor=pointer]:
+              - generic [ref=e2885]:
+                - generic [ref=e2886]:
+                  - img [ref=e2888]
+                  - text: 0:15
+                - generic [ref=e2890]: Davidson makes Six Nations history. 00:00:15, play video
+                - generic [ref=e2891]: Davidson makes Six Nations history
+              - img "Holly Davidson" [ref=e2894]
+          - listitem [ref=e2895]:
+            - button "'Such good awareness!' - NZ's Mitchell makes boundary catch. 00:00:33, play video Daryl Mitchell" [ref=e2897] [cursor=pointer]:
+              - generic [ref=e2899]:
+                - generic [ref=e2900]:
+                  - img [ref=e2902]
+                  - text: 0:33
+                - generic [ref=e2904]: "'Such good awareness!' - NZ's Mitchell makes boundary catch. 00:00:33, play video"
+                - generic [ref=e2905]: "'Such good awareness!' - NZ's Mitchell makes boundary catch"
+              - img "Daryl Mitchell" [ref=e2908]
+          - listitem [ref=e2909]:
+            - button "Brook out playing the ramp shot. 00:00:10, play video Harry Brook" [ref=e2911] [cursor=pointer]:
+              - generic [ref=e2913]:
+                - generic [ref=e2914]:
+                  - img [ref=e2916]
+                  - text: 0:10
+                - generic [ref=e2918]: Brook out playing the ramp shot. 00:00:10, play video
+                - generic [ref=e2919]: Brook out playing the ramp shot
+              - img "Harry Brook" [ref=e2922]
+          - listitem [ref=e2923]:
+            - button "'Incredible scrummaging' on display from Italy. 00:00:15, play video Dan Sheehan" [ref=e2925] [cursor=pointer]:
+              - generic [ref=e2927]:
+                - generic [ref=e2928]:
+                  - img [ref=e2930]
+                  - text: 0:15
+                - generic [ref=e2932]: "'Incredible scrummaging' on display from Italy. 00:00:15, play video"
+                - generic [ref=e2933]: "'Incredible scrummaging' on display from Italy"
+              - img "Dan Sheehan" [ref=e2936]
+          - listitem [ref=e2937]:
+            - button "Pundits on FA Cup memories. 00:01:07, play video Nedum Onuoha, Chris Sutton, Danny Murphy and the FA Cup trophy" [ref=e2939] [cursor=pointer]:
+              - generic [ref=e2941]:
+                - generic [ref=e2942]:
+                  - img [ref=e2944]
+                  - text: 1:07
+                - generic [ref=e2946]: Pundits on FA Cup memories. 00:01:07, play video
+                - generic [ref=e2947]: Pundits on FA Cup memories
+              - img "Nedum Onuoha, Chris Sutton, Danny Murphy and the FA Cup trophy" [ref=e2950]
+          - listitem [ref=e2951]:
+            - button "Oman's Shakeel Sui celebration. 00:00:10, play video Oman's Shakeel Sui celebration" [ref=e2953] [cursor=pointer]:
+              - generic [ref=e2955]:
+                - generic [ref=e2956]:
+                  - img [ref=e2958]
+                  - text: 0:10
+                - generic [ref=e2960]: Oman's Shakeel Sui celebration. 00:00:10, play video
+                - generic [ref=e2961]: Oman's Shakeel Sui celebration
+              - img "Oman's Shakeel Sui celebration" [ref=e2964]
+          - listitem [ref=e2965]:
+            - button "Neto hat-trick fires Chelsea into fifth round. 00:01:43, play video Big smiles from Pedro Neto after scoring the hat-trick that took Chelsea to the fifth round of the FA Cup on February 13 2026." [ref=e2967] [cursor=pointer]:
+              - generic [ref=e2969]:
+                - generic [ref=e2970]:
+                  - img [ref=e2972]
+                  - text: 1:43
+                - generic [ref=e2974]: Neto hat-trick fires Chelsea into fifth round. 00:01:43, play video
+                - generic [ref=e2975]: Neto hat-trick fires Chelsea into fifth round
+              - img "Big smiles from Pedro Neto after scoring the hat-trick that took Chelsea to the fifth round of the FA Cup on February 13 2026." [ref=e2978]
+          - listitem [ref=e2979]:
+            - button "Who's the new man in North London? 00:00:58, play video Igor Tudor" [ref=e2981] [cursor=pointer]:
+              - generic [ref=e2983]:
+                - generic [ref=e2984]:
+                  - img [ref=e2986]
+                  - text: 0:58
+                - generic [ref=e2988]: Who's the new man in North London? 00:00:58, play video
+                - generic [ref=e2989]: Who's the new man in North London?
+              - img "Igor Tudor" [ref=e2992]
+          - listitem [ref=e2993]:
+            - button "'What on earth is Delap doing?' - premature celebration backfires. 00:00:34, play video Liam Delap" [ref=e2995] [cursor=pointer]:
+              - generic [ref=e2997]:
+                - generic [ref=e2998]:
+                  - img [ref=e3000]
+                  - text: 0:34
+                - generic [ref=e3002]: "'What on earth is Delap doing?' - premature celebration backfires. 00:00:34, play video"
+                - generic [ref=e3003]: "'What on earth is Delap doing?' - premature celebration backfires"
+              - img "Liam Delap" [ref=e3006]
+          - listitem [ref=e3007]:
+            - button "From tactics to touchline? 00:01:34, play video Pep Guardiola" [ref=e3009] [cursor=pointer]:
+              - generic [ref=e3011]:
+                - generic [ref=e3012]:
+                  - img [ref=e3014]
+                  - text: 1:34
+                - generic [ref=e3016]: From tactics to touchline? 00:01:34, play video
+                - generic [ref=e3017]: From tactics to touchline?
+              - img "Pep Guardiola" [ref=e3020]
+          - listitem [ref=e3021]:
+            - button "Elanga says Newcastle players are behind Howe. 00:01:06, play video Anthony Elanga in a light blue Newcastle training top with the caption. 'We want to fight for the gaffer'." [ref=e3023] [cursor=pointer]:
+              - generic [ref=e3025]:
+                - generic [ref=e3026]:
+                  - img [ref=e3028]
+                  - text: 1:06
+                - generic [ref=e3030]: Elanga says Newcastle players are behind Howe. 00:01:06, play video
+                - generic [ref=e3031]: Elanga says Newcastle players are behind Howe
+              - img "Anthony Elanga in a light blue Newcastle training top with the caption. 'We want to fight for the gaffer'." [ref=e3034]
+    - generic [ref=e3037]:
+      - heading "Sports news around the UK" [level=2] [ref=e3041]
+      - list [ref=e3043]:
+        - listitem [ref=e3044]:
+          - generic [ref=e3047]:
+            - generic [ref=e3048]:
+              - 'heading "Live . FA Cup fourth round: Arsenal hit four within 30 minutes against Wigan" [level=3] [ref=e3050]':
+                - 'link "Live . FA Cup fourth round: Arsenal hit four within 30 minutes against Wigan" [ref=e3051] [cursor=pointer]':
+                  - /url: /sport/football/live/cdree8627net
+                  - generic [ref=e3052]:
+                    - generic [ref=e3054]:
+                      - img [ref=e3056]
+                      - text: Live
+                      - generic [ref=e3059]: .
+                    - paragraph [ref=e3060]: "FA Cup fourth round: Arsenal hit four within 30 minutes against Wigan"
+              - list [ref=e3063]:
+                - listitem [ref=e3064]:
+                  - generic [ref=e3065]: Attribution
+                  - link "FA Cup" [ref=e3068] [cursor=pointer]:
+                    - /url: /sport/football/fa-cup
+                    - generic [ref=e3069]: FA Cup
+            - img "Arsenal celebrate against Wigan" [ref=e3074]
+        - listitem [ref=e3075]:
+          - generic [ref=e3078]:
+            - generic [ref=e3079]:
+              - 'heading "Live . Scottish Premiership: Braga powers Hearts ahead against Rangers in Ibrox thriller" [level=3] [ref=e3081]':
+                - 'link "Live . Scottish Premiership: Braga powers Hearts ahead against Rangers in Ibrox thriller" [ref=e3082] [cursor=pointer]':
+                  - /url: /sport/football/live/c204n6yydn0t
+                  - generic [ref=e3083]:
+                    - generic [ref=e3085]:
+                      - img [ref=e3087]
+                      - text: Live
+                      - generic [ref=e3090]: .
+                    - paragraph [ref=e3091]: "Scottish Premiership: Braga powers Hearts ahead against Rangers in Ibrox thriller"
+              - list [ref=e3094]:
+                - listitem [ref=e3095]:
+                  - generic [ref=e3096]: Attribution
+                  - link "Scottish Prem" [ref=e3099] [cursor=pointer]:
+                    - /url: /sport/football/scottish-premiership
+                    - generic [ref=e3100]: Scottish Prem
+            - img "Rangers equaliser" [ref=e3105]
+        - listitem [ref=e3106]:
+          - generic [ref=e3109]:
+            - generic [ref=e3110]:
+              - heading "France hammer Wales to keep Grand Slam dream alive" [level=3] [ref=e3112]:
+                - link "France hammer Wales to keep Grand Slam dream alive" [ref=e3113] [cursor=pointer]:
+                  - /url: /sport/rugby-union/articles/cddn92m8nd5o
+                  - paragraph [ref=e3115]: France hammer Wales to keep Grand Slam dream alive
+              - list [ref=e3118]:
+                - listitem [ref=e3119]:
+                  - generic [ref=e3120]: Attribution
+                  - link "Wales" [ref=e3123] [cursor=pointer]:
+                    - /url: /sport/rugby-union/teams/wales
+                    - generic [ref=e3124]: Wales
+                - generic [ref=e3125]:
+                  - listitem [ref=e3126]:
+                    - generic [ref=e3127]: Posted
+                    - generic [ref=e3130]:
+                      - generic [ref=e3131]: 7 minutes ago
+                      - text: 7min
+                  - listitem [ref=e3132]:
+                    - generic [ref=e3133]: Comments
+                    - link "10" [ref=e3136] [cursor=pointer]:
+                      - /url: /sport/rugby-union/articles/cddn92m8nd5o#comments
+                      - generic [ref=e3137]:
+                        - img [ref=e3139]
+                        - text: "10"
+            - img "France wing Louis Bielle-Biarrey scores with Wales Louis Rees-Zammit next to him" [ref=e3145]
+        - listitem [ref=e3146]:
+          - generic [ref=e3149]:
+            - generic [ref=e3150]:
+              - heading "I think Crowley starts against England - Murray" [level=3] [ref=e3152]:
+                - link "I think Crowley starts against England - Murray" [ref=e3153] [cursor=pointer]:
+                  - /url: /sport/rugby-union/articles/cy8lpx3qgwxo
+                  - paragraph [ref=e3155]: I think Crowley starts against England - Murray
+              - list [ref=e3158]:
+                - listitem [ref=e3159]:
+                  - generic [ref=e3160]: Attribution
+                  - link "Irish Rugby" [ref=e3163] [cursor=pointer]:
+                    - /url: /sport/rugby-union/irish
+                    - generic [ref=e3164]: Irish Rugby
+                - listitem [ref=e3166]:
+                  - generic [ref=e3167]: Posted
+                  - generic [ref=e3170]:
+                    - generic [ref=e3171]: 6 hours ago
+                    - text: 6h
+            - img "Jack Crowley" [ref=e3176]
+    - generic [ref=e3180]:
+      - generic [ref=e3182]:
+        - heading "Elsewhere on the BBC" [level=2] [ref=e3184]
+        - paragraph [ref=e3185]: Add to your watchlist on iPlayer and subscribe on Sounds
+      - list [ref=e3187]:
+        - listitem [ref=e3188]:
+          - generic [ref=e3191]:
+            - generic [ref=e3192]:
+              - generic [ref=e3193]:
+                - heading "The anti-freeze scandal that tainted Austria’s fine wine reputation" [level=3] [ref=e3194]:
+                  - link "The anti-freeze scandal that tainted Austria’s fine wine reputation" [ref=e3195] [cursor=pointer]:
+                    - /url: /sounds/play/w3ct74kk?at_mid=lUMWvNKZ6G&at_campaign=Witness_History_Austria_Wine_Scandal&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=sounds&at_brand=p004t1hd&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Witness_History_Austria_Wine_Scandal&at_bbc_team=BBC
+                    - paragraph [ref=e3197]: The anti-freeze scandal that tainted Austria’s fine wine reputation
+                - paragraph [ref=e3198]: Heidi Schroek, a young wine-maker at the time, recalls the incident from 1985
+              - generic [ref=e3200]:
+                - list [ref=e3203]:
+                  - listitem [ref=e3204]:
+                    - generic [ref=e3205]: Attribution
+                    - generic [ref=e3208]:
+                      - img [ref=e3210]
+                      - text: Sounds
+                - generic [ref=e3218]:
+                  - button "Follow Witness History" [ref=e3220]:
+                    - generic [ref=e3223]:
+                      - img [ref=e3224]
+                      - generic [ref=e3226]:
+                        - text: Follow
+                        - generic [ref=e3227]: Witness History
+                  - paragraph [ref=e3228]: Follow Witness History
+            - img "Witness History" [ref=e3233]
+        - listitem [ref=e3234]:
+          - generic [ref=e3237]:
+            - generic [ref=e3238]:
+              - 'heading "A Suitable Boy: Where traditions clash with modern dreams" [level=3] [ref=e3240]':
+                - 'link "A Suitable Boy: Where traditions clash with modern dreams" [ref=e3241] [cursor=pointer]':
+                  - /url: /iplayer/episode/m000lbh7/a-suitable-boy-series-1-episode-1?at_mid=6MzfDTeGNa&at_campaign=A_Suitable_Boy_series_1_episode_1&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=m000lbh9&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=A_Suitable_Boy_series_1_episode_1&at_bbc_team=BBC
+                  - paragraph [ref=e3243]: "A Suitable Boy: Where traditions clash with modern dreams"
+              - generic [ref=e3245]:
+                - list [ref=e3248]:
+                  - listitem [ref=e3249]:
+                    - generic [ref=e3250]: Attribution
+                    - generic [ref=e3253]:
+                      - img [ref=e3255]
+                      - text: iPlayer
+                - generic [ref=e3264]:
+                  - button "Follow A Suitable Boy" [ref=e3266]:
+                    - generic [ref=e3269]:
+                      - img [ref=e3270]
+                      - generic [ref=e3272]:
+                        - text: Follow
+                        - generic [ref=e3273]: A Suitable Boy
+                  - paragraph [ref=e3274]: Follow A Suitable Boy
+            - img "A Suitable Boy" [ref=e3279]
+        - listitem [ref=e3280]:
+          - generic [ref=e3283]:
+            - generic [ref=e3284]:
+              - heading "A smooth soul throwback mix from iconic voices" [level=3] [ref=e3286]:
+                - link "A smooth soul throwback mix from iconic voices" [ref=e3287] [cursor=pointer]:
+                  - /url: /sounds/play/m002qsyk?at_mid=z2DNTYshn7&at_campaign=1Xtras_Throwback_Party_Erykah_Badu_Lauryn_Hill_Musiq_Soulchild&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=sounds&at_brand=m0015txd&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=1Xtras_Throwback_Party_Erykah_Badu_Lauryn_Hill_Musiq_Soulchild&at_bbc_team=BBC
+                  - paragraph [ref=e3289]: A smooth soul throwback mix from iconic voices
+              - generic [ref=e3291]:
+                - list [ref=e3294]:
+                  - listitem [ref=e3295]:
+                    - generic [ref=e3296]: Attribution
+                    - generic [ref=e3299]:
+                      - img [ref=e3301]
+                      - text: Sounds
+                - generic [ref=e3309]:
+                  - button "Follow 1Xtra's Throwback Party" [ref=e3311]:
+                    - generic [ref=e3314]:
+                      - img [ref=e3315]
+                      - generic [ref=e3317]:
+                        - text: Follow
+                        - generic [ref=e3318]: 1Xtra's Throwback Party
+                  - paragraph [ref=e3319]: Follow 1Xtra's Throwback Party
+            - img "1Xtra's Throwback Party" [ref=e3324]
+        - listitem [ref=e3325]:
+          - generic [ref=e3328]:
+            - generic [ref=e3329]:
+              - heading "An intense drama where AI deepfakes have blurred reality" [level=3] [ref=e3331]:
+                - link "An intense drama where AI deepfakes have blurred reality" [ref=e3332] [cursor=pointer]:
+                  - /url: /iplayer/episode/m00085sv/the-capture-series-1-1-what-happens-in-helmand?at_mid=HeBeR6cUYN&at_campaign=The_Capture_series_1_episode_1&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=m00085sx&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=The_Capture_series_1_episode_1&at_bbc_team=BBC
+                  - paragraph [ref=e3334]: An intense drama where AI deepfakes have blurred reality
+              - generic [ref=e3336]:
+                - list [ref=e3339]:
+                  - listitem [ref=e3340]:
+                    - generic [ref=e3341]: Attribution
+                    - generic [ref=e3344]:
+                      - img [ref=e3346]
+                      - text: iPlayer
+                - generic [ref=e3355]:
+                  - button "Follow The Capture" [ref=e3357]:
+                    - generic [ref=e3360]:
+                      - img [ref=e3361]
+                      - generic [ref=e3363]:
+                        - text: Follow
+                        - generic [ref=e3364]: The Capture
+                  - paragraph [ref=e3365]: Follow The Capture
+            - img "The Capture" [ref=e3370]
+        - listitem [ref=e3371]:
+          - generic [ref=e3374]:
+            - generic [ref=e3375]:
+              - heading "Can you imagine life without the Moon?" [level=3] [ref=e3377]:
+                - link "Can you imagine life without the Moon?" [ref=e3378] [cursor=pointer]:
+                  - /url: /sounds/play/m002r4y0?at_mid=xzyf0YtfpN&at_campaign=Life_Without_the_Moon&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=sounds&at_brand=m002r4y1&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Life_Without_the_Moon&at_bbc_team=BBC
+                  - paragraph [ref=e3380]: Can you imagine life without the Moon?
+              - generic [ref=e3382]:
+                - list [ref=e3385]:
+                  - listitem [ref=e3386]:
+                    - generic [ref=e3387]: Attribution
+                    - generic [ref=e3390]:
+                      - img [ref=e3392]
+                      - text: Sounds
+                - generic [ref=e3400]:
+                  - button "Follow Life Without" [ref=e3402]:
+                    - generic [ref=e3405]:
+                      - img [ref=e3406]
+                      - generic [ref=e3408]:
+                        - text: Follow
+                        - generic [ref=e3409]: Life Without
+                  - paragraph [ref=e3410]: Follow Life Without
+            - img "Life Without" [ref=e3415]
+        - listitem [ref=e3416]:
+          - generic [ref=e3419]:
+            - generic [ref=e3420]:
+              - heading "Sit down with the legendary Roberto Martinez" [level=3] [ref=e3422]:
+                - link "Sit down with the legendary Roberto Martinez" [ref=e3423] [cursor=pointer]:
+                  - /url: /iplayer/episode/m002rktb/the-football-interview-series-1-roberto-martinez?at_mid=ck3ckZmzTB&at_campaign=The_Football_Intverview_Roberto_Martinez&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=m002hdpv&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=The_Football_Intverview_Roberto_Martinez&at_bbc_team=BBC
+                  - paragraph [ref=e3425]: Sit down with the legendary Roberto Martinez
+              - generic [ref=e3427]:
+                - list [ref=e3430]:
+                  - listitem [ref=e3431]:
+                    - generic [ref=e3432]: Attribution
+                    - generic [ref=e3435]:
+                      - img [ref=e3437]
+                      - text: iPlayer
+                - generic [ref=e3446]:
+                  - button "Follow The Football Interview" [ref=e3448]:
+                    - generic [ref=e3451]:
+                      - img [ref=e3452]
+                      - generic [ref=e3454]:
+                        - text: Follow
+                        - generic [ref=e3455]: The Football Interview
+                  - paragraph [ref=e3456]: Follow The Football Interview
+            - img "The Football Interview" [ref=e3461]
+        - listitem [ref=e3462]:
+          - generic [ref=e3465]:
+            - generic [ref=e3466]:
+              - heading "How will Venezuela's economy recover after its recent setback?" [level=3] [ref=e3468]:
+                - link "How will Venezuela's economy recover after its recent setback?" [ref=e3469] [cursor=pointer]:
+                  - /url: /sounds/play/w3ct6s3g?at_mid=0xWDIaibIi&at_campaign=Business_Daily_What_next_for_Venezuela&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=sounds&at_brand=p002vsxs&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Business_Daily_What_next_for_Venezuela&at_bbc_team=BBC
+                  - paragraph [ref=e3471]: How will Venezuela's economy recover after its recent setback?
+              - generic [ref=e3473]:
+                - list [ref=e3476]:
+                  - listitem [ref=e3477]:
+                    - generic [ref=e3478]: Attribution
+                    - generic [ref=e3481]:
+                      - img [ref=e3483]
+                      - text: Sounds
+                - generic [ref=e3491]:
+                  - button "Follow Business Daily" [ref=e3493]:
+                    - generic [ref=e3496]:
+                      - img [ref=e3497]
+                      - generic [ref=e3499]:
+                        - text: Follow
+                        - generic [ref=e3500]: Business Daily
+                  - paragraph [ref=e3501]: Follow Business Daily
+            - img "Business Daily" [ref=e3506]
+    - generic [ref=e3511]:
+      - generic [ref=e3513]:
+        - heading "BBC Sport emails" [level=2] [ref=e3514]
+        - paragraph [ref=e3515]: Get a range of BBC Sport newsletters delivered straight to your inbox throughout the week
+      - link "Sign up now" [ref=e3518] [cursor=pointer]:
+        - /url: /newsletters/bbcsport/zh9tg2p
+        - generic [ref=e3519]: Sign up now
+    - generic [ref=e3523]:
+      - heading "More to explore" [level=2] [ref=e3527]
+      - list [ref=e3529]:
+        - listitem [ref=e3530]:
+          - generic [ref=e3533]:
+            - generic [ref=e3534]:
+              - generic [ref=e3535]:
+                - heading "Three years on, Deulofeu is still fighting for 'miracle' return" [level=3] [ref=e3536]:
+                  - link "Three years on, Deulofeu is still fighting for 'miracle' return" [ref=e3537] [cursor=pointer]:
+                    - /url: /sport/football/articles/c89kxxpj1vko
+                    - paragraph [ref=e3539]: Three years on, Deulofeu is still fighting for 'miracle' return
+                - paragraph [ref=e3540]: Gerard Deulofeu has not played for more than three years but believes he can make "history" by fighting for a "miracle" comeback.
+              - list [ref=e3543]:
+                - listitem [ref=e3544]:
+                  - generic [ref=e3545]: Attribution
+                  - link "European Football" [ref=e3548] [cursor=pointer]:
+                    - /url: /sport/football/european
+                    - generic [ref=e3549]: European Football
+                - generic [ref=e3550]:
+                  - listitem [ref=e3551]:
+                    - generic [ref=e3552]: Posted
+                    - generic [ref=e3555]:
+                      - generic [ref=e3556]: 10 hours ago
+                      - text: 10h
+                  - listitem [ref=e3557]:
+                    - generic [ref=e3558]: Comments
+                    - link "137" [ref=e3561] [cursor=pointer]:
+                      - /url: /sport/football/articles/c89kxxpj1vko#comments
+                      - generic [ref=e3562]:
+                        - img [ref=e3564]
+                        - text: "137"
+            - img "Gerard Deulofeu celebrates" [ref=e3570]
+        - listitem [ref=e3571]:
+          - generic [ref=e3574]:
+            - generic [ref=e3575]:
+              - heading "'The officials looked petrified' - was Villa Park chaos advert for VAR?" [level=3] [ref=e3577]:
+                - link "'The officials looked petrified' - was Villa Park chaos advert for VAR?" [ref=e3578] [cursor=pointer]:
+                  - /url: /sport/football/articles/c70ke0zglk5o
+                  - paragraph [ref=e3580]: "'The officials looked petrified' - was Villa Park chaos advert for VAR?"
+              - list [ref=e3583]:
+                - listitem [ref=e3584]:
+                  - generic [ref=e3585]: Attribution
+                  - link "FA Cup" [ref=e3588] [cursor=pointer]:
+                    - /url: /sport/football/fa-cup
+                    - generic [ref=e3589]: FA Cup
+                - generic [ref=e3590]:
+                  - listitem [ref=e3591]:
+                    - generic [ref=e3592]: Posted
+                    - generic [ref=e3595]:
+                      - generic [ref=e3596]: 20 hours ago
+                      - text: 20h
+                  - listitem [ref=e3597]:
+                    - generic [ref=e3598]: Comments
+                    - link "2076" [ref=e3601] [cursor=pointer]:
+                      - /url: /sport/football/articles/c70ke0zglk5o#comments
+                      - generic [ref=e3602]:
+                        - img [ref=e3604]
+                        - text: "2076"
+            - img "Newcastle complain to referee Chris Kavanagh" [ref=e3610]
+        - listitem [ref=e3611]:
+          - generic [ref=e3614]:
+            - generic [ref=e3615]:
+              - heading "A 'very special' FA Cup win and why managing Ronaldo is 'easy'" [level=3] [ref=e3617]:
+                - link "A 'very special' FA Cup win and why managing Ronaldo is 'easy'" [ref=e3618] [cursor=pointer]:
+                  - /url: /sport/football/articles/c98gy904nggo
+                  - paragraph [ref=e3620]: A 'very special' FA Cup win and why managing Ronaldo is 'easy'
+              - list [ref=e3623]:
+                - listitem [ref=e3624]:
+                  - generic [ref=e3625]: Attribution
+                  - link "Portugal" [ref=e3628] [cursor=pointer]:
+                    - /url: /sport/football/teams/portugal
+                    - generic [ref=e3629]: Portugal
+                - listitem [ref=e3631]:
+                  - generic [ref=e3632]: Posted
+                  - generic [ref=e3635]:
+                    - generic [ref=e3636]: 1 day ago
+                    - text: 1d
+            - img "Portugal manager Roberto Martinez" [ref=e3641]
+        - listitem [ref=e3642]:
+          - generic [ref=e3645]:
+            - generic [ref=e3646]:
+              - heading "Why are Team GB so good at skeleton?" [level=3] [ref=e3648]:
+                - link "Why are Team GB so good at skeleton?" [ref=e3649] [cursor=pointer]:
+                  - /url: /sport/articles/cz6ejev058eo
+                  - paragraph [ref=e3651]: Why are Team GB so good at skeleton?
+              - list [ref=e3654]:
+                - listitem [ref=e3655]:
+                  - generic [ref=e3656]: Attribution
+                  - link "Winter Olympics" [ref=e3659] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e3660]: Winter Olympics
+                - generic [ref=e3661]:
+                  - listitem [ref=e3662]:
+                    - generic [ref=e3663]: Posted
+                    - generic [ref=e3666]:
+                      - generic [ref=e3667]: 1 day ago
+                      - text: 1d
+                  - listitem [ref=e3668]:
+                    - generic [ref=e3669]: Comments
+                    - link "269" [ref=e3672] [cursor=pointer]:
+                      - /url: /sport/articles/cz6ejev058eo#comments
+                      - generic [ref=e3673]:
+                        - img [ref=e3675]
+                        - text: "269"
+            - img "Matt Weston holds up a Union Jack" [ref=e3681]
+        - listitem [ref=e3682]:
+          - generic [ref=e3685]:
+            - generic [ref=e3686]:
+              - heading "Kane reaches 500 goals - what other records could he break?" [level=3] [ref=e3688]:
+                - link "Kane reaches 500 goals - what other records could he break?" [ref=e3689] [cursor=pointer]:
+                  - /url: /sport/football/articles/c743xp1xw9yo
+                  - paragraph [ref=e3691]: Kane reaches 500 goals - what other records could he break?
+              - list [ref=e3694]:
+                - listitem [ref=e3695]:
+                  - generic [ref=e3696]: Attribution
+                  - link "European Football" [ref=e3699] [cursor=pointer]:
+                    - /url: /sport/football/european
+                    - generic [ref=e3700]: European Football
+                - generic [ref=e3701]:
+                  - listitem [ref=e3702]:
+                    - generic [ref=e3703]: Posted
+                    - generic [ref=e3706]:
+                      - generic [ref=e3707]: 22 hours ago
+                      - text: 22h
+                  - listitem [ref=e3708]:
+                    - generic [ref=e3709]: Comments
+                    - link "637" [ref=e3712] [cursor=pointer]:
+                      - /url: /sport/football/articles/c743xp1xw9yo#comments
+                      - generic [ref=e3713]:
+                        - img [ref=e3715]
+                        - text: "637"
+            - img "Harry Kane celebrates scoring for Bayern Munich" [ref=e3721]
+        - listitem [ref=e3722]:
+          - generic [ref=e3725]:
+            - generic [ref=e3726]:
+              - heading "The samba-dancing skier making Brazil Olympic history" [level=3] [ref=e3728]:
+                - link "The samba-dancing skier making Brazil Olympic history" [ref=e3729] [cursor=pointer]:
+                  - /url: /sport/articles/c24dnjnp39qo
+                  - paragraph [ref=e3731]: The samba-dancing skier making Brazil Olympic history
+              - list [ref=e3734]:
+                - listitem [ref=e3735]:
+                  - generic [ref=e3736]: Attribution
+                  - link "Winter Olympics" [ref=e3739] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e3740]: Winter Olympics
+                - generic [ref=e3741]:
+                  - listitem [ref=e3742]:
+                    - generic [ref=e3743]: Posted
+                    - generic [ref=e3746]:
+                      - generic [ref=e3747]: 1 day ago
+                      - text: 1d
+                  - listitem [ref=e3748]:
+                    - generic [ref=e3749]: Comments
+                    - link "202" [ref=e3752] [cursor=pointer]:
+                      - /url: /sport/articles/c24dnjnp39qo#comments
+                      - generic [ref=e3753]:
+                        - img [ref=e3755]
+                        - text: "202"
+            - img "Lucas Pinheiro Braathen holds up his Olympic gold medal" [ref=e3761]
+        - listitem [ref=e3762]:
+          - generic [ref=e3765]:
+            - generic [ref=e3766]:
+              - heading "Hiding pace? Too slow? What pre-season testing told us" [level=3] [ref=e3768]:
+                - link "Hiding pace? Too slow? What pre-season testing told us" [ref=e3769] [cursor=pointer]:
+                  - /url: /sport/formula1/articles/cp321qpwx39o
+                  - paragraph [ref=e3771]: Hiding pace? Too slow? What pre-season testing told us
+              - list [ref=e3774]:
+                - listitem [ref=e3775]:
+                  - generic [ref=e3776]: Attribution
+                  - link "Formula 1" [ref=e3779] [cursor=pointer]:
+                    - /url: /sport/formula1
+                    - generic [ref=e3780]: Formula 1
+                - generic [ref=e3781]:
+                  - listitem [ref=e3782]:
+                    - generic [ref=e3783]: Posted
+                    - generic [ref=e3786]:
+                      - generic [ref=e3787]: 1 day ago
+                      - text: 1d
+                  - listitem [ref=e3788]:
+                    - generic [ref=e3789]: Comments
+                    - link "442" [ref=e3792] [cursor=pointer]:
+                      - /url: /sport/formula1/articles/cp321qpwx39o#comments
+                      - generic [ref=e3793]:
+                        - img [ref=e3795]
+                        - text: "442"
+            - img "Max Verstappen drives the 2026 Red Bull on track in Bahrain during pre-season testing" [ref=e3801]
+    - generic [ref=e3804]:
+      - 'heading "Insight: Must-read sports stories" [level=2] [ref=e3808]':
+        - 'link "Insight: Must-read sports stories" [ref=e3809] [cursor=pointer]':
+          - /url: /sport/insight
+          - text: "Insight: Must-read sports stories"
+          - img [ref=e3811]
+      - list [ref=e3814]:
+        - listitem [ref=e3815]:
+          - generic [ref=e3818]:
+            - generic [ref=e3819]:
+              - generic [ref=e3820]:
+                - 'heading "Frank''s downfall: Inside his struggle to get players and fans onboard" [level=3] [ref=e3821]':
+                  - 'link "Frank''s downfall: Inside his struggle to get players and fans onboard" [ref=e3822] [cursor=pointer]':
+                    - /url: /sport/football/articles/cgmlv9d3k7no
+                    - paragraph [ref=e3824]: "Frank's downfall: Inside his struggle to get players and fans onboard"
+                - paragraph [ref=e3825]: Thomas Frank has been sacked as Tottenham manager after just eight months in charge. BBC Sport's Sami Mokbel takes a closer look at his tenure.
+              - list [ref=e3828]:
+                - listitem [ref=e3829]:
+                  - generic [ref=e3830]: Attribution
+                  - link "Premier League" [ref=e3833] [cursor=pointer]:
+                    - /url: /sport/football/premier-league
+                    - generic [ref=e3834]: Premier League
+                - generic [ref=e3835]:
+                  - listitem [ref=e3836]:
+                    - generic [ref=e3837]: Posted
+                    - generic [ref=e3840]:
+                      - generic [ref=e3841]: 3 days ago
+                      - text: 3d
+                  - listitem [ref=e3842]:
+                    - generic [ref=e3843]: Comments
+                    - link "879" [ref=e3846] [cursor=pointer]:
+                      - /url: /sport/football/articles/cgmlv9d3k7no#comments
+                      - generic [ref=e3847]:
+                        - img [ref=e3849]
+                        - text: "879"
+            - img "Thomas Frank with his hands on his head" [ref=e3855]
+        - listitem [ref=e3856]:
+          - generic [ref=e3859]:
+            - generic [ref=e3860]:
+              - heading "What is the future of the Winter Olympics?" [level=3] [ref=e3862]:
+                - link "What is the future of the Winter Olympics?" [ref=e3863] [cursor=pointer]:
+                  - /url: /sport/extra/xmtwwy6anf/the-future-of-the-winter-olympics
+                  - paragraph [ref=e3865]: What is the future of the Winter Olympics?
+              - list [ref=e3868]:
+                - listitem [ref=e3869]:
+                  - generic [ref=e3870]: Attribution
+                  - generic [ref=e3873]: Winter Olympics
+            - img "Winter Olympics graphic" [ref=e3878]
+        - listitem [ref=e3879]:
+          - generic [ref=e3882]:
+            - generic [ref=e3883]:
+              - heading "'I've been flying through the air without skis on - that is a weird feeling'" [level=3] [ref=e3885]:
+                - link "'I've been flying through the air without skis on - that is a weird feeling'" [ref=e3886] [cursor=pointer]:
+                  - /url: /sport/articles/c3r1w1vp2ldo
+                  - paragraph [ref=e3888]: "'I've been flying through the air without skis on - that is a weird feeling'"
+              - list [ref=e3891]:
+                - listitem [ref=e3892]:
+                  - generic [ref=e3893]: Attribution
+                  - link "Winter Olympics" [ref=e3896] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e3897]: Winter Olympics
+                - listitem [ref=e3899]:
+                  - generic [ref=e3900]: Posted
+                  - generic [ref=e3903]:
+                    - generic [ref=e3904]: 5 February
+                    - text: 5 Feb
+            - img "Zoe Atkin off the ground on her skis, which cross as she hangs in the air" [ref=e3909]
+        - listitem [ref=e3910]:
+          - generic [ref=e3913]:
+            - generic [ref=e3914]:
+              - heading "Happy tennis, serious name - how history-maker Alcaraz clinched career Grand Slam" [level=3] [ref=e3916]:
+                - link "Happy tennis, serious name - how history-maker Alcaraz clinched career Grand Slam" [ref=e3917] [cursor=pointer]:
+                  - /url: /sport/tennis/articles/c4gvy382jg9o
+                  - paragraph [ref=e3919]: Happy tennis, serious name - how history-maker Alcaraz clinched career Grand Slam
+              - list [ref=e3922]:
+                - listitem [ref=e3923]:
+                  - generic [ref=e3924]: Attribution
+                  - link "Tennis" [ref=e3927] [cursor=pointer]:
+                    - /url: /sport/tennis
+                    - generic [ref=e3928]: Tennis
+                - listitem [ref=e3930]:
+                  - generic [ref=e3931]: Posted
+                  - generic [ref=e3934]:
+                    - generic [ref=e3935]: 1 February
+                    - text: 1 Feb
+            - img "Carlos Alcaraz celebrates with the Australian Open trophy" [ref=e3940]
+        - listitem [ref=e3941]:
+          - generic [ref=e3944]:
+            - generic [ref=e3945]:
+              - heading "Cages, crushes and stabbings - is European away safety getting worse?" [level=3] [ref=e3947]:
+                - link "Cages, crushes and stabbings - is European away safety getting worse?" [ref=e3948] [cursor=pointer]:
+                  - /url: /sport/football/articles/c2lg7kkqe11o
+                  - paragraph [ref=e3950]: Cages, crushes and stabbings - is European away safety getting worse?
+              - list [ref=e3953]:
+                - listitem [ref=e3954]:
+                  - generic [ref=e3955]: Attribution
+                  - link "Football" [ref=e3958] [cursor=pointer]:
+                    - /url: /sport/football
+                    - generic [ref=e3959]: Football
+                - generic [ref=e3960]:
+                  - listitem [ref=e3961]:
+                    - generic [ref=e3962]: Posted
+                    - generic [ref=e3965]:
+                      - generic [ref=e3966]: 30 January
+                      - text: 30 Jan
+                  - listitem [ref=e3967]:
+                    - generic [ref=e3968]: Comments
+                    - link "1011" [ref=e3971] [cursor=pointer]:
+                      - /url: /sport/football/articles/c2lg7kkqe11o#comments
+                      - generic [ref=e3972]:
+                        - img [ref=e3974]
+                        - text: "1011"
+            - img "An illustration showing riot police officers, stewards, and fans outside football matches" [ref=e3980]
+        - listitem [ref=e3981]:
+          - generic [ref=e3984]:
+            - generic [ref=e3985]:
+              - heading "Rejections, depression & promise to his mum - Thiago's route to top" [level=3] [ref=e3987]:
+                - link "Rejections, depression & promise to his mum - Thiago's route to top" [ref=e3988] [cursor=pointer]:
+                  - /url: /sport/football/articles/c07xpzyv1yno
+                  - paragraph [ref=e3990]: Rejections, depression & promise to his mum - Thiago's route to top
+              - list [ref=e3993]:
+                - listitem [ref=e3994]:
+                  - generic [ref=e3995]: Attribution
+                  - link "Premier League" [ref=e3998] [cursor=pointer]:
+                    - /url: /sport/football/premier-league
+                    - generic [ref=e3999]: Premier League
+                - generic [ref=e4000]:
+                  - listitem [ref=e4001]:
+                    - generic [ref=e4002]: Posted
+                    - generic [ref=e4005]:
+                      - generic [ref=e4006]: 15 January
+                      - text: 15 Jan
+                  - listitem [ref=e4007]:
+                    - generic [ref=e4008]: Comments
+                    - link "243" [ref=e4011] [cursor=pointer]:
+                      - /url: /sport/football/articles/c07xpzyv1yno#comments
+                      - generic [ref=e4012]:
+                        - img [ref=e4014]
+                        - text: "243"
+            - img "Brentford striker Igor Thiago" [ref=e4020]
+        - listitem [ref=e4021]:
+          - generic [ref=e4024]:
+            - generic [ref=e4025]:
+              - heading "Tactics, transfers and turmoil - inside the fall of Amorim" [level=3] [ref=e4027]:
+                - link "Tactics, transfers and turmoil - inside the fall of Amorim" [ref=e4028] [cursor=pointer]:
+                  - /url: /sport/football/articles/cly927pn4pno
+                  - paragraph [ref=e4030]: Tactics, transfers and turmoil - inside the fall of Amorim
+              - list [ref=e4033]:
+                - listitem [ref=e4034]:
+                  - generic [ref=e4035]: Attribution
+                  - link "Man Utd" [ref=e4038] [cursor=pointer]:
+                    - /url: /sport/football/teams/manchester-united
+                    - generic [ref=e4039]: Man Utd
+                - generic [ref=e4040]:
+                  - listitem [ref=e4041]:
+                    - generic [ref=e4042]: Posted
+                    - generic [ref=e4045]:
+                      - generic [ref=e4046]: 5 January
+                      - text: 5 Jan
+                  - listitem [ref=e4047]:
+                    - generic [ref=e4048]: Comments
+                    - link "2827" [ref=e4051] [cursor=pointer]:
+                      - /url: /sport/football/articles/cly927pn4pno#comments
+                      - generic [ref=e4052]:
+                        - img [ref=e4054]
+                        - text: "2827"
+            - img "Ruben Amorim holds his head" [ref=e4060]
+      - 'generic "Insight: Must-read sports stories" [ref=e4061]':
+        - link "View more" [ref=e4062] [cursor=pointer]:
+          - /url: /sport/insight
+    - generic [ref=e4065]:
+      - heading "Find us here" [level=2] [ref=e4066]
+      - list [ref=e4068]:
+        - listitem [ref=e4069]:
+          - generic [ref=e4071]:
+            - link "Instagram" [ref=e4074] [cursor=pointer]:
+              - /url: https://www.instagram.com/bbcsport/
+              - paragraph [ref=e4076]: Instagram
+            - img "Instagram logo" [ref=e4081]
+        - listitem [ref=e4082]:
+          - generic [ref=e4084]:
+            - link "TikTok" [ref=e4087] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@bbcsport
+              - paragraph [ref=e4089]: TikTok
+            - img "TikTok logo" [ref=e4094]
+        - listitem [ref=e4095]:
+          - generic [ref=e4097]:
+            - link "Facebook" [ref=e4100] [cursor=pointer]:
+              - /url: https://www.facebook.com/BBCSPORT
+              - paragraph [ref=e4102]: Facebook
+            - img "Facebook logo" [ref=e4107]
+        - listitem [ref=e4108]:
+          - generic [ref=e4110]:
+            - link "X" [ref=e4113] [cursor=pointer]:
+              - /url: https://twitter.com/BBCSport
+              - paragraph [ref=e4115]: X
+            - img "X logo" [ref=e4120]
+        - listitem [ref=e4121]:
+          - generic [ref=e4123]:
+            - link "YouTube" [ref=e4126] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCW6-BQWFA70Dyyc7ZpZ9Xlg
+              - paragraph [ref=e4128]: YouTube
+            - img "YouTube logo" [ref=e4133]
+    - generic [ref=e4136]:
+      - heading "Find out more" [level=2] [ref=e4138]
+      - list [ref=e4139]:
+        - listitem [ref=e4140]:
+          - link "BBC Sport App" [ref=e4141] [cursor=pointer]:
+            - /url: /sport/articles/cx2gkjzyke4o
+        - listitem [ref=e4142]:
+          - link "Help & FAQs" [ref=e4143] [cursor=pointer]:
+            - /url: /sport/articles/cn33yxd1rz0o
+  - contentinfo [ref=e4146]:
+    - generic [ref=e4150]:
+      - heading "10-minute plays, perfect for a pause" [level=2] [ref=e4154]
+      - list [ref=e4156]:
+        - listitem [ref=e4157]:
+          - generic [ref=e4159]:
+            - generic [ref=e4160]:
+              - generic [ref=e4161]:
+                - link "From classic lit to teen hit" [ref=e4163] [cursor=pointer]:
+                  - /url: /iplayer/episode/p08kqmxs/inside-cinema-shorts-41-classic-lit-to-teen-hit?seriesId=more-like-this&at_mid=EbLGIdjBrt&at_campaign=Inside_Cinema_Classic_Lit_To_Teen_Hit&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=p07f7m9q&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Inside_Cinema_Classic_Lit_To_Teen_Hit&at_bbc_team=BBC
+                  - paragraph [ref=e4165]: From classic lit to teen hit
+                - list [ref=e4169]:
+                  - listitem [ref=e4170]:
+                    - generic [ref=e4171]: Attribution
+                    - generic [ref=e4174]:
+                      - img [ref=e4176]
+                      - text: iPlayer
+              - generic [ref=e4185]:
+                - button "Watchlist Add Inside Cinema to your Watchlist in iPlayer" [ref=e4187]:
+                  - generic [ref=e4189]:
+                    - img [ref=e4191]
+                    - generic [ref=e4193]:
+                      - text: Watchlist
+                      - generic [ref=e4194]: Add Inside Cinema to your Watchlist in iPlayer
+                - paragraph [ref=e4195]: Watchlist Add Inside Cinema to your Watchlist in iPlayer
+            - img "Inside Cinema - Cher from Clueless" [ref=e4199]
+        - listitem [ref=e4200]:
+          - generic [ref=e4202]:
+            - generic [ref=e4203]:
+              - generic [ref=e4204]:
+                - link "The siblings that made skiing history" [ref=e4206] [cursor=pointer]:
+                  - /url: /sounds/play/w3ct7zsy?at_mid=hQZgpx6uGW&at_campaign=Sporting_Witness&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=sounds&at_brand=p00j2pn5&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Sporting_Witness&at_bbc_team=BBC
+                  - paragraph [ref=e4208]: The siblings that made skiing history
+                - list [ref=e4212]:
+                  - listitem [ref=e4213]:
+                    - generic [ref=e4214]: Attribution
+                    - generic [ref=e4217]:
+                      - img [ref=e4219]
+                      - text: Sounds
+              - generic [ref=e4227]:
+                - button "Subscribe Add Sporting Witness to My Sounds" [ref=e4229]:
+                  - generic [ref=e4231]:
+                    - img [ref=e4233]
+                    - generic [ref=e4236]:
+                      - text: Subscribe
+                      - generic [ref=e4237]: Add Sporting Witness to My Sounds
+                - paragraph [ref=e4238]: Subscribe Add Sporting Witness to My Sounds
+            - img "Sporting Witness" [ref=e4242]
+        - listitem [ref=e4243]:
+          - generic [ref=e4245]:
+            - generic [ref=e4246]:
+              - generic [ref=e4247]:
+                - link "Margot Robbie joins Greg James for a game of Unpopular Opinion" [ref=e4249] [cursor=pointer]:
+                  - /url: /iplayer/episode/p0mw1391/unpopular-opinion-margot-robbie?at_mid=Zp9LdiVUvt&at_campaign=Unpopular_Opinion_Margot_Robbie&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=p086sxq7&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Unpopular_Opinion_Margot_Robbie&at_bbc_team=BBC
+                  - paragraph [ref=e4251]: Margot Robbie joins Greg James for a game of Unpopular Opinion
+                - list [ref=e4255]:
+                  - listitem [ref=e4256]:
+                    - generic [ref=e4257]: Attribution
+                    - generic [ref=e4260]:
+                      - img [ref=e4262]
+                      - text: iPlayer
+              - generic [ref=e4271]:
+                - button "Watchlist Add Unpopular Opinion to your Watchlist in iPlayer" [ref=e4273]:
+                  - generic [ref=e4275]:
+                    - img [ref=e4277]
+                    - generic [ref=e4279]:
+                      - text: Watchlist
+                      - generic [ref=e4280]: Add Unpopular Opinion to your Watchlist in iPlayer
+                - paragraph [ref=e4281]: Watchlist Add Unpopular Opinion to your Watchlist in iPlayer
+            - img "Unpopular Opinion" [ref=e4285]
+        - listitem [ref=e4286]:
+          - generic [ref=e4288]:
+            - generic [ref=e4289]:
+              - generic [ref=e4290]:
+                - link "Why has there been a rise in child-free weddings?" [ref=e4292] [cursor=pointer]:
+                  - /url: /sounds/play/p0mynm74?at_mid=WCSUbs9AYC&at_campaign=Anti_social_Childfree_weddings&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=m0018h15&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Anti_social_Childfree_weddings&at_bbc_team=BBC
+                  - paragraph [ref=e4294]: Why has there been a rise in child-free weddings?
+                - list [ref=e4298]:
+                  - listitem [ref=e4299]:
+                    - generic [ref=e4300]: Attribution
+                    - generic [ref=e4303]:
+                      - img [ref=e4305]
+                      - text: Sounds
+              - generic [ref=e4313]:
+                - button "Subscribe Add AntiSocial to My Sounds" [ref=e4315]:
+                  - generic [ref=e4317]:
+                    - img [ref=e4319]
+                    - generic [ref=e4322]:
+                      - text: Subscribe
+                      - generic [ref=e4323]: Add AntiSocial to My Sounds
+                - paragraph [ref=e4324]: Subscribe Add AntiSocial to My Sounds
+            - img "AntiSocial" [ref=e4328]
+    - generic [ref=e4331]:
+      - list [ref=e4332]:
+        - listitem [ref=e4333]:
+          - link "Home" [ref=e4334] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk
+        - listitem [ref=e4335]:
+          - link "News" [ref=e4336] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/news
+        - listitem [ref=e4337]:
+          - link "Sport" [ref=e4338] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/sport
+        - listitem [ref=e4339]:
+          - link "Weather" [ref=e4340] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/weather
+        - listitem [ref=e4341]:
+          - link "iPlayer" [ref=e4342] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/iplayer
+        - listitem [ref=e4343]:
+          - link "Sounds" [ref=e4344] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/sounds
+        - listitem [ref=e4345]:
+          - link "Bitesize" [ref=e4346] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/bitesize
+        - listitem [ref=e4347]:
+          - link "CBBC" [ref=e4348] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/cbbc
+        - listitem [ref=e4349]:
+          - link "CBeebies" [ref=e4350] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/cbeebies
+        - listitem [ref=e4351]:
+          - link "Food" [ref=e4352] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/food
+      - generic [ref=e4353]:
+        - list [ref=e4355]:
+          - listitem [ref=e4356]:
+            - link "Terms of Use" [ref=e4357] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/terms
+          - listitem [ref=e4358]:
+            - link "About the BBC" [ref=e4359] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/aboutthebbc
+          - listitem [ref=e4360]:
+            - link "Privacy Policy" [ref=e4361] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/privacy
+          - listitem [ref=e4362]:
+            - link "Cookies" [ref=e4363] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/cookies
+          - listitem [ref=e4364]:
+            - link "Accessibility Help" [ref=e4365] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/accessibility
+          - listitem [ref=e4366]:
+            - link "Parental Guidance" [ref=e4367] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/iplayer/guidance
+          - listitem [ref=e4368]:
+            - link "Contact the BBC" [ref=e4369] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/contact
+          - listitem [ref=e4370]:
+            - link "Make an editorial complaint" [ref=e4371] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/contact/complaints
+          - listitem [ref=e4372]:
+            - link "BBC emails for you" [ref=e4373] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/bbcnewsletter
+        - paragraph [ref=e4374]:
+          - text: Copyright © 2026 BBC. The BBC is not responsible for the content of external sites.
+          - link "Read about our approach to external linking." [ref=e4375] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links

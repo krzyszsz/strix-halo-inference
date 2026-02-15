@@ -1,0 +1,11 @@
+npm warn exec The following package was not found and will be installed: @playwright/mcp@0.0.68
+Listening on http://localhost:8931
+Put this in your client config:
+{
+  "mcpServers": {
+    "playwright": {
+      "url": "http://localhost:8931/mcp"
+    }
+  }
+}
+For legacy SSE transport support, you can use the /sse endpoint instead.

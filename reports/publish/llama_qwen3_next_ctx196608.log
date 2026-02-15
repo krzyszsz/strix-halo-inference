@@ -1,0 +1,12 @@
+[2026-02-15T16:39:27Z] watchdog start max_seconds=3600 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env MODEL_PATH=/mnt/hf/models/qwen3-next-80b-a3b-instruct-gguf/Qwen3-Next-80B-A3B-Instruct-Q5_K_M.gguf PORT=8113 CTX_SIZE=196608 MAX_TOKENS=1024 PROMPT_MODE=text THREADS=8 GPU_LAYERS=999 OUT_JSON=/home/kj/strix-halo-inference/llama-cpp-vulkan/out/qwen3_next_80b_q5_ctx_196608_75g_retest2.json bash /home/kj/strix-halo-inference/llama-cpp-vulkan/scripts/probe_ctx_once.sh
+[2026-02-15T16:39:28Z] Starting container=llama-ctx-probe-8113 ctx=196608 max_tokens=1024 mem=75g swap=75g reservation=67g
+[2026-02-15T16:39:28Z] Container started id=6a36eeb1e5397e8929708796e90495d934177a65c472cb813135d8526c385b16
+[2026-02-15T16:39:53Z] Waiting for server readiness on port=8113 attempt=6/180 http=503
+[2026-02-15T16:40:24Z] Waiting for server readiness on port=8113 attempt=12/180 http=503
+[2026-02-15T16:40:34Z] Server ready on port=8113; submitting chat request (curl_max_time=1200s)
+[2026-02-15T16:41:04Z] Chat request still running (elapsed=30s ctx=196608)
+[2026-02-15T16:41:04Z] Chat request completed successfully
+/home/kj/strix-halo-inference/llama-cpp-vulkan/out/qwen3_next_80b_q5_ctx_196608_75g_retest2.json bytes=1971
+[2026-02-15T16:41:04Z] Probe completed and artifact saved: /home/kj/strix-halo-inference/llama-cpp-vulkan/out/qwen3_next_80b_q5_ctx_196608_75g_retest2.json
+CTX probe success: model=/mnt/hf/models/qwen3-next-80b-a3b-instruct-gguf/Qwen3-Next-80B-A3B-Instruct-Q5_K_M.gguf ctx=196608 max_tokens=1024 out=/home/kj/strix-halo-inference/llama-cpp-vulkan/out/qwen3_next_80b_q5_ctx_196608_75g_retest2.json
+[2026-02-15T16:41:27Z] watchdog finished cmd_status=0

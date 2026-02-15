@@ -1,0 +1,525 @@
+- generic [active] [ref=e1]:
+  - region "Cookies on the BBC website" [ref=e5]:
+    - generic [ref=e6]:
+      - heading "Cookies on the BBC website" [level=2] [ref=e7]
+      - paragraph [ref=e8]:
+        - link "We use cookies" [ref=e9] [cursor=pointer]:
+          - /url: https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/
+        - text: to give you the best online experience. Strictly necessary cookies are
+        - strong [ref=e10]: "on"
+        - text: by default. Additional cookies are
+        - strong [ref=e11]: "off"
+        - text: by default.
+    - generic [ref=e12]:
+      - button "Accept additional cookies" [ref=e13] [cursor=pointer]
+      - button "Reject additional cookies" [ref=e14] [cursor=pointer]
+      - link "Let me choose" [ref=e15] [cursor=pointer]:
+        - /url: https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/
+  - banner "BBC-wide" [ref=e17]:
+    - generic [ref=e19]:
+      - link "Homepage" [ref=e21] [cursor=pointer]:
+        - /url: https://www.bbc.co.uk
+        - img [ref=e22]
+        - generic [ref=e24]: Homepage
+      - generic:
+        - generic:
+          - heading "Accessibility links" [level=2] [ref=e25]
+          - list:
+            - listitem:
+              - link "Skip to content" [ref=e26] [cursor=pointer]:
+                - /url: "#wr-masthead-location-search-id"
+            - listitem:
+              - link "Accessibility Help" [ref=e27] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/accessibility/
+      - generic [ref=e28]:
+        - link "Sign in" [ref=e32] [cursor=pointer]:
+          - /url: https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fweather&userOrigin=weather_ps&context=weather&sequenceId=2f364502-71e2-4a4c-b306-5957a9e05db3
+          - generic [ref=e33]: Sign in
+        - link "Notifications" [ref=e36] [cursor=pointer]:
+          - /url: https://www.bbc.co.uk/notifications
+          - img [ref=e37]
+          - generic [ref=e39]: Notifications
+      - navigation [ref=e40]:
+        - list [ref=e41]:
+          - listitem [ref=e42]:
+            - link "Home" [ref=e43] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk
+              - generic [ref=e44]: Home
+          - listitem [ref=e45]:
+            - link "News" [ref=e46] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/news
+              - img [ref=e47]
+              - generic [ref=e52]: News
+          - listitem [ref=e53]:
+            - link "Sport" [ref=e54] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/sport
+              - img [ref=e55]
+              - generic [ref=e60]: Sport
+          - listitem [ref=e61]:
+            - link "Weather" [ref=e62] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/weather
+              - img [ref=e63]
+              - generic [ref=e68]: Weather
+          - listitem [ref=e69]:
+            - link "iPlayer" [ref=e70] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/iplayer
+              - img [ref=e71]
+              - generic [ref=e76]: iPlayer
+          - listitem [ref=e77]:
+            - link "Sounds" [ref=e78] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/sounds
+              - img [ref=e79]
+              - generic [ref=e84]: Sounds
+          - listitem [ref=e85]:
+            - link "Bitesize" [ref=e86] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/bitesize
+              - img [ref=e87]
+              - generic [ref=e92]: Bitesize
+      - generic [ref=e93]:
+        - button "All BBC destinations menu" [ref=e94] [cursor=pointer]:
+          - img [ref=e95]
+          - generic [ref=e98]: More menu
+        - search [ref=e99]:
+          - link "Search BBC" [ref=e100] [cursor=pointer]:
+            - /url: https://search.bbc.co.uk/search?scope=all&destination=weather_ps
+            - generic [ref=e101]:
+              - img [ref=e102]
+              - generic [ref=e104]: Search BBC
+  - main [ref=e106]:
+    - heading "BBC Weather" [level=1] [ref=e107]
+    - generic [ref=e110]:
+      - link "BBC Weather" [ref=e112] [cursor=pointer]:
+        - /url: /weather
+        - generic [ref=e115]: BBC Weather
+      - heading "Search for a location" [level=2] [ref=e116]
+      - search [ref=e118]:
+        - generic [ref=e120]:
+          - generic [ref=e123]:
+            - combobox [ref=e124]:
+              - combobox "Enter a town, city or UK postcode" [ref=e125]
+            - button "Search" [ref=e126] [cursor=pointer]:
+              - generic [ref=e127]: Search
+              - img [ref=e128]
+          - button "Find my location" [ref=e130] [cursor=pointer]:
+            - generic [ref=e131]: Find my location
+            - img [ref=e132]
+    - generic [ref=e136]:
+      - heading "UK Summary" [level=2] [ref=e137]
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - generic [ref=e141]:
+            - link "UK weather warnings issued" [ref=e143] [cursor=pointer]:
+              - /url: /weather/warnings/weather
+              - img [ref=e145]
+              - generic [ref=e148]:
+                - generic [ref=e149]: UK weather warnings issued
+                - img [ref=e151]
+            - link "UK flood warnings issued" [ref=e154] [cursor=pointer]:
+              - /url: /weather/warnings/floods
+              - img [ref=e156]
+              - generic [ref=e159]:
+                - generic [ref=e160]: UK flood warnings issued
+                - img [ref=e162]
+          - generic [ref=e164]:
+            - generic [ref=e646]:
+              - generic [ref=e165]: Sign In Banner
+              - generic [ref=e169]:
+                - generic [ref=e170]:
+                  - heading "Personalise your weather" [level=2] [ref=e171]
+                  - paragraph [ref=e172]: Add your favourite places and get your weather faster
+                - generic [ref=e174]:
+                  - link "Sign in" [ref=e176] [cursor=pointer]:
+                    - /url: https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fweather&sequenceId=d3d37770-4f25-4a41-8ae4-c10c5949a076&userOrigin=weather
+                    - img [ref=e178]
+                    - generic [ref=e180]: Sign in
+                  - generic [ref=e181]: or
+                  - link "Register" [ref=e182] [cursor=pointer]:
+                    - /url: https://session.bbc.co.uk/session?action=register&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fweather&sequenceId=d3d37770-4f25-4a41-8ae4-c10c5949a076&userOrigin=weather
+            - generic [ref=e183]:
+              - img [ref=e184]
+              - generic [ref=e188]:
+                - generic [ref=e190]:
+                  - heading "Become a Weather Watcher" [level=2] [ref=e191]
+                  - paragraph [ref=e192]: Sign up to share photos with thousands of Weather Watchers and across the BBC.
+                - link "Get started" [ref=e195] [cursor=pointer]:
+                  - /url: /weatherwatchers/
+                  - generic [ref=e196]: Get started
+        - generic [ref=e199]:
+          - generic [ref=e201]:
+            - generic [ref=e202]: UK map with selected locations
+            - list:
+              - listitem [ref=e204]:
+                - link "Lerwick , Light Rain Showers" [ref=e205] [cursor=pointer]:
+                  - /url: /weather/2644605
+                  - generic [ref=e206]: Lerwick
+                  - generic [ref=e207]: ", Light Rain Showers"
+              - listitem [ref=e210]:
+                - link "Inverness , Sleet Showers" [ref=e211] [cursor=pointer]:
+                  - /url: /weather/2646088
+                  - generic [ref=e214]: Inverness
+                  - generic [ref=e215]: ", Sleet Showers"
+              - listitem [ref=e216]:
+                - link "Edinburgh , Light Rain" [ref=e217] [cursor=pointer]:
+                  - /url: /weather/2650225
+                  - generic [ref=e220]: Edinburgh
+                  - generic [ref=e221]: ", Light Rain"
+              - listitem [ref=e222]:
+                - link "Belfast , Drizzle" [ref=e223] [cursor=pointer]:
+                  - /url: /weather/2655984
+                  - generic [ref=e226]: Belfast
+                  - generic [ref=e227]: ", Drizzle"
+              - listitem [ref=e228]:
+                - link "Hull , Light Rain" [ref=e229] [cursor=pointer]:
+                  - /url: /weather/2645425
+                  - generic [ref=e232]: Hull
+                  - generic [ref=e233]: ", Light Rain"
+              - listitem [ref=e234]:
+                - link "Manchester , Light Rain Showers" [ref=e235] [cursor=pointer]:
+                  - /url: /weather/2643123
+                  - generic [ref=e236]: Manchester
+                  - generic [ref=e237]: ", Light Rain Showers"
+              - listitem [ref=e240]:
+                - link "London , Light Rain" [ref=e241] [cursor=pointer]:
+                  - /url: /weather/2643743
+                  - generic [ref=e244]: London
+                  - generic [ref=e245]: ", Light Rain"
+              - listitem [ref=e246]:
+                - link "Cardiff , Light Rain" [ref=e247] [cursor=pointer]:
+                  - /url: /weather/2653822
+                  - generic [ref=e248]: Cardiff
+                  - generic [ref=e249]: ", Light Rain"
+              - listitem [ref=e252]:
+                - link "St Helier , Light Rain Showers" [ref=e253] [cursor=pointer]:
+                  - /url: /weather/3042091
+                  - generic [ref=e256]: St Helier
+                  - generic [ref=e257]: ", Light Rain Showers"
+          - link "Detailed map" [ref=e259] [cursor=pointer]:
+            - /url: /weather/map
+            - img [ref=e261]
+            - generic [ref=e263]: Detailed map
+    - generic [ref=e267]:
+      - heading "Forecast for the UK" [level=2] [ref=e271]
+      - generic [ref=e272]:
+        - generic [ref=e273]:
+          - heading "Latest forecast for the UK" [level=3] [ref=e274]
+          - generic "Play Latest forecast for the UK" [ref=e648]:
+            - button "Play Latest forecast for the UK" [ref=e649] [cursor=pointer]:
+              - generic:
+                - generic:
+                  - img
+            - time: 01:30
+          - list [ref=e287]:
+            - listitem [ref=e289]:
+              - generic [ref=e290]: Last updated
+              - generic [ref=e293]:
+                - img [ref=e295]
+                - text: 2 hours ago
+        - generic [ref=e297]:
+          - heading "Latest forecast for UK" [level=3] [ref=e298]
+          - generic [ref=e299]: Last updated 46 minutes ago
+          - generic [ref=e300]:
+            - generic [ref=e303]:
+              - paragraph [ref=e304]: Tonight
+              - paragraph [ref=e305]: Tonight will see the last of the rain and hill snow clear the north-east, leaving all with variable cloud cover, clear breaks, and some scattered showers. A less cold night than the previous.
+            - button "Show More" [ref=e307] [cursor=pointer]:
+              - img [ref=e309]
+              - text: Show More
+          - list [ref=e313]:
+            - listitem [ref=e315]:
+              - generic [ref=e316]: Last updated
+              - generic [ref=e319]:
+                - img [ref=e321]
+                - text: 46 minutes ago
+    - generic [ref=e326]:
+      - heading "Features" [level=2] [ref=e330]
+      - list [ref=e332]:
+        - listitem [ref=e333]:
+          - generic [ref=e336]:
+            - generic [ref=e337]:
+              - generic [ref=e338]:
+                - link "Will the icy blast give way to more rain?" [ref=e339] [cursor=pointer]:
+                  - /url: /weather/articles/cwy8dwzlgj9o
+                  - paragraph [ref=e341]: Will the icy blast give way to more rain?
+                - paragraph [ref=e342]: Sarah Keith-Lucas explains why it's suddenly turned cold after being so wet so far this year. She also looks to see if there anything more settled on the horizon.
+              - list [ref=e345]:
+                - listitem [ref=e346]:
+                  - generic [ref=e347]: Attribution
+                  - link "Weather" [ref=e350] [cursor=pointer]:
+                    - /url: /weather
+                    - generic [ref=e351]: Weather
+                - listitem [ref=e353]:
+                  - generic [ref=e354]: Posted
+                  - generic [ref=e357]:
+                    - generic [ref=e358]: 1 day ago
+                    - text: 1d
+            - img "A road runs through trees and fields coated with white snow and blue sky behind" [ref=e363]
+        - listitem [ref=e364]:
+          - generic [ref=e367]:
+            - generic [ref=e368]:
+              - generic [ref=e369]:
+                - link "How do UK weather warnings work? Video, 00:01:47" [ref=e370] [cursor=pointer]:
+                  - /url: /weather/features/45593113
+                  - paragraph [ref=e372]:
+                    - generic [ref=e373]: How do UK weather warnings work? Video, 00:01:47
+                    - text: How do UK weather warnings work?
+                - paragraph [ref=e374]: BBC Weather carries National Severe Weather Warnings which are issued by the Met Office. But how does the warning system work?
+              - list [ref=e377]:
+                - listitem [ref=e378]:
+                  - generic [ref=e379]: Attribution
+                  - link "Features" [ref=e382] [cursor=pointer]:
+                    - /url: /weather/features
+                    - generic [ref=e383]: Features
+                - listitem [ref=e385]:
+                  - generic [ref=e386]: Posted
+                  - generic [ref=e389]:
+                    - generic [ref=e390]: 27 October 2021
+                    - text: 27 Oct 2021
+            - generic [ref=e392]:
+              - generic [ref=e394]:
+                - img [ref=e396]
+                - generic [ref=e398]: 1:47
+              - img "Chris Fawkes explains how the UK weather warnings matrix works." [ref=e401]
+        - listitem [ref=e402]:
+          - generic [ref=e405]:
+            - generic [ref=e406]:
+              - generic [ref=e407]:
+                - link "How to get the best view of the Northern Lights in 2026" [ref=e408] [cursor=pointer]:
+                  - /url: /news/articles/clyzw90xnjzo
+                  - paragraph [ref=e410]: How to get the best view of the Northern Lights in 2026
+                - paragraph [ref=e411]: Experts say 2026 will be a peak year for aurora spotting as the Sun reaches the maximum of its cycle.
+              - list [ref=e414]:
+                - listitem [ref=e415]:
+                  - generic [ref=e416]: Attribution
+                  - link "Scotland" [ref=e419] [cursor=pointer]:
+                    - /url: /news/scotland
+                    - generic [ref=e420]:
+                      - img [ref=e422]
+                      - text: Scotland
+                - listitem [ref=e428]:
+                  - generic [ref=e429]: Posted
+                  - generic [ref=e432]:
+                    - generic [ref=e433]: 16 hours ago
+                    - text: 16h
+            - img "Alternative description The Northern Lights in the north coast of Scotland." [ref=e438]
+        - listitem [ref=e439]:
+          - generic [ref=e442]:
+            - generic [ref=e443]:
+              - generic [ref=e444]:
+                - link "Weather for the week ahead Video, 00:03:29" [ref=e445] [cursor=pointer]:
+                  - /url: /weather/videos/clyvynjvj7yo
+                  - paragraph [ref=e447]:
+                    - generic [ref=e448]: Weather for the week ahead Video, 00:03:29
+                    - text: Weather for the week ahead
+                - paragraph [ref=e449]: A changeable week ahead, bringing rain, hill snow, and spells of sunshine. Stav Danaos has the details.
+              - list [ref=e452]:
+                - listitem [ref=e453]:
+                  - generic [ref=e454]: Attribution
+                  - link "Weather" [ref=e457] [cursor=pointer]:
+                    - /url: /weather
+                    - generic [ref=e458]: Weather
+                - listitem [ref=e460]:
+                  - generic [ref=e461]: Posted
+                  - generic [ref=e464]:
+                    - generic [ref=e465]: 2 hours ago
+                    - text: 2h
+            - generic [ref=e467]:
+              - generic [ref=e469]:
+                - img [ref=e471]
+                - generic [ref=e473]: 3:29
+              - img "Llanelli, Carmarthenshire" [ref=e476]
+        - listitem [ref=e477]:
+          - generic [ref=e480]:
+            - generic [ref=e481]:
+              - link "How to drive safely in icy weather. Video, 00:00:56" [ref=e483] [cursor=pointer]:
+                - /url: /weather/videos/cvgkx1lej3go
+                - paragraph [ref=e485]:
+                  - generic [ref=e486]: How to drive safely in icy weather. Video, 00:00:56
+                  - text: How to drive safely in icy weather
+              - list [ref=e489]:
+                - listitem [ref=e490]:
+                  - generic [ref=e491]: Attribution
+                  - link "Weather" [ref=e494] [cursor=pointer]:
+                    - /url: /weather
+                    - generic [ref=e495]: Weather
+                - listitem [ref=e497]:
+                  - generic [ref=e498]: Posted
+                  - generic [ref=e501]:
+                    - generic [ref=e502]: 2 days ago
+                    - text: 2d
+            - generic [ref=e504]:
+              - generic [ref=e506]:
+                - img [ref=e508]
+                - generic [ref=e510]: 0:56
+              - img "Weather presenter Matt Taylor, looking shocked with his mouth open as he grips the steering wheel of a small car, spinning around a skid pan." [ref=e513]
+    - generic [ref=e516]:
+      - heading "Settings" [level=2] [ref=e520]
+      - list [ref=e521]:
+        - listitem [ref=e522]:
+          - generic [ref=e524]:
+            - text: Language
+            - generic [ref=e526]:
+              - combobox "Language" [ref=e527]:
+                - option "English" [selected]
+                - option "Cymraeg"
+                - option "Gaeilge"
+                - option "Gàidhlig"
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - img
+        - listitem [ref=e528]:
+          - generic [ref=e530]:
+            - text: Temperature
+            - generic [ref=e532]:
+              - combobox "Temperature" [ref=e533]:
+                - option "Celsius" [selected]
+                - option "Fahrenheit"
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - img
+        - listitem [ref=e534]:
+          - generic [ref=e536]:
+            - text: Wind speed
+            - generic [ref=e538]:
+              - combobox "Wind speed" [ref=e539]:
+                - option "Miles per hour" [selected]
+                - option "Kilometres per hour"
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - img
+    - navigation "More Weather" [ref=e541]:
+      - generic [ref=e542]:
+        - heading "More Weather" [level=2] [ref=e543]
+        - list [ref=e544]:
+          - listitem [ref=e545]:
+            - heading "UK" [level=3] [ref=e547]
+            - list [ref=e548]:
+              - listitem [ref=e549]:
+                - link "Weather Warnings" [ref=e550] [cursor=pointer]:
+                  - /url: /weather/warnings/weather
+              - listitem [ref=e551]:
+                - link "Flood Warnings" [ref=e552] [cursor=pointer]:
+                  - /url: /weather/warnings/floods
+              - listitem [ref=e553]:
+                - link "Monthly Outlook" [ref=e554] [cursor=pointer]:
+                  - /url: /weather/outlook
+              - listitem [ref=e555]:
+                - link "Coast & Sea" [ref=e556] [cursor=pointer]:
+                  - /url: /weather/coast-and-sea
+              - listitem [ref=e557]:
+                - link "Weather Watchers" [ref=e558] [cursor=pointer]:
+                  - /url: /weatherwatchers
+          - listitem [ref=e559]:
+            - heading "About BBC Weather" [level=3] [ref=e561]
+            - list [ref=e562]:
+              - listitem [ref=e563]:
+                - link "FAQs" [ref=e564] [cursor=pointer]:
+                  - /url: /weather/articles/c0qlk174vzjo
+              - listitem [ref=e565]:
+                - link "Feeds" [ref=e566] [cursor=pointer]:
+                  - /url: /weather/articles/czjnrgv4pdko
+          - listitem [ref=e567]:
+            - heading "Elsewhere" [level=3] [ref=e569]
+            - list [ref=e570]:
+              - listitem [ref=e571]:
+                - link "MeteoGroup , external" [ref=e572] [cursor=pointer]:
+                  - /url: https://www.meteogroup.com
+                  - generic [ref=e573]:
+                    - text: MeteoGroup
+                    - generic [ref=e574]: ", external"
+              - listitem [ref=e575]:
+                - link "World Meteorological Organization , external" [ref=e576] [cursor=pointer]:
+                  - /url: https://wmo.int
+                  - generic [ref=e577]:
+                    - text: World Meteorological Organization
+                    - generic [ref=e578]: ", external"
+              - listitem [ref=e579]:
+                - link "Met Office , external" [ref=e580] [cursor=pointer]:
+                  - /url: http://www.metoffice.gov.uk
+                  - generic [ref=e581]:
+                    - text: Met Office
+                    - generic [ref=e582]: ", external"
+    - generic [ref=e586]:
+      - paragraph [ref=e587]:
+        - text: BBC Weather in association with
+        - link "MeteoGroup , external" [ref=e588] [cursor=pointer]:
+          - /url: https://www.meteogroup.com
+          - text: MeteoGroup
+          - generic [ref=e589]: ", external"
+      - paragraph [ref=e590]: All times are Greenwich Mean Time (Europe/London, GMT) unless otherwise stated.
+  - generic [ref=e591]:
+    - complementary [ref=e592]:
+      - navigation "BBC" [ref=e594]:
+        - heading "Explore the BBC" [level=2] [ref=e595]
+        - navigation [ref=e597]:
+          - list [ref=e598]:
+            - listitem [ref=e599]:
+              - link "Home" [ref=e600] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk
+            - listitem [ref=e601]:
+              - link "News" [ref=e602] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/news
+            - listitem [ref=e603]:
+              - link "Sport" [ref=e604] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/sport
+            - listitem [ref=e605]:
+              - link "Weather" [ref=e606] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/weather
+            - listitem [ref=e607]:
+              - link "iPlayer" [ref=e608] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/iplayer
+            - listitem [ref=e609]:
+              - link "Sounds" [ref=e610] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/sounds
+            - listitem [ref=e611]:
+              - link "Bitesize" [ref=e612] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/bitesize
+            - listitem [ref=e613]:
+              - link "CBeebies" [ref=e614] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/cbeebies
+            - listitem [ref=e615]:
+              - link "CBBC" [ref=e616] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/cbbc
+            - listitem [ref=e617]:
+              - link "Food" [ref=e618] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/food
+    - contentinfo [ref=e619]:
+      - generic [ref=e622]:
+        - list [ref=e623]:
+          - listitem [ref=e624]:
+            - link "Terms of Use" [ref=e625] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/terms/
+          - listitem [ref=e626]:
+            - link "About the BBC" [ref=e627] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/aboutthebbc
+          - listitem [ref=e628]:
+            - link "Privacy Policy" [ref=e629] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/privacy/
+          - listitem [ref=e630]:
+            - link "Cookies" [ref=e631] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/cookies/
+          - listitem [ref=e632]:
+            - link "Accessibility Help" [ref=e633] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/accessibility/
+          - listitem [ref=e634]:
+            - link "Parental Guidance" [ref=e635] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/guidance
+          - listitem [ref=e636]:
+            - link "Contact the BBC" [ref=e637] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/contact
+          - listitem [ref=e638]:
+            - link "Make an editorial complaint" [ref=e639] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/contact/complaints/
+          - listitem [ref=e640]:
+            - link "BBC emails for you" [ref=e641] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/bbcnewsletter
+        - generic [ref=e642]:
+          - emphasis [ref=e643]: Copyright © 2026 BBC.
+          - text: The BBC is not responsible for the content of external sites.
+          - link "Read about our approach to external linking." [ref=e645] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links

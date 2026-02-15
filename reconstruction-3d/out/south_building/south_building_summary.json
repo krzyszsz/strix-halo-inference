@@ -1,0 +1,33 @@
+{
+  "model_id": "facebook/VGGT-1B",
+  "device": "cuda",
+  "dtype": "torch.bfloat16",
+  "input_image_count": 12,
+  "input_images": [
+    "reconstruction-3d/data/south_building/images/P1180168.JPG",
+    "reconstruction-3d/data/south_building/images/P1180169.JPG",
+    "reconstruction-3d/data/south_building/images/P1180170.JPG",
+    "reconstruction-3d/data/south_building/images/P1180171.JPG",
+    "reconstruction-3d/data/south_building/images/P1180172.JPG",
+    "reconstruction-3d/data/south_building/images/P1180173.JPG",
+    "reconstruction-3d/data/south_building/images/P1180174.JPG",
+    "reconstruction-3d/data/south_building/images/P1180175.JPG",
+    "reconstruction-3d/data/south_building/images/P1180176.JPG",
+    "reconstruction-3d/data/south_building/images/P1180177.JPG",
+    "reconstruction-3d/data/south_building/images/P1180178.JPG",
+    "reconstruction-3d/data/south_building/images/P1180179.JPG"
+  ],
+  "load_resolution": 768,
+  "model_resolution": 448,
+  "confidence_threshold": 0.0,
+  "confidence_min": 1.0,
+  "confidence_max": 30.22428321838379,
+  "confidence_mean": 10.04231071472168,
+  "confidence_fallback_threshold": null,
+  "max_points": 200000,
+  "num_points_written": 200000,
+  "preview_points": 60000,
+  "out_ply": "reconstruction-3d/out/south_building/south_building_points.ply",
+  "out_preview": "reconstruction-3d/out/south_building/south_building_points_preview.png",
+  "elapsed_seconds": 159.41
+}

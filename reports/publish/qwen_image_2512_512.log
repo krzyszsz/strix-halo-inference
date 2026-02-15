@@ -1,0 +1,5 @@
+[2026-02-15T13:40:23Z] watchdog start max_seconds=3600 idle_seconds=1800 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env MODEL_ID=/mnt/hf/models/qwen-image-2512 WIDTH=512 HEIGHT=512 STEPS=20 DTYPE=bfloat16 OUT_PATH=/home/kj/strix-halo-inference/qwen-image/out/qwen_image_2512_512_2026-02-11.png bash /home/kj/strix-halo-inference/qwen-image/scripts/test_qwen_image.sh
+510a359c30437dd0c2cbfbbfee5f9646b3a2ca552b3fcd32a88106eea85d5b2a
+Waiting for container health on port 8000 (retries=180, sleep=5s)...
+/home/kj/strix-halo-inference/qwen-image/out/qwen_image_2512_512_2026-02-11.png 349966
+[2026-02-15T13:43:23Z] watchdog finished cmd_status=0

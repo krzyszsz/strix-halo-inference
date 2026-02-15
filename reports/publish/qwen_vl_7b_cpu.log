@@ -1,0 +1,5 @@
+[2026-02-15T16:35:57Z] watchdog start max_seconds=2400 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env FORCE_CPU=1 MAX_NEW_TOKENS=256 INPUT_IMAGE=/home/kj/strix-halo-inference/qwen-image/out/qwen_image_512_75g_retest2.png OUT_PATH=/home/kj/strix-halo-inference/qwen-vl/out/qwen_vl_describe_75g_retest2.txt bash /home/kj/strix-halo-inference/qwen-vl/scripts/test_qwen_vl_7b.sh
+Attempt: DTYPE=float32 ATTN_IMPL=eager DEVICE_MAP=cpu
+f4784f56a711826c2715acf2d0c7fd0b1175127d5c01b0c8d85bda8d4705c21f
+/home/kj/strix-halo-inference/qwen-vl/out/qwen_vl_describe_75g_retest2.txt 409
+[2026-02-15T16:37:57Z] watchdog finished cmd_status=0

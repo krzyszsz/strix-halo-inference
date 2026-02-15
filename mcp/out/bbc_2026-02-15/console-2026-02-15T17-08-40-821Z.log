@@ -1,0 +1,3 @@
+[      24ms] [WARNING] Error with Feature-Policy header: Unrecognized feature: 'document-domain'. @ :0
+[      24ms] [WARNING] Error with Feature-Policy header: Some features are specified in both Feature-Policy and Permissions-Policy header: accelerometer, autoplay, camera, encrypted-media, fullscreen, geolocation, gyroscope, magnetometer, microphone, midi, payment, picture-in-picture, screen-wake-lock, sync-xhr, usb, xr-spatial-tracking. Values defined in Permissions-Policy header will be used. @ :0
+[      24ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'document-domain'. @ :0

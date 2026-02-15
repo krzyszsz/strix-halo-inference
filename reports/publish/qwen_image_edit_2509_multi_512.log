@@ -1,0 +1,27 @@
+[2026-02-15T15:25:26Z] watchdog start max_seconds=3600 idle_seconds=1800 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env MODE=multi MODEL_ID=/mnt/hf/models/qwen-image-edit-2509 HEIGHT=512 WIDTH=512 STEPS=8 MEMORY_SWAP=140g INPUT_IMAGE_A=/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png INPUT_IMAGE_B=/home/kj/strix-halo-inference/qwen-image/out/qwen_image_512_75g_retest2.png PROMPT='Create one coherent scene by placing the human from image A into image B. Keep the person identity and face natural, match lighting and perspective, keep both subjects visible.' OUT_PATH=/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png bash /home/kj/strix-halo-inference/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
+bb9e4f4b6d82ceba944003ae443542ef45436314088c0c574eec6ff8c32be20d
+Waiting for container health on port 8012 (retries=240, sleep=5s)...
+/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png 319635
+[2026-02-15T15:46:01Z] watchdog start max_seconds=3600 idle_seconds=1800 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env MODE=multi MODEL_ID=/mnt/hf/models/qwen-image-edit-2509 HEIGHT=512 WIDTH=512 STEPS=8 MEMORY_SWAP=140g INPUT_IMAGE_A=/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png INPUT_IMAGE_B=/home/kj/strix-halo-inference/qwen-image/out/qwen_image_512_75g_retest2.png PROMPT='Create one coherent scene by placing the human from image A into image B. Keep the person identity and face natural, match lighting and perspective, keep both subjects visible.' OUT_PATH=/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png bash /home/kj/strix-halo-inference/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
+6b59a53ff8f47f41299d35d8dfc7e89eb96da56c0ac0c7aa202d23ea1db29f61
+Waiting for container health on port 8012 (retries=240, sleep=5s)...
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+Waiting for edit request to finish... (pid=776267)
+/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png 292538
+[2026-02-15T15:55:31Z] watchdog finished cmd_status=0

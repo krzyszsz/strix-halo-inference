@@ -1,0 +1,20 @@
+[2026-02-15T14:12:54Z] watchdog start max_seconds=3600 idle_seconds=1800 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env MODEL_ID=/mnt/hf/models/flux2-klein-9b HEIGHT=512 WIDTH=512 STEPS=4 GUIDANCE=1.0 MODEL_CPU_OFFLOAD=1 OUT_PATH=/home/kj/strix-halo-inference/stable-diffusion/out/flux2_klein_9b_512_t2i_reconfirm_2026-02-12.png bash /home/kj/strix-halo-inference/stable-diffusion/scripts/test_flux2_klein_probe.sh
+/opt/venv/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+loading Flux2KleinPipeline from /mnt/hf/models/flux2-klein-9b
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.34it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.87it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.52it/s]
+Loading pipeline components...:  20%|██        | 1/5 [00:00<00:02,  1.72it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][A
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  3.68it/s][A
+Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  2.77it/s][A
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  2.59it/s][ALoading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  3.51it/s]
+Loading pipeline components...:  40%|████      | 2/5 [00:01<00:02,  1.09it/s]Loading pipeline components...:  60%|██████    | 3/5 [00:01<00:01,  1.80it/s]Loading pipeline components...:  80%|████████  | 4/5 [00:02<00:00,  2.43it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:02<00:00,  2.43it/s]
+enabling model CPU offload
+running generation
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:10<00:31, 10.49s/it]100%|██████████| 4/4 [00:10<00:00,  2.63s/it]
+saved /out/flux2_klein_9b_512_t2i_reconfirm_2026-02-12.png
+Saved: /home/kj/strix-halo-inference/stable-diffusion/out/flux2_klein_9b_512_t2i_reconfirm_2026-02-12.png
+[2026-02-15T14:15:24Z] watchdog finished cmd_status=0

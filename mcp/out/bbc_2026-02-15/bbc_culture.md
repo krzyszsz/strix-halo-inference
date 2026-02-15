@@ -1,0 +1,407 @@
+- generic [active] [ref=e1]:
+  - region "Cookies on the BBC website" [ref=e5]:
+    - generic [ref=e6]:
+      - heading "Cookies on the BBC website" [level=2] [ref=e7]
+      - paragraph [ref=e8]:
+        - link "We use cookies" [ref=e9] [cursor=pointer]:
+          - /url: https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/
+        - text: to give you the best online experience. Strictly necessary cookies are
+        - strong [ref=e10]: "on"
+        - text: by default. Additional cookies are
+        - strong [ref=e11]: "off"
+        - text: by default.
+    - generic [ref=e12]:
+      - button "Accept additional cookies" [ref=e13] [cursor=pointer]
+      - button "Reject additional cookies" [ref=e14] [cursor=pointer]
+      - link "Let me choose" [ref=e15] [cursor=pointer]:
+        - /url: https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/
+  - banner "BBC-wide" [ref=e17]:
+    - generic [ref=e19]:
+      - link "Homepage" [ref=e21] [cursor=pointer]:
+        - /url: https://www.bbc.co.uk
+        - img [ref=e22]
+        - generic [ref=e24]: Homepage
+      - generic:
+        - generic:
+          - heading "Accessibility links" [level=2] [ref=e25]
+          - list:
+            - listitem:
+              - link "Skip to content" [ref=e26] [cursor=pointer]:
+                - /url: "#orb-modules"
+            - listitem:
+              - link "Accessibility Help" [ref=e27] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/accessibility/
+      - generic [ref=e28]:
+        - link "Sign in" [ref=e32] [cursor=pointer]:
+          - /url: https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fculture&userOrigin=FEATURE_SITES_GNL&context=feature_sites&sequenceId=2f364502-71e2-4a4c-b306-5957a9e05db3
+          - generic [ref=e33]: Sign in
+        - link "Notifications" [ref=e36] [cursor=pointer]:
+          - /url: https://www.bbc.co.uk/notifications
+          - img [ref=e37]
+          - generic [ref=e39]: Notifications
+      - navigation [ref=e40]:
+        - list [ref=e41]:
+          - listitem [ref=e42]:
+            - link "Home" [ref=e43] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk
+              - generic [ref=e44]: Home
+          - listitem [ref=e45]:
+            - link "News" [ref=e46] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/news
+              - img [ref=e47]
+              - generic [ref=e52]: News
+          - listitem [ref=e53]:
+            - link "Sport" [ref=e54] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/sport
+              - img [ref=e55]
+              - generic [ref=e60]: Sport
+          - listitem [ref=e61]:
+            - link "Weather" [ref=e62] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/weather
+              - img [ref=e63]
+              - generic [ref=e68]: Weather
+          - listitem [ref=e69]:
+            - link "iPlayer" [ref=e70] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/iplayer
+              - img [ref=e71]
+              - generic [ref=e76]: iPlayer
+          - listitem [ref=e77]:
+            - link "Sounds" [ref=e78] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/sounds
+              - img [ref=e79]
+              - generic [ref=e84]: Sounds
+          - listitem [ref=e85]:
+            - link "Bitesize" [ref=e86] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/bitesize
+              - img [ref=e87]
+              - generic [ref=e92]: Bitesize
+      - generic [ref=e93]:
+        - button "All BBC destinations menu" [ref=e94] [cursor=pointer]:
+          - img [ref=e95]
+          - generic [ref=e98]: More menu
+        - search [ref=e99]:
+          - link "Search BBC" [ref=e100] [cursor=pointer]:
+            - /url: https://search.bbc.co.uk/search?scope=all&destination=FEATURE_SITES_GNL
+            - generic [ref=e101]:
+              - img [ref=e102]
+              - generic [ref=e104]: Search BBC
+  - generic [ref=e106]:
+    - navigation [ref=e108]:
+      - navigation [ref=e109]:
+        - generic [ref=e111]:
+          - link [ref=e113] [cursor=pointer]:
+            - /url: /culture
+            - img [ref=e115]
+          - generic [ref=e124]:
+            - link "Home" [ref=e125] [cursor=pointer]:
+              - /url: /culture
+              - paragraph [ref=e126]: Home
+            - link "Film" [ref=e127] [cursor=pointer]:
+              - /url: /culture/columns/film
+              - paragraph [ref=e128]: Film
+            - link "Art" [ref=e129] [cursor=pointer]:
+              - /url: /culture/columns/art
+              - paragraph [ref=e130]: Art
+            - link "Books" [ref=e131] [cursor=pointer]:
+              - /url: /culture/tags/books
+              - paragraph [ref=e132]: Books
+            - link "Music" [ref=e133] [cursor=pointer]:
+              - /url: /culture/columns/music
+              - paragraph [ref=e134]: Music
+            - link "TV" [ref=e135] [cursor=pointer]:
+              - /url: /culture/tags/television
+              - paragraph [ref=e136]: TV
+            - link "Style" [ref=e137] [cursor=pointer]:
+              - /url: /culture/style
+              - paragraph [ref=e138]: Style
+          - button "Open more navigation" [ref=e141] [cursor=pointer]:
+            - paragraph [ref=e143]: More
+            - generic [ref=e145]: 
+    - generic [ref=e146]:
+      - generic [ref=e149]:
+        - paragraph [ref=e150]: This website is produced by BBC Global News Ltd, a commercial company that is part of BBC Studios, owned by the BBC (and just the BBC). No money from the licence fee was used to create this website. The money we make from it is re-invested to help fund the BBC’s international journalism.
+        - button "Close disclaimer" [expanded] [ref=e151] [cursor=pointer]:
+          - generic [ref=e152]: 
+      - main [ref=e153]:
+        - generic [ref=e154]:
+          - generic [ref=e156]:
+            - generic:
+              - generic [ref=e158]:
+                - link "Film |" [ref=e159] [cursor=pointer]:
+                  - /url: /culture/columns/film
+                - link "Berlin Film Festival" [ref=e160] [cursor=pointer]:
+                  - /url: /culture/tags/berlin-film-festival
+              - link "A moving, tragic biopic of a tortured jazz great" [ref=e162] [cursor=pointer]:
+                - /url: /culture/article/20260215-everybody-digs-bill-evans-review-a-moving-tragic-biopic-of-a-tortured-jazz-great
+                - heading "A moving, tragic biopic of a tortured jazz great" [level=1] [ref=e163]
+                - separator [ref=e164]
+              - heading "Everybody Digs Bill Evans will draw you to the brilliant pianist's music" [level=2] [ref=e165]:
+                - link "Everybody Digs Bill Evans will draw you to the brilliant pianist's music" [ref=e166] [cursor=pointer]:
+                  - /url: /culture/article/20260215-everybody-digs-bill-evans-review-a-moving-tragic-biopic-of-a-tortured-jazz-great
+              - link "Read More" [ref=e168] [cursor=pointer]:
+                - /url: /culture/article/20260215-everybody-digs-bill-evans-review-a-moving-tragic-biopic-of-a-tortured-jazz-great
+                - text: Read More
+            - button "down-arrow" [ref=e169] [cursor=pointer]:
+              - img "down-arrow" [ref=e170]
+            - 'img "(Image Credit: Shane O'' Connor)" [ref=e171]'
+          - generic [ref=e173]:
+            - paragraph [ref=e174]: Editor's Picks
+            - generic [ref=e179]:
+              - generic [ref=e182]:
+                - 'link "Tyra Banks poses with three models (Credit: Getty Images)" [ref=e184] [cursor=pointer]':
+                  - /url: /culture/article/20260213-how-americas-next-top-model-became-a-tv-horror-show
+                  - 'img "Tyra Banks poses with three models (Credit: Getty Images)" [ref=e186]'
+                - generic [ref=e187]:
+                  - link "Reality TV" [ref=e188] [cursor=pointer]:
+                    - /url: /culture/tags/reality-tv
+                  - link "How America's Next Top Model became a horror show" [ref=e189] [cursor=pointer]:
+                    - /url: /culture/article/20260213-how-americas-next-top-model-became-a-tv-horror-show
+                    - heading "How America's Next Top Model became a horror show" [level=2] [ref=e190]
+                  - paragraph [ref=e191]: By Laura Martin
+              - generic [ref=e192]:
+                - generic [ref=e194]:
+                  - 'link "Lox Pratt as Jack in Lord of the Flies (Credit: Eleven Film)" [ref=e195] [cursor=pointer]':
+                    - /url: /culture/article/20260213-lord-of-the-flies-review
+                    - 'img "Lox Pratt as Jack in Lord of the Flies (Credit: Eleven Film)" [ref=e198]'
+                  - link "Berlin Film Festival" [ref=e199] [cursor=pointer]:
+                    - /url: /culture/tags/berlin-film-festival
+                  - link "Lord of the Flies is a 'chilling' nightmare" [ref=e201] [cursor=pointer]:
+                    - /url: /culture/article/20260213-lord-of-the-flies-review
+                    - heading "Lord of the Flies is a 'chilling' nightmare" [level=2] [ref=e202]
+                  - generic [ref=e206]: By Hugh Montgomery
+                - generic [ref=e208]:
+                  - 'link "John F Kennedy Jr and Carolyn Bessette smiling at each other (Credit: Getty Images)" [ref=e209] [cursor=pointer]':
+                    - /url: /culture/article/20260212-carolyn-bessette-kennedy-the-true-story-behind-the-mysterious-and-tragic-us-icon
+                    - 'img "John F Kennedy Jr and Carolyn Bessette smiling at each other (Credit: Getty Images)" [ref=e212]'
+                  - link "Television" [ref=e213] [cursor=pointer]:
+                    - /url: /culture/tags/television
+                  - link "The true story behind a tragic US icon" [ref=e215] [cursor=pointer]:
+                    - /url: /culture/article/20260212-carolyn-bessette-kennedy-the-true-story-behind-the-mysterious-and-tragic-us-icon
+                    - heading "The true story behind a tragic US icon" [level=2] [ref=e216]
+                  - generic [ref=e220]: By Neil Armstrong
+                - generic [ref=e222]:
+                  - 'link "A still from The Addams Family (Credit: Alamy)" [ref=e223] [cursor=pointer]':
+                    - /url: /culture/article/20260209-12-of-the-best-alternative-romantic-films
+                    - 'img "A still from The Addams Family (Credit: Alamy)" [ref=e226]'
+                  - link "Watch List" [ref=e227] [cursor=pointer]:
+                    - /url: /culture/columns/watch-list
+                  - link "12 of the best alternative romantic films" [ref=e229] [cursor=pointer]:
+                    - /url: /culture/article/20260209-12-of-the-best-alternative-romantic-films
+                    - heading "12 of the best alternative romantic films" [level=2] [ref=e230]
+                  - generic [ref=e234]: By BBC Features team
+          - generic [ref=e237]:
+            - 'img "(Image credit: Woodnest/ Sindre Ellingsen)" [ref=e239]'
+            - generic [ref=e240]:
+              - link "Style" [ref=e241] [cursor=pointer]:
+                - /url: /culture/style
+                - generic [ref=e242]: Style
+              - link "10 of the world's most spectacular tree houses" [ref=e243] [cursor=pointer]:
+                - /url: /culture/article/20260112-10-of-the-worlds-most-spectacular-tree-houses
+                - heading "10 of the world's most spectacular tree houses" [level=2] [ref=e244]
+              - paragraph [ref=e245]: By Deborah Nicholls-Lee
+          - generic [ref=e247]:
+            - paragraph [ref=e248]: Hot Topics
+            - generic [ref=e253]:
+              - generic [ref=e256]:
+                - 'link "Kit Harington sat at a grand piano wearing a silk dressing gown in Industry season 4 (Credit: HBO)" [ref=e258] [cursor=pointer]':
+                  - /url: /culture/article/20260114-how-industry-became-the-most-nightmarish-show-on-tv
+                  - 'img "Kit Harington sat at a grand piano wearing a silk dressing gown in Industry season 4 (Credit: HBO)" [ref=e260]'
+                - generic [ref=e261]:
+                  - link "Television" [ref=e262] [cursor=pointer]:
+                    - /url: /culture/tags/television
+                  - link "How Industry became TV's most nightmarish show" [ref=e263] [cursor=pointer]:
+                    - /url: /culture/article/20260114-how-industry-became-the-most-nightmarish-show-on-tv
+                    - heading "How Industry became TV's most nightmarish show" [level=2] [ref=e264]
+                  - paragraph [ref=e265]: By Laura Martin
+              - generic [ref=e266]:
+                - generic [ref=e268]:
+                  - 'link "Historical illustration of Ann Lee (Credit: Alamy)" [ref=e269] [cursor=pointer]':
+                    - /url: /culture/article/20260128-the-forgotten-story-of-18th-century-radical-ann-lee
+                    - 'img "Historical illustration of Ann Lee (Credit: Alamy)" [ref=e272]'
+                  - link "Film" [ref=e273] [cursor=pointer]:
+                    - /url: /culture/columns/film
+                  - link "The 1700s Christian leader who shocked America" [ref=e275] [cursor=pointer]:
+                    - /url: /culture/article/20260128-the-forgotten-story-of-18th-century-radical-ann-lee
+                    - heading "The 1700s Christian leader who shocked America" [level=2] [ref=e276]
+                  - generic [ref=e280]: By Anthony Frajman
+                - generic [ref=e282]:
+                  - 'link "Ariana Grande as Glinda in Wicked: For Good (Credit: Universal Pictures)" [ref=e283] [cursor=pointer]':
+                    - /url: /culture/article/20260122-why-hollywood-fell-out-of-love-with-wicked
+                    - 'img "Ariana Grande as Glinda in Wicked: For Good (Credit: Universal Pictures)" [ref=e286]'
+                  - link "Film" [ref=e287] [cursor=pointer]:
+                    - /url: /culture/columns/film
+                  - link "Why Hollywood fell out of love with Wicked" [ref=e289] [cursor=pointer]:
+                    - /url: /culture/article/20260122-why-hollywood-fell-out-of-love-with-wicked
+                    - heading "Why Hollywood fell out of love with Wicked" [level=2] [ref=e290]
+                  - generic [ref=e294]: By Nicholas Barber
+                - generic [ref=e296]:
+                  - 'link "A close up of Charlie Chaplin smiling and holding a flower in City Lights (Credit: Alamy)" [ref=e297] [cursor=pointer]':
+                    - /url: /culture/article/20260120-the-story-behind-city-lights-and-cinemas-greatest-ever-final-shot
+                    - 'img "A close up of Charlie Chaplin smiling and holding a flower in City Lights (Credit: Alamy)" [ref=e300]'
+                  - link "Film" [ref=e301] [cursor=pointer]:
+                    - /url: /culture/columns/film
+                  - link "The story behind cinema's greatest ever final shot" [ref=e303] [cursor=pointer]:
+                    - /url: /culture/article/20260120-the-story-behind-city-lights-and-cinemas-greatest-ever-final-shot
+                    - heading "The story behind cinema's greatest ever final shot" [level=2] [ref=e304]
+                  - generic [ref=e308]: By Gregory Wakeman
+          - generic [ref=e400]:
+            - text: The Collection
+            - generic [ref=e401]:
+              - generic [ref=e403]:
+                - 'link "Floor-to-ceiling windows create great views across the water on the off-grid Altar, Brazil (Credit: Mel Audi)" [ref=e404] [cursor=pointer]':
+                  - /url: /culture/article/20230815-eight-of-the-worlds-most-stunning-floating-homes
+                  - generic [ref=e406]:
+                    - generic:
+                      - 'img "Floor-to-ceiling windows create great views across the water on the off-grid Altar, Brazil (Credit: Mel Audi)"'
+                - link "Design" [ref=e407] [cursor=pointer]:
+                  - /url: /culture/tags/design
+                - link "Eight floating homes around the world" [ref=e409] [cursor=pointer]:
+                  - /url: /culture/article/20230815-eight-of-the-worlds-most-stunning-floating-homes
+                  - heading "Eight floating homes around the world" [level=2] [ref=e410]
+                - generic [ref=e414]: By Dominic Lutyens
+              - generic [ref=e416]:
+                - 'link "(Credit: Alamy)" [ref=e417] [cursor=pointer]':
+                  - /url: /culture/article/20230630-how-drawing-can-make-you-happier-and-calmer
+                  - generic [ref=e419]:
+                    - generic:
+                      - 'img "(Credit: Alamy)"'
+                - link "Art" [ref=e420] [cursor=pointer]:
+                  - /url: /culture/tags/art
+                - link "Why drawing is the best digital detox" [ref=e422] [cursor=pointer]:
+                  - /url: /culture/article/20230630-how-drawing-can-make-you-happier-and-calmer
+                  - heading "Why drawing is the best digital detox" [level=2] [ref=e423]
+                - generic [ref=e427]: By Beverley D'Silva
+              - generic [ref=e429]:
+                - 'link "In season two, Carmy, pictured here with Syndey (Ayo Edebiri), sports a grey crew-neck sweater that has been a hit with audiences (Credit: Disney+/FX)" [ref=e430] [cursor=pointer]':
+                  - /url: /culture/article/20230628-why-fans-of-tvs-the-bear-are-obsessed-with-the-sweater
+                  - generic [ref=e432]:
+                    - generic:
+                      - 'img "In season two, Carmy, pictured here with Syndey (Ayo Edebiri), sports a grey crew-neck sweater that has been a hit with audiences (Credit: Disney+/FX)"'
+                - link "Television" [ref=e433] [cursor=pointer]:
+                  - /url: /culture/tags/television
+                - link "How 'The Bear sweater' went viral" [ref=e435] [cursor=pointer]:
+                  - /url: /culture/article/20230628-why-fans-of-tvs-the-bear-are-obsessed-with-the-sweater
+                  - heading "How 'The Bear sweater' went viral" [level=2] [ref=e436]
+                - generic [ref=e440]: By Faran Krentcil
+              - generic [ref=e442]:
+                - 'link "(Credit: Getty Images)" [ref=e443] [cursor=pointer]':
+                  - /url: /culture/article/20230626-from-bette-davis-to-beyonc-why-divas-deserve-to-be-difficult
+                  - generic [ref=e445]:
+                    - generic:
+                      - 'img "(Credit: Getty Images)"'
+                - link "Identity" [ref=e446] [cursor=pointer]:
+                  - /url: /culture/tags/identity
+                - link "Why divas deserve to be difficult" [ref=e448] [cursor=pointer]:
+                  - /url: /culture/article/20230626-from-bette-davis-to-beyonc-why-divas-deserve-to-be-difficult
+                  - heading "Why divas deserve to be difficult" [level=2] [ref=e449]
+                - generic [ref=e453]: By Deborah Nicholls-Lee
+            - button "See more " [ref=e456] [cursor=pointer]:
+              - text: See more
+              - generic [ref=e457]: 
+          - generic [ref=e313]:
+            - text: Around the BBC
+            - generic [ref=e314]:
+              - generic [ref=e316]:
+                - link "The unexplained physics of curling" [ref=e317] [cursor=pointer]:
+                  - /url: https://www.bbc.com/future/article/20260213-the-unexplained-physics-of-curling
+                  - generic [ref=e319]:
+                    - generic:
+                      - img "The unexplained physics of curling"
+                - link "Future" [ref=e320] [cursor=pointer]:
+                  - /url: /future
+                - link "The unexplained physics of curling" [ref=e322] [cursor=pointer]:
+                  - /url: https://www.bbc.com/future/article/20260213-the-unexplained-physics-of-curling
+                  - heading "The unexplained physics of curling" [level=2] [ref=e323]
+              - generic [ref=e325]:
+                - link "A US TikTok ban could harm small businesses" [ref=e326] [cursor=pointer]:
+                  - /url: https://www.bbc.com/worklife/article/20240425-us-tik-tok-ban-small-business-creator-revenue
+                  - generic [ref=e328]:
+                    - generic:
+                      - img "A US TikTok ban could harm small businesses"
+                - link "Worklife" [ref=e329] [cursor=pointer]:
+                  - /url: /worklife
+                - link "A US TikTok ban could harm small businesses" [ref=e331] [cursor=pointer]:
+                  - /url: https://www.bbc.com/worklife/article/20240425-us-tik-tok-ban-small-business-creator-revenue
+                  - heading "A US TikTok ban could harm small businesses" [level=2] [ref=e332]
+              - generic [ref=e334]:
+                - link "Where tourism is growing fastest in 2026" [ref=e335] [cursor=pointer]:
+                  - /url: https://www.bbc.com/travel/article/20260212-where-tourism-is-growing-fastest-in-2026
+                  - generic [ref=e337]:
+                    - generic:
+                      - img "Where tourism is growing fastest in 2026"
+                - link "travel" [ref=e338] [cursor=pointer]:
+                  - /url: https://www.bbc.com/travel
+                - link "Where tourism is growing fastest in 2026" [ref=e340] [cursor=pointer]:
+                  - /url: https://www.bbc.com/travel/article/20260212-where-tourism-is-growing-fastest-in-2026
+                  - heading "Where tourism is growing fastest in 2026" [level=2] [ref=e341]
+  - generic [ref=e343]:
+    - complementary [ref=e344]:
+      - navigation "BBC" [ref=e346]:
+        - heading "Explore the BBC" [level=2] [ref=e347]
+        - navigation [ref=e349]:
+          - list [ref=e350]:
+            - listitem [ref=e351]:
+              - link "Home" [ref=e352] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk
+            - listitem [ref=e353]:
+              - link "News" [ref=e354] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/news
+            - listitem [ref=e355]:
+              - link "Sport" [ref=e356] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/sport
+            - listitem [ref=e357]:
+              - link "Weather" [ref=e358] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/weather
+            - listitem [ref=e359]:
+              - link "iPlayer" [ref=e360] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/iplayer
+            - listitem [ref=e361]:
+              - link "Sounds" [ref=e362] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/sounds
+            - listitem [ref=e363]:
+              - link "Bitesize" [ref=e364] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/bitesize
+            - listitem [ref=e365]:
+              - link "CBeebies" [ref=e366] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/cbeebies
+            - listitem [ref=e367]:
+              - link "CBBC" [ref=e368] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/cbbc
+            - listitem [ref=e369]:
+              - link "Food" [ref=e370] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/food
+    - contentinfo [ref=e371]:
+      - generic [ref=e374]:
+        - list [ref=e375]:
+          - listitem [ref=e376]:
+            - link "Terms of Use" [ref=e377] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/terms/
+          - listitem [ref=e378]:
+            - link "About the BBC" [ref=e379] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/aboutthebbc
+          - listitem [ref=e380]:
+            - link "Privacy Policy" [ref=e381] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/privacy/
+          - listitem [ref=e382]:
+            - link "Cookies" [ref=e383] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/cookies/
+          - listitem [ref=e384]:
+            - link "Accessibility Help" [ref=e385] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/accessibility/
+          - listitem [ref=e386]:
+            - link "Parental Guidance" [ref=e387] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/guidance
+          - listitem [ref=e388]:
+            - link "Contact the BBC" [ref=e389] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/contact
+          - listitem [ref=e390]:
+            - link "Make an editorial complaint" [ref=e391] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/contact/complaints/
+          - listitem [ref=e392]:
+            - link "BBC emails for you" [ref=e393] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/bbcnewsletter
+        - generic [ref=e394]:
+          - emphasis [ref=e395]: Copyright © 2026 BBC.
+          - text: The BBC is not responsible for the content of external sites.
+          - link "Read about our approach to external linking." [ref=e397] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links

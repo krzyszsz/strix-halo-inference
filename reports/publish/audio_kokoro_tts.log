@@ -1,0 +1,26 @@
+[2026-02-15T16:47:28Z] watchdog start max_seconds=2400 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env OUT_WAV=/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest.wav OUT_SUMMARY=/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest_summary.json bash /home/kj/strix-halo-inference/audio/scripts/test_kokoro_podcast.sh
+WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.
+/usr/local/lib/python3.12/site-packages/torch/nn/modules/rnn.py:990: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+/usr/local/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Collecting en-core-web-sm==3.8.0
+  Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl (12.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 4.7 MB/s  0:00:02
+Installing collected packages: en-core-web-sm
+Successfully installed en-core-web-sm-3.8.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+{
+  "input_text": "/home/kj/strix-halo-inference/audio/input/podcast_script.txt",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "lang_code": "a",
+  "chunks": 6,
+  "sample_rate": 24000,
+  "samples": 3789600,
+  "duration_seconds": 157.9,
+  "output_wav": "/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest.wav"
+}
+[2026-02-15T16:49:28Z] watchdog finished cmd_status=0

@@ -1,0 +1,5 @@
+[2026-02-15T14:06:54Z] watchdog start max_seconds=3600 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env MODEL_ID=/mnt/hf/models/flux2-klein-base-4b DTYPE=float32 HEIGHT=512 WIDTH=512 STEPS=4 GUIDANCE=1.0 OUT_PATH=/home/kj/strix-halo-inference/stable-diffusion/out/flux2_klein_base_4b_512_2026-02-11.png bash /home/kj/strix-halo-inference/stable-diffusion/scripts/test_flux2_klein_sample.sh
+3c985dbc794112329c556868e7c9ac80f48fcf143f354d96d477b3e54871112f
+Waiting for container health on port 8001 (retries=120, sleep=5s)...
+/home/kj/strix-halo-inference/stable-diffusion/out/flux2_klein_base_4b_512_2026-02-11.png 466287
+[2026-02-15T14:09:54Z] watchdog finished cmd_status=0

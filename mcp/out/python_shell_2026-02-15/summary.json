@@ -1,0 +1,40 @@
+[
+  {
+    "question": "Compute the sum of squares from 1 to 20.",
+    "tool": "python_eval",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"stdout\":\"2870\\n\",\"stderr\":\"\",\"locals\":{\"total\":\"2870\"}}"
+        }
+      ],
+      "structuredContent": {
+        "stdout": "2870\n",
+        "stderr": "",
+        "locals": {
+          "total": "2870"
+        }
+      },
+      "isError": false
+    }
+  },
+  {
+    "question": "Show the size of /mnt/hf/models (human-readable).",
+    "tool": "run_shell",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"exit_code\":0,\"stdout\":\"1.1T\\t/mnt/hf/models\\n\",\"stderr\":\"\"}"
+        }
+      ],
+      "structuredContent": {
+        "exit_code": 0,
+        "stdout": "1.1T\t/mnt/hf/models\n",
+        "stderr": ""
+      },
+      "isError": false
+    }
+  }
+]

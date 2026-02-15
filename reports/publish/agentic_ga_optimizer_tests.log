@@ -1,0 +1,14 @@
+[2026-02-15T17:10:59Z] watchdog start max_seconds=1800 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env OUT_LOG=/home/kj/strix-halo-inference/agentic/ga-optimizer-demo/out/tests_post_impl_recheck_publish.log bash /home/kj/strix-halo-inference/agentic/ga-optimizer-demo/scripts/run_tests.sh
+  Determining projects to restore...
+  Restored /home/kj/strix-halo-inference/agentic/ga-optimizer-demo/src/GeneticOptimizer/GeneticOptimizer.csproj (in 75 ms).
+  Restored /home/kj/strix-halo-inference/agentic/ga-optimizer-demo/tests/GeneticOptimizer.Tests/GeneticOptimizer.Tests.csproj (in 671 ms).
+  GeneticOptimizer -> /home/kj/strix-halo-inference/agentic/ga-optimizer-demo/src/GeneticOptimizer/bin/Debug/net10.0/GeneticOptimizer.dll
+  GeneticOptimizer.Tests -> /home/kj/strix-halo-inference/agentic/ga-optimizer-demo/tests/GeneticOptimizer.Tests/bin/Debug/net10.0/GeneticOptimizer.Tests.dll
+Test run for /home/kj/strix-halo-inference/agentic/ga-optimizer-demo/tests/GeneticOptimizer.Tests/bin/Debug/net10.0/GeneticOptimizer.Tests.dll (.NETCoreApp,Version=v10.0)
+VSTest version 18.0.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4, Duration: 24 ms - GeneticOptimizer.Tests.dll (net10.0)
+[2026-02-15T17:11:29Z] watchdog finished cmd_status=0

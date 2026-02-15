@@ -1,0 +1,33 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "To implement a thread-safe C# utility that computes median and percentile values for a `double[]` input, we can use locks to ensure thread safety. Here's a simple implementation:\n\n```csharp\nusing System;\nusing System.Linq;\nusing System.Threading;\n\npublic class StatisticsUtility\n{\n    private readonly object _lock = new object();\n\n    public double GetMedian(double[] data)\n    {\n        lock (_lock)\n        {\n            if (data == null || data.Length == 0)\n                throw new ArgumentException(\"Input array must not be null or empty.\");\n\n            var sortedData = data.OrderBy(n => n).ToArray();\n            int size = sortedData.Length;\n            int mid = size / 2;\n\n            if (size % 2 == 0)\n                return (sortedData[mid - 1] + sortedData[mid]) / 2.0;\n            else\n                return sortedData[mid];\n        }\n    }\n\n    public double GetPercentile(double[] data, double percentile)\n    {\n        lock (_lock)\n        {\n            if (data == null || data.Length == 0)\n                throw new ArgumentException(\"Input array must not be null or empty.\");\n            if (percentile < 0 || percentile > 100)\n                throw new ArgumentOutOfRangeException(nameof(percentile), \"Percentile must be between 0 and 100.\");\n\n            var sortedData = data.OrderBy(n => n).ToArray();\n            int size = sortedData.Length;\n            double index = (percentile / 100.0) * (size - 1);\n            int lower = (int)Math.Floor(index);\n            int upper = (int)Math.Ceiling(index);\n            double weight = index % 1;\n\n            return sortedData[lower] * (1 - weight) + sortedData[upper] * weight;\n        }\n    }\n}\n```\n\n### Algorithmic Complexity\n\n1. **Sorting the Array**: Both `GetMedian` and `GetPercentile` require sorting the array. The sorting operation has a time complexity of \\(O(n \\log n)\\), where \\(n\\) is the number of elements in the array.\n\n2. **Finding the Median**: After sorting, finding the median involves accessing a few elements in the array, which is \\(O(1)\\) in time complexity.\n\n3. **Calculating the Percentile**: Calculating the percentile also involves accessing a few elements after sorting, which is \\(O(1)\\) in time complexity.\n\n4. **Overall Complexity**: The overall time complexity for both operations is dominated by the sorting step, making it \\(O(n \\log n)\\).\n\n5. **Space Complexity**: The space complexity is \\(O(n)\\) due to the need to create a sorted copy of the input array.\n\n6. **Thread Safety**: The use of a lock ensures that only one thread can execute the sorting and calculation operations at a time, which does not affect the time complexity but ensures thread safety."
+      }
+    }
+  ],
+  "created": 1771173881,
+  "model": "qwen2.5-coder-32b-instruct-q4_k_m.gguf",
+  "system_fingerprint": "b7972-e06088da0",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 602,
+    "prompt_tokens": 49,
+    "total_tokens": 651
+  },
+  "id": "chatcmpl-sO2Cvf63u9HMDgWpuvlZkPMiVlOnnGdS",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 49,
+    "prompt_ms": 542.289,
+    "prompt_per_token_ms": 11.06712244897959,
+    "prompt_per_second": 90.3577243868122,
+    "predicted_n": 602,
+    "predicted_ms": 56199.391,
+    "predicted_per_token_ms": 93.35447009966778,
+    "predicted_per_second": 10.71185984915744
+  }
+}

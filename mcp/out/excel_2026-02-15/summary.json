@@ -1,0 +1,11 @@
+{
+  "values": [
+    3,
+    5,
+    8,
+    13,
+    21
+  ],
+  "sum": 50.0,
+  "workbook": "/home/kj/strix-halo-inference/mcp/out/excel_2026-02-15/demo.xlsx"
+}

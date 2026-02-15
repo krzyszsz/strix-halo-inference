@@ -1,0 +1,8 @@
+{
+  "reference_count": 4,
+  "detected_faces": 5,
+  "evaluated_faces": 4,
+  "correct_matches": 3,
+  "hit_rate": 0.75,
+  "scoring": "per_expected_cell_best_det"
+}

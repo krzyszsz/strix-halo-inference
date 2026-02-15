@@ -1,0 +1,11 @@
+{
+  "input_text": "/home/kj/strix-halo-inference/audio/input/podcast_script.txt",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "lang_code": "a",
+  "chunks": 6,
+  "sample_rate": 24000,
+  "samples": 3789600,
+  "duration_seconds": 157.9,
+  "output_wav": "/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest.wav"
+}

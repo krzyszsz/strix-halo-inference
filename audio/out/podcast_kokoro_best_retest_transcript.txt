@@ -1,0 +1,38 @@
+Welcome to this local AI engineering podcast session.
+Today, we are documenting practical inference workflows
+on an AMD Strix Halo machine with 96 gigabytes of unified memory.
+The focus is not only peak benchmark numbers,
+but repeatable operations, stable scripts,
+and logs that can be reviewed later.
+In this episode, we summarize the current stack.
+Image generation is handled by QnImage and multiple diffusion pipelines.
+Vision language analysis is covered by Qn2.5VL.
+Coding and chat endpoints are served through Lama.CPP with Vulkan Acceleration.
+MCP examples demonstrate browser automation, spreadsheet operations,
+and local Python plus shell execution.
+A key reliability practice is resource cleanup.
+Before each heavy run, we clear stale containers
+and terminate non-essential high-memory leftovers.
+After each test, we do the same cleanup again,
+so one run does not poison the next run.
+This sounds simple, but it is usually the difference
+between stable overnight testing and random crashes.
+For image quality, one interesting direction is post-processing.
+Base generations can look plastic in skin texture and lighting.
+A diffusion upskiller can improve detail,
+but the safest configuration is often lower input size and conservative denoising.
+When instability appears, we reduce step count,
+disable risky attention paths, and keep every retry fully logged.
+On the coding side, we are also testing staged, agentic workflows.
+The pattern is to define interfaces first, then tests,
+then skeleton methods, and only then implementation.
+That structure keeps goals explicit and makes progress auditable.
+It also reduces wasted token budget
+because each iteration has a concrete pass or fail target.
+Finally, this transcript itself is part of the reproducibility process.
+We use it to generate a synthetic podcast-style audio sample,
+then run speech-to-text and export subtitles as SRT.
+That gives us an end-to-end, fully local validation path
+for long-form audio generation and subtitle extraction.
+If you can replay this exact pipeline from Scripps alone,
+the documentation is doing its job.

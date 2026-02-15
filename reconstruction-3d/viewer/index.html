@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VGGT Point Cloud Viewer</title>
+  <style>
+    :root {
+      --bg: #0c1018;
+      --panel: rgba(10, 16, 28, 0.86);
+      --text: #e8eefc;
+      --accent: #6ec1ff;
+    }
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: radial-gradient(circle at 20% 10%, #1d2842 0, #0c1018 55%);
+      color: var(--text);
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    }
+    #app {
+      position: fixed;
+      inset: 0;
+    }
+    #panel {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: var(--panel);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+      max-width: 360px;
+      line-height: 1.4;
+      z-index: 20;
+    }
+    #panel h1 {
+      font-size: 15px;
+      margin: 0 0 8px;
+      color: #f7fbff;
+    }
+    #panel p {
+      margin: 0 0 8px;
+      font-size: 12px;
+    }
+    #panel label {
+      font-size: 12px;
+      display: block;
+      margin-top: 6px;
+    }
+    #panel input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent);
+    }
+    #status {
+      color: #cbe8ff;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      opacity: 0.95;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="panel">
+    <h1>VGGT Point Cloud Demo</h1>
+    <p><strong>Scene:</strong> South Building (COLMAP sample set)</p>
+    <p id="ply-path"></p>
+    <p id="status">Loading point cloud...</p>
+    <label>Point size: <span id="point-size-value">0.008</span></label>
+    <input id="point-size" type="range" min="0.002" max="0.03" step="0.001" value="0.008" />
+    <p>Drag to orbit, scroll to zoom.</p>
+    <p><a id="download-link" href="../out/south_building/south_building_points.ply">Download `.ply`</a></p>
+  </div>
+
+  <script type="module">
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js';
+    import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/controls/OrbitControls.js';
+    import { PLYLoader } from 'https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/loaders/PLYLoader.js';
+
+    const container = document.getElementById('app');
+    const status = document.getElementById('status');
+    const pathLabel = document.getElementById('ply-path');
+    const downloadLink = document.getElementById('download-link');
+    const pointSizeInput = document.getElementById('point-size');
+    const pointSizeValue = document.getElementById('point-size-value');
+    const query = new URLSearchParams(window.location.search);
+    const plyPath = query.get('ply') || '../out/south_building/south_building_points.ply';
+
+    pathLabel.textContent = `Point cloud: ${plyPath}`;
+    downloadLink.href = plyPath;
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    container.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0a0f18);
+
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 2000);
+    camera.position.set(1.5, 0.7, 1.5);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.08;
+
+    scene.add(new THREE.AmbientLight(0xffffff, 0.85));
+
+    const grid = new THREE.GridHelper(4, 24, 0x3f5066, 0x253346);
+    grid.position.y = -0.65;
+    scene.add(grid);
+
+    let pointsObject = null;
+
+    if (window.location.protocol === 'file:') {
+      status.textContent = 'Open this page through HTTP server (not file://): bash reconstruction-3d/scripts/serve_viewer.sh';
+    }
+
+    const loader = new PLYLoader();
+    loader.load(plyPath, (geometry) => {
+      geometry.computeBoundingSphere();
+      geometry.computeBoundingBox();
+
+      const material = new THREE.PointsMaterial({
+        size: parseFloat(pointSizeInput.value),
+        vertexColors: true,
+        sizeAttenuation: true,
+      });
+
+      pointsObject = new THREE.Points(geometry, material);
+      scene.add(pointsObject);
+
+      const box = geometry.boundingBox.clone();
+      const center = box.getCenter(new THREE.Vector3());
+      pointsObject.position.sub(center);
+
+      const sphere = geometry.boundingSphere;
+      const radius = Math.max(sphere ? sphere.radius : 1.0, 0.01);
+      const distance = radius * 2.6;
+      camera.position.set(distance, distance * 0.45, distance);
+      camera.near = Math.max(distance / 2000.0, 0.001);
+      camera.far = Math.max(distance * 250.0, 100.0);
+      camera.updateProjectionMatrix();
+      controls.target.set(0, 0, 0);
+      controls.update();
+
+      status.textContent = `Loaded ${geometry.attributes.position.count.toLocaleString()} points`;
+    }, undefined, (err) => {
+      console.error(err);
+      const fileHint = window.location.protocol === 'file:' ? ' Use HTTP server mode.' : '';
+      status.textContent = `Failed to load ${plyPath}.${fileHint}`;
+    });
+
+    pointSizeInput.addEventListener('input', () => {
+      pointSizeValue.textContent = pointSizeInput.value;
+      if (pointsObject) {
+        pointsObject.material.size = parseFloat(pointSizeInput.value);
+      }
+    });
+
+    function animate() {
+      controls.update();
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+[2026-02-15T17:09:59Z] watchdog start max_seconds=600 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; python /home/kj/strix-halo-inference/mcp/scripts/python_shell_demo.py
+[2026-02-15T17:10:29Z] watchdog finished cmd_status=0

@@ -1,0 +1,4 @@
+[2026-02-15T14:25:55Z] watchdog start max_seconds=3600 idle_seconds=1800 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env OUT_PATH=/home/kj/strix-halo-inference/stable-diffusion/out/sd35_sample_best_retest.png bash /home/kj/strix-halo-inference/stable-diffusion/scripts/test_sd35_sample.sh
+9b81da17ec36507f575fae162da3d2e32dd987b25b0eeb55ba35f254c5756d4b
+/home/kj/strix-halo-inference/stable-diffusion/out/sd35_sample_best_retest.png 384657
+[2026-02-15T14:33:55Z] watchdog finished cmd_status=0

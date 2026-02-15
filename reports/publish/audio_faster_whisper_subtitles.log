@@ -1,0 +1,13 @@
+[2026-02-15T16:49:28Z] watchdog start max_seconds=2400 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env INPUT_AUDIO=/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest.wav OUT_SRT=/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest.srt OUT_TXT=/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest_transcript.txt OUT_SUMMARY=/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest_stt_summary.json bash /home/kj/strix-halo-inference/audio/scripts/test_faster_whisper_subtitles.sh
+{
+  "input_audio": "/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest.wav",
+  "model_size": "small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "language": "en",
+  "segments": 38,
+  "duration_seconds": 157.9,
+  "srt_path": "/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest.srt",
+  "transcript_path": "/home/kj/strix-halo-inference/audio/out/podcast_kokoro_best_retest_transcript.txt"
+}
+[2026-02-15T16:51:28Z] watchdog finished cmd_status=0

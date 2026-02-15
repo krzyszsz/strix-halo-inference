@@ -1,0 +1,60 @@
+- <changed> generic [ref=e154]:
+  - ref=e156 [unchanged]
+  - ref=e173 [unchanged]
+  - ref=e237 [unchanged]
+  - ref=e247 [unchanged]
+  - generic [ref=e400]:
+    - text: The Collection
+    - generic [ref=e401]:
+      - generic [ref=e403]:
+        - 'link "Floor-to-ceiling windows create great views across the water on the off-grid Altar, Brazil (Credit: Mel Audi)" [ref=e404] [cursor=pointer]':
+          - /url: /culture/article/20230815-eight-of-the-worlds-most-stunning-floating-homes
+          - generic [ref=e406]:
+            - generic:
+              - 'img "Floor-to-ceiling windows create great views across the water on the off-grid Altar, Brazil (Credit: Mel Audi)"'
+        - link "Design" [ref=e407] [cursor=pointer]:
+          - /url: /culture/tags/design
+        - link "Eight floating homes around the world" [ref=e409] [cursor=pointer]:
+          - /url: /culture/article/20230815-eight-of-the-worlds-most-stunning-floating-homes
+          - heading "Eight floating homes around the world" [level=2] [ref=e410]
+        - generic [ref=e414]: By Dominic Lutyens
+      - generic [ref=e416]:
+        - 'link "(Credit: Alamy)" [ref=e417] [cursor=pointer]':
+          - /url: /culture/article/20230630-how-drawing-can-make-you-happier-and-calmer
+          - generic [ref=e419]:
+            - generic:
+              - 'img "(Credit: Alamy)"'
+        - link "Art" [ref=e420] [cursor=pointer]:
+          - /url: /culture/tags/art
+        - link "Why drawing is the best digital detox" [ref=e422] [cursor=pointer]:
+          - /url: /culture/article/20230630-how-drawing-can-make-you-happier-and-calmer
+          - heading "Why drawing is the best digital detox" [level=2] [ref=e423]
+        - generic [ref=e427]: By Beverley D'Silva
+      - generic [ref=e429]:
+        - 'link "In season two, Carmy, pictured here with Syndey (Ayo Edebiri), sports a grey crew-neck sweater that has been a hit with audiences (Credit: Disney+/FX)" [ref=e430] [cursor=pointer]':
+          - /url: /culture/article/20230628-why-fans-of-tvs-the-bear-are-obsessed-with-the-sweater
+          - generic [ref=e432]:
+            - generic:
+              - 'img "In season two, Carmy, pictured here with Syndey (Ayo Edebiri), sports a grey crew-neck sweater that has been a hit with audiences (Credit: Disney+/FX)"'
+        - link "Television" [ref=e433] [cursor=pointer]:
+          - /url: /culture/tags/television
+        - link "How 'The Bear sweater' went viral" [ref=e435] [cursor=pointer]:
+          - /url: /culture/article/20230628-why-fans-of-tvs-the-bear-are-obsessed-with-the-sweater
+          - heading "How 'The Bear sweater' went viral" [level=2] [ref=e436]
+        - generic [ref=e440]: By Faran Krentcil
+      - generic [ref=e442]:
+        - 'link "(Credit: Getty Images)" [ref=e443] [cursor=pointer]':
+          - /url: /culture/article/20230626-from-bette-davis-to-beyonc-why-divas-deserve-to-be-difficult
+          - generic [ref=e445]:
+            - generic:
+              - 'img "(Credit: Getty Images)"'
+        - link "Identity" [ref=e446] [cursor=pointer]:
+          - /url: /culture/tags/identity
+        - link "Why divas deserve to be difficult" [ref=e448] [cursor=pointer]:
+          - /url: /culture/article/20230626-from-bette-davis-to-beyonc-why-divas-deserve-to-be-difficult
+          - heading "Why divas deserve to be difficult" [level=2] [ref=e449]
+        - generic [ref=e453]: By Deborah Nicholls-Lee
+    - button "See more " [ref=e456] [cursor=pointer]:
+      - text: See more
+      - generic [ref=e457]: 
+  - ref=e313 [unchanged]

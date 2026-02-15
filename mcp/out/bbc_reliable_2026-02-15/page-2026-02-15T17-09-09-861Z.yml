@@ -1,0 +1,163 @@
+- <changed> banner [ref=e7]:
+  - region "Cookies on the BBC website" [ref=e3066]:
+    - generic [ref=e3068]:
+      - generic [ref=e3069]:
+        - heading "Cookies on the BBC website" [active] [level=2] [ref=e3070]
+        - paragraph [ref=e3073]:
+          - link "We use cookies" [ref=e3074] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/
+          - text: to give you the best online experience. Strictly necessary cookies are on by default. Additional cookies are off by default.
+      - generic [ref=e3075]:
+        - button "Accept additional cookies" [ref=e3076]
+        - button "Reject additional cookies" [ref=e3077]
+        - link "Let me choose" [ref=e3078] [cursor=pointer]:
+          - /url: https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/
+          - generic [ref=e3079]: Let me choose
+  - navigation "BBC" [ref=e8]:
+    - generic [ref=e10]:
+      - ref=e12 [unchanged]
+      - generic:
+        - list:
+          - listitem:
+            - ref=e17 [unchanged]
+          - listitem:
+            - ref=e18 [unchanged]
+      - generic [ref=e19]:
+        - list [ref=e20]:
+          - listitem [ref=e21]:
+            - link "Sign in" [ref=e3080] [cursor=pointer]:
+              - /url: https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fnews&sequenceId=637d6cd6-f061-4b00-99b7-e566815d1620
+              - img [ref=e3082]
+              - text: Sign in
+          - ref=e29 [unchanged]
+        - ref=e36 [unchanged]
+      - ref=e104 [unchanged]
+  - ref=e110 [unchanged]
+  - region "Sign In Banner" [ref=e192]:
+    - ref=e193 [unchanged]
+    - generic [ref=e197]:
+      - ref=e198 [unchanged]
+      - generic [ref=e202]:
+        - link "Sign in" [ref=e3084] [cursor=pointer]:
+          - /url: https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fnews&sequenceId=01fbe6c3-54d9-4fd6-bc01-91ba35dd5098&userOrigin=news
+          - img [ref=e206]
+          - generic [ref=e208]: Sign in
+        - ref=e209 [unchanged]
+        - link "Register" [ref=e3085] [cursor=pointer]:
+          - /url: https://session.bbc.co.uk/session?action=register&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fnews&sequenceId=01fbe6c3-54d9-4fd6-bc01-91ba35dd5098&userOrigin=news
+      - ref=e213 [unchanged]
+- <changed> main [ref=e220]:
+  - ref=e222 [unchanged]
+  - ref=e223 [unchanged]
+  - ref=e476 [unchanged]
+  - ref=e657 [unchanged]
+  - ref=e821 [unchanged]
+  - generic [ref=e3088]:
+    - generic [ref=e3089]: Sign In Banner
+    - generic [ref=e3093]:
+      - generic [ref=e3094]:
+        - heading "Want local stories right here?" [level=2] [ref=e3095]
+        - paragraph [ref=e3096]: Get the news from where you live on your homepage
+      - generic [ref=e3098]:
+        - link "Sign in" [ref=e3100] [cursor=pointer]:
+          - /url: https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fnews&sequenceId=01fbe6c3-54d9-4fd6-bc01-91ba35dd5098&userOrigin=news
+          - img [ref=e3102]
+          - generic [ref=e3104]: Sign in
+        - generic [ref=e3105]: or
+        - link "Register" [ref=e3106] [cursor=pointer]:
+          - /url: https://session.bbc.co.uk/session?action=register&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fnews&sequenceId=01fbe6c3-54d9-4fd6-bc01-91ba35dd5098&userOrigin=news
+  - ref=e1058 [unchanged]
+  - ref=e1070 [unchanged]
+  - ref=e1433 [unchanged]
+  - ref=e1564 [unchanged]
+  - ref=e1659 [unchanged]
+  - ref=e1969 [unchanged]
+  - ref=e1979 [unchanged]
+  - ref=e2055 [unchanged]
+  - generic [ref=e2147]:
+    - ref=e2149 [unchanged]
+    - list [ref=e2154]:
+      - listitem [ref=e2155]:
+        - generic [ref=e2158]:
+          - generic [ref=e2159]:
+            - ref=e2160 [unchanged]
+            - generic [ref=e2167]:
+              - ref=e2170 [unchanged]
+              - generic [ref=e2186]:
+                - ref=e2188 [unchanged]
+                - paragraph [ref=e2196]
+          - ref=e2201 [unchanged]
+      - listitem [ref=e2202]:
+        - generic [ref=e2205]:
+          - generic [ref=e2206]:
+            - ref=e2208 [unchanged]
+            - generic [ref=e2213]:
+              - ref=e2216 [unchanged]
+              - generic [ref=e2231]:
+                - ref=e2233 [unchanged]
+                - paragraph [ref=e2241]
+          - ref=e2246 [unchanged]
+      - listitem [ref=e2247]:
+        - generic [ref=e2250]:
+          - generic [ref=e2251]:
+            - ref=e2253 [unchanged]
+            - generic [ref=e2258]:
+              - ref=e2261 [unchanged]
+              - generic [ref=e2277]:
+                - ref=e2279 [unchanged]
+                - paragraph [ref=e2287]
+          - ref=e2292 [unchanged]
+      - listitem [ref=e2293]:
+        - generic [ref=e2296]:
+          - generic [ref=e2297]:
+            - ref=e2299 [unchanged]
+            - generic [ref=e2304]:
+              - ref=e2307 [unchanged]
+              - generic [ref=e2322]:
+                - ref=e2324 [unchanged]
+                - paragraph [ref=e2332]
+          - ref=e2337 [unchanged]
+      - listitem [ref=e2338]:
+        - generic [ref=e2341]:
+          - generic [ref=e2342]:
+            - ref=e2344 [unchanged]
+            - generic [ref=e2349]:
+              - ref=e2352 [unchanged]
+              - generic [ref=e2368]:
+                - ref=e2370 [unchanged]
+                - paragraph [ref=e2378]
+          - ref=e2383 [unchanged]
+      - listitem [ref=e2384]:
+        - generic [ref=e2387]:
+          - generic [ref=e2388]:
+            - ref=e2390 [unchanged]
+            - generic [ref=e2395]:
+              - ref=e2398 [unchanged]
+              - generic [ref=e2413]:
+                - ref=e2415 [unchanged]
+                - paragraph [ref=e2423]
+          - ref=e2428 [unchanged]
+      - listitem [ref=e2429]:
+        - generic [ref=e2432]:
+          - generic [ref=e2433]:
+            - ref=e2435 [unchanged]
+            - generic [ref=e2440]:
+              - ref=e2443 [unchanged]
+              - generic [ref=e2459]:
+                - ref=e2461 [unchanged]
+                - paragraph [ref=e2469]
+          - ref=e2474 [unchanged]
+  - ref=e2477 [unchanged]
+  - generic [ref=e3112]:
+    - generic [ref=e3114]:
+      - heading "My News" [level=2] [ref=e3115]
+      - paragraph [ref=e3116]: Follow what matters to you
+    - link "Discover more" [ref=e3119] [cursor=pointer]:
+      - /url: /news/my
+      - generic [ref=e3120]: Discover more
+  - ref=e2769 [unchanged]
+  - ref=e2781 [unchanged]
+- <changed> paragraph [ref=e2885]
+- <changed> paragraph [ref=e2928]
+- <changed> paragraph [ref=e2971]
+- <changed> paragraph [ref=e3014]

@@ -1,0 +1,152 @@
+- <changed> banner [ref=e7]:
+  - region "Cookies on the BBC website" [ref=e4376]:
+    - generic [ref=e4378]:
+      - generic [ref=e4379]:
+        - heading "Cookies on the BBC website" [active] [level=2] [ref=e4380]
+        - paragraph [ref=e4383]:
+          - link "We use cookies" [ref=e4384] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/
+          - text: to give you the best online experience. Strictly necessary cookies are on by default. Additional cookies are off by default.
+      - generic [ref=e4385]:
+        - button "Accept additional cookies" [ref=e4386]
+        - button "Reject additional cookies" [ref=e4387]
+        - link "Let me choose" [ref=e4388] [cursor=pointer]:
+          - /url: https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/
+          - generic [ref=e4389]: Let me choose
+  - navigation "BBC" [ref=e8]:
+    - generic [ref=e10]:
+      - ref=e12 [unchanged]
+      - generic:
+        - list:
+          - listitem:
+            - ref=e17 [unchanged]
+          - listitem:
+            - ref=e18 [unchanged]
+      - generic [ref=e19]:
+        - list [ref=e20]:
+          - listitem [ref=e21]:
+            - link "Sign in" [ref=e4390] [cursor=pointer]:
+              - /url: https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport&sequenceId=2f364502-71e2-4a4c-b306-5957a9e05db3
+              - img [ref=e4392]
+              - text: Sign in
+          - ref=e29 [unchanged]
+        - ref=e36 [unchanged]
+      - ref=e104 [unchanged]
+  - ref=e110 [unchanged]
+  - region "Sign In Banner" [ref=e183]:
+    - ref=e184 [unchanged]
+    - generic [ref=e188]:
+      - ref=e189 [unchanged]
+      - generic [ref=e193]:
+        - link "Sign in" [ref=e4394] [cursor=pointer]:
+          - /url: https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport&sequenceId=b71c061e-0bfb-4f7a-8242-2801f2672270&userOrigin=sport
+          - img [ref=e197]
+          - generic [ref=e199]: Sign in
+        - ref=e200 [unchanged]
+        - link "Register" [ref=e4395] [cursor=pointer]:
+          - /url: https://session.bbc.co.uk/session?action=register&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport&sequenceId=b71c061e-0bfb-4f7a-8242-2801f2672270&userOrigin=sport
+      - ref=e204 [unchanged]
+- <changed> main [ref=e211]:
+  - ref=e213 [unchanged]
+  - ref=e219 [unchanged]
+  - ref=e456 [unchanged]
+  - ref=e661 [unchanged]
+  - ref=e939 [unchanged]
+  - generic [ref=e4400]:
+    - generic [ref=e4402]:
+      - heading "My Sport" [level=2] [ref=e4403]
+      - paragraph [ref=e4404]: Follow the sports that matter to you
+    - link "Discover more" [ref=e4407] [cursor=pointer]:
+      - /url: /sport/my
+      - generic [ref=e4408]: Discover more
+  - ref=e1243 [unchanged]
+  - ref=e1448 [unchanged]
+  - ref=e1627 [unchanged]
+  - ref=e1833 [unchanged]
+  - ref=e2003 [unchanged]
+  - ref=e2275 [unchanged]
+  - ref=e2480 [unchanged]
+  - ref=e2733 [unchanged]
+  - ref=e3037 [unchanged]
+  - generic [ref=e3180]:
+    - ref=e3182 [unchanged]
+    - list [ref=e3187]:
+      - listitem [ref=e3188]:
+        - generic [ref=e3191]:
+          - generic [ref=e3192]:
+            - ref=e3193 [unchanged]
+            - generic [ref=e3200]:
+              - ref=e3203 [unchanged]
+              - generic [ref=e3218]:
+                - ref=e3220 [unchanged]
+                - paragraph [ref=e3228]
+          - ref=e3233 [unchanged]
+      - listitem [ref=e3234]:
+        - generic [ref=e3237]:
+          - generic [ref=e3238]:
+            - ref=e3240 [unchanged]
+            - generic [ref=e3245]:
+              - ref=e3248 [unchanged]
+              - generic [ref=e3264]:
+                - ref=e3266 [unchanged]
+                - paragraph [ref=e3274]
+          - ref=e3279 [unchanged]
+      - listitem [ref=e3280]:
+        - generic [ref=e3283]:
+          - generic [ref=e3284]:
+            - ref=e3286 [unchanged]
+            - generic [ref=e3291]:
+              - ref=e3294 [unchanged]
+              - generic [ref=e3309]:
+                - ref=e3311 [unchanged]
+                - paragraph [ref=e3319]
+          - ref=e3324 [unchanged]
+      - listitem [ref=e3325]:
+        - generic [ref=e3328]:
+          - generic [ref=e3329]:
+            - ref=e3331 [unchanged]
+            - generic [ref=e3336]:
+              - ref=e3339 [unchanged]
+              - generic [ref=e3355]:
+                - ref=e3357 [unchanged]
+                - paragraph [ref=e3365]
+          - ref=e3370 [unchanged]
+      - listitem [ref=e3371]:
+        - generic [ref=e3374]:
+          - generic [ref=e3375]:
+            - ref=e3377 [unchanged]
+            - generic [ref=e3382]:
+              - ref=e3385 [unchanged]
+              - generic [ref=e3400]:
+                - ref=e3402 [unchanged]
+                - paragraph [ref=e3410]
+          - ref=e3415 [unchanged]
+      - listitem [ref=e3416]:
+        - generic [ref=e3419]:
+          - generic [ref=e3420]:
+            - ref=e3422 [unchanged]
+            - generic [ref=e3427]:
+              - ref=e3430 [unchanged]
+              - generic [ref=e3446]:
+                - ref=e3448 [unchanged]
+                - paragraph [ref=e3456]
+          - ref=e3461 [unchanged]
+      - listitem [ref=e3462]:
+        - generic [ref=e3465]:
+          - generic [ref=e3466]:
+            - ref=e3468 [unchanged]
+            - generic [ref=e3473]:
+              - ref=e3476 [unchanged]
+              - generic [ref=e3491]:
+                - ref=e3493 [unchanged]
+                - paragraph [ref=e3501]
+          - ref=e3506 [unchanged]
+  - ref=e3511 [unchanged]
+  - ref=e3523 [unchanged]
+  - ref=e3804 [unchanged]
+  - ref=e4065 [unchanged]
+  - ref=e4136 [unchanged]
+- <changed> paragraph [ref=e4195]
+- <changed> paragraph [ref=e4238]
+- <changed> paragraph [ref=e4281]
+- <changed> paragraph [ref=e4324]

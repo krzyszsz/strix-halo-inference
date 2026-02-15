@@ -1,0 +1,2006 @@
+- generic [ref=e4]:
+  - banner [ref=e7]:
+    - navigation "BBC" [ref=e8]:
+      - generic [ref=e10]:
+        - link "BBC Homepage" [ref=e12] [cursor=pointer]:
+          - /url: https://www.bbc.co.uk
+          - generic [ref=e13]:
+            - img [ref=e14]
+            - generic [ref=e16]: BBC Homepage
+        - generic:
+          - list:
+            - listitem:
+              - link "Skip to content" [ref=e17] [cursor=pointer]:
+                - /url: "#main-heading"
+            - listitem:
+              - link "Accessibility Help" [ref=e18] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/accessibility/
+        - generic [ref=e19]:
+          - list [ref=e20]:
+            - listitem [ref=e21]:
+              - generic [ref=e22]:
+                - link:
+                  - /url: https://account.bbc.com/account?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2F
+                  - generic:
+                    - img
+                  - text: Your account
+            - listitem [ref=e29]:
+              - link "Notifications" [ref=e30] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/notifications
+                - generic [ref=e31]:
+                  - img [ref=e32]
+                  - generic [ref=e34]: Notifications
+          - list [ref=e36]:
+            - listitem [ref=e37]:
+              - link "Home" [ref=e38] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk
+                - generic [ref=e39]: Home
+            - listitem [ref=e40]:
+              - link "News" [ref=e41] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/news
+                - generic [ref=e42]:
+                  - img [ref=e44]
+                  - text: News
+            - listitem [ref=e49]:
+              - link "Sport" [ref=e50] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/sport
+                - generic [ref=e51]:
+                  - img [ref=e53]
+                  - text: Sport
+            - listitem [ref=e58]:
+              - link "Weather" [ref=e59] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/weather
+                - generic [ref=e60]:
+                  - img [ref=e62]
+                  - text: Weather
+            - listitem [ref=e67]:
+              - link "iPlayer" [ref=e68] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/iplayer
+                - generic [ref=e69]:
+                  - img [ref=e71]
+                  - text: iPlayer
+            - listitem [ref=e77]:
+              - link "Sounds" [ref=e78] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/sounds
+                - generic [ref=e79]:
+                  - img [ref=e81]
+                  - text: Sounds
+            - listitem [ref=e86]:
+              - link "Bitesize" [ref=e87] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/bitesize
+                - generic [ref=e88]:
+                  - img [ref=e90]
+                  - text: Bitesize
+            - listitem [ref=e95]:
+              - button "More menu" [ref=e96] [cursor=pointer]:
+                - generic [ref=e98]:
+                  - img [ref=e99]
+                  - generic [ref=e102]: More menu
+        - search "Search BBC" [ref=e104]:
+          - link "Search BBC" [ref=e105] [cursor=pointer]:
+            - /url: /search?d=HOMEPAGE_PS
+            - img [ref=e107]
+            - generic [ref=e109]: Search BBC
+    - generic [ref=e114]: Welcome to the BBC
+  - main [ref=e117]:
+    - heading "BBC Homepage" [level=1] [ref=e119]
+    - list [ref=e125]:
+      - listitem [ref=e126]:
+        - generic [ref=e128]:
+          - generic [ref=e129]:
+            - generic [ref=e130]:
+              - 'heading "Live . Winter Olympics: GB''s Weston bids for second medal in mixed team skeleton - build-up" [level=3] [ref=e131]':
+                - 'link "Live . Winter Olympics: GB''s Weston bids for second medal in mixed team skeleton - build-up" [ref=e132] [cursor=pointer]':
+                  - /url: /sport/winter-olympics/live/cr7jxj0knlxt
+                  - generic [ref=e133]:
+                    - generic [ref=e135]:
+                      - img [ref=e137]
+                      - text: Live
+                      - generic [ref=e140]: .
+                    - paragraph [ref=e141]: "Winter Olympics: GB's Weston bids for second medal in mixed team skeleton - build-up"
+              - paragraph [ref=e142]: Follow live text, BBC TV coverage, radio commentary, reaction and updates from the Winter Olympics in Milan-Cortina.
+            - list [ref=e145]:
+              - listitem [ref=e146]:
+                - generic [ref=e147]: Attribution
+                - link "Winter Olympics" [ref=e150] [cursor=pointer]:
+                  - /url: /sport/winter-olympics
+                  - generic [ref=e151]:
+                    - img [ref=e153]
+                    - text: Winter Olympics
+          - img "Matt Weston" [ref=e162]
+      - listitem [ref=e163]:
+        - generic [ref=e165]:
+          - generic [ref=e166]:
+            - heading "UK wants action taken on Russia after Navalny frog poisoning, Cooper says" [level=3] [ref=e168]:
+              - link "UK wants action taken on Russia after Navalny frog poisoning, Cooper says" [ref=e169] [cursor=pointer]:
+                - /url: /news/articles/c8r15e4ek2vo
+                - paragraph [ref=e171]: UK wants action taken on Russia after Navalny frog poisoning, Cooper says
+            - list [ref=e174]:
+              - listitem [ref=e175]:
+                - generic [ref=e176]: Attribution
+                - link "Europe" [ref=e179] [cursor=pointer]:
+                  - /url: /news/world/europe
+                  - generic [ref=e180]:
+                    - img [ref=e182]
+                    - text: Europe
+          - img "Foreign Secretary Yvette Cooper speaking from a conference in Munich. Shge wears a black overcoat with a white scarf and a blue beaded necklace. She has short, ash blonde hair with a fringe and two silver stud earrings. Snow-covered buildings can be seen behind her rooftop position. Copyright" [ref=e191]
+      - listitem [ref=e192]:
+        - generic [ref=e194]:
+          - generic [ref=e195]:
+            - heading "Children 'weaponised' by both sides of trans debate, says author of gender identity report" [level=3] [ref=e197]:
+              - link "Children 'weaponised' by both sides of trans debate, says author of gender identity report" [ref=e198] [cursor=pointer]:
+                - /url: /news/articles/c0k1vkmxgd6o
+                - paragraph [ref=e200]: Children 'weaponised' by both sides of trans debate, says author of gender identity report
+            - list [ref=e203]:
+              - listitem [ref=e204]:
+                - generic [ref=e205]: Attribution
+                - link "UK" [ref=e208] [cursor=pointer]:
+                  - /url: /news/uk
+                  - generic [ref=e209]:
+                    - img [ref=e211]
+                    - text: UK
+          - img "Hilary Cass on the Sunday With Laura Kuenssberg set. She has medium-length curly brown hair and is wearing a purple jacket, dark blue top and has a large purple bead necklace and purple bead earrings." [ref=e220]
+      - listitem [ref=e221]:
+        - generic [ref=e223]:
+          - generic [ref=e224]:
+            - heading "Hundreds of thousands join Iran protests around the world" [level=3] [ref=e226]:
+              - link "Hundreds of thousands join Iran protests around the world" [ref=e227] [cursor=pointer]:
+                - /url: /news/articles/czr0lykl4g4o
+                - paragraph [ref=e229]: Hundreds of thousands join Iran protests around the world
+            - list [ref=e232]:
+              - listitem [ref=e233]:
+                - generic [ref=e234]: Attribution
+                - link "Middle East" [ref=e237] [cursor=pointer]:
+                  - /url: /news/world/middle_east
+                  - generic [ref=e238]:
+                    - img [ref=e240]
+                    - text: Middle East
+          - img "A woman wearing earmuffs and holding a flag shouts at a protest" [ref=e249]
+      - listitem [ref=e250]:
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - heading "What the Nigella Lawson effect will mean for the Great British Bake Off" [level=3] [ref=e255]:
+              - link "What the Nigella Lawson effect will mean for the Great British Bake Off" [ref=e256] [cursor=pointer]:
+                - /url: /news/articles/cgmlvl48202o
+                - paragraph [ref=e258]: What the Nigella Lawson effect will mean for the Great British Bake Off
+            - list [ref=e261]:
+              - listitem [ref=e262]:
+                - generic [ref=e263]: Attribution
+                - link "Culture" [ref=e266] [cursor=pointer]:
+                  - /url: /news/entertainment_and_arts
+                  - generic [ref=e267]:
+                    - img [ref=e269]
+                    - text: Culture
+          - img "Chef Nigella Lawson poses for a portrait on June 1, 2005 in London." [ref=e278]
+      - listitem [ref=e279]:
+        - generic [ref=e281]:
+          - generic [ref=e282]:
+            - heading "This rail line caused travel chaos during storms. £165m later, it's happened again" [level=3] [ref=e284]:
+              - link "This rail line caused travel chaos during storms. £165m later, it's happened again" [ref=e285] [cursor=pointer]:
+                - /url: /news/articles/c0q4j9e78jzo
+                - paragraph [ref=e287]: This rail line caused travel chaos during storms. £165m later, it's happened again
+            - list [ref=e290]:
+              - listitem [ref=e291]:
+                - generic [ref=e292]: Attribution
+                - link "England" [ref=e295] [cursor=pointer]:
+                  - /url: /news/england
+                  - generic [ref=e296]:
+                    - img [ref=e298]
+                    - text: England
+          - img "A damaged section of the coastal railway at Dawlish in 2014, with waves washing over broken track where the sea wall has collapsed. Houses sit close to the line on the right under a grey sky." [ref=e307]
+      - listitem [ref=e308]:
+        - generic [ref=e310]:
+          - generic [ref=e311]:
+            - 'heading "Live . Six Nations: Eight-try France hammer Wales in Cardiff - watch, listen & reaction live" [level=3] [ref=e313]':
+              - 'link "Live . Six Nations: Eight-try France hammer Wales in Cardiff - watch, listen & reaction live" [ref=e314] [cursor=pointer]':
+                - /url: /sport/rugby-union/live/c4g5d4ygex8t
+                - generic [ref=e315]:
+                  - generic [ref=e317]:
+                    - img [ref=e319]
+                    - text: Live
+                    - generic [ref=e322]: .
+                  - paragraph [ref=e323]: "Six Nations: Eight-try France hammer Wales in Cardiff - watch, listen & reaction live"
+            - list [ref=e326]:
+              - listitem [ref=e327]:
+                - generic [ref=e328]: Attribution
+                - link "Wales" [ref=e331] [cursor=pointer]:
+                  - /url: /sport/rugby-union/teams/wales
+                  - generic [ref=e332]:
+                    - img [ref=e334]
+                    - text: Wales
+          - img "Taine Plumtree looks dejected" [ref=e343]
+    - generic [ref=e346]:
+      - generic [ref=e348]:
+        - heading "Sport headlines" [level=2] [ref=e350]:
+          - link "Sport headlines" [ref=e351] [cursor=pointer]:
+            - /url: /sport
+            - text: Sport headlines
+            - img [ref=e353]
+        - paragraph [ref=e355]: Keep up with the latest from BBC Sport
+      - list [ref=e357]:
+        - listitem [ref=e358]:
+          - generic [ref=e360]:
+            - generic [ref=e361]:
+              - generic [ref=e362]:
+                - 'heading "Live . FA Cup fourth round: Arsenal hit four within 30 minutes against Wigan" [level=3] [ref=e363]':
+                  - 'link "Live . FA Cup fourth round: Arsenal hit four within 30 minutes against Wigan" [ref=e364] [cursor=pointer]':
+                    - /url: /sport/football/live/cdree8627net
+                    - generic [ref=e365]:
+                      - generic [ref=e367]:
+                        - img [ref=e369]
+                        - text: Live
+                        - generic [ref=e372]: .
+                      - paragraph [ref=e373]: "FA Cup fourth round: Arsenal hit four within 30 minutes against Wigan"
+                - paragraph [ref=e374]: Follow live text updates as Arsenal host Wigan in the fourth round of the FA Cup.
+              - list [ref=e377]:
+                - listitem [ref=e378]:
+                  - generic [ref=e379]: Attribution
+                  - link "FA Cup" [ref=e382] [cursor=pointer]:
+                    - /url: /sport/football/fa-cup
+                    - generic [ref=e383]:
+                      - img [ref=e385]
+                      - text: FA Cup
+            - img "Arsenal celebrate against Wigan" [ref=e394]
+        - listitem [ref=e395]:
+          - generic [ref=e397]:
+            - generic [ref=e398]:
+              - 'heading "Live . Scottish Premiership: Braga powers Hearts ahead against Rangers in Ibrox thriller" [level=3] [ref=e400]':
+                - 'link "Live . Scottish Premiership: Braga powers Hearts ahead against Rangers in Ibrox thriller" [ref=e401] [cursor=pointer]':
+                  - /url: /sport/football/live/c204n6yydn0t
+                  - generic [ref=e402]:
+                    - generic [ref=e404]:
+                      - img [ref=e406]
+                      - text: Live
+                      - generic [ref=e409]: .
+                    - paragraph [ref=e410]: "Scottish Premiership: Braga powers Hearts ahead against Rangers in Ibrox thriller"
+              - list [ref=e413]:
+                - listitem [ref=e414]:
+                  - generic [ref=e415]: Attribution
+                  - link "Scottish Prem" [ref=e418] [cursor=pointer]:
+                    - /url: /sport/football/scottish-premiership
+                    - generic [ref=e419]:
+                      - img [ref=e421]
+                      - text: Scottish Prem
+            - img "Rangers equaliser" [ref=e430]
+        - listitem [ref=e431]:
+          - generic [ref=e433]:
+            - generic [ref=e434]:
+              - heading "GB's Bankes & Nightingale win historic snowboard cross gold" [level=3] [ref=e436]:
+                - link "GB's Bankes & Nightingale win historic snowboard cross gold" [ref=e437] [cursor=pointer]:
+                  - /url: /sport/articles/cx245x1xnxlo
+                  - paragraph [ref=e439]: GB's Bankes & Nightingale win historic snowboard cross gold
+              - list [ref=e442]:
+                - listitem [ref=e443]:
+                  - generic [ref=e444]: Attribution
+                  - link "Winter Olympics" [ref=e447] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e448]:
+                      - img [ref=e450]
+                      - text: Winter Olympics
+                - listitem [ref=e456]:
+                  - generic [ref=e457]: Comments
+                  - link "286" [ref=e460] [cursor=pointer]:
+                    - /url: /sport/articles/cx245x1xnxlo#comments
+                    - generic [ref=e461]:
+                      - img [ref=e463]
+                      - text: "286"
+            - img "Charlotte Bankes and Huw Nightingale on the podium" [ref=e469]
+        - listitem [ref=e470]:
+          - generic [ref=e472]:
+            - generic [ref=e473]:
+              - 'heading "Live . T20 World Cup: India thrash woeful Pakistan by 61 runs - reaction" [level=3] [ref=e475]':
+                - 'link "Live . T20 World Cup: India thrash woeful Pakistan by 61 runs - reaction" [ref=e476] [cursor=pointer]':
+                  - /url: /sport/cricket/live/c9vxpy8x89dt
+                  - generic [ref=e477]:
+                    - generic [ref=e479]:
+                      - img [ref=e481]
+                      - text: Live
+                      - generic [ref=e484]: .
+                    - paragraph [ref=e485]: "T20 World Cup: India thrash woeful Pakistan by 61 runs - reaction"
+              - list [ref=e488]:
+                - listitem [ref=e489]:
+                  - generic [ref=e490]: Attribution
+                  - link "Cricket" [ref=e493] [cursor=pointer]:
+                    - /url: /sport/cricket
+                    - generic [ref=e494]:
+                      - img [ref=e496]
+                      - text: Cricket
+            - img "India's Hardik Pandya (L) and captain Suryakumar Yadav celebrate after their team's win at the end of the 2026 ICC Men's T20 Cricket World Cup group stage match between India and Pakistan in the R Premadasa Stadium, Colombo" [ref=e505]
+        - listitem [ref=e506]:
+          - generic [ref=e508]:
+            - generic [ref=e509]:
+              - heading "Bankes and Nightingale win snowboard cross gold for Team GB. Video, 00:03:10" [level=3] [ref=e511]:
+                - link "Bankes and Nightingale win snowboard cross gold for Team GB. Video, 00:03:10" [ref=e512] [cursor=pointer]:
+                  - /url: /sport/videos/cm2x71g1edyo
+                  - paragraph [ref=e514]:
+                    - generic [ref=e515]: Bankes and Nightingale win snowboard cross gold for Team GB. Video, 00:03:10
+                    - text: Bankes and Nightingale win snowboard cross gold for Team GB
+              - list [ref=e518]:
+                - listitem [ref=e519]:
+                  - generic [ref=e520]: Attribution
+                  - link "Winter Olympics" [ref=e523] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e524]:
+                      - img [ref=e526]
+                      - text: Winter Olympics
+            - generic [ref=e532]:
+              - generic [ref=e534]:
+                - img [ref=e536]
+                - generic [ref=e538]: 3:10
+              - img "Charlotte Bankes" [ref=e541]
+        - listitem [ref=e542]:
+          - generic [ref=e544]:
+            - generic [ref=e545]:
+              - 'heading "Watch: UK Indoor Championships - Boffey, Kerr & Anning in action" [level=3] [ref=e547]':
+                - 'link "Watch: UK Indoor Championships - Boffey, Kerr & Anning in action" [ref=e548] [cursor=pointer]':
+                  - /url: /sport/athletics/live/c3edw9d2yvzt
+                  - paragraph [ref=e550]: "Watch: UK Indoor Championships - Boffey, Kerr & Anning in action"
+              - list [ref=e553]:
+                - listitem [ref=e554]:
+                  - generic [ref=e555]: Attribution
+                  - link "Athletics" [ref=e558] [cursor=pointer]:
+                    - /url: /sport/athletics
+                    - generic [ref=e559]:
+                      - img [ref=e561]
+                      - text: Athletics
+            - img "Ethan Hussey congratulates Ben Pattison of Great Britain celebrates after winning on the 800m men final" [ref=e570]
+        - listitem [ref=e571]:
+          - generic [ref=e573]:
+            - generic [ref=e574]:
+              - heading "GB target skeleton team medal - Sunday's guide" [level=3] [ref=e576]:
+                - link "GB target skeleton team medal - Sunday's guide" [ref=e577] [cursor=pointer]:
+                  - /url: /sport/articles/c338y36kngzo
+                  - paragraph [ref=e579]: GB target skeleton team medal - Sunday's guide
+              - list [ref=e582]:
+                - listitem [ref=e583]:
+                  - generic [ref=e584]: Attribution
+                  - link "Winter Olympics" [ref=e587] [cursor=pointer]:
+                    - /url: /sport/winter-olympics
+                    - generic [ref=e588]:
+                      - img [ref=e590]
+                      - text: Winter Olympics
+            - img "Great Britain's Matt Weston during the Men's Skeleton Training at the Cortina Sliding Centre, on day three of the Milano Cortina 2026 Winter Olympics, Italy." [ref=e599]
+      - generic "Sport headlines" [ref=e600]:
+        - link "View more" [ref=e601] [cursor=pointer]:
+          - /url: /sport
+    - generic [ref=e603]:
+      - 'heading "Winter Olympics: Latest moments" [level=2] [ref=e608]':
+        - 'link "Winter Olympics: Latest moments" [ref=e609] [cursor=pointer]':
+          - /url: https://www.bbc.co.uk/sport/winter-olympics
+          - text: "Winter Olympics: Latest moments"
+          - img [ref=e611]
+      - group [ref=e614]:
+        - generic [ref=e617]:
+          - button "Scroll to previous item" [disabled] [ref=e618]:
+            - generic [ref=e619]:
+              - img [ref=e620]
+              - generic [ref=e622]: Scroll to previous item
+          - button "Scroll to next item, 7 of 20" [ref=e623]:
+            - generic [ref=e624]:
+              - img [ref=e625]
+              - generic [ref=e627]: Scroll to next item, 7 of 20
+        - list [ref=e628]:
+          - listitem [ref=e629]:
+            - button "Great Britain win gold in mixed team snowboard cross. 00:01:46, play video Charlotte Bankes" [ref=e631] [cursor=pointer]:
+              - generic [ref=e633]:
+                - generic [ref=e634]:
+                  - img [ref=e636]
+                  - text: 1:46
+                - generic [ref=e638]: Great Britain win gold in mixed team snowboard cross. 00:01:46, play video
+                - generic [ref=e639]: Great Britain win gold in mixed team snowboard cross
+              - img "Charlotte Bankes" [ref=e642]
+          - listitem [ref=e643]:
+            - button "'It's gold!' - inside the comm box for Team GB's snowboard cross win. 00:01:01, play video Tim Warwood and Ed Leigh" [ref=e645] [cursor=pointer]:
+              - generic [ref=e647]:
+                - generic [ref=e648]:
+                  - img [ref=e650]
+                  - text: 1:01
+                - generic [ref=e652]: "'It's gold!' - inside the comm box for Team GB's snowboard cross win. 00:01:01, play video"
+                - generic [ref=e653]: "'It's gold!' - inside the comm box for Team GB's snowboard cross win"
+              - img "Tim Warwood and Ed Leigh" [ref=e656]
+          - listitem [ref=e657]:
+            - button "Fans go wild for GB's snowboard gold. 00:00:38, play video GB fans" [ref=e659] [cursor=pointer]:
+              - generic [ref=e661]:
+                - generic [ref=e662]:
+                  - img [ref=e664]
+                  - text: 0:38
+                - generic [ref=e666]: Fans go wild for GB's snowboard gold. 00:00:38, play video
+                - generic [ref=e667]: Fans go wild for GB's snowboard gold
+              - img "GB fans" [ref=e670]
+          - listitem [ref=e671]:
+            - button "Proud parents revel in GB gold. 00:00:20, play video Huw Nightingale's father" [ref=e673] [cursor=pointer]:
+              - generic [ref=e675]:
+                - generic [ref=e676]:
+                  - img [ref=e678]
+                  - text: 0:20
+                - generic [ref=e680]: Proud parents revel in GB gold. 00:00:20, play video
+                - generic [ref=e681]: Proud parents revel in GB gold
+              - img "Huw Nightingale's father" [ref=e684]
+          - listitem [ref=e685]:
+            - button "Bankes & Nightingale get their gold medals. 00:00:34, play video Charlotte Bankes and Huw Nightingale" [ref=e687] [cursor=pointer]:
+              - generic [ref=e689]:
+                - generic [ref=e690]:
+                  - img [ref=e692]
+                  - text: 0:34
+                - generic [ref=e694]: Bankes & Nightingale get their gold medals. 00:00:34, play video
+                - generic [ref=e695]: Bankes & Nightingale get their gold medals
+              - img "Charlotte Bankes and Huw Nightingale" [ref=e698]
+          - listitem [ref=e699]:
+            - button "'The best there's ever been' - Klaebo wins historic ninth gold. 00:00:34, play video Johannes Hoesflot Klaebo" [ref=e701] [cursor=pointer]:
+              - generic [ref=e703]:
+                - generic [ref=e704]:
+                  - img [ref=e706]
+                  - text: 0:34
+                - generic [ref=e708]: "'The best there's ever been' - Klaebo wins historic ninth gold. 00:00:34, play video"
+                - generic [ref=e709]: "'The best there's ever been' - Klaebo wins historic ninth gold"
+              - img "Johannes Hoesflot Klaebo" [ref=e712]
+          - listitem [ref=e713]:
+            - button "Athletes celebrate with their children after moguls final. 00:00:21, play video Mikael Kingsbury holding his child in one arm and gold medal in his other hand" [ref=e715] [cursor=pointer]:
+              - generic [ref=e717]:
+                - generic [ref=e718]:
+                  - img [ref=e720]
+                  - text: 0:21
+                - generic [ref=e722]: Athletes celebrate with their children after moguls final. 00:00:21, play video
+                - generic [ref=e723]: Athletes celebrate with their children after moguls final
+              - img "Mikael Kingsbury holding his child in one arm and gold medal in his other hand" [ref=e726]
+          - listitem [ref=e727]:
+            - button "So wholesome! 00:00:32, play video Proposal at big air" [ref=e729] [cursor=pointer]:
+              - generic [ref=e731]:
+                - generic [ref=e732]:
+                  - img [ref=e734]
+                  - text: 0:32
+                - generic [ref=e736]: So wholesome! 00:00:32, play video
+                - generic [ref=e737]: So wholesome!
+              - img "Proposal at big air" [ref=e740]
+          - listitem [ref=e741]:
+            - button "Passion personified from Canada's speed skating coach. 00:00:15, play video Canadian speed skating coach" [ref=e743] [cursor=pointer]:
+              - generic [ref=e745]:
+                - generic [ref=e746]:
+                  - img [ref=e748]
+                  - text: 0:15
+                - generic [ref=e750]: Passion personified from Canada's speed skating coach. 00:00:15, play video
+                - generic [ref=e751]: Passion personified from Canada's speed skating coach
+              - img "Canadian speed skating coach" [ref=e754]
+          - listitem [ref=e755]:
+            - button "Came for the high-five, left with the glove. 00:00:17, play video Marie-Philip Poulin has her glove taken off by a fan" [ref=e757] [cursor=pointer]:
+              - generic [ref=e759]:
+                - generic [ref=e760]:
+                  - img [ref=e762]
+                  - text: 0:17
+                - generic [ref=e764]: Came for the high-five, left with the glove. 00:00:17, play video
+                - generic [ref=e765]: Came for the high-five, left with the glove
+              - img "Marie-Philip Poulin has her glove taken off by a fan" [ref=e768]
+          - listitem [ref=e769]:
+            - button "'This is absolutely incredible' - USA goalkeeper fooled by wonder goal. 00:00:57, play video Nicholas Jensen" [ref=e771] [cursor=pointer]:
+              - generic [ref=e773]:
+                - generic [ref=e774]:
+                  - img [ref=e776]
+                  - text: 0:57
+                - generic [ref=e778]: "'This is absolutely incredible' - USA goalkeeper fooled by wonder goal. 00:00:57, play video"
+                - generic [ref=e779]: "'This is absolutely incredible' - USA goalkeeper fooled by wonder goal"
+              - img "Nicholas Jensen" [ref=e782]
+          - listitem [ref=e783]:
+            - button "Crash, dash and silver! 00:01:23, play video Ebba Andersson" [ref=e785] [cursor=pointer]:
+              - generic [ref=e787]:
+                - generic [ref=e788]:
+                  - img [ref=e790]
+                  - text: 1:23
+                - generic [ref=e792]: Crash, dash and silver! 00:01:23, play video
+                - generic [ref=e793]: Crash, dash and silver!
+              - img "Ebba Andersson" [ref=e796]
+          - listitem [ref=e797]:
+            - button "Matt Weston wins Team GB's first medal with skeleton gold. 00:01:04, play video Matt Weston" [ref=e799] [cursor=pointer]:
+              - generic [ref=e801]:
+                - generic [ref=e802]:
+                  - img [ref=e804]
+                  - text: 1:04
+                - generic [ref=e806]: Matt Weston wins Team GB's first medal with skeleton gold. 00:01:04, play video
+                - generic [ref=e807]: Matt Weston wins Team GB's first medal with skeleton gold
+              - img "Matt Weston" [ref=e810]
+          - listitem [ref=e811]:
+            - button "German team swap ice hockey for football. 00:00:17, play video German ice hockey team" [ref=e813] [cursor=pointer]:
+              - generic [ref=e815]:
+                - generic [ref=e816]:
+                  - img [ref=e818]
+                  - text: 0:17
+                - generic [ref=e820]: German team swap ice hockey for football. 00:00:17, play video
+                - generic [ref=e821]: German team swap ice hockey for football
+              - img "German ice hockey team" [ref=e824]
+          - listitem [ref=e825]:
+            - button "The tightest call for ice hockey VAR. 00:00:32, play video Ice Hockey" [ref=e827] [cursor=pointer]:
+              - generic [ref=e829]:
+                - generic [ref=e830]:
+                  - img [ref=e832]
+                  - text: 0:32
+                - generic [ref=e834]: The tightest call for ice hockey VAR. 00:00:32, play video
+                - generic [ref=e835]: The tightest call for ice hockey VAR
+              - img "Ice Hockey" [ref=e838]
+          - listitem [ref=e839]:
+            - button "Inside the commentary box with Ed and Tim at Milan-Cortina. 00:00:50, play video Tim Warwood and Ed Leigh fist bump in commentary box" [ref=e841] [cursor=pointer]:
+              - generic [ref=e843]:
+                - generic [ref=e844]:
+                  - img [ref=e846]
+                  - text: 0:50
+                - generic [ref=e848]: Inside the commentary box with Ed and Tim at Milan-Cortina. 00:00:50, play video
+                - generic [ref=e849]: Inside the commentary box with Ed and Tim at Milan-Cortina
+              - img "Tim Warwood and Ed Leigh fist bump in commentary box" [ref=e852]
+          - listitem [ref=e853]:
+            - button "Curlers clash over 'double tap' 00:00:59, play video Marc Kennedy" [ref=e855] [cursor=pointer]:
+              - generic [ref=e857]:
+                - generic [ref=e858]:
+                  - img [ref=e860]
+                  - text: 0:59
+                - generic [ref=e862]: Curlers clash over 'double tap' 00:00:59, play video
+                - generic [ref=e863]: Curlers clash over 'double tap'
+              - img "Marc Kennedy" [ref=e866]
+          - listitem [ref=e867]:
+            - button "'Hopefully I did you proud' - Weston elated after winning skeleton title. 00:00:49, play video Matt Weston" [ref=e869] [cursor=pointer]:
+              - generic [ref=e871]:
+                - generic [ref=e872]:
+                  - img [ref=e874]
+                  - text: 0:49
+                - generic [ref=e876]: "'Hopefully I did you proud' - Weston elated after winning skeleton title. 00:00:49, play video"
+                - generic [ref=e877]: "'Hopefully I did you proud' - Weston elated after winning skeleton title"
+              - img "Matt Weston" [ref=e880]
+          - listitem [ref=e881]:
+            - button "Team GB's Weston celebrates with family after gold victory. 00:00:47, play video Matt Weston celebrating with his fiancé" [ref=e883] [cursor=pointer]:
+              - generic [ref=e885]:
+                - generic [ref=e886]:
+                  - img [ref=e888]
+                  - text: 0:47
+                - generic [ref=e890]: Team GB's Weston celebrates with family after gold victory. 00:00:47, play video
+                - generic [ref=e891]: Team GB's Weston celebrates with family after gold victory
+              - img "Matt Weston celebrating with his fiancé" [ref=e894]
+          - listitem [ref=e895]:
+            - button "'What's going on here?' - Gold medal favourite Malinin finishes eighth. 00:00:44, play video Ilia Malinin of USA" [ref=e897] [cursor=pointer]:
+              - generic [ref=e899]:
+                - generic [ref=e900]:
+                  - img [ref=e902]
+                  - text: 0:44
+                - generic [ref=e904]: "'What's going on here?' - Gold medal favourite Malinin finishes eighth. 00:00:44, play video"
+                - generic [ref=e905]: "'What's going on here?' - Gold medal favourite Malinin finishes eighth"
+              - img "Ilia Malinin of USA" [ref=e908]
+    - generic [ref=e911]:
+      - generic [ref=e913]:
+        - heading "Around the UK" [level=2] [ref=e915]:
+          - link "Around the UK" [ref=e916] [cursor=pointer]:
+            - /url: /news/uk
+            - text: Around the UK
+            - img [ref=e918]
+        - paragraph [ref=e920]: The top stories from England, Scotland, Wales and Northern Ireland
+      - list [ref=e922]:
+        - listitem [ref=e923]:
+          - generic [ref=e925]:
+            - generic [ref=e926]:
+              - heading "Man dies after entering flood water in police chase" [level=3] [ref=e928]:
+                - link "Man dies after entering flood water in police chase" [ref=e929] [cursor=pointer]:
+                  - /url: /news/articles/cd70dypr1n5o
+                  - paragraph [ref=e931]: Man dies after entering flood water in police chase
+              - list [ref=e934]:
+                - listitem [ref=e935]:
+                  - generic [ref=e936]: Attribution
+                  - link "Derbyshire" [ref=e939] [cursor=pointer]:
+                    - /url: /news/england/derbyshire
+                    - generic [ref=e940]:
+                      - img [ref=e942]
+                      - text: Derbyshire
+            - img "Egginton Brook visible from the junction of Main Street and Ash Grove Lane in Egginton, Derbyshire" [ref=e951]
+        - listitem [ref=e952]:
+          - generic [ref=e954]:
+            - generic [ref=e955]:
+              - heading "Trans doctor in changing room row leaves the NHS" [level=3] [ref=e957]:
+                - link "Trans doctor in changing room row leaves the NHS" [ref=e958] [cursor=pointer]:
+                  - /url: /news/articles/cx2lyq5dn9xo
+                  - paragraph [ref=e960]: Trans doctor in changing room row leaves the NHS
+              - list [ref=e963]:
+                - listitem [ref=e964]:
+                  - generic [ref=e965]: Attribution
+                  - link "Edinburgh, Fife & East" [ref=e968] [cursor=pointer]:
+                    - /url: /news/scotland/edinburgh_east_and_fife
+                    - generic [ref=e969]:
+                      - img [ref=e971]
+                      - text: Edinburgh, Fife & East
+            - img "Dr Beth Upton has long brown hair and wears a colourful scarf and a brown parka jacket." [ref=e980]
+        - listitem [ref=e981]:
+          - generic [ref=e983]:
+            - generic [ref=e984]:
+              - heading "Man claimed girlfriend's death in car was an accident, but forensics revealed the truth" [level=3] [ref=e986]:
+                - link "Man claimed girlfriend's death in car was an accident, but forensics revealed the truth" [ref=e987] [cursor=pointer]:
+                  - /url: /news/articles/cr73r7mj730o
+                  - paragraph [ref=e989]: Man claimed girlfriend's death in car was an accident, but forensics revealed the truth
+              - list [ref=e992]:
+                - listitem [ref=e993]:
+                  - generic [ref=e994]: Attribution
+                  - link "Wales" [ref=e997] [cursor=pointer]:
+                    - /url: /news/wales
+                    - generic [ref=e998]:
+                      - img [ref=e1000]
+                      - text: Wales
+            - img "Jenna Watkins is a white woman in her early 20s in a head and shoulders photo. She has dyed black hair which is shoulder length with a fringe. She is wearing an off the shoulder white top and a long silver necklace with large beads starting at her collarbone. She is wearing make up and looks like she is on a night out. She is smiling straight at the camera. The background is black." [ref=e1009]
+        - listitem [ref=e1010]:
+          - generic [ref=e1012]:
+            - generic [ref=e1013]:
+              - heading "I only speak English outside my home after racist graffiti, says woman" [level=3] [ref=e1015]:
+                - link "I only speak English outside my home after racist graffiti, says woman" [ref=e1016] [cursor=pointer]:
+                  - /url: /news/articles/cvg8m32ykz4o
+                  - paragraph [ref=e1018]: I only speak English outside my home after racist graffiti, says woman
+              - list [ref=e1021]:
+                - listitem [ref=e1022]:
+                  - generic [ref=e1023]: Attribution
+                  - link "Northern Ireland" [ref=e1026] [cursor=pointer]:
+                    - /url: /news/northern_ireland
+                    - generic [ref=e1027]:
+                      - img [ref=e1029]
+                      - text: Northern Ireland
+            - img "A woman, pictured from the shoulders up, wearing a green and navy top and glasses. She has shoulder length brown hair. There is a yellow wall behind her." [ref=e1038]
+        - listitem [ref=e1039]:
+          - generic [ref=e1041]:
+            - generic [ref=e1042]:
+              - heading "Find your regional news" [level=3] [ref=e1044]:
+                - link "Find your regional news" [ref=e1045] [cursor=pointer]:
+                  - /url: /news/regions
+                  - paragraph [ref=e1047]: Find your regional news
+              - list [ref=e1050]:
+                - listitem [ref=e1051]:
+                  - generic [ref=e1052]: Attribution
+                  - generic [ref=e1055]:
+                    - img [ref=e1057]
+                    - text: News
+            - img "Find your regional news" [ref=e1066]
+      - generic "Around the UK" [ref=e1067]:
+        - link "View more" [ref=e1068] [cursor=pointer]:
+          - /url: /news/uk
+    - generic [ref=e1071]:
+      - generic [ref=e1073]:
+        - heading "Entertainment and TV" [level=2] [ref=e1075]:
+          - link "Entertainment and TV" [ref=e1076] [cursor=pointer]:
+            - /url: /news/entertainment_and_arts
+            - text: Entertainment and TV
+            - img [ref=e1078]
+        - paragraph [ref=e1080]: Latest news and must-see moments
+      - list [ref=e1082]:
+        - listitem [ref=e1083]:
+          - generic [ref=e1085]:
+            - generic [ref=e1086]:
+              - generic [ref=e1087]:
+                - heading "Actor Ross Kemp to return to EastEnders for short stint" [level=3] [ref=e1088]:
+                  - link "Actor Ross Kemp to return to EastEnders for short stint" [ref=e1089] [cursor=pointer]:
+                    - /url: /news/articles/cwy8j4zw8e4o
+                    - paragraph [ref=e1091]: Actor Ross Kemp to return to EastEnders for short stint
+                - paragraph [ref=e1092]: "'Explosive drama' promised as Grant Mitchell returns to Albert Square."
+              - list [ref=e1095]:
+                - listitem [ref=e1096]:
+                  - generic [ref=e1097]: Attribution
+                  - link "Culture" [ref=e1100] [cursor=pointer]:
+                    - /url: /news/entertainment_and_arts
+                    - generic [ref=e1101]:
+                      - img [ref=e1103]
+                      - text: Culture
+            - img "Actor Ross Kemp stands outside Walford East Station" [ref=e1112]
+        - listitem [ref=e1113]:
+          - generic [ref=e1115]:
+            - generic [ref=e1116]:
+              - heading "Time will heal Beckham family relationship, says Gordon Ramsay" [level=3] [ref=e1118]:
+                - link "Time will heal Beckham family relationship, says Gordon Ramsay" [ref=e1119] [cursor=pointer]:
+                  - /url: /news/articles/cp813w7k8g3o
+                  - paragraph [ref=e1121]: Time will heal Beckham family relationship, says Gordon Ramsay
+              - list [ref=e1124]:
+                - listitem [ref=e1125]:
+                  - generic [ref=e1126]: Attribution
+                  - link "Culture" [ref=e1129] [cursor=pointer]:
+                    - /url: /news/entertainment_and_arts
+                    - generic [ref=e1130]:
+                      - img [ref=e1132]
+                      - text: Culture
+            - img "Gordon Ramsey in a navy blue suit and black shirt, with David Beckham in a black leader jacket and white t-shirt." [ref=e1141]
+        - listitem [ref=e1142]:
+          - generic [ref=e1144]:
+            - generic [ref=e1145]:
+              - heading "Bowman heartbroken after case with ashes goes missing" [level=3] [ref=e1147]:
+                - link "Bowman heartbroken after case with ashes goes missing" [ref=e1148] [cursor=pointer]:
+                  - /url: /news/articles/cn0z8p05l7no
+                  - paragraph [ref=e1150]: Bowman heartbroken after case with ashes goes missing
+              - list [ref=e1153]:
+                - listitem [ref=e1154]:
+                  - generic [ref=e1155]: Attribution
+                  - link "Gloucestershire" [ref=e1158] [cursor=pointer]:
+                    - /url: /news/england/gloucestershire
+                    - generic [ref=e1159]:
+                      - img [ref=e1161]
+                      - text: Gloucestershire
+            - img "Edith Bowman is wearing a black suit jacket, a white shirt and a blue tie. She is smiling, with blurred bright lights behind her." [ref=e1170]
+        - listitem [ref=e1171]:
+          - generic [ref=e1173]:
+            - generic [ref=e1174]:
+              - heading "Which British sitcom does Margot Robbie think is the best thing on TV?" [level=3] [ref=e1176]:
+                - link "Which British sitcom does Margot Robbie think is the best thing on TV?" [ref=e1177] [cursor=pointer]:
+                  - /url: /news/articles/cde4kpe5wl0o
+                  - paragraph [ref=e1179]: Which British sitcom does Margot Robbie think is the best thing on TV?
+              - list [ref=e1182]:
+                - listitem [ref=e1183]:
+                  - generic [ref=e1184]: Attribution
+                  - link "Wales" [ref=e1187] [cursor=pointer]:
+                    - /url: /news/wales
+                    - generic [ref=e1188]:
+                      - img [ref=e1190]
+                      - text: Wales
+            - img "Close-up headshot of Margot Robbie, who has long blonde hair and is smiling at the camera" [ref=e1199]
+        - listitem [ref=e1200]:
+          - generic [ref=e1202]:
+            - generic [ref=e1203]:
+              - heading "Graham's all-star guests are captivated by Kaley Cuoco's pet zonkeys. Video, 00:01:55" [level=3] [ref=e1205]:
+                - link "Graham's all-star guests are captivated by Kaley Cuoco's pet zonkeys. Video, 00:01:55" [ref=e1206] [cursor=pointer]:
+                  - /url: /programmes/p0n10yyh
+                  - paragraph [ref=e1208]:
+                    - generic [ref=e1209]: Graham's all-star guests are captivated by Kaley Cuoco's pet zonkeys. Video, 00:01:55
+                    - text: Graham's all-star guests are captivated by Kaley Cuoco's pet zonkeys
+              - list [ref=e1212]:
+                - listitem [ref=e1213]:
+                  - generic [ref=e1214]: Attribution
+                  - generic [ref=e1217]: BBC One
+            - generic [ref=e1219]:
+              - generic [ref=e1221]:
+                - img [ref=e1223]
+                - generic [ref=e1225]: 1:55
+              - img "Split image of Kaley Cuoco and her pet Zonkey" [ref=e1228]
+        - listitem [ref=e1229]:
+          - generic [ref=e1231]:
+            - generic [ref=e1232]:
+              - heading "He was once a teen 'superstar'. Why did James Van Der Beek need help to pay his medical bills?" [level=3] [ref=e1234]:
+                - link "He was once a teen 'superstar'. Why did James Van Der Beek need help to pay his medical bills?" [ref=e1235] [cursor=pointer]:
+                  - /url: /news/articles/cx2dw01p7k8o
+                  - paragraph [ref=e1237]: He was once a teen 'superstar'. Why did James Van Der Beek need help to pay his medical bills?
+              - list [ref=e1240]:
+                - listitem [ref=e1241]:
+                  - generic [ref=e1242]: Attribution
+                  - link "Culture" [ref=e1245] [cursor=pointer]:
+                    - /url: /news/entertainment_and_arts
+                    - generic [ref=e1246]:
+                      - img [ref=e1248]
+                      - text: Culture
+            - img "James Van Der Beek wears a black polo and stands in front of a blue background" [ref=e1257]
+        - listitem [ref=e1258]:
+          - generic [ref=e1260]:
+            - generic [ref=e1261]:
+              - heading "Mika covers a classic '80s power ballad in Radio 2's Piano Room. Video, 25 minutes" [level=3] [ref=e1263]:
+                - link "Mika covers a classic '80s power ballad in Radio 2's Piano Room. Video, 25 minutes" [ref=e1264] [cursor=pointer]:
+                  - /url: /iplayer/episode/p0mtrv8k
+                  - paragraph [ref=e1266]:
+                    - generic [ref=e1267]: Mika covers a classic '80s power ballad in Radio 2's Piano Room. Video, 25 minutes
+                    - text: Mika covers a classic '80s power ballad in Radio 2's Piano Room
+              - list [ref=e1270]:
+                - listitem [ref=e1271]:
+                  - generic [ref=e1272]: Attribution
+                  - generic [ref=e1275]:
+                    - img [ref=e1277]
+                    - text: BBC Radio 2
+            - generic [ref=e1284]:
+              - generic [ref=e1286]:
+                - img [ref=e1288]
+                - generic [ref=e1290]: 25 mins
+              - img "MIKA sings in a colorful suit with BBC Orchestra in the background." [ref=e1293]
+      - generic "Entertainment and TV" [ref=e1294]:
+        - link "View more" [ref=e1295] [cursor=pointer]:
+          - /url: /news/entertainment_and_arts
+    - generic [ref=e1298]:
+      - heading "Arts and culture" [level=2] [ref=e1302]
+      - list [ref=e1304]:
+        - listitem [ref=e1305]:
+          - generic [ref=e1307]:
+            - generic [ref=e1308]:
+              - 'heading "A Quiet Love: The six-decade romance that defied divisions" [level=3] [ref=e1310]':
+                - 'link "A Quiet Love: The six-decade romance that defied divisions" [ref=e1311] [cursor=pointer]':
+                  - /url: /news/articles/cgjw3wvq22zo
+                  - paragraph [ref=e1313]: "A Quiet Love: The six-decade romance that defied divisions"
+              - list [ref=e1316]:
+                - listitem [ref=e1317]:
+                  - generic [ref=e1318]: Attribution
+                  - link "Northern Ireland" [ref=e1321] [cursor=pointer]:
+                    - /url: /news/northern_ireland
+                    - generic [ref=e1322]:
+                      - img [ref=e1324]
+                      - text: Northern Ireland
+            - img "A man with white hair and a beard, wearing a green jumper, kissing a woman with short white hair, both are holding their hands up showcasing sign language" [ref=e1333]
+        - listitem [ref=e1334]:
+          - generic [ref=e1336]:
+            - generic [ref=e1337]:
+              - heading "Why wasn't Beryl Cook treated as a serious artist?" [level=3] [ref=e1339]:
+                - link "Why wasn't Beryl Cook treated as a serious artist?" [ref=e1340] [cursor=pointer]:
+                  - /url: /news/articles/cy8pv2198rko
+                  - paragraph [ref=e1342]: Why wasn't Beryl Cook treated as a serious artist?
+              - list [ref=e1345]:
+                - listitem [ref=e1346]:
+                  - generic [ref=e1347]: Attribution
+                  - link "Devon" [ref=e1350] [cursor=pointer]:
+                    - /url: /news/england/devon
+                    - generic [ref=e1351]:
+                      - img [ref=e1353]
+                      - text: Devon
+            - img "This is Beryl Cook's self-portrait Feeding the Tortoises, which is featured in the 2026 Plymouth exhibition. The image is of a woman with short grey hair, wearing jeans with white sandals and striped socks. She is feeding two tortoises, called Hercule and Desiree, with leaves. The tortoises are watched by a cat with blue eyes." [ref=e1362]
+        - listitem [ref=e1363]:
+          - generic [ref=e1366]:
+            - 'heading "From the spectacular to the controversial: Memorable moments from the Brit Awards" [level=3] [ref=e1368]':
+              - 'link "From the spectacular to the controversial: Memorable moments from the Brit Awards" [ref=e1369] [cursor=pointer]':
+                - /url: /bitesize/articles/z34smbk
+                - paragraph [ref=e1371]: "From the spectacular to the controversial: Memorable moments from the Brit Awards"
+            - list [ref=e1374]:
+              - listitem [ref=e1375]:
+                - generic [ref=e1376]: Attribution
+                - link "BBC Bitesize" [ref=e1379] [cursor=pointer]:
+                  - /url: /bitesize
+                  - generic [ref=e1380]:
+                    - img [ref=e1382]
+                    - text: BBC Bitesize
+        - listitem [ref=e1391]:
+          - generic [ref=e1393]:
+            - generic [ref=e1394]:
+              - heading "Brutalist Southbank Centre granted listed status" [level=3] [ref=e1396]:
+                - link "Brutalist Southbank Centre granted listed status" [ref=e1397] [cursor=pointer]:
+                  - /url: /news/articles/c8d5je92j2ro
+                  - paragraph [ref=e1399]: Brutalist Southbank Centre granted listed status
+              - list [ref=e1402]:
+                - listitem [ref=e1403]:
+                  - generic [ref=e1404]: Attribution
+                  - link "London" [ref=e1407] [cursor=pointer]:
+                    - /url: /news/england/london
+                    - generic [ref=e1408]:
+                      - img [ref=e1410]
+                      - text: London
+                - listitem [ref=e1416]:
+                  - generic [ref=e1417]: Comments
+                  - link "206" [ref=e1420] [cursor=pointer]:
+                    - /url: /news/articles/c8d5je92j2ro#comments
+                    - generic [ref=e1421]:
+                      - img [ref=e1423]
+                      - text: "206"
+            - img "The brutalist building which is a mix of different shapes, stairs and corridors." [ref=e1429]
+        - listitem [ref=e1430]:
+          - generic [ref=e1432]:
+            - generic [ref=e1433]:
+              - 'heading "Wuthering Heights to Happy Valley: The highs and lows of Yorkshire on screen. Audio, 43 minutes" [level=3] [ref=e1435]':
+                - 'link "Wuthering Heights to Happy Valley: The highs and lows of Yorkshire on screen. Audio, 43 minutes" [ref=e1436] [cursor=pointer]':
+                  - /url: /sounds/play/m002qv80
+                  - paragraph [ref=e1438]:
+                    - generic [ref=e1439]: "Wuthering Heights to Happy Valley: The highs and lows of Yorkshire on screen. Audio, 43 minutes"
+                    - text: "Wuthering Heights to Happy Valley: The highs and lows of Yorkshire on screen"
+              - list [ref=e1442]:
+                - listitem [ref=e1443]:
+                  - generic [ref=e1444]: Attribution
+                  - generic [ref=e1447]:
+                    - img [ref=e1449]
+                    - text: BBC Radio 4
+            - generic [ref=e1457]:
+              - img [ref=e1459]
+              - generic [ref=e1461]: 43 mins
+    - generic [ref=e1466]:
+      - generic [ref=e1468]:
+        - heading "Food and recipes" [level=2] [ref=e1470]:
+          - link "Food and recipes" [ref=e1471] [cursor=pointer]:
+            - /url: /food
+            - text: Food and recipes
+            - img [ref=e1473]
+        - paragraph [ref=e1475]: Meal ideas, cooking tips and more, updated daily to keep you inspired
+      - list [ref=e1477]:
+        - listitem [ref=e1478]:
+          - generic [ref=e1480]:
+            - generic [ref=e1481]:
+              - generic [ref=e1482]:
+                - heading "Give your favourite comfort foods a twist with these flavour-packed recipes" [level=3] [ref=e1483]:
+                  - link "Give your favourite comfort foods a twist with these flavour-packed recipes" [ref=e1484] [cursor=pointer]:
+                    - /url: /food/collections/comfort_food_with_a_twist
+                    - paragraph [ref=e1486]: Give your favourite comfort foods a twist with these flavour-packed recipes
+                - paragraph [ref=e1487]: Reinvent a classic with vegetarian, meat-free and spicy versions.
+              - list [ref=e1490]:
+                - listitem [ref=e1491]:
+                  - generic [ref=e1492]: Attribution
+                  - generic [ref=e1495]: BBC Food
+            - img "Image of smoky cauliflower cheese in a blue oval dish, recipe from BBC Food." [ref=e1500]
+        - listitem [ref=e1501]:
+          - generic [ref=e1503]:
+            - generic [ref=e1504]:
+              - heading "Prep tomorrow's breakfast tonight with these overnight oat ideas" [level=3] [ref=e1506]:
+                - link "Prep tomorrow's breakfast tonight with these overnight oat ideas" [ref=e1507] [cursor=pointer]:
+                  - /url: /food/collections/overnight_oats
+                  - paragraph [ref=e1509]: Prep tomorrow's breakfast tonight with these overnight oat ideas
+              - list [ref=e1512]:
+                - listitem [ref=e1513]:
+                  - generic [ref=e1514]: Attribution
+                  - generic [ref=e1517]: BBC Food
+            - img "Image of Banana cocoa crunch overnight oats, recipe from BBC Food." [ref=e1522]
+        - listitem [ref=e1523]:
+          - generic [ref=e1525]:
+            - generic [ref=e1526]:
+              - heading "The diet tweaks that can improve your skin" [level=3] [ref=e1528]:
+                - link "The diet tweaks that can improve your skin" [ref=e1529] [cursor=pointer]:
+                  - /url: /food/articles/skin_health_diet
+                  - paragraph [ref=e1531]: The diet tweaks that can improve your skin
+              - list [ref=e1534]:
+                - listitem [ref=e1535]:
+                  - generic [ref=e1536]: Attribution
+                  - generic [ref=e1539]: BBC Food
+            - img "A close up of a young woman's face, she is holding a blackberry up to her lips." [ref=e1544]
+        - listitem [ref=e1545]:
+          - generic [ref=e1548]:
+            - heading "How science can help you win at Pancake Day" [level=3] [ref=e1550]:
+              - link "How science can help you win at Pancake Day" [ref=e1551] [cursor=pointer]:
+                - /url: /bitesize/articles/z764cqt
+                - paragraph [ref=e1553]: How science can help you win at Pancake Day
+            - list [ref=e1556]:
+              - listitem [ref=e1557]:
+                - generic [ref=e1558]: Attribution
+                - link "BBC Bitesize" [ref=e1561] [cursor=pointer]:
+                  - /url: /bitesize
+                  - generic [ref=e1562]:
+                    - img [ref=e1564]
+                    - text: BBC Bitesize
+        - listitem [ref=e1573]:
+          - generic [ref=e1575]:
+            - generic [ref=e1576]:
+              - heading "When New Yorkers tried British pork pies for the first time. Video, 00:03:20" [level=3] [ref=e1578]:
+                - link "When New Yorkers tried British pork pies for the first time. Video, 00:03:20" [ref=e1579] [cursor=pointer]:
+                  - /url: /videos/c0ke618en8go
+                  - paragraph [ref=e1581]:
+                    - generic [ref=e1582]: When New Yorkers tried British pork pies for the first time. Video, 00:03:20
+                    - text: When New Yorkers tried British pork pies for the first time
+              - list [ref=e1585]:
+                - listitem [ref=e1586]:
+                  - generic [ref=e1587]: Attribution
+                  - generic [ref=e1590]: BBC Archive
+            - generic [ref=e1592]:
+              - generic [ref=e1594]:
+                - img [ref=e1596]
+                - generic [ref=e1598]: 3:20
+              - img "A hand picking up a piece of pork pie in a bar in New York. © BBC" [ref=e1601]
+      - generic "Food and recipes" [ref=e1602]:
+        - link "View more" [ref=e1603] [cursor=pointer]:
+          - /url: /food
+    - generic [ref=e1606]:
+      - heading "Health and wellbeing" [level=2] [ref=e1610]:
+        - link "Health and wellbeing" [ref=e1611] [cursor=pointer]:
+          - /url: /news/health
+          - text: Health and wellbeing
+          - img [ref=e1613]
+      - list [ref=e1616]:
+        - listitem [ref=e1617]:
+          - generic [ref=e1619]:
+            - generic [ref=e1620]:
+              - generic [ref=e1621]:
+                - heading "'My break-up blindsided me. Here's how to tell if your relationship isn't working'" [level=3] [ref=e1622]:
+                  - link "'My break-up blindsided me. Here's how to tell if your relationship isn't working'" [ref=e1623] [cursor=pointer]:
+                    - /url: /news/articles/c1dk24xrpq7o
+                    - paragraph [ref=e1625]: "'My break-up blindsided me. Here's how to tell if your relationship isn't working'"
+                - paragraph [ref=e1626]: Eve's husband asked for a divorce after six months. Here's how to fix a failing partnership and when to walk away.
+              - list [ref=e1629]:
+                - listitem [ref=e1630]:
+                  - generic [ref=e1631]: Attribution
+                  - link "News" [ref=e1634] [cursor=pointer]:
+                    - /url: /news
+                    - generic [ref=e1635]:
+                      - img [ref=e1637]
+                      - text: News
+            - img "Eve Simmons, sporting long brown hair and a blue dress, is smiling while sitting on an orange sofa" [ref=e1646]
+        - listitem [ref=e1647]:
+          - generic [ref=e1649]:
+            - generic [ref=e1650]:
+              - heading "Statin pills much safer than advertised, major review finds" [level=3] [ref=e1652]:
+                - link "Statin pills much safer than advertised, major review finds" [ref=e1653] [cursor=pointer]:
+                  - /url: /news/articles/c80142p2g00o
+                  - paragraph [ref=e1655]: Statin pills much safer than advertised, major review finds
+              - list [ref=e1658]:
+                - listitem [ref=e1659]:
+                  - generic [ref=e1660]: Attribution
+                  - link "Health" [ref=e1663] [cursor=pointer]:
+                    - /url: /news/health
+                    - generic [ref=e1664]:
+                      - img [ref=e1666]
+                      - text: Health
+                - listitem [ref=e1672]:
+                  - generic [ref=e1673]: Comments
+                  - link "492" [ref=e1676] [cursor=pointer]:
+                    - /url: /news/articles/c80142p2g00o#comments
+                    - generic [ref=e1677]:
+                      - img [ref=e1679]
+                      - text: "492"
+            - img "Woman wearing bright pink cardigan and dark blue jeans hold two pills in one hand and a glass of water in the other" [ref=e1685]
+        - listitem [ref=e1686]:
+          - generic [ref=e1688]:
+            - generic [ref=e1689]:
+              - 'heading "''We are just parents, not a couple'': How to reconnect after having kids" [level=3] [ref=e1691]':
+                - 'link "''We are just parents, not a couple'': How to reconnect after having kids" [ref=e1692] [cursor=pointer]':
+                  - /url: /news/articles/ce3kvw4q29wo
+                  - paragraph [ref=e1694]: "'We are just parents, not a couple': How to reconnect after having kids"
+              - list [ref=e1697]:
+                - listitem [ref=e1698]:
+                  - generic [ref=e1699]: Attribution
+                  - link "Family & Education" [ref=e1702] [cursor=pointer]:
+                    - /url: /news/education
+                    - generic [ref=e1703]:
+                      - img [ref=e1705]
+                      - text: Family & Education
+            - img "A woman with red hair and blue eyes smiling." [ref=e1714]
+        - listitem [ref=e1715]:
+          - generic [ref=e1717]:
+            - generic [ref=e1718]:
+              - heading "Five foods everyone should eat more of, according to a doctor" [level=3] [ref=e1720]:
+                - link "Five foods everyone should eat more of, according to a doctor" [ref=e1721] [cursor=pointer]:
+                  - /url: /food/articles/rupy_aujla_vegan_tips
+                  - paragraph [ref=e1723]: Five foods everyone should eat more of, according to a doctor
+              - list [ref=e1726]:
+                - listitem [ref=e1727]:
+                  - generic [ref=e1728]: Attribution
+                  - generic [ref=e1731]: BBC Food
+            - img "A white bowl of harissa polenta with vegetables." [ref=e1736]
+        - listitem [ref=e1737]:
+          - generic [ref=e1739]:
+            - generic [ref=e1740]:
+              - heading "Why is it so hard to find an NHS dentist? Audio, 28 minutes" [level=3] [ref=e1742]:
+                - link "Why is it so hard to find an NHS dentist? Audio, 28 minutes" [ref=e1743] [cursor=pointer]:
+                  - /url: /sounds/play/m002r3nn
+                  - paragraph [ref=e1745]:
+                    - generic [ref=e1746]: Why is it so hard to find an NHS dentist? Audio, 28 minutes
+                    - text: Why is it so hard to find an NHS dentist?
+              - list [ref=e1749]:
+                - listitem [ref=e1750]:
+                  - generic [ref=e1751]: Attribution
+                  - generic [ref=e1754]:
+                    - img [ref=e1756]
+                    - text: BBC Radio 4
+            - generic [ref=e1762]:
+              - generic [ref=e1764]:
+                - img [ref=e1766]
+                - generic [ref=e1768]: 28 mins
+              - img "A close up of a dentist holding dental equipment." [ref=e1771]
+      - generic "Health and wellbeing" [ref=e1772]:
+        - link "View more" [ref=e1773] [cursor=pointer]:
+          - /url: /news/health
+    - generic [ref=e1776]:
+      - heading "Money" [level=2] [ref=e1780]:
+        - link "Money" [ref=e1781] [cursor=pointer]:
+          - /url: /news/business/your_money
+          - text: Money
+          - img [ref=e1783]
+      - list [ref=e1786]:
+        - listitem [ref=e1787]:
+          - generic [ref=e1790]:
+            - heading "'I turned my £500 business into £2 million'" [level=3] [ref=e1792]:
+              - link "'I turned my £500 business into £2 million'" [ref=e1793] [cursor=pointer]:
+                - /url: /bitesize/articles/zkr4fdm
+                - paragraph [ref=e1795]: "'I turned my £500 business into £2 million'"
+            - list [ref=e1798]:
+              - listitem [ref=e1799]:
+                - generic [ref=e1800]: Attribution
+                - link "BBC Bitesize" [ref=e1803] [cursor=pointer]:
+                  - /url: /bitesize
+                  - generic [ref=e1804]:
+                    - img [ref=e1806]
+                    - text: BBC Bitesize
+        - listitem [ref=e1815]:
+          - generic [ref=e1817]:
+            - generic [ref=e1818]:
+              - heading "Interest from around the world as 'home of the year' goes up for sale at £4.5m" [level=3] [ref=e1820]:
+                - link "Interest from around the world as 'home of the year' goes up for sale at £4.5m" [ref=e1821] [cursor=pointer]:
+                  - /url: /news/articles/cvgj5w07qjlo
+                  - paragraph [ref=e1823]: Interest from around the world as 'home of the year' goes up for sale at £4.5m
+              - list [ref=e1826]:
+                - listitem [ref=e1827]:
+                  - generic [ref=e1828]: Attribution
+                  - link "Wales" [ref=e1831] [cursor=pointer]:
+                    - /url: /news/wales
+                    - generic [ref=e1832]:
+                      - img [ref=e1834]
+                      - text: Wales
+            - img "Aerial view of a modern, single-story house with a grass-covered roof nestled into a coastal hillside." [ref=e1843]
+        - listitem [ref=e1844]:
+          - generic [ref=e1846]:
+            - generic [ref=e1847]:
+              - heading "Secret filming exposes locksmith charging 10 times his original quote" [level=3] [ref=e1849]:
+                - link "Secret filming exposes locksmith charging 10 times his original quote" [ref=e1850] [cursor=pointer]:
+                  - /url: /news/articles/c20825qwgz2o
+                  - paragraph [ref=e1852]: Secret filming exposes locksmith charging 10 times his original quote
+              - list [ref=e1855]:
+                - listitem [ref=e1856]:
+                  - generic [ref=e1857]: Attribution
+                  - link "England" [ref=e1860] [cursor=pointer]:
+                    - /url: /news/england
+                    - generic [ref=e1861]:
+                      - img [ref=e1863]
+                      - text: England
+            - img "The man from 24/7 Locksmiths UK is holding his drill and is poised to drill the lock of a faded black painted door" [ref=e1872]
+        - listitem [ref=e1873]:
+          - generic [ref=e1875]:
+            - generic [ref=e1876]:
+              - heading "'Success is the best revenge' say female entrepreneurs in their 50s" [level=3] [ref=e1878]:
+                - link "'Success is the best revenge' say female entrepreneurs in their 50s" [ref=e1879] [cursor=pointer]:
+                  - /url: /news/articles/cew8v8r8w2zo
+                  - paragraph [ref=e1881]: "'Success is the best revenge' say female entrepreneurs in their 50s"
+              - list [ref=e1884]:
+                - listitem [ref=e1885]:
+                  - generic [ref=e1886]: Attribution
+                  - link "Business" [ref=e1889] [cursor=pointer]:
+                    - /url: /news/business
+                    - generic [ref=e1890]:
+                      - img [ref=e1892]
+                      - text: Business
+            - img "A woman weaing a pink hat and pointing to some bottles." [ref=e1901]
+        - listitem [ref=e1902]:
+          - generic [ref=e1904]:
+            - generic [ref=e1905]:
+              - heading "Is renovating your house worth it? Video, 00:08:47" [level=3] [ref=e1907]:
+                - link "Is renovating your house worth it? Video, 00:08:47" [ref=e1908] [cursor=pointer]:
+                  - /url: /programmes/p0myw393
+                  - paragraph [ref=e1910]:
+                    - generic [ref=e1911]: Is renovating your house worth it? Video, 00:08:47
+                    - text: Is renovating your house worth it?
+              - list [ref=e1914]:
+                - listitem [ref=e1915]:
+                  - generic [ref=e1916]: Attribution
+                  - generic [ref=e1919]: BBC One
+            - generic [ref=e1921]:
+              - generic [ref=e1923]:
+                - img [ref=e1925]
+                - generic [ref=e1927]: 8:47
+              - img "A split picture consisting of Nick Knowles sat in a TV studio, wearing a dark purple shirt alongside a house partway through a loft extension." [ref=e1930]
+      - generic "Money" [ref=e1931]:
+        - link "View more" [ref=e1932] [cursor=pointer]:
+          - /url: /news/business/your_money
+    - generic [ref=e1935]:
+      - heading "Uplifting stories" [level=2] [ref=e1939]
+      - list [ref=e1941]:
+        - listitem [ref=e1942]:
+          - generic [ref=e1944]:
+            - generic [ref=e1945]:
+              - generic [ref=e1946]:
+                - heading "How to get the best view of the Northern Lights in 2026" [level=3] [ref=e1947]:
+                  - link "How to get the best view of the Northern Lights in 2026" [ref=e1948] [cursor=pointer]:
+                    - /url: /news/articles/clyzw90xnjzo
+                    - paragraph [ref=e1950]: How to get the best view of the Northern Lights in 2026
+                - paragraph [ref=e1951]: Experts say it will be a peak year for aurora spotting as the Sun reaches the maximum of its cycle.
+              - list [ref=e1954]:
+                - listitem [ref=e1955]:
+                  - generic [ref=e1956]: Attribution
+                  - link "Scotland" [ref=e1959] [cursor=pointer]:
+                    - /url: /news/scotland
+                    - generic [ref=e1960]:
+                      - img [ref=e1962]
+                      - text: Scotland
+            - img "Alternative description The Northern Lights in the north coast of Scotland." [ref=e1971]
+        - listitem [ref=e1972]:
+          - generic [ref=e1974]:
+            - generic [ref=e1975]:
+              - heading "The three metre-wide restaurant with eight seats named best in Wales" [level=3] [ref=e1977]:
+                - link "The three metre-wide restaurant with eight seats named best in Wales" [ref=e1978] [cursor=pointer]:
+                  - /url: /news/articles/ckgxlvxzkreo
+                  - paragraph [ref=e1980]: The three metre-wide restaurant with eight seats named best in Wales
+              - list [ref=e1983]:
+                - listitem [ref=e1984]:
+                  - generic [ref=e1985]: Attribution
+                  - link "Wales" [ref=e1988] [cursor=pointer]:
+                    - /url: /news/wales
+                    - generic [ref=e1989]:
+                      - img [ref=e1991]
+                      - text: Wales
+            - img "Chef Corrin in kitchen which is open to dining area talking to diners at two tables together. The setting is dark with warm overhead lighting and the diners are all looking at him." [ref=e2000]
+        - listitem [ref=e2001]:
+          - generic [ref=e2003]:
+            - generic [ref=e2004]:
+              - heading "Meet the rugby player still going strong - at 78" [level=3] [ref=e2006]:
+                - link "Meet the rugby player still going strong - at 78" [ref=e2007] [cursor=pointer]:
+                  - /url: /sport/rugby-union/articles/ce3g8q1ygzzo
+                  - paragraph [ref=e2009]: Meet the rugby player still going strong - at 78
+              - list [ref=e2012]:
+                - listitem [ref=e2013]:
+                  - generic [ref=e2014]: Attribution
+                  - link "Rugby Union" [ref=e2017] [cursor=pointer]:
+                    - /url: /sport/rugby-union
+                    - generic [ref=e2018]:
+                      - img [ref=e2020]
+                      - text: Rugby Union
+            - img "Alan Goggin" [ref=e2029]
+        - listitem [ref=e2030]:
+          - generic [ref=e2032]:
+            - generic [ref=e2033]:
+              - heading "Six celebrities who started their careers with apprenticeships" [level=3] [ref=e2035]:
+                - link "Six celebrities who started their careers with apprenticeships" [ref=e2036] [cursor=pointer]:
+                  - /url: /bitesize/articles/z2vxnk7
+                  - paragraph [ref=e2038]: Six celebrities who started their careers with apprenticeships
+              - list [ref=e2041]:
+                - listitem [ref=e2042]:
+                  - generic [ref=e2043]: Attribution
+                  - link "BBC Bitesize" [ref=e2046] [cursor=pointer]:
+                    - /url: /bitesize
+                    - generic [ref=e2047]:
+                      - img [ref=e2049]
+                      - text: BBC Bitesize
+            - img "Sir Ian McKellan, Steph McGovern" [ref=e2058]
+        - listitem [ref=e2059]:
+          - generic [ref=e2061]:
+            - generic [ref=e2062]:
+              - heading "Railway fans drive Europe's last commuter steam train in 1998. Video, 00:01:54" [level=3] [ref=e2064]:
+                - link "Railway fans drive Europe's last commuter steam train in 1998. Video, 00:01:54" [ref=e2065] [cursor=pointer]:
+                  - /url: /videos/cdx414dwqlqo
+                  - paragraph [ref=e2067]:
+                    - generic [ref=e2068]: Railway fans drive Europe's last commuter steam train in 1998. Video, 00:01:54
+                    - text: Railway fans drive Europe's last commuter steam train in 1998
+              - list [ref=e2071]:
+                - listitem [ref=e2072]:
+                  - generic [ref=e2073]: Attribution
+                  - generic [ref=e2076]: BBC Archive
+            - generic [ref=e2078]:
+              - generic [ref=e2080]:
+                - img [ref=e2082]
+                - generic [ref=e2084]: 1:54
+              - img "Train enthusiasts watching a steam train arrive at a platform in Poland." [ref=e2087]
+    - generic [ref=e2090]:
+      - generic [ref=e2092]:
+        - heading "Insight and analysis" [level=2] [ref=e2094]
+        - paragraph [ref=e2095]: A closer look at the week's stories
+      - list [ref=e2097]:
+        - listitem [ref=e2098]:
+          - generic [ref=e2100]:
+            - generic [ref=e2101]:
+              - heading "Who pays for state visits in Windsor?" [level=3] [ref=e2103]:
+                - link "Who pays for state visits in Windsor?" [ref=e2104] [cursor=pointer]:
+                  - /url: /news/articles/c7438lewy8zo
+                  - paragraph [ref=e2106]: Who pays for state visits in Windsor?
+              - list [ref=e2109]:
+                - listitem [ref=e2110]:
+                  - generic [ref=e2111]: Attribution
+                  - link "Berkshire" [ref=e2114] [cursor=pointer]:
+                    - /url: /news/england/berkshire
+                    - generic [ref=e2115]:
+                      - img [ref=e2117]
+                      - text: Berkshire
+            - img "King Charles and US President Donald Trump are sat next to one another at a formal banquet." [ref=e2126]
+        - listitem [ref=e2127]:
+          - generic [ref=e2129]:
+            - generic [ref=e2130]:
+              - 'heading "Abduction, Bitcoin and a TV icon: Why Nancy Guthrie''s case has gripped the US" [level=3] [ref=e2132]':
+                - 'link "Abduction, Bitcoin and a TV icon: Why Nancy Guthrie''s case has gripped the US" [ref=e2133] [cursor=pointer]':
+                  - /url: /news/articles/c5y48j0exlgo
+                  - paragraph [ref=e2135]: "Abduction, Bitcoin and a TV icon: Why Nancy Guthrie's case has gripped the US"
+              - list [ref=e2138]:
+                - listitem [ref=e2139]:
+                  - generic [ref=e2140]: Attribution
+                  - link "US & Canada" [ref=e2143] [cursor=pointer]:
+                    - /url: /news/world/us_and_canada
+                    - generic [ref=e2144]:
+                      - img [ref=e2146]
+                      - text: US & Canada
+            - img "A woman wearing a dark top and jeans stands in quiet contemplation by a flower memorial outside Nancy Guthrie's home" [ref=e2155]
+        - listitem [ref=e2156]:
+          - generic [ref=e2158]:
+            - generic [ref=e2159]:
+              - 'heading "70 years on: The challenges of depicting Jesus in TV drama for the first time" [level=3] [ref=e2161]':
+                - 'link "70 years on: The challenges of depicting Jesus in TV drama for the first time" [ref=e2162] [cursor=pointer]':
+                  - /url: /historyofthebbc/jesus-of-nazareth
+                  - paragraph [ref=e2164]: "70 years on: The challenges of depicting Jesus in TV drama for the first time"
+              - list [ref=e2167]:
+                - listitem [ref=e2168]:
+                  - generic [ref=e2169]: Attribution
+                  - generic [ref=e2172]: History of the BBC
+            - img "Image of the BBC filming Jesus of Nazareth in 1956." [ref=e2177]
+        - listitem [ref=e2178]:
+          - generic [ref=e2180]:
+            - generic [ref=e2181]:
+              - heading "Kane reaches 500 goals - what other records could he break?" [level=3] [ref=e2183]:
+                - link "Kane reaches 500 goals - what other records could he break?" [ref=e2184] [cursor=pointer]:
+                  - /url: /sport/football/articles/c743xp1xw9yo
+                  - paragraph [ref=e2186]: Kane reaches 500 goals - what other records could he break?
+              - list [ref=e2189]:
+                - listitem [ref=e2190]:
+                  - generic [ref=e2191]: Attribution
+                  - link "European Football" [ref=e2194] [cursor=pointer]:
+                    - /url: /sport/football/european
+                    - generic [ref=e2195]:
+                      - img [ref=e2197]
+                      - text: European Football
+                - listitem [ref=e2203]:
+                  - generic [ref=e2204]: Comments
+                  - link "637" [ref=e2207] [cursor=pointer]:
+                    - /url: /sport/football/articles/c743xp1xw9yo#comments
+                    - generic [ref=e2208]:
+                      - img [ref=e2210]
+                      - text: "637"
+            - img "Harry Kane celebrates scoring for Bayern Munich" [ref=e2216]
+        - listitem [ref=e2217]:
+          - generic [ref=e2219]:
+            - generic [ref=e2220]:
+              - heading "How a Super Bowl ad sparked new fears about our doorbells and AI. Audio, 34 minutes" [level=3] [ref=e2222]:
+                - link "How a Super Bowl ad sparked new fears about our doorbells and AI. Audio, 34 minutes" [ref=e2223] [cursor=pointer]:
+                  - /url: /sounds/play/p0mylrdr
+                  - paragraph [ref=e2225]:
+                    - generic [ref=e2226]: How a Super Bowl ad sparked new fears about our doorbells and AI. Audio, 34 minutes
+                    - text: How a Super Bowl ad sparked new fears about our doorbells and AI
+              - list [ref=e2229]:
+                - listitem [ref=e2230]:
+                  - generic [ref=e2231]: Attribution
+                  - generic [ref=e2234]:
+                    - img [ref=e2236]
+                    - text: BBC Radio 4
+            - generic [ref=e2242]:
+              - generic [ref=e2244]:
+                - img [ref=e2246]
+                - generic [ref=e2248]: 34 mins
+              - img "Ring doorbells" [ref=e2251]
+    - generic [ref=e2254]:
+      - heading "Science and nature" [level=2] [ref=e2258]
+      - list [ref=e2260]:
+        - listitem [ref=e2261]:
+          - generic [ref=e2263]:
+            - generic [ref=e2264]:
+              - generic [ref=e2265]:
+                - 'heading "Planet parade: Six planets to line up across night sky" [level=3] [ref=e2266]':
+                  - 'link "Planet parade: Six planets to line up across night sky" [ref=e2267] [cursor=pointer]':
+                    - /url: /newsround/articles/cqxdjv7r7n4o
+                    - paragraph [ref=e2269]: "Planet parade: Six planets to line up across night sky"
+                - paragraph [ref=e2270]: Four planets will be visible to the naked eye during this rare event at the end of February.
+              - list [ref=e2273]:
+                - listitem [ref=e2274]:
+                  - generic [ref=e2275]: Attribution
+                  - link "Newsround" [ref=e2278] [cursor=pointer]:
+                    - /url: /newsround
+                    - generic [ref=e2279]: Newsround
+                - listitem [ref=e2281]:
+                  - generic [ref=e2282]: Comments
+                  - link "17" [ref=e2285] [cursor=pointer]:
+                    - /url: /newsround/articles/cqxdjv7r7n4o#comments
+                    - generic [ref=e2286]:
+                      - img [ref=e2288]
+                      - text: "17"
+            - img "Planets on parade." [ref=e2294]
+        - listitem [ref=e2295]:
+          - generic [ref=e2297]:
+            - generic [ref=e2298]:
+              - heading "How lichen hold the secret to a breath of fresh air" [level=3] [ref=e2300]:
+                - link "How lichen hold the secret to a breath of fresh air" [ref=e2301] [cursor=pointer]:
+                  - /url: /news/articles/czx7rd9ny7wo
+                  - paragraph [ref=e2303]: How lichen hold the secret to a breath of fresh air
+              - list [ref=e2306]:
+                - listitem [ref=e2307]:
+                  - generic [ref=e2308]: Attribution
+                  - link "Hampshire & Isle of Wight" [ref=e2311] [cursor=pointer]:
+                    - /url: /news/england/hampshire
+                    - generic [ref=e2312]:
+                      - img [ref=e2314]
+                      - text: Hampshire & Isle of Wight
+            - img "Lichen on a branch." [ref=e2323]
+        - listitem [ref=e2324]:
+          - generic [ref=e2326]:
+            - generic [ref=e2327]:
+              - heading "Extremely rare species spotted in 'Asia's Amazon'" [level=3] [ref=e2329]:
+                - link "Extremely rare species spotted in 'Asia's Amazon'" [ref=e2330] [cursor=pointer]:
+                  - /url: /newsround/articles/cvgngw0lzwvo
+                  - paragraph [ref=e2332]: Extremely rare species spotted in 'Asia's Amazon'
+              - list [ref=e2335]:
+                - listitem [ref=e2336]:
+                  - generic [ref=e2337]: Attribution
+                  - link "Newsround" [ref=e2340] [cursor=pointer]:
+                    - /url: /newsround
+                    - generic [ref=e2341]: Newsround
+                - listitem [ref=e2343]:
+                  - generic [ref=e2344]: Comments
+                  - link "11" [ref=e2347] [cursor=pointer]:
+                    - /url: /newsround/articles/cvgngw0lzwvo#comments
+                    - generic [ref=e2348]:
+                      - img [ref=e2350]
+                      - text: "11"
+            - img "Great hornbill" [ref=e2356]
+        - listitem [ref=e2357]:
+          - generic [ref=e2360]:
+            - 'heading "The Yellowstone supervolcano: What would happen if it erupted?" [level=3] [ref=e2362]':
+              - 'link "The Yellowstone supervolcano: What would happen if it erupted?" [ref=e2363] [cursor=pointer]':
+                - /url: /bitesize/articles/zn3rs82
+                - paragraph [ref=e2365]: "The Yellowstone supervolcano: What would happen if it erupted?"
+            - list [ref=e2368]:
+              - listitem [ref=e2369]:
+                - generic [ref=e2370]: Attribution
+                - link "BBC Bitesize" [ref=e2373] [cursor=pointer]:
+                  - /url: /bitesize
+                  - generic [ref=e2374]:
+                    - img [ref=e2376]
+                    - text: BBC Bitesize
+        - listitem [ref=e2385]:
+          - generic [ref=e2387]:
+            - generic [ref=e2388]:
+              - 'heading "The science of soulmates: Is there a perfect match for you? Audio, 14 minutes" [level=3] [ref=e2390]':
+                - 'link "The science of soulmates: Is there a perfect match for you? Audio, 14 minutes" [ref=e2391] [cursor=pointer]':
+                  - /url: /sounds/play/p0n0njyp
+                  - paragraph [ref=e2393]:
+                    - generic [ref=e2394]: "The science of soulmates: Is there a perfect match for you? Audio, 14 minutes"
+                    - text: "The science of soulmates: Is there a perfect match for you?"
+              - list [ref=e2397]:
+                - listitem [ref=e2398]:
+                  - generic [ref=e2399]: Attribution
+                  - generic [ref=e2402]:
+                    - img [ref=e2404]
+                    - text: BBC News
+            - generic [ref=e2410]:
+              - generic [ref=e2412]:
+                - img [ref=e2414]
+                - generic [ref=e2416]: 14 mins
+              - img "A grpahic of two hearts in a chemistry beaker" [ref=e2419]
+    - generic [ref=e2421]:
+      - generic [ref=e2424]:
+        - heading "The video playlist" [level=2] [ref=e2426]
+        - paragraph [ref=e2427]: Watch a selection of standout clips from across the BBC
+      - group [ref=e2429]:
+        - generic [ref=e2432]:
+          - button "Scroll to previous item" [disabled] [ref=e2433]:
+            - generic [ref=e2434]:
+              - img [ref=e2435]
+              - generic [ref=e2437]: Scroll to previous item
+          - button "Scroll to next item, 7 of 15" [ref=e2438]:
+            - generic [ref=e2439]:
+              - img [ref=e2440]
+              - generic [ref=e2442]: Scroll to next item, 7 of 15
+        - list [ref=e2443]:
+          - listitem [ref=e2444]:
+            - button "Great Britain wins gold in mixed team snowboard cross. 00:01:46, play video Charlotte Bankes of Britain crosses finish line ahead of Lea Casta of France during the Mixed Team Snowboard Cross Semifinals" [ref=e2446] [cursor=pointer]:
+              - generic [ref=e2448]:
+                - generic [ref=e2449]:
+                  - img [ref=e2451]
+                  - text: 1:46
+                - generic [ref=e2453]: Great Britain wins gold in mixed team snowboard cross. 00:01:46, play video
+                - generic [ref=e2454]: Great Britain wins gold in mixed team snowboard cross
+              - img "Charlotte Bankes of Britain crosses finish line ahead of Lea Casta of France during the Mixed Team Snowboard Cross Semifinals" [ref=e2457]
+          - listitem [ref=e2458]:
+            - button "The Scottish island that's key to the world's curling stones. 00:01:54, play video A grey curling stone being made on a stone surface, a man's hands can be seen working on the stone" [ref=e2460] [cursor=pointer]:
+              - generic [ref=e2462]:
+                - generic [ref=e2463]:
+                  - img [ref=e2465]
+                  - text: 1:54
+                - generic [ref=e2467]: The Scottish island that's key to the world's curling stones. 00:01:54, play video
+                - generic [ref=e2468]: The Scottish island that's key to the world's curling stones
+              - img "A grey curling stone being made on a stone surface, a man's hands can be seen working on the stone" [ref=e2471]
+          - listitem [ref=e2472]:
+            - button "Love is... a four-week-old sausage roll? 00:00:54, play video A woman with long dark hair holds a phone to her ear, her hand is on a cardboard box" [ref=e2474] [cursor=pointer]:
+              - generic [ref=e2476]:
+                - generic [ref=e2477]:
+                  - img [ref=e2479]
+                  - text: 0:54
+                - generic [ref=e2481]: Love is... a four-week-old sausage roll? 00:00:54, play video
+                - generic [ref=e2482]: Love is... a four-week-old sausage roll?
+              - img "A woman with long dark hair holds a phone to her ear, her hand is on a cardboard box" [ref=e2485]
+          - listitem [ref=e2486]:
+            - button "'Baby groups are really important - for the parents' 00:00:40, play video Dani Dyer on a video call" [ref=e2488] [cursor=pointer]:
+              - generic [ref=e2490]:
+                - generic [ref=e2491]:
+                  - img [ref=e2493]
+                  - text: 0:40
+                - generic [ref=e2495]: "'Baby groups are really important - for the parents' 00:00:40, play video"
+                - generic [ref=e2496]: "'Baby groups are really important - for the parents'"
+              - img "Dani Dyer on a video call" [ref=e2499]
+          - listitem [ref=e2500]:
+            - button "This is why zebras have stripes. 00:01:03, play video A woman with blonde hair in a green and white top, superimposed over a picture of zebras on the savannah" [ref=e2502] [cursor=pointer]:
+              - generic [ref=e2504]:
+                - generic [ref=e2505]:
+                  - img [ref=e2507]
+                  - text: 1:03
+                - generic [ref=e2509]: This is why zebras have stripes. 00:01:03, play video
+                - generic [ref=e2510]: This is why zebras have stripes
+              - img "A woman with blonde hair in a green and white top, superimposed over a picture of zebras on the savannah" [ref=e2513]
+          - listitem [ref=e2514]:
+            - button "'Has anybody seen any grown-ups?' 00:00:34, play video Two characters, Ralph and Piggy, in shirt and shorts, stand on a beach in front of other boys" [ref=e2516] [cursor=pointer]:
+              - generic [ref=e2518]:
+                - generic [ref=e2519]:
+                  - img [ref=e2521]
+                  - text: 0:34
+                - generic [ref=e2523]: "'Has anybody seen any grown-ups?' 00:00:34, play video"
+                - generic [ref=e2524]: "'Has anybody seen any grown-ups?'"
+              - img "Two characters, Ralph and Piggy, in shirt and shorts, stand on a beach in front of other boys" [ref=e2527]
+          - listitem [ref=e2528]:
+            - button "Is the US still a genuine ally of Europe? 00:00:49, play video Marco Rubio" [ref=e2530] [cursor=pointer]:
+              - generic [ref=e2532]:
+                - generic [ref=e2533]:
+                  - img [ref=e2535]
+                  - text: 0:49
+                - generic [ref=e2537]: Is the US still a genuine ally of Europe? 00:00:49, play video
+                - generic [ref=e2538]: Is the US still a genuine ally of Europe?
+              - img "Marco Rubio" [ref=e2541]
+          - listitem [ref=e2542]:
+            - button "No, Valentine's Day wasn't created by card companies. 00:01:03, play video A heart-shaped box of chocolates" [ref=e2544] [cursor=pointer]:
+              - generic [ref=e2546]:
+                - generic [ref=e2547]:
+                  - img [ref=e2549]
+                  - text: 1:03
+                - generic [ref=e2551]: No, Valentine's Day wasn't created by card companies. 00:01:03, play video
+                - generic [ref=e2552]: No, Valentine's Day wasn't created by card companies
+              - img "A heart-shaped box of chocolates" [ref=e2555]
+          - listitem [ref=e2556]:
+            - button "Moment Matt Weston wins Olympic gold for Team GB. 00:01:04, play video Matt Weston holds his helmet up after winning gold" [ref=e2558] [cursor=pointer]:
+              - generic [ref=e2560]:
+                - generic [ref=e2561]:
+                  - img [ref=e2563]
+                  - text: 1:04
+                - generic [ref=e2565]: Moment Matt Weston wins Olympic gold for Team GB. 00:01:04, play video
+                - generic [ref=e2566]: Moment Matt Weston wins Olympic gold for Team GB
+              - img "Matt Weston holds his helmet up after winning gold" [ref=e2569]
+          - listitem [ref=e2570]:
+            - button "When your pocket dial lie gets found out. 00:00:38, play video A woman stands in a doorway in her pyjamas" [ref=e2572] [cursor=pointer]:
+              - generic [ref=e2574]:
+                - generic [ref=e2575]:
+                  - img [ref=e2577]
+                  - text: 0:38
+                - generic [ref=e2579]: When your pocket dial lie gets found out. 00:00:38, play video
+                - generic [ref=e2580]: When your pocket dial lie gets found out
+              - img "A woman stands in a doorway in her pyjamas" [ref=e2583]
+          - listitem [ref=e2584]:
+            - button "Why a broken heart can be so painful. 00:01:13, play video A woman holds a cutout of a broken heart over her face" [ref=e2586] [cursor=pointer]:
+              - generic [ref=e2588]:
+                - generic [ref=e2589]:
+                  - img [ref=e2591]
+                  - text: 1:13
+                - generic [ref=e2593]: Why a broken heart can be so painful. 00:01:13, play video
+                - generic [ref=e2594]: Why a broken heart can be so painful
+              - img "A woman holds a cutout of a broken heart over her face" [ref=e2597]
+          - listitem [ref=e2598]:
+            - button "How to drive safely in icy weather. 00:00:56, play video Weather presenter Matt Taylor, looking shocked with his mouth open as he grips the steering wheel of a small car, spinning around a skid pan." [ref=e2600] [cursor=pointer]:
+              - generic [ref=e2602]:
+                - generic [ref=e2603]:
+                  - img [ref=e2605]
+                  - text: 0:56
+                - generic [ref=e2607]: How to drive safely in icy weather. 00:00:56, play video
+                - generic [ref=e2608]: How to drive safely in icy weather
+              - img "Weather presenter Matt Taylor, looking shocked with his mouth open as he grips the steering wheel of a small car, spinning around a skid pan." [ref=e2611]
+          - listitem [ref=e2612]:
+            - button "Think I'll give the Brazil nuts a miss. 00:00:18, play video A man with long grey hair spitrs out a Brazil nut" [ref=e2614] [cursor=pointer]:
+              - generic [ref=e2616]:
+                - generic [ref=e2617]:
+                  - img [ref=e2619]
+                  - text: 0:18
+                - generic [ref=e2621]: Think I'll give the Brazil nuts a miss. 00:00:18, play video
+                - generic [ref=e2622]: Think I'll give the Brazil nuts a miss
+              - img "A man with long grey hair spitrs out a Brazil nut" [ref=e2625]
+          - listitem [ref=e2626]:
+            - button "The unlikely benefits of kissing. 00:01:29, play video Two women kissing with their eyes closed. One has red hair and the other has brown hair" [ref=e2628] [cursor=pointer]:
+              - generic [ref=e2630]:
+                - generic [ref=e2631]:
+                  - img [ref=e2633]
+                  - text: 1:29
+                - generic [ref=e2635]: The unlikely benefits of kissing. 00:01:29, play video
+                - generic [ref=e2636]: The unlikely benefits of kissing
+              - img "Two women kissing with their eyes closed. One has red hair and the other has brown hair" [ref=e2639]
+          - listitem [ref=e2640]:
+            - button "What is love in Glasgow? 00:01:15, play video Ashleigh Storrie stands in a museum holding a microphone. She has long, dark hair." [ref=e2642] [cursor=pointer]:
+              - generic [ref=e2644]:
+                - generic [ref=e2645]:
+                  - img [ref=e2647]
+                  - text: 1:15
+                - generic [ref=e2649]: What is love in Glasgow? 00:01:15, play video
+                - generic [ref=e2650]: What is love in Glasgow?
+              - img "Ashleigh Storrie stands in a museum holding a microphone. She has long, dark hair." [ref=e2653]
+    - generic [ref=e2656]:
+      - heading "Discover more to watch and listen to" [level=2] [ref=e2660]
+      - list [ref=e2662]:
+        - listitem [ref=e2663]:
+          - generic [ref=e2665]:
+            - generic [ref=e2666]:
+              - generic [ref=e2667]:
+                - heading "Could Denmark solve this divorcee's life problems? Video, 84 minutes" [level=3] [ref=e2668]:
+                  - link "Could Denmark solve this divorcee's life problems? Video, 84 minutes" [ref=e2669] [cursor=pointer]:
+                    - /url: /iplayer/episode/m001mg2h
+                    - paragraph [ref=e2671]:
+                      - generic [ref=e2672]: Could Denmark solve this divorcee's life problems? Video, 84 minutes
+                      - text: Could Denmark solve this divorcee's life problems?
+                - paragraph [ref=e2673]: An unhappy Herb, played by Rafe Spall, hears being held in a Danish jail is more comfy than his life in Wales.
+              - list [ref=e2676]:
+                - listitem [ref=e2677]:
+                  - generic [ref=e2678]: Attribution
+                  - generic [ref=e2681]:
+                    - img [ref=e2683]
+                    - text: BBC Two
+            - generic [ref=e2692]:
+              - img [ref=e2694]
+              - generic [ref=e2696]: 84 mins
+        - listitem [ref=e2699]:
+          - generic [ref=e2701]:
+            - generic [ref=e2702]:
+              - heading "Four cousins and a dog embark on a treasure hunt that could turn deadly. Video, 89 minutes" [level=3] [ref=e2704]:
+                - link "Four cousins and a dog embark on a treasure hunt that could turn deadly. Video, 89 minutes" [ref=e2705] [cursor=pointer]:
+                  - /url: /iplayer/episode/m001tbsg
+                  - paragraph [ref=e2707]:
+                    - generic [ref=e2708]: Four cousins and a dog embark on a treasure hunt that could turn deadly. Video, 89 minutes
+                    - text: Four cousins and a dog embark on a treasure hunt that could turn deadly
+              - list [ref=e2711]:
+                - listitem [ref=e2712]:
+                  - generic [ref=e2713]: Attribution
+                  - generic [ref=e2716]:
+                    - img [ref=e2718]
+                    - text: CBBC
+            - generic [ref=e2727]:
+              - img [ref=e2729]
+              - generic [ref=e2731]: 89 mins
+        - listitem [ref=e2734]:
+          - generic [ref=e2736]:
+            - generic [ref=e2737]:
+              - heading "'I bought Macclesfield FC while drunk and it saved my life' Audio, 42 minutes" [level=3] [ref=e2739]:
+                - link "'I bought Macclesfield FC while drunk and it saved my life' Audio, 42 minutes" [ref=e2740] [cursor=pointer]:
+                  - /url: /sounds/play/p0mzm3fb
+                  - paragraph [ref=e2742]:
+                    - generic [ref=e2743]: "'I bought Macclesfield FC while drunk and it saved my life' Audio, 42 minutes"
+                    - text: "'I bought Macclesfield FC while drunk and it saved my life'"
+              - list [ref=e2746]:
+                - listitem [ref=e2747]:
+                  - generic [ref=e2748]: Attribution
+                  - generic [ref=e2751]:
+                    - img [ref=e2753]
+                    - text: BBC World Service
+            - generic [ref=e2759]:
+              - generic [ref=e2761]:
+                - img [ref=e2763]
+                - generic [ref=e2765]: 42 mins
+              - img "Rob Smethurst the FA Cup match between Macclesfield and Crystal Palace" [ref=e2768]
+        - listitem [ref=e2769]:
+          - generic [ref=e2771]:
+            - generic [ref=e2772]:
+              - heading "Diane Morgan in a warm-hearted comedy about overbearing in-laws. Video, 27 minutes" [level=3] [ref=e2774]:
+                - link "Diane Morgan in a warm-hearted comedy about overbearing in-laws. Video, 27 minutes" [ref=e2775] [cursor=pointer]:
+                  - /url: /iplayer/episode/p0dj28k7
+                  - paragraph [ref=e2777]:
+                    - generic [ref=e2778]: Diane Morgan in a warm-hearted comedy about overbearing in-laws. Video, 27 minutes
+                    - text: Diane Morgan in a warm-hearted comedy about overbearing in-laws
+              - list [ref=e2781]:
+                - listitem [ref=e2782]:
+                  - generic [ref=e2783]: Attribution
+                  - generic [ref=e2786]:
+                    - img [ref=e2788]
+                    - text: BBC Two
+            - generic [ref=e2795]:
+              - generic [ref=e2797]:
+                - img [ref=e2799]
+                - generic [ref=e2801]: 27 mins
+              - img "A man and a woman stand under umbrellas. They are both wearing rain jackets with the hoods up" [ref=e2804]
+        - listitem [ref=e2805]:
+          - generic [ref=e2807]:
+            - generic [ref=e2808]:
+              - 'heading "''I would never do it again'': The day Pink Floyd played in Venice. Audio, 10 minutes" [level=3] [ref=e2810]':
+                - 'link "''I would never do it again'': The day Pink Floyd played in Venice. Audio, 10 minutes" [ref=e2811] [cursor=pointer]':
+                  - /url: /sounds/play/w3ct74p0
+                  - paragraph [ref=e2813]:
+                    - generic [ref=e2814]: "'I would never do it again': The day Pink Floyd played in Venice. Audio, 10 minutes"
+                    - text: "'I would never do it again': The day Pink Floyd played in Venice"
+              - list [ref=e2817]:
+                - listitem [ref=e2818]:
+                  - generic [ref=e2819]: Attribution
+                  - generic [ref=e2822]:
+                    - img [ref=e2824]
+                    - text: BBC World Service
+            - generic [ref=e2830]:
+              - generic [ref=e2832]:
+                - img [ref=e2834]
+                - generic [ref=e2836]: 10 mins
+              - img "Aerial view from the roof of Londra Grand hotel of a large crowd waiting for Pink floyd to perform a show in Venice, 1989. (Photo by Luciano Viti/Getty Images)" [ref=e2839]
+    - generic [ref=e2843]:
+      - generic [ref=e2845]:
+        - heading "New and trending on the BBC" [level=2] [ref=e2847]
+        - paragraph [ref=e2848]: Add to your watchlist on iPlayer and subscribe on Sounds
+      - list [ref=e2850]:
+        - listitem [ref=e2851]:
+          - generic [ref=e2853]:
+            - generic [ref=e2854]:
+              - generic [ref=e2855]:
+                - heading "The anti-freeze scandal that tainted Austria’s fine wine reputation" [level=3] [ref=e2857]:
+                  - link "The anti-freeze scandal that tainted Austria’s fine wine reputation" [ref=e2858] [cursor=pointer]:
+                    - /url: /sounds/play/w3ct74kk?at_mid=lUMWvNKZ6G&at_campaign=Witness_History_Austria_Wine_Scandal&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=sounds&at_brand=p004t1hd&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Witness_History_Austria_Wine_Scandal&at_bbc_team=BBC
+                    - paragraph [ref=e2860]: The anti-freeze scandal that tainted Austria’s fine wine reputation
+                - list [ref=e2864]:
+                  - listitem [ref=e2865]:
+                    - generic [ref=e2866]: Attribution
+                    - generic [ref=e2869]:
+                      - img [ref=e2871]
+                      - text: Sounds
+              - generic [ref=e2879]:
+                - button "Subscribe Add Witness History to My Sounds" [ref=e2881]:
+                  - generic [ref=e2883]:
+                    - img [ref=e2885]
+                    - generic [ref=e2888]:
+                      - text: Subscribe
+                      - generic [ref=e2889]: Add Witness History to My Sounds
+                - paragraph [ref=e2890]: Subscribe Add Witness History to My Sounds
+            - img "Witness History" [ref=e2894]
+        - listitem [ref=e2895]:
+          - generic [ref=e2897]:
+            - generic [ref=e2898]:
+              - generic [ref=e2899]:
+                - 'heading "A Suitable Boy: Where traditions clash with modern dreams" [level=3] [ref=e2901]':
+                  - 'link "A Suitable Boy: Where traditions clash with modern dreams" [ref=e2902] [cursor=pointer]':
+                    - /url: /iplayer/episode/m000lbh7/a-suitable-boy-series-1-episode-1?at_mid=6MzfDTeGNa&at_campaign=A_Suitable_Boy_series_1_episode_1&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=m000lbh9&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=A_Suitable_Boy_series_1_episode_1&at_bbc_team=BBC
+                    - paragraph [ref=e2904]: "A Suitable Boy: Where traditions clash with modern dreams"
+                - list [ref=e2908]:
+                  - listitem [ref=e2909]:
+                    - generic [ref=e2910]: Attribution
+                    - generic [ref=e2913]:
+                      - img [ref=e2915]
+                      - text: iPlayer
+              - generic [ref=e2924]:
+                - button "Watchlist Add A Suitable Boy to your Watchlist in iPlayer" [ref=e2926]:
+                  - generic [ref=e2928]:
+                    - img [ref=e2930]
+                    - generic [ref=e2932]:
+                      - text: Watchlist
+                      - generic [ref=e2933]: Add A Suitable Boy to your Watchlist in iPlayer
+                - paragraph [ref=e2934]: Watchlist Add A Suitable Boy to your Watchlist in iPlayer
+            - img "A Suitable Boy" [ref=e2938]
+        - listitem [ref=e2939]:
+          - generic [ref=e2941]:
+            - generic [ref=e2942]:
+              - generic [ref=e2943]:
+                - heading "A smooth soul throwback mix from iconic voices" [level=3] [ref=e2945]:
+                  - link "A smooth soul throwback mix from iconic voices" [ref=e2946] [cursor=pointer]:
+                    - /url: /sounds/play/m002qsyk?at_mid=z2DNTYshn7&at_campaign=1Xtras_Throwback_Party_Erykah_Badu_Lauryn_Hill_Musiq_Soulchild&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=sounds&at_brand=m0015txd&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=1Xtras_Throwback_Party_Erykah_Badu_Lauryn_Hill_Musiq_Soulchild&at_bbc_team=BBC
+                    - paragraph [ref=e2948]: A smooth soul throwback mix from iconic voices
+                - list [ref=e2952]:
+                  - listitem [ref=e2953]:
+                    - generic [ref=e2954]: Attribution
+                    - generic [ref=e2957]:
+                      - img [ref=e2959]
+                      - text: Sounds
+              - generic [ref=e2967]:
+                - button "Subscribe Add 1Xtra's Throwback Party to My Sounds" [ref=e2969]:
+                  - generic [ref=e2971]:
+                    - img [ref=e2973]
+                    - generic [ref=e2976]:
+                      - text: Subscribe
+                      - generic [ref=e2977]: Add 1Xtra's Throwback Party to My Sounds
+                - paragraph [ref=e2978]: Subscribe Add 1Xtra's Throwback Party to My Sounds
+            - img "1Xtra's Throwback Party" [ref=e2982]
+        - listitem [ref=e2983]:
+          - generic [ref=e2985]:
+            - generic [ref=e2986]:
+              - generic [ref=e2987]:
+                - heading "An intense drama where AI deepfakes have blurred reality" [level=3] [ref=e2989]:
+                  - link "An intense drama where AI deepfakes have blurred reality" [ref=e2990] [cursor=pointer]:
+                    - /url: /iplayer/episode/m00085sv/the-capture-series-1-1-what-happens-in-helmand?at_mid=HeBeR6cUYN&at_campaign=The_Capture_series_1_episode_1&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=m00085sx&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=The_Capture_series_1_episode_1&at_bbc_team=BBC
+                    - paragraph [ref=e2992]: An intense drama where AI deepfakes have blurred reality
+                - list [ref=e2996]:
+                  - listitem [ref=e2997]:
+                    - generic [ref=e2998]: Attribution
+                    - generic [ref=e3001]:
+                      - img [ref=e3003]
+                      - text: iPlayer
+              - generic [ref=e3012]:
+                - button "Watchlist Add The Capture to your Watchlist in iPlayer" [ref=e3014]:
+                  - generic [ref=e3016]:
+                    - img [ref=e3018]
+                    - generic [ref=e3020]:
+                      - text: Watchlist
+                      - generic [ref=e3021]: Add The Capture to your Watchlist in iPlayer
+                - paragraph [ref=e3022]: Watchlist Add The Capture to your Watchlist in iPlayer
+            - img "The Capture" [ref=e3026]
+    - generic [ref=e3029]:
+      - heading "Quizzes and games" [level=2] [ref=e3033]
+      - list [ref=e3035]:
+        - listitem [ref=e3036]:
+          - generic [ref=e3038]:
+            - generic [ref=e3039]:
+              - 'heading "Cob, bap or stottie?: See how well you know these regional food names" [level=3] [ref=e3041]':
+                - 'link "Cob, bap or stottie?: See how well you know these regional food names" [ref=e3042] [cursor=pointer]':
+                  - /url: /food/articles/quiz_regional_food_name_variations
+                  - paragraph [ref=e3044]: "Cob, bap or stottie?: See how well you know these regional food names"
+              - list [ref=e3047]:
+                - listitem [ref=e3048]:
+                  - generic [ref=e3049]: Attribution
+                  - generic [ref=e3052]: BBC Food
+            - img "Bacon sandwich with ketchup" [ref=e3057]
+        - listitem [ref=e3058]:
+          - generic [ref=e3060]:
+            - generic [ref=e3061]:
+              - heading "Looking for a career change? Take the quiz to find an apprenticeship for you" [level=3] [ref=e3063]:
+                - link "Looking for a career change? Take the quiz to find an apprenticeship for you" [ref=e3064] [cursor=pointer]:
+                  - /url: /bitesize/articles/zy8r6rd
+                  - paragraph [ref=e3066]: Looking for a career change? Take the quiz to find an apprenticeship for you
+              - list [ref=e3069]:
+                - listitem [ref=e3070]:
+                  - generic [ref=e3071]: Attribution
+                  - link "BBC Bitesize" [ref=e3074] [cursor=pointer]:
+                    - /url: /bitesize
+                    - generic [ref=e3075]:
+                      - img [ref=e3077]
+                      - text: BBC Bitesize
+            - img "A young person working outdoors with planets. They have long blonde hair and are wearing a dark grey coat." [ref=e3086]
+        - listitem [ref=e3087]:
+          - generic [ref=e3090]:
+            - heading "Do you remember these retro gadgets and gizmos?" [level=3] [ref=e3092]:
+              - link "Do you remember these retro gadgets and gizmos?" [ref=e3093] [cursor=pointer]:
+                - /url: /bitesize/articles/z7dwb7h
+                - paragraph [ref=e3095]: Do you remember these retro gadgets and gizmos?
+            - list [ref=e3098]:
+              - listitem [ref=e3099]:
+                - generic [ref=e3100]: Attribution
+                - link "BBC Bitesize" [ref=e3103] [cursor=pointer]:
+                  - /url: /bitesize
+                  - generic [ref=e3104]:
+                    - img [ref=e3106]
+                    - text: BBC Bitesize
+        - listitem [ref=e3115]:
+          - generic [ref=e3117]:
+            - generic [ref=e3118]:
+              - heading "Keep your brain active with these Sudoku puzzles" [level=3] [ref=e3120]:
+                - link "Keep your brain active with these Sudoku puzzles" [ref=e3121] [cursor=pointer]:
+                  - /url: /bitesize/articles/zsry239#zfcvmbk
+                  - paragraph [ref=e3123]: Keep your brain active with these Sudoku puzzles
+              - list [ref=e3126]:
+                - listitem [ref=e3127]:
+                  - generic [ref=e3128]: Attribution
+                  - generic [ref=e3131]:
+                    - img [ref=e3133]
+                    - text: BBC Bitesize
+            - img "Sudoku Puzzle" [ref=e3142]
+    - generic [ref=e3145]:
+      - heading "BBC around the UK" [level=2] [ref=e3146]
+      - list [ref=e3148]:
+        - listitem [ref=e3149]:
+          - generic [ref=e3151]:
+            - link "Scotland" [ref=e3154] [cursor=pointer]:
+              - /url: /scotland
+              - paragraph [ref=e3156]: Scotland
+            - img "BBC Scotland logo" [ref=e3161]
+        - listitem [ref=e3162]:
+          - generic [ref=e3164]:
+            - link "ALBA" [ref=e3167] [cursor=pointer]:
+              - /url: /alba
+              - paragraph [ref=e3169]: ALBA
+            - img "BBC ALBA logo" [ref=e3174]
+        - listitem [ref=e3175]:
+          - generic [ref=e3177]:
+            - link "Wales" [ref=e3180] [cursor=pointer]:
+              - /url: /wales
+              - paragraph [ref=e3182]: Wales
+            - img "BBC Cymru logo" [ref=e3187]
+        - listitem [ref=e3188]:
+          - generic [ref=e3190]:
+            - link "Cymru" [ref=e3193] [cursor=pointer]:
+              - /url: /cymru
+              - paragraph [ref=e3195]: Cymru
+            - img "BBC Cymru logo" [ref=e3200]
+        - listitem [ref=e3201]:
+          - generic [ref=e3203]:
+            - link "NI" [ref=e3206] [cursor=pointer]:
+              - /url: /northernireland
+              - paragraph [ref=e3208]: NI
+            - img "BBC Northern Ireland logo" [ref=e3213]
+    - generic [ref=e3216]:
+      - heading "Get support" [level=2] [ref=e3218]
+      - list [ref=e3219]:
+        - listitem [ref=e3220]:
+          - link "Find BBC Action Lines" [ref=e3221] [cursor=pointer]:
+            - /url: /actionline/
+        - listitem [ref=e3222]:
+          - link "Action Lines for young people" [ref=e3223] [cursor=pointer]:
+            - /url: /programmes/articles/6SmMTR854QqSmKlxYrlRTs/information-and-support-bitesize
+        - listitem [ref=e3224]:
+          - link "Get help receiving TV, radio or digital services" [ref=e3225] [cursor=pointer]:
+            - /url: /reception/
+    - generic [ref=e3228]:
+      - heading "About the BBC" [level=2] [ref=e3230]
+      - list [ref=e3231]:
+        - listitem [ref=e3232]:
+          - link "Mission, values and public purposes" [ref=e3233] [cursor=pointer]:
+            - /url: /aboutthebbc/governance/mission
+        - listitem [ref=e3234]:
+          - link "What we do" [ref=e3235] [cursor=pointer]:
+            - /url: /aboutthebbc/whatwedo/
+        - listitem [ref=e3236]:
+          - link "Modern slavery statement" [ref=e3237] [cursor=pointer]:
+            - /url: /aboutthebbc/documents/bbcmsa2025.pdf
+  - contentinfo [ref=e3240]:
+    - generic [ref=e3243]:
+      - heading "10-minute plays, perfect for a pause" [level=2] [ref=e3247]
+      - list [ref=e3249]:
+        - listitem [ref=e3250]:
+          - generic [ref=e3252]:
+            - generic [ref=e3253]:
+              - link "From classic lit to teen hit" [ref=e3255] [cursor=pointer]:
+                - /url: /iplayer/episode/p08kqmxs/inside-cinema-shorts-41-classic-lit-to-teen-hit?seriesId=more-like-this&at_mid=EbLGIdjBrt&at_campaign=Inside_Cinema_Classic_Lit_To_Teen_Hit&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=p07f7m9q&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Inside_Cinema_Classic_Lit_To_Teen_Hit&at_bbc_team=BBC
+                - paragraph [ref=e3257]: From classic lit to teen hit
+              - list [ref=e3260]:
+                - listitem [ref=e3261]:
+                  - generic [ref=e3262]: Attribution
+                  - generic [ref=e3265]:
+                    - img [ref=e3267]
+                    - text: iPlayer
+            - img "Inside Cinema - Cher from Clueless" [ref=e3277]
+        - listitem [ref=e3278]:
+          - generic [ref=e3280]:
+            - generic [ref=e3281]:
+              - link "The siblings that made skiing history" [ref=e3283] [cursor=pointer]:
+                - /url: /sounds/play/w3ct7zsy?at_mid=hQZgpx6uGW&at_campaign=Sporting_Witness&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=sounds&at_brand=p00j2pn5&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Sporting_Witness&at_bbc_team=BBC
+                - paragraph [ref=e3285]: The siblings that made skiing history
+              - list [ref=e3288]:
+                - listitem [ref=e3289]:
+                  - generic [ref=e3290]: Attribution
+                  - generic [ref=e3293]:
+                    - img [ref=e3295]
+                    - text: Sounds
+            - img "Sporting Witness" [ref=e3304]
+        - listitem [ref=e3305]:
+          - generic [ref=e3307]:
+            - generic [ref=e3308]:
+              - link "Margot Robbie joins Greg James for a game of Unpopular Opinion" [ref=e3310] [cursor=pointer]:
+                - /url: /iplayer/episode/p0mw1391/unpopular-opinion-margot-robbie?at_mid=Zp9LdiVUvt&at_campaign=Unpopular_Opinion_Margot_Robbie&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=p086sxq7&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Unpopular_Opinion_Margot_Robbie&at_bbc_team=BBC
+                - paragraph [ref=e3312]: Margot Robbie joins Greg James for a game of Unpopular Opinion
+              - list [ref=e3315]:
+                - listitem [ref=e3316]:
+                  - generic [ref=e3317]: Attribution
+                  - generic [ref=e3320]:
+                    - img [ref=e3322]
+                    - text: iPlayer
+            - img "Unpopular Opinion" [ref=e3332]
+        - listitem [ref=e3333]:
+          - generic [ref=e3335]:
+            - generic [ref=e3336]:
+              - link "Why has there been a rise in child-free weddings?" [ref=e3338] [cursor=pointer]:
+                - /url: /sounds/play/p0mynm74?at_mid=WCSUbs9AYC&at_campaign=Anti_social_Childfree_weddings&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=m0018h15&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Anti_social_Childfree_weddings&at_bbc_team=BBC
+                - paragraph [ref=e3340]: Why has there been a rise in child-free weddings?
+              - list [ref=e3343]:
+                - listitem [ref=e3344]:
+                  - generic [ref=e3345]: Attribution
+                  - generic [ref=e3348]:
+                    - img [ref=e3350]
+                    - text: Sounds
+            - img "AntiSocial" [ref=e3359]
+    - generic [ref=e3362]:
+      - list [ref=e3363]:
+        - listitem [ref=e3364]:
+          - link "Home" [ref=e3365] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk
+        - listitem [ref=e3366]:
+          - link "News" [ref=e3367] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/news
+        - listitem [ref=e3368]:
+          - link "Sport" [ref=e3369] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/sport
+        - listitem [ref=e3370]:
+          - link "Weather" [ref=e3371] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/weather
+        - listitem [ref=e3372]:
+          - link "iPlayer" [ref=e3373] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/iplayer
+        - listitem [ref=e3374]:
+          - link "Sounds" [ref=e3375] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/sounds
+        - listitem [ref=e3376]:
+          - link "Bitesize" [ref=e3377] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/bitesize
+        - listitem [ref=e3378]:
+          - link "CBBC" [ref=e3379] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/cbbc
+        - listitem [ref=e3380]:
+          - link "CBeebies" [ref=e3381] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/cbeebies
+        - listitem [ref=e3382]:
+          - link "Food" [ref=e3383] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/food
+      - generic [ref=e3384]:
+        - list [ref=e3386]:
+          - listitem [ref=e3387]:
+            - link "Terms of Use" [ref=e3388] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/terms
+          - listitem [ref=e3389]:
+            - link "About the BBC" [ref=e3390] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/aboutthebbc
+          - listitem [ref=e3391]:
+            - link "Privacy Policy" [ref=e3392] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/privacy
+          - listitem [ref=e3393]:
+            - link "Cookies" [ref=e3394] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/cookies
+          - listitem [ref=e3395]:
+            - link "Accessibility Help" [ref=e3396] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/accessibility
+          - listitem [ref=e3397]:
+            - link "Parental Guidance" [ref=e3398] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/iplayer/guidance
+          - listitem [ref=e3399]:
+            - link "Contact the BBC" [ref=e3400] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/contact
+          - listitem [ref=e3401]:
+            - link "Make an editorial complaint" [ref=e3402] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/contact/complaints
+          - listitem [ref=e3403]:
+            - link "BBC emails for you" [ref=e3404] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/bbcnewsletter
+        - paragraph [ref=e3405]:
+          - text: Copyright © 2026 BBC. The BBC is not responsible for the content of external sites.
+          - link "Read about our approach to external linking." [ref=e3406] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links

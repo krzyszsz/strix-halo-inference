@@ -1,0 +1,159 @@
+{
+  "models": {
+    "detector": "/models/ultraface/version-RFB-320.onnx",
+    "recognizer": "/models/arcface/arcfaceresnet100-8.onnx"
+  },
+  "thresholds": {
+    "conf_threshold": 0.7,
+    "iou_threshold": 0.3,
+    "crop_margin": 0.25
+  },
+  "references": [
+    {
+      "label": "person_1",
+      "file": "person_1.png"
+    },
+    {
+      "label": "person_2",
+      "file": "person_2.png"
+    },
+    {
+      "label": "person_3",
+      "file": "person_3.png"
+    },
+    {
+      "label": "person_4",
+      "file": "person_4.png"
+    }
+  ],
+  "query": {
+    "file": "group.png",
+    "detections": [
+      {
+        "box_xyxy": [
+          159,
+          210,
+          395,
+          527
+        ],
+        "score": 0.999991774559021,
+        "center_xy": [
+          277,
+          368
+        ],
+        "match": {
+          "best_label": "person_2",
+          "best_cosine": 0.17817994952201843,
+          "expected_label": "person_1",
+          "correct": false
+        },
+        "cosine_by_label": {
+          "person_2": 0.17817994952201843,
+          "person_4": 0.09928078949451447,
+          "person_1": 0.032129496335983276,
+          "person_3": -0.10631869733333588
+        }
+      },
+      {
+        "box_xyxy": [
+          159,
+          647,
+          395,
+          994
+        ],
+        "score": 0.9999825954437256,
+        "center_xy": [
+          277,
+          820
+        ],
+        "match": {
+          "best_label": "person_3",
+          "best_cosine": 0.4206068515777588,
+          "expected_label": "person_3",
+          "correct": true
+        },
+        "cosine_by_label": {
+          "person_3": 0.4206068515777588,
+          "person_1": 0.2861637771129608,
+          "person_4": 0.2303699404001236,
+          "person_2": -0.019760040566325188
+        }
+      },
+      {
+        "box_xyxy": [
+          706,
+          210,
+          965,
+          526
+        ],
+        "score": 0.999976396560669,
+        "center_xy": [
+          835,
+          368
+        ],
+        "match": {
+          "best_label": "person_2",
+          "best_cosine": 0.32485029101371765,
+          "expected_label": "person_2",
+          "correct": true
+        },
+        "cosine_by_label": {
+          "person_2": 0.32485029101371765,
+          "person_3": -0.007208591792732477,
+          "person_1": -0.06206834688782692,
+          "person_4": -0.14822104573249817
+        }
+      },
+      {
+        "box_xyxy": [
+          647,
+          566,
+          1037,
+          1089
+        ],
+        "score": 0.9999701976776123,
+        "center_xy": [
+          842,
+          827
+        ],
+        "match": {
+          "best_label": "person_4",
+          "best_cosine": 0.37165725231170654,
+          "expected_label": "person_4",
+          "correct": true
+        },
+        "cosine_by_label": {
+          "person_4": 0.37165725231170654,
+          "person_1": 0.1130681037902832,
+          "person_3": 0.04977762699127197,
+          "person_2": -0.06859870254993439
+        }
+      },
+      {
+        "box_xyxy": [
+          707,
+          722,
+          902,
+          984
+        ],
+        "score": 0.9831642508506775,
+        "center_xy": [
+          804,
+          853
+        ],
+        "match": {
+          "best_label": "person_2",
+          "best_cosine": 0.10932786762714386,
+          "expected_label": "person_4",
+          "correct": false
+        },
+        "cosine_by_label": {
+          "person_2": 0.10932786762714386,
+          "person_4": 0.09459298849105835,
+          "person_1": 0.027536701411008835,
+          "person_3": -0.0026154769584536552
+        }
+      }
+    ]
+  }
+}

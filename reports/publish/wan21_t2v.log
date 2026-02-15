@@ -1,0 +1,22 @@
+[2026-02-15T16:54:58Z] watchdog start max_seconds=3600 idle_seconds=1800 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; bash /home/kj/strix-halo-inference/video/scripts/test_wan21_t2v_sample.sh
+/opt/venv/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.81s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  1.85s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.14s/it]
+Loading pipeline components...:  40%|████      | 2/5 [00:04<00:06,  2.16s/it]
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s][A
+Loading checkpoint shards:  20%|██        | 1/5 [00:02<00:08,  2.16s/it][A
+Loading checkpoint shards:  40%|████      | 2/5 [00:04<00:06,  2.11s/it][A
+Loading checkpoint shards:  60%|██████    | 3/5 [00:06<00:04,  2.17s/it][A
+Loading checkpoint shards:  80%|████████  | 4/5 [00:08<00:02,  2.13s/it][A
+Loading checkpoint shards: 100%|██████████| 5/5 [00:09<00:00,  1.84s/it][ALoading checkpoint shards: 100%|██████████| 5/5 [00:09<00:00,  1.98s/it]
+Loading pipeline components...:  60%|██████    | 3/5 [00:14<00:10,  5.39s/it]Loading pipeline components...:  80%|████████  | 4/5 [00:14<00:03,  3.48s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:14<00:00,  2.90s/it]
+  0%|          | 0/8 [00:00<?, ?it/s]/opt/venv/lib/python3.12/site-packages/diffusers/models/attention_dispatch.py:2447: UserWarning: Flash Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:309.)
+  out = torch.nn.functional.scaled_dot_product_attention(
+/opt/venv/lib/python3.12/site-packages/diffusers/models/attention_dispatch.py:2447: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:360.)
+  out = torch.nn.functional.scaled_dot_product_attention(
+ 12%|█▎        | 1/8 [00:15<01:46, 15.19s/it] 25%|██▌       | 2/8 [00:25<01:14, 12.45s/it] 38%|███▊      | 3/8 [00:36<00:58, 11.66s/it] 50%|█████     | 4/8 [00:47<00:44, 11.22s/it] 62%|██████▎   | 5/8 [00:57<00:32, 11.00s/it] 75%|███████▌  | 6/8 [01:08<00:21, 10.85s/it] 88%|████████▊ | 7/8 [01:18<00:10, 10.77s/it]100%|██████████| 8/8 [01:29<00:00, 10.72s/it]100%|██████████| 8/8 [01:29<00:00, 11.17s/it]
+/home/kj/strix-halo-inference/video/out/wan21_t2v_sample.mp4 frames=17 fps=8 size=239839
+[2026-02-15T17:02:28Z] watchdog finished cmd_status=0

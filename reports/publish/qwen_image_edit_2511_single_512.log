@@ -1,0 +1,17 @@
+[2026-02-15T15:58:26Z] watchdog start max_seconds=3600 idle_seconds=1800 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh bash -lc set -euo pipefail; env MODE=single MODEL_ID=/mnt/hf/models/qwen-image-edit-2511 INPUT_IMAGE=/home/kj/strix-halo-inference/qwen-image/out/qwen_image_512_75g_retest2.png HEIGHT=512 WIDTH=512 STEPS=4 MEMORY_SWAP=140g OUT_PATH=/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_2511_single_512_seqoffload_bf16_75g_swap140_test.png bash /home/kj/strix-halo-inference/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
+1a9c81ff0fe6cf94d3c9953d27623e736f6ee0999e7540784b2985a0e2409747
+Waiting for container health on port 8002 (retries=180, sleep=5s)...
+Waiting for edit request to finish... (pid=778216)
+Waiting for edit request to finish... (pid=778216)
+Waiting for edit request to finish... (pid=778216)
+Waiting for edit request to finish... (pid=778216)
+Waiting for edit request to finish... (pid=778216)
+Waiting for edit request to finish... (pid=778216)
+Waiting for edit request to finish... (pid=778216)
+Waiting for edit request to finish... (pid=778216)
+Waiting for edit request to finish... (pid=778216)
+Waiting for edit request to finish... (pid=778216)
+Waiting for edit request to finish... (pid=778216)
+Waiting for edit request to finish... (pid=778216)
+/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_2511_single_512_seqoffload_bf16_75g_swap140_test.png 292656
+[2026-02-15T16:04:56Z] watchdog finished cmd_status=0

@@ -1,0 +1,3036 @@
+- generic [active] [ref=e1]:
+  - region "Cookies on the BBC website" [ref=e5]:
+    - generic [ref=e6]:
+      - heading "Cookies on the BBC website" [level=2] [ref=e7]
+      - paragraph [ref=e8]:
+        - link "We use cookies" [ref=e9] [cursor=pointer]:
+          - /url: https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/
+        - text: to give you the best online experience. Strictly necessary cookies are
+        - strong [ref=e10]: "on"
+        - text: by default. Additional cookies are
+        - strong [ref=e11]: "off"
+        - text: by default.
+    - generic [ref=e12]:
+      - button "Accept additional cookies" [ref=e13] [cursor=pointer]
+      - button "Reject additional cookies" [ref=e14] [cursor=pointer]
+      - link "Let me choose" [ref=e15] [cursor=pointer]:
+        - /url: https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/
+  - banner "BBC-wide" [ref=e17]:
+    - generic [ref=e19]:
+      - link "Homepage" [ref=e21] [cursor=pointer]:
+        - /url: https://www.bbc.co.uk
+        - img [ref=e22]
+        - generic [ref=e24]: Homepage
+      - generic:
+        - generic:
+          - heading "Accessibility links" [level=2] [ref=e25]
+          - list:
+            - listitem:
+              - link "Skip to content" [ref=e26] [cursor=pointer]:
+                - /url: "#root"
+            - listitem:
+              - link "Accessibility Help" [ref=e27] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/accessibility/
+      - generic [ref=e28]:
+        - link "Sign in" [ref=e32] [cursor=pointer]:
+          - /url: https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Freel&userOrigin=FEATURE_SITES_GNL&context=feature_sites&sequenceId=2f364502-71e2-4a4c-b306-5957a9e05db3
+          - generic [ref=e33]: Sign in
+        - link "Notifications" [ref=e36] [cursor=pointer]:
+          - /url: https://www.bbc.co.uk/notifications
+          - img [ref=e37]
+          - generic [ref=e39]: Notifications
+      - navigation [ref=e40]:
+        - list [ref=e41]:
+          - listitem [ref=e42]:
+            - link "Home" [ref=e43] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk
+              - generic [ref=e44]: Home
+          - listitem [ref=e45]:
+            - link "News" [ref=e46] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/news
+              - img [ref=e47]
+              - generic [ref=e52]: News
+          - listitem [ref=e53]:
+            - link "Sport" [ref=e54] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/sport
+              - img [ref=e55]
+              - generic [ref=e60]: Sport
+          - listitem [ref=e61]:
+            - link "Weather" [ref=e62] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/weather
+              - img [ref=e63]
+              - generic [ref=e68]: Weather
+          - listitem [ref=e69]:
+            - link "iPlayer" [ref=e70] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/iplayer
+              - img [ref=e71]
+              - generic [ref=e76]: iPlayer
+          - listitem [ref=e77]:
+            - link "Sounds" [ref=e78] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/sounds
+              - img [ref=e79]
+              - generic [ref=e84]: Sounds
+          - listitem [ref=e85]:
+            - link "Bitesize" [ref=e86] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/bitesize
+              - img [ref=e87]
+              - generic [ref=e92]: Bitesize
+      - generic [ref=e93]:
+        - button "All BBC destinations menu" [ref=e94] [cursor=pointer]:
+          - img [ref=e95]
+          - generic [ref=e98]: More menu
+        - search [ref=e99]:
+          - link "Search BBC" [ref=e100] [cursor=pointer]:
+            - /url: https://search.bbc.co.uk/search?scope=all&destination=FEATURE_SITES_GNL
+            - generic [ref=e101]:
+              - img [ref=e102]
+              - generic [ref=e104]: Search BBC
+  - main [ref=e107]:
+    - generic [ref=e109]: This website is produced by BBC Global News Ltd, a commercial company that is part of BBC Studios, owned by the BBC (and just the BBC). No money from the licence fee was used to create this website. The money we make from it is re-invested to help fund the BBC’s international journalism.
+    - navigation [ref=e110]:
+      - navigation [ref=e112]:
+        - generic [ref=e113]:
+          - link [ref=e115]:
+            - /url: /reel/
+            - img [ref=e116]
+          - generic [ref=e121]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - link:
+                      - /url: /reel/
+                      - img
+                  - generic:
+                    - button "Close":
+                      - text: Close
+                      - img
+                - generic:
+                  - paragraph: Follow us on
+                  - generic:
+                    - link "BBC Reel on Facebook":
+                      - /url: https://www.facebook.com/BBCReel
+                      - img
+                    - link "BBC Reel on Instagram":
+                      - /url: https://www.instagram.com/bbc_reel
+                      - img
+                    - link "BBC Reel on Twitter":
+                      - /url: https://twitter.com/BBC_Reel
+                      - img
+                    - link "BBC Reel on Youtube":
+                      - /url: https://www.youtube.com/c/BBCReel
+                      - img
+            - list [ref=e122]:
+              - listitem [ref=e123]:
+                - link "Home":
+                  - /url: /reel/
+              - listitem [ref=e124]:
+                - link "Quick Takes" [ref=e125] [cursor=pointer]:
+                  - /url: /reel/playlist/quick-takes
+              - listitem [ref=e126]:
+                - link "History" [ref=e127] [cursor=pointer]:
+                  - /url: /reel/playlist/ancient-mysteries
+              - listitem [ref=e128]:
+                - link "Science" [ref=e129] [cursor=pointer]:
+                  - /url: /reel/playlist/split-at-birth-twins-divided
+              - listitem [ref=e130]:
+                - link "World" [ref=e131] [cursor=pointer]:
+                  - /url: /reel/playlist/world-of-wonder
+              - listitem [ref=e132]:
+                - link "Playlists" [ref=e133] [cursor=pointer]:
+                  - /url: /reel/playlists
+            - button "More" [ref=e134] [cursor=pointer]:
+              - generic [ref=e135]: More
+              - img [ref=e136]
+    - button [ref=e139] [cursor=pointer]:
+      - img [ref=e140]
+    - region [ref=e142]:
+      - generic [ref=e145]:
+        - iframe [ref=e153]:
+          - generic [active]:
+            - generic [ref=f3e1]:
+              - img [ref=f3e2]
+              - region
+            - img [ref=f3e6]
+        - generic [ref=e154]:
+          - generic [ref=e157]:
+            - heading "The Sicilian wisdom for inner peace" [level=1] [ref=e158]
+            - paragraph [ref=e160]: The expression 'futtitinni' runs deep in the Sicilian culture and helps the locals not sweat the small stuff.
+            - link "Play video The Sicilian wisdom for inner peace" [ref=e161] [cursor=pointer]:
+              - /url: /reel/video/p0m671gk/futtitinni-the-sicilian-life-advice-you-need-to-know-about
+              - generic [ref=e162]:
+                - img [ref=e164]
+                - text: Watch now
+          - list [ref=e168]:
+            - listitem [ref=e169] [cursor=pointer]
+            - listitem [ref=e170] [cursor=pointer]
+            - listitem [ref=e171] [cursor=pointer]
+            - listitem [ref=e172] [cursor=pointer]
+            - listitem [ref=e173] [cursor=pointer]
+            - listitem [ref=e174] [cursor=pointer]
+          - list [ref=e176]:
+            - listitem [ref=e177]:
+              - button "Preview video The Sicilian wisdom for inner peace" [ref=e178] [cursor=pointer]:
+                - img [ref=e180]
+                - generic [ref=e182]: The Sicilian wisdom for inner peace
+            - listitem [ref=e183]:
+              - button "Preview video The real voodoo of New Orleans" [ref=e184] [cursor=pointer]:
+                - img [ref=e186]
+                - generic [ref=e188]: The real voodoo of New Orleans
+            - listitem [ref=e189]:
+              - button "Preview video Meet the world's first artist robot" [ref=e190] [cursor=pointer]:
+                - img [ref=e192]
+                - generic [ref=e194]: Meet the world's first artist robot
+            - listitem [ref=e195]:
+              - button "Preview video The surprising benefits of being vain" [ref=e196] [cursor=pointer]:
+                - img [ref=e198]
+                - generic [ref=e200]: The surprising benefits of being vain
+            - listitem [ref=e201]:
+              - button "Preview video Can degrowth save the world?" [ref=e202] [cursor=pointer]:
+                - img [ref=e204]
+                - generic [ref=e206]: Can degrowth save the world?
+            - listitem [ref=e207]:
+              - button "Preview video A rare taste of South India in NYC" [ref=e208] [cursor=pointer]:
+                - img [ref=e210]
+                - generic [ref=e212]: A rare taste of South India in NYC
+    - region "Editor's Picks" [ref=e621]:
+      - generic [ref=e623]:
+        - generic [ref=e624]:
+          - img [ref=e626]
+          - generic [ref=e632]:
+            - heading "Editor's Picks" [level=2]
+        - paragraph [ref=e634]: BBC Reel editors pick a selection of our best videos.
+        - list [ref=e635]:
+          - listitem [ref=e636]:
+            - link "Play video Inside a floating Norwegian restaurant" [ref=e638] [cursor=pointer]:
+              - /url: /reel/video/p0h69rlt/a-unique-experience-in-the-heart-of-a-norwegian-fjord
+              - img "Inside a floating Norwegian restaurant" [ref=e641]
+              - generic [ref=e643]:
+                - generic [ref=e645]: Discover the World
+                - heading "Inside a floating Norwegian restaurant" [level=3] [ref=e646]
+                - generic [ref=e647]:
+                  - img [ref=e649]
+                  - text: Watch now
+          - listitem [ref=e651]:
+            - link "Play video Melting ice reveals secrets of the past" [ref=e653] [cursor=pointer]:
+              - /url: /reel/video/p0gl9tq4/melting-glaciers-reveal-viking-pass-hidden-for-centuries
+              - img "Melting ice reveals secrets of the past" [ref=e656]
+              - generic [ref=e658]:
+                - generic [ref=e660]: Earth
+                - heading "Melting ice reveals secrets of the past" [level=3] [ref=e661]
+                - generic [ref=e662]:
+                  - img [ref=e664]
+                  - text: Watch now
+          - listitem [ref=e666]:
+            - link "Play video Stargazing from atop the Himalayas" [ref=e668] [cursor=pointer]:
+              - /url: /reel/video/p0gcjmz2/views-from-an-observatory-on-top-of-the-world
+              - img "Stargazing from atop the Himalayas" [ref=e671]
+              - generic [ref=e673]:
+                - generic [ref=e675]: Weather & science
+                - heading "Stargazing from atop the Himalayas" [level=3] [ref=e676]
+                - generic [ref=e677]:
+                  - img [ref=e679]
+                  - text: Watch now
+          - listitem [ref=e681]:
+            - link "Play video Siberia's exploding earth mystery" [ref=e683] [cursor=pointer]:
+              - /url: /reel/video/p097w5p3/the-mystery-of-siberia-s-exploding-craters
+              - img "Siberia's exploding earth mystery" [ref=e686]
+              - generic [ref=e688]:
+                - generic [ref=e690]: Climate Change
+                - heading "Siberia's exploding earth mystery" [level=3] [ref=e691]
+                - generic [ref=e692]:
+                  - img [ref=e694]
+                  - text: Watch now
+          - listitem [ref=e696]:
+            - link "Play video The tiny island with a population of 16" [ref=e698] [cursor=pointer]:
+              - /url: /reel/video/p07cjvmc/the-tiny-german-island-with-a-population-of-16
+              - img "The tiny island with a population of 16" [ref=e701]
+              - generic [ref=e703]:
+                - generic [ref=e705]: Remote Places
+                - heading "The tiny island with a population of 16" [level=3] [ref=e706]
+                - generic [ref=e707]:
+                  - img [ref=e709]
+                  - text: Watch now
+          - listitem [ref=e711]:
+            - link "Play video The world's largest underground temple" [ref=e713] [cursor=pointer]:
+              - /url: /reel/video/p0g26p8r/damanhur-the-world-s-largest-underground-temple
+              - img "The world's largest underground temple" [ref=e716]
+              - generic [ref=e718]:
+                - generic [ref=e720]: Spirituality
+                - heading "The world's largest underground temple" [level=3] [ref=e721]
+                - generic [ref=e722]:
+                  - img [ref=e724]
+                  - text: Watch now
+    - region "Most Watched" [ref=e217]:
+      - generic [ref=e219]:
+        - generic [ref=e220]:
+          - img [ref=e222]
+          - generic [ref=e235]:
+            - heading "Most Watched" [level=2]
+        - paragraph [ref=e237]: See the videos our audience loves.
+        - list [ref=e238]:
+          - listitem [ref=e239]:
+            - link "Play video World's number one 'off-map' restaurant" [ref=e241] [cursor=pointer]:
+              - /url: /reel/video/p0l3vw35/inside-one-of-the-world-s-most-remote-restaurants
+              - img "World's number one 'off-map' restaurant" [ref=e244]
+              - generic [ref=e246]:
+                - generic [ref=e248]: Discover the World
+                - heading "World's number one 'off-map' restaurant" [level=3] [ref=e249]
+                - generic [ref=e250]:
+                  - img [ref=e252]
+                  - text: Watch now
+          - listitem [ref=e254]:
+            - link "Play video The only piece of US land in the UK" [ref=e256] [cursor=pointer]:
+              - /url: /reel/video/p0ftrxhx/the-tiny-piece-of-the-us-hidden-in-england
+              - img "The only piece of US land in the UK" [ref=e259]
+              - generic [ref=e261]:
+                - generic [ref=e263]: History
+                - heading "The only piece of US land in the UK" [level=3] [ref=e264]
+                - generic [ref=e265]:
+                  - img [ref=e267]
+                  - text: Watch now
+          - listitem [ref=e269]:
+            - link "Play video Are we bracing for a new Sandy?" [ref=e271] [cursor=pointer]:
+              - /url: /reel/video/p0g8hx9j/are-we-bracing-for-a-new-hurricane-sandy-
+              - img "Are we bracing for a new Sandy?" [ref=e274]
+              - generic [ref=e276]:
+                - generic [ref=e278]: Climate Change
+                - heading "Are we bracing for a new Sandy?" [level=3] [ref=e279]
+                - generic [ref=e280]:
+                  - img [ref=e282]
+                  - text: Watch now
+          - listitem [ref=e284]:
+            - link "Play video Footage from the eye of a hurricane" [ref=e286] [cursor=pointer]:
+              - /url: /reel/video/p0gdfcqj/watch-footage-from-inside-the-eye-of-a-hurricane
+              - img "Footage from the eye of a hurricane" [ref=e289]
+              - generic [ref=e291]:
+                - generic [ref=e293]: Ocean
+                - heading "Footage from the eye of a hurricane" [level=3] [ref=e294]
+                - generic [ref=e295]:
+                  - img [ref=e297]
+                  - text: Watch now
+          - listitem [ref=e299]:
+            - link "Play video Who put Bella in the wych elm?" [ref=e301] [cursor=pointer]:
+              - /url: /reel/video/p0g26yr4/the-80-year-old-mystery-of-the-skeleton-found-in-a-wych-elm
+              - img "Who put Bella in the wych elm?" [ref=e304]
+              - generic [ref=e306]:
+                - generic [ref=e308]: Myths and Legends
+                - heading "Who put Bella in the wych elm?" [level=3] [ref=e309]
+                - generic [ref=e310]:
+                  - img [ref=e312]
+                  - text: Watch now
+          - listitem [ref=e314]:
+            - link "Play video The blueprint to a mirror Universe" [ref=e316] [cursor=pointer]:
+              - /url: /reel/video/p0g22nf3/the-enigmatic-blueprint-to-a-mirror-universe
+              - img "The blueprint to a mirror Universe" [ref=e319]
+              - generic [ref=e321]:
+                - generic [ref=e323]: Science
+                - heading "The blueprint to a mirror Universe" [level=3] [ref=e324]
+                - generic [ref=e325]:
+                  - img [ref=e327]
+                  - text: Watch now
+          - listitem [ref=e329]:
+            - link "Play video The deadliest street in US history" [ref=e331] [cursor=pointer]:
+              - /url: /reel/video/p0g1yn2x/the-bloody-angle-the-deadliest-street-in-american-history
+              - img "The deadliest street in US history" [ref=e334]
+              - generic [ref=e336]:
+                - generic [ref=e338]: History
+                - heading "The deadliest street in US history" [level=3] [ref=e339]
+                - generic [ref=e340]:
+                  - img [ref=e342]
+                  - text: Watch now
+          - listitem [ref=e344]:
+            - link "Play video The multiverse explained in four ways" [ref=e346] [cursor=pointer]:
+              - /url: /reel/video/p0g9hhcg/four-ways-to-understand-the-multiverse
+              - img "The multiverse explained in four ways" [ref=e349]
+              - generic [ref=e351]:
+                - generic [ref=e353]: Science
+                - heading "The multiverse explained in four ways" [level=3] [ref=e354]
+                - generic [ref=e355]:
+                  - img [ref=e357]
+                  - text: Watch now
+    - region "Top Playlists" [ref=e359]:
+      - generic [ref=e365]:
+        - generic [ref=e366]:
+          - img [ref=e368]
+          - generic [ref=e376]:
+            - heading "Top Playlists" [level=2]
+        - paragraph [ref=e378]: BBC Reel's favourite playlists to expand your mind.
+        - list [ref=e379]:
+          - listitem [ref=e380]:
+            - link "Play video Future Planet" [ref=e382] [cursor=pointer]:
+              - /url: /reel/playlist/future-planet
+              - img "Future Planet" [ref=e385]
+              - generic [ref=e387]:
+                - generic [ref=e388]:
+                  - generic [ref=e389]: Earth
+                  - generic [ref=e390]:
+                    - img [ref=e391]
+                    - text: 32 videos
+                - heading "Future Planet" [level=3] [ref=e395]
+                - paragraph [ref=e397]: Future Planet explores the solutions to the greatest environmental challenges of our time.
+                - generic [ref=e398]:
+                  - img [ref=e400]
+                  - text: Watch now
+          - listitem [ref=e402]:
+            - link "Play video Quick Takes" [ref=e404] [cursor=pointer]:
+              - /url: /reel/playlist/quick-takes
+              - img "Quick Takes" [ref=e407]
+              - generic [ref=e409]:
+                - generic [ref=e410]:
+                  - generic [ref=e411]: News
+                  - generic [ref=e412]:
+                    - img [ref=e413]
+                    - text: 109 videos
+                - heading "Quick Takes" [level=3] [ref=e417]
+                - generic [ref=e418]:
+                  - img [ref=e420]
+                  - text: Watch now
+          - listitem [ref=e422]:
+            - link "Play video Hidden Histories" [ref=e424] [cursor=pointer]:
+              - /url: /reel/playlist/hidden-histories
+              - img "Hidden Histories" [ref=e427]
+              - generic [ref=e429]:
+                - generic [ref=e430]:
+                  - generic [ref=e431]: History
+                  - generic [ref=e432]:
+                    - img [ref=e433]
+                    - text: 130 videos
+                - heading "Hidden Histories" [level=3] [ref=e437]
+                - generic [ref=e438]:
+                  - img [ref=e440]
+                  - text: Watch now
+          - listitem [ref=e442]:
+            - link "Play video World of Wonder" [ref=e444] [cursor=pointer]:
+              - /url: /reel/playlist/world-of-wonder
+              - img "World of Wonder" [ref=e447]
+              - generic [ref=e449]:
+                - generic [ref=e450]:
+                  - generic [ref=e451]: Earth
+                  - generic [ref=e452]:
+                    - img [ref=e453]
+                    - text: 123 videos
+                - heading "World of Wonder" [level=3] [ref=e457]
+                - generic [ref=e458]:
+                  - img [ref=e460]
+                  - text: Watch now
+          - listitem [ref=e462]:
+            - link "Play video World's Table" [ref=e464] [cursor=pointer]:
+              - /url: /reel/playlist/worlds-table
+              - img "World's Table" [ref=e467]
+              - generic [ref=e469]:
+                - generic [ref=e470]:
+                  - generic [ref=e471]: World's Table
+                  - generic [ref=e472]:
+                    - img [ref=e473]
+                    - text: 20 videos
+                - heading "World's Table" [level=3] [ref=e477]
+                - generic [ref=e478]:
+                  - img [ref=e480]
+                  - text: Watch now
+          - listitem [ref=e482]:
+            - link "Play video Deeper Dives" [ref=e484] [cursor=pointer]:
+              - /url: /reel/playlist/deeper-dives
+              - img "Deeper Dives" [ref=e487]
+              - generic [ref=e489]:
+                - generic [ref=e490]:
+                  - generic [ref=e491]: Conservation
+                  - generic [ref=e492]:
+                    - img [ref=e493]
+                    - text: 9 videos
+                - heading "Deeper Dives" [level=3] [ref=e497]
+                - generic [ref=e498]:
+                  - img [ref=e500]
+                  - text: Watch now
+          - listitem [ref=e502]:
+            - link "Play video Naked Truth" [ref=e504] [cursor=pointer]:
+              - /url: /reel/playlist/naked-truth
+              - img "Naked Truth" [ref=e507]
+              - generic [ref=e509]:
+                - generic [ref=e510]:
+                  - generic [ref=e511]: Humanity
+                  - generic [ref=e512]:
+                    - img [ref=e513]
+                    - text: 7 videos
+                - heading "Naked Truth" [level=3] [ref=e517]
+                - generic [ref=e518]:
+                  - img [ref=e520]
+                  - text: Watch now
+          - listitem [ref=e522]:
+            - link "Play video The Science of Fitness" [ref=e524] [cursor=pointer]:
+              - /url: /reel/playlist/the-science-of-fitness
+              - img "The Science of Fitness" [ref=e527]
+              - generic [ref=e529]:
+                - generic [ref=e530]:
+                  - generic [ref=e531]: Fitness
+                  - generic [ref=e532]:
+                    - img [ref=e533]
+                    - text: 15 videos
+                - heading "The Science of Fitness" [level=3] [ref=e537]
+                - generic [ref=e538]:
+                  - img [ref=e540]
+                  - text: Watch now
+          - listitem [ref=e542]:
+            - link "Play video A Happier You" [ref=e544] [cursor=pointer]:
+              - /url: /reel/playlist/a-happier-you
+              - img "A Happier You" [ref=e547]
+              - generic [ref=e549]:
+                - generic [ref=e550]:
+                  - generic [ref=e551]: Psychology
+                  - generic [ref=e552]:
+                    - img [ref=e553]
+                    - text: 5 videos
+                - heading "A Happier You" [level=3] [ref=e557]
+                - generic [ref=e558]:
+                  - img [ref=e560]
+                  - text: Watch now
+    - region "Hot Topics" [ref=e726]:
+      - generic [ref=e728]:
+        - generic [ref=e729]:
+          - img [ref=e731]
+          - generic [ref=e736]:
+            - heading "Hot Topics" [level=2]
+        - paragraph [ref=e738]: Trending topics for curious minds.
+        - generic [ref=e739]:
+          - generic [ref=e741]:
+            - img [ref=e742]
+            - text: 32 videos
+          - heading "Love & Sex" [level=2] [ref=e746]
+          - paragraph [ref=e748]: The different ways we express ourselves romantically and sexually.
+          - generic [ref=e749]:
+            - region "Love & Sex" [ref=e750]:
+              - listitem [ref=e751]:
+                - link "Play video The rise of ethical porn" [ref=e753] [cursor=pointer]:
+                  - /url: /reel/video/p0gytpbk/behind-the-scenes-at-an-ethical-porn-shoot
+                  - img "The rise of ethical porn" [ref=e756]
+                  - generic [ref=e758]:
+                    - generic [ref=e760]: Love & Sex
+                    - heading "The rise of ethical porn" [level=3] [ref=e761]
+                    - generic [ref=e762]:
+                      - img [ref=e764]
+                      - text: Watch now
+              - listitem [ref=e766]:
+                - link "Play video How to enhance your pleasure" [ref=e768] [cursor=pointer]:
+                  - /url: /reel/video/p0g25ht5/a-smart-way-to-improve-your-sex-life
+                  - img "How to enhance your pleasure" [ref=e771]
+                  - generic [ref=e773]:
+                    - generic [ref=e775]: Love & Sex
+                    - heading "How to enhance your pleasure" [level=3] [ref=e776]
+                    - generic [ref=e777]:
+                      - img [ref=e779]
+                      - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The surprising benefits of breaking up":
+                    - /url: /reel/video/p0fyvbnd/the-unexpected-benefits-of-breaking-up
+                    - generic:
+                      - img "The surprising benefits of breaking up"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "The surprising benefits of breaking up" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Gay under the Taliban":
+                    - /url: /reel/video/p0ft2gtk/the-underground-lgbtq-people-trapped-in-afghanistan
+                    - generic:
+                      - img "Gay under the Taliban"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "Gay under the Taliban" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The truth about the Kama Sutra":
+                    - /url: /reel/video/p0fl4b21/kama-sutra-a-misunderstood-ancient-erotic-manual
+                    - generic:
+                      - img "The truth about the Kama Sutra"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "The truth about the Kama Sutra" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why heartbreak hurts so much":
+                    - /url: /reel/video/p0f30frs/the-surprising-physical-toll-of-heartbreak
+                    - generic:
+                      - img "Why heartbreak hurts so much"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "Why heartbreak hurts so much" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why great sleep is the new ‘great sex’":
+                    - /url: /reel/video/p0c7rpjl/why-healthy-sleep-is-the-key-to-great-sex-
+                    - generic:
+                      - img "Why great sleep is the new ‘great sex’"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "Why great sleep is the new ‘great sex’" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why we need to rethink 'virginity'":
+                    - /url: /reel/video/p0c11bxf/how-the-virginity-myth-is-harming-our-sex-lives
+                    - generic:
+                      - img "Why we need to rethink 'virginity'"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "Why we need to rethink 'virginity'" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The secret love letters of Henry VIII":
+                    - /url: /reel/video/p0b7b0z9/the-steamy-love-letters-henry-viii-sent-to-anne-boleyn
+                    - generic:
+                      - img "The secret love letters of Henry VIII"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "The secret love letters of Henry VIII" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The surprising importance of touch":
+                    - /url: /reel/video/p0b2xg9c/how-touch-influences-who-we-are-attracted-to
+                    - generic:
+                      - img "The surprising importance of touch"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "The surprising importance of touch" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Are you addicted to love?":
+                    - /url: /reel/video/p09x7xs4/the-little-known-disorder-affecting-5-of-the-us-
+                    - generic:
+                      - img "Are you addicted to love?"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "Are you addicted to love?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why do humans kiss?":
+                    - /url: /reel/video/p09rs61b/what-does-a-first-kiss-really-tell-you-
+                    - generic:
+                      - img "Why do humans kiss?"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "Why do humans kiss?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why single people smell different":
+                    - /url: /reel/video/p09mw5sp/why-single-people-smell-different
+                    - generic:
+                      - img "Why single people smell different"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "Why single people smell different" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The secret diaries of Anne Lister":
+                    - /url: /reel/video/p09ms5ys/the-explicit-coded-diaries-of-the-first-modern-lesbian-
+                    - generic:
+                      - img "The secret diaries of Anne Lister"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "The secret diaries of Anne Lister" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why we love a non-conformist":
+                    - /url: /reel/video/p09jg3zy/why-we-re-so-attracted-to-the-non-conformists
+                    - generic:
+                      - img "Why we love a non-conformist"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "Why we love a non-conformist" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The club that hid forbidden love":
+                    - /url: /reel/video/p09h76fg/the-underground-club-where-forbidden-love-flourished
+                    - generic:
+                      - img "The club that hid forbidden love"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "The club that hid forbidden love" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Can your voice make you sexier?":
+                    - /url: /reel/video/p09f7crn/do-you-have-the-world-s-sexiest-accent-
+                    - generic:
+                      - img "Can your voice make you sexier?"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "Can your voice make you sexier?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The women closing the pleasure gap":
+                    - /url: /reel/video/p072jkjv/the-two-mit-graduates-closing-the-pleasure-gap
+                    - generic:
+                      - img "The women closing the pleasure gap"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "The women closing the pleasure gap" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why we're fascinated by the orgasm":
+                    - /url: /reel/video/p089q87f/the-fascinating-history-of-the-orgasm
+                    - generic:
+                      - img "Why we're fascinated by the orgasm"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "Why we're fascinated by the orgasm" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video What sex can teach us about the past":
+                    - /url: /reel/video/p089qjs6/what-sex-can-teach-us-about-the-past
+                    - generic:
+                      - img "What sex can teach us about the past"
+                    - generic:
+                      - generic:
+                        - generic: Love & Sex
+                      - heading "What sex can teach us about the past" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+            - img [ref=e782]
+            - img [ref=e785]
+          - list [ref=e789]:
+            - listitem [ref=e790] [cursor=pointer]
+            - listitem [ref=e791] [cursor=pointer]
+            - listitem [ref=e792] [cursor=pointer]
+            - listitem [ref=e793] [cursor=pointer]
+            - listitem [ref=e794] [cursor=pointer]
+            - listitem [ref=e795] [cursor=pointer]
+            - listitem [ref=e796] [cursor=pointer]
+            - listitem [ref=e797] [cursor=pointer]
+            - listitem [ref=e798] [cursor=pointer]
+            - listitem [ref=e799] [cursor=pointer]
+        - generic [ref=e800]:
+          - generic [ref=e802]:
+            - img [ref=e803]
+            - text: 7 videos
+          - heading "Fitness" [level=2] [ref=e807]
+          - paragraph [ref=e809]: Tips and tricks in looking after your physical health and diet.
+          - generic [ref=e810]:
+            - region "Fitness" [ref=e811]:
+              - listitem [ref=e812]:
+                - link "Play video The science of Brazilian Jiu-Jitsu" [ref=e814] [cursor=pointer]:
+                  - /url: /reel/video/p0dmlcgl/the-surprising-physics-behind-brazilian-jiu-jitsu
+                  - img "The science of Brazilian Jiu-Jitsu" [ref=e817]
+                  - generic [ref=e819]:
+                    - generic [ref=e821]: Fitness
+                    - heading "The science of Brazilian Jiu-Jitsu" [level=3] [ref=e822]
+                    - generic [ref=e823]:
+                      - img [ref=e825]
+                      - text: Watch now
+              - listitem [ref=e827]:
+                - link "Play video When is the best time to exercise?" [ref=e829] [cursor=pointer]:
+                  - /url: /reel/video/p0cx58pc/when-is-the-best-time-to-exercise-
+                  - img "When is the best time to exercise?" [ref=e832]
+                  - generic [ref=e834]:
+                    - generic [ref=e836]: Fitness
+                    - heading "When is the best time to exercise?" [level=3] [ref=e837]
+                    - generic [ref=e838]:
+                      - img [ref=e840]
+                      - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video 'Your body starts to eat itself'":
+                    - /url: /reel/video/p0cmkn6p/the-strange-appeal-of-extreme-endurance-sport
+                    - generic:
+                      - img "'Your body starts to eat itself'"
+                    - generic:
+                      - generic:
+                        - generic: Fitness
+                      - heading "'Your body starts to eat itself'" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Is a vegan diet better for you?":
+                    - /url: /reel/video/p0b5x2z7/is-a-vegan-diet-healthier-than-eating-meat-and-dairy-
+                    - generic:
+                      - img "Is a vegan diet better for you?"
+                    - generic:
+                      - generic:
+                        - generic: Fitness
+                      - heading "Is a vegan diet better for you?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Diving deep on a single breath of air":
+                    - /url: /reel/video/p09ynrc8/freediving-the-science-of-holding-your-breath
+                    - generic:
+                      - img "Diving deep on a single breath of air"
+                    - generic:
+                      - generic:
+                        - generic: Fitness
+                      - heading "Diving deep on a single breath of air" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The surprising power of squats":
+                    - /url: /reel/video/p09v8wyh/a-simple-exercise-that-gives-your-brain-an-unexpected-boost
+                    - generic:
+                      - img "The surprising power of squats"
+                    - generic:
+                      - generic:
+                        - generic: Fitness
+                      - heading "The surprising power of squats" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The power of narrow visual focus":
+                    - /url: /reel/video/p09r61yk/an-ingenious-way-to-run-faster
+                    - generic:
+                      - img "The power of narrow visual focus"
+                    - generic:
+                      - generic:
+                        - generic: Fitness
+                      - heading "The power of narrow visual focus" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+            - img [ref=e843]
+            - img [ref=e846]
+          - list [ref=e850]:
+            - listitem [ref=e851] [cursor=pointer]
+            - listitem [ref=e852] [cursor=pointer]
+            - listitem [ref=e853] [cursor=pointer]
+            - listitem [ref=e854] [cursor=pointer]
+        - generic [ref=e855]:
+          - generic [ref=e857]:
+            - img [ref=e858]
+            - text: 15 videos
+          - heading "Wellbeing" [level=2] [ref=e862]
+          - paragraph [ref=e864]: The different ways to harness and take care of our mind and body.
+          - generic [ref=e865]:
+            - region "Wellbeing" [ref=e866]:
+              - listitem [ref=e867]:
+                - link "Play video Why the Dutch sit too much" [ref=e869] [cursor=pointer]:
+                  - /url: /reel/video/p0j1883l/champion-sitters-why-the-dutch-sit-too-much
+                  - img "Why the Dutch sit too much" [ref=e872]
+                  - generic [ref=e874]:
+                    - generic [ref=e876]: Wellbeing
+                    - heading "Why the Dutch sit too much" [level=3] [ref=e877]
+                    - generic [ref=e878]:
+                      - img [ref=e880]
+                      - text: Watch now
+              - listitem [ref=e882]:
+                - 'link "Play video Hammocks: A higher form of camping" [ref=e884] [cursor=pointer]':
+                  - /url: /reel/video/p0gbv8t7/hammocks-a-higher-form-of-camping
+                  - 'img "Hammocks: A higher form of camping" [ref=e887]'
+                  - generic [ref=e889]:
+                    - generic [ref=e891]: Wellbeing
+                    - 'heading "Hammocks: A higher form of camping" [level=3] [ref=e892]'
+                    - generic [ref=e893]:
+                      - img [ref=e895]
+                      - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Is alkaline water good for you?":
+                    - /url: /reel/video/p0g27l49/is-alkaline-water-good-for-you-
+                    - generic:
+                      - img "Is alkaline water good for you?"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "Is alkaline water good for you?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The benefits of intermittent fasting":
+                    - /url: /reel/video/p0fp7b0f/what-is-intermittent-fasting-and-why-is-it-good-for-you-
+                    - generic:
+                      - img "The benefits of intermittent fasting"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "The benefits of intermittent fasting" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The pole dancers fighting sexual stigma":
+                    - /url: /reel/video/p0ffr47d/the-hong-kong-pole-dancers-fighting-sexual-stigma
+                    - generic:
+                      - img "The pole dancers fighting sexual stigma"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "The pole dancers fighting sexual stigma" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Does the cold burn more fat?":
+                    - /url: /reel/video/p097ylw3/is-exercising-in-the-cold-good-for-you-
+                    - generic:
+                      - img "Does the cold burn more fat?"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "Does the cold burn more fat?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why leeches are ‘not a simple worm’":
+                    - /url: /reel/video/p096tf17/the-therapy-used-by-stalin-and-still-popular-in-russia
+                    - generic:
+                      - img "Why leeches are ‘not a simple worm’"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "Why leeches are ‘not a simple worm’" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The mind-altering Bufo Alvarius":
+                    - /url: /reel/video/p094jxm2/the-psychedelic-power-of-the-sonoran-desert-toad
+                    - generic:
+                      - img "The mind-altering Bufo Alvarius"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "The mind-altering Bufo Alvarius" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How to manifest dreams into reality":
+                    - /url: /reel/video/p093pfnz/how-manifesting-became-the-next-big-wellness-trend
+                    - generic:
+                      - img "How to manifest dreams into reality"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "How to manifest dreams into reality" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Can bondage help to heal?":
+                    - /url: /reel/video/p08w4wb7/the-swedish-bodyworker-tying-people-up
+                    - generic:
+                      - img "Can bondage help to heal?"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "Can bondage help to heal?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The ancient art of seeing":
+                    - /url: /reel/video/p08nn4pz/vipassana-the-ancient-art-of-seeing
+                    - generic:
+                      - img "The ancient art of seeing"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "The ancient art of seeing" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video An Asian American family’s taboo":
+                    - /url: /reel/video/p08mr7k6/the-hurtful-truth-i-never-told-my-parents
+                    - generic:
+                      - img "An Asian American family’s taboo"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "An Asian American family’s taboo" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The people who sleep on a bed of bees":
+                    - /url: /reel/video/p08lb5l4/the-therapeutic-sound-of-slovenian-bees
+                    - generic:
+                      - img "The people who sleep on a bed of bees"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "The people who sleep on a bed of bees" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The simple stress-buster":
+                    - /url: /reel/video/p08jrcp9/the-simple-stress-buster-that-could-change-your-life
+                    - generic:
+                      - img "The simple stress-buster"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "The simple stress-buster" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The mindful approach to orgasm":
+                    - /url: /reel/video/p083xmcz/the-tantra-teacher-giving-millennials-orgasms-in-singapore
+                    - generic:
+                      - img "The mindful approach to orgasm"
+                    - generic:
+                      - generic:
+                        - generic: Wellbeing
+                      - heading "The mindful approach to orgasm" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+            - img [ref=e898]
+            - img [ref=e901]
+          - list [ref=e905]:
+            - listitem [ref=e906] [cursor=pointer]
+            - listitem [ref=e907] [cursor=pointer]
+            - listitem [ref=e908] [cursor=pointer]
+            - listitem [ref=e909] [cursor=pointer]
+            - listitem [ref=e910] [cursor=pointer]
+            - listitem [ref=e911] [cursor=pointer]
+            - listitem [ref=e912] [cursor=pointer]
+            - listitem [ref=e913] [cursor=pointer]
+        - generic [ref=e914]:
+          - generic [ref=e916]:
+            - img [ref=e917]
+            - text: 17 videos
+          - heading "Mind" [level=2] [ref=e921]
+          - paragraph [ref=e923]: Exploring our mental state and well-being.
+          - generic [ref=e924]:
+            - region "Mind" [ref=e925]:
+              - listitem [ref=e926]:
+                - link "Play video The science behind mantra meditation" [ref=e928] [cursor=pointer]:
+                  - /url: /reel/video/p0cqt0yc/mantra-meditation-the-ancient-practice-to-heal-our-minds
+                  - img "The science behind mantra meditation" [ref=e931]
+                  - generic [ref=e933]:
+                    - generic [ref=e935]: Mind
+                    - heading "The science behind mantra meditation" [level=3] [ref=e936]
+                    - generic [ref=e937]:
+                      - img [ref=e939]
+                      - text: Watch now
+              - listitem [ref=e941]:
+                - link "Play video The unexpected rise of psychedelics" [ref=e943] [cursor=pointer]:
+                  - /url: /reel/video/p0cg7x7k/can-magic-mushrooms-and-mdma-cure-depression-
+                  - img "The unexpected rise of psychedelics" [ref=e946]
+                  - generic [ref=e948]:
+                    - generic [ref=e950]: Mind
+                    - heading "The unexpected rise of psychedelics" [level=3] [ref=e951]
+                    - generic [ref=e952]:
+                      - img [ref=e954]
+                      - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Unraveling the mystery of touch":
+                    - /url: /reel/video/p0c53h1m/the-link-between-our-hands-and-our-increasing-narcissism
+                    - generic:
+                      - img "Unraveling the mystery of touch"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "Unraveling the mystery of touch" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How your thoughts shape your digestion":
+                    - /url: /reel/video/p0brtrb1/why-pleasure-is-key-to-losing-weight
+                    - generic:
+                      - img "How your thoughts shape your digestion"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "How your thoughts shape your digestion" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why do we feel hungry?":
+                    - /url: /reel/video/p0b4kkt9/the-truth-about-why-we-feel-hungry
+                    - generic:
+                      - img "Why do we feel hungry?"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "Why do we feel hungry?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Does the brain ever rest?":
+                    - /url: /reel/video/p09mtl6p/why-it-s-good-to-let-your-mind-wander
+                    - generic:
+                      - img "Does the brain ever rest?"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "Does the brain ever rest?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Can Mozart really make you smarter?":
+                    - /url: /reel/video/p09cz6j6/can-listening-to-classical-music-really-boost-intelligence-
+                    - generic:
+                      - img "Can Mozart really make you smarter?"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "Can Mozart really make you smarter?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The world’s first happiness museum":
+                    - /url: /reel/video/p0922rw5/inside-the-world-s-first-happiness-museum
+                    - generic:
+                      - img "The world’s first happiness museum"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "The world’s first happiness museum" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How to find your 'forever home'":
+                    - /url: /reel/video/p0911t6b/the-psychology-of-buying-a-home
+                    - generic:
+                      - img "How to find your 'forever home'"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "How to find your 'forever home'" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Are we getting mindfulness wrong?":
+                    - /url: /reel/video/p08v547g/why-we-might-be-getting-mindfulness-wrong
+                    - generic:
+                      - img "Are we getting mindfulness wrong?"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "Are we getting mindfulness wrong?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The spiritual effects of crying":
+                    - /url: /reel/video/p08qj3vv/why-the-japanese-believe-that-crying-is-good-for-you
+                    - generic:
+                      - img "The spiritual effects of crying"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "The spiritual effects of crying" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - 'link "Play video Mental health: Managing the new normal"':
+                    - /url: /reel/video/p08d15ny/mental-health-the-feeling-you-can-t-put-your-finger-on
+                    - generic:
+                      - 'img "Mental health: Managing the new normal"'
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - 'heading "Mental health: Managing the new normal" [level=3]'
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The secrets for managing uncertainty":
+                    - /url: /reel/video/p08bmr62/six-simple-mind-tricks-for-dealing-with-uncertainty
+                    - generic:
+                      - img "The secrets for managing uncertainty"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "The secrets for managing uncertainty" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The top 5 tips for a better rest":
+                    - /url: /reel/video/p083dpl4/why-being-anti-social-is-the-key-to-relaxation
+                    - generic:
+                      - img "The top 5 tips for a better rest"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "The top 5 tips for a better rest" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The dangers of perfectionism":
+                    - /url: /reel/video/p07hmhbz/the-dangerous-downsides-of-perfectionism
+                    - generic:
+                      - img "The dangers of perfectionism"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "The dangers of perfectionism" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How to hustle smart and beat burnout":
+                    - /url: /reel/video/p079bxn3/how-to-beat-millennial-burnout
+                    - generic:
+                      - img "How to hustle smart and beat burnout"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "How to hustle smart and beat burnout" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The upsides of being an introvert":
+                    - /url: /reel/video/p078r9th/the-surprising-benefits-of-being-alone
+                    - generic:
+                      - img "The upsides of being an introvert"
+                    - generic:
+                      - generic:
+                        - generic: Mind
+                      - heading "The upsides of being an introvert" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+            - img [ref=e957]
+            - img [ref=e960]
+          - list [ref=e964]:
+            - listitem [ref=e965] [cursor=pointer]
+            - listitem [ref=e966] [cursor=pointer]
+            - listitem [ref=e967] [cursor=pointer]
+            - listitem [ref=e968] [cursor=pointer]
+            - listitem [ref=e969] [cursor=pointer]
+            - listitem [ref=e970] [cursor=pointer]
+            - listitem [ref=e971] [cursor=pointer]
+            - listitem [ref=e972] [cursor=pointer]
+            - listitem [ref=e973] [cursor=pointer]
+        - generic [ref=e974]:
+          - generic [ref=e976]:
+            - img [ref=e977]
+            - text: 96 videos
+          - heading "Food & Drink" [level=2] [ref=e981]
+          - paragraph [ref=e983]: Immerse yourself in local food, drink, traditions and customs.
+          - generic [ref=e984]:
+            - region "Food & Drink" [ref=e985]:
+              - listitem [ref=e986]:
+                - link "Play video Turkey's unique delicacy with a twist" [ref=e988] [cursor=pointer]:
+                  - /url: /reel/video/p0ll87z3/the-traditional-turkish-pudding-with-a-surprising-twist
+                  - img "Turkey's unique delicacy with a twist" [ref=e991]
+                  - generic [ref=e993]:
+                    - generic [ref=e995]: Food & Drink
+                    - heading "Turkey's unique delicacy with a twist" [level=3] [ref=e996]
+                    - generic [ref=e997]:
+                      - img [ref=e999]
+                      - text: Watch now
+              - listitem [ref=e1001]:
+                - link "Play video A trip to Turkey's Black Sea region" [ref=e1003] [cursor=pointer]:
+                  - /url: /reel/video/p0jfpxzb/turkey-s-wild-and-rugged-black-sea-region
+                  - img "A trip to Turkey's Black Sea region" [ref=e1006]
+                  - generic [ref=e1008]:
+                    - generic [ref=e1010]: Food & Drink
+                    - heading "A trip to Turkey's Black Sea region" [level=3] [ref=e1011]
+                    - generic [ref=e1012]:
+                      - img [ref=e1014]
+                      - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video This blunder changed chickens forever":
+                    - /url: /reel/video/p0hgl0lh/the-blunder-that-changed-chickens-forever
+                    - generic:
+                      - img "This blunder changed chickens forever"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "This blunder changed chickens forever" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The 200-year-old drinkable champagne":
+                    - /url: /reel/video/p0glbv33/the-world-s-oldest-drinkable-champagne
+                    - generic:
+                      - img "The 200-year-old drinkable champagne"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "The 200-year-old drinkable champagne" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How safe is frozen fruit?":
+                    - /url: /reel/video/p0fxt74f/how-safe-is-frozen-fruit-
+                    - generic:
+                      - img "How safe is frozen fruit?"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "How safe is frozen fruit?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The legacy of poor nutrition":
+                    - /url: /reel/video/p0f5qzdq/the-harmful-legacy-of-poor-nutrition
+                    - generic:
+                      - img "The legacy of poor nutrition"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "The legacy of poor nutrition" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The secret world of truffle hunting":
+                    - /url: /reel/video/p0f1n8wh/the-hunt-for-the-world-s-most-expensive-fungus
+                    - generic:
+                      - img "The secret world of truffle hunting"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "The secret world of truffle hunting" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The truth behind your favourite flavour":
+                    - /url: /reel/video/p0f0cw07/the-truth-behind-your-favourite-flavours
+                    - generic:
+                      - img "The truth behind your favourite flavour"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "The truth behind your favourite flavour" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Wagyu beef made in a lab":
+                    - /url: /reel/video/p0dvbn8b/japan-creating-the-first-wagyu-beef-in-a-lab
+                    - generic:
+                      - img "Wagyu beef made in a lab"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "Wagyu beef made in a lab" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How a vegan diet affects the brain":
+                    - /url: /reel/video/p0dsvhvc/how-a-vegan-diet-can-affect-your-brain
+                    - generic:
+                      - img "How a vegan diet affects the brain"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "How a vegan diet affects the brain" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Are we all really masochistic?":
+                    - /url: /reel/video/p0dglbf7/spicy-chillies-behind-the-agonising-pleasure-of-capsaicin
+                    - generic:
+                      - img "Are we all really masochistic?"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "Are we all really masochistic?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The foods that can boost your memory":
+                    - /url: /reel/video/p0df5vpt/what-food-and-drink-is-good-for-your-memory-
+                    - generic:
+                      - img "The foods that can boost your memory"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "The foods that can boost your memory" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The fight to feed humanity":
+                    - /url: /reel/video/p0d9xnpl/the-fight-to-feed-humanity
+                    - generic:
+                      - img "The fight to feed humanity"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "The fight to feed humanity" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The true origins of chocolate":
+                    - /url: /reel/video/p0db285p/the-surprising-role-chocolate-played-for-ancient-humans
+                    - generic:
+                      - img "The true origins of chocolate"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "The true origins of chocolate" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The surprising power of the beetroot":
+                    - /url: /reel/video/p0d7t71j/how-beetroot-can-enhance-your-performance
+                    - generic:
+                      - img "The surprising power of the beetroot"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "The surprising power of the beetroot" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The truth about raw milk":
+                    - /url: /reel/video/p0d47mjl/the-truth-about-drinking-raw-milk
+                    - generic:
+                      - img "The truth about raw milk"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "The truth about raw milk" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How Russia fell in love with mayonnaise":
+                    - /url: /reel/video/p0cx5c9z/the-russian-food-obsession-inspired-by-the-us
+                    - generic:
+                      - img "How Russia fell in love with mayonnaise"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "How Russia fell in love with mayonnaise" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why is cod so popular in Portugal?":
+                    - /url: /reel/video/p0crynq5/why-is-cod-so-popular-in-portugal-
+                    - generic:
+                      - img "Why is cod so popular in Portugal?"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "Why is cod so popular in Portugal?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How sushi took over the world":
+                    - /url: /reel/video/p0cg0wgn/how-sushi-took-over-the-world
+                    - generic:
+                      - img "How sushi took over the world"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "How sushi took over the world" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The surprising truth about supplements":
+                    - /url: /reel/video/p0c5mwdb/the-truth-about-supplements-and-who-should-be-taking-them
+                    - generic:
+                      - img "The surprising truth about supplements"
+                    - generic:
+                      - generic:
+                        - generic: Food & Drink
+                      - heading "The surprising truth about supplements" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+            - img [ref=e1017]
+            - img [ref=e1020]
+          - list [ref=e1024]:
+            - listitem [ref=e1025] [cursor=pointer]
+            - listitem [ref=e1026] [cursor=pointer]
+            - listitem [ref=e1027] [cursor=pointer]
+            - listitem [ref=e1028] [cursor=pointer]
+            - listitem [ref=e1029] [cursor=pointer]
+            - listitem [ref=e1030] [cursor=pointer]
+            - listitem [ref=e1031] [cursor=pointer]
+            - listitem [ref=e1032] [cursor=pointer]
+            - listitem [ref=e1033] [cursor=pointer]
+            - listitem [ref=e1034] [cursor=pointer]
+        - generic [ref=e1035]:
+          - generic [ref=e1037]:
+            - img [ref=e1038]
+            - text: 9 videos
+          - heading "Sleep" [level=2] [ref=e1042]
+          - paragraph [ref=e1044]: Analysing sleep and what it is really for.
+          - generic [ref=e1045]:
+            - region "Sleep" [ref=e1046]:
+              - listitem [ref=e1047]:
+                - link "Play video Are you an 'elite sleeper'?" [ref=e1049] [cursor=pointer]:
+                  - /url: /reel/video/p0ck62w1/why-do-some-people-need-less-sleep-
+                  - img "Are you an 'elite sleeper'?" [ref=e1052]
+                  - generic [ref=e1054]:
+                    - generic [ref=e1056]: Sleep
+                    - heading "Are you an 'elite sleeper'?" [level=3] [ref=e1057]
+                    - generic [ref=e1058]:
+                      - img [ref=e1060]
+                      - text: Watch now
+              - listitem [ref=e1062]:
+                - link "Play video Are you a 'lark' or an 'owl'?" [ref=e1064] [cursor=pointer]:
+                  - /url: /reel/video/p09mqkk8/are-you-a-morning-lark-or-a-night-owl-
+                  - img "Are you a 'lark' or an 'owl'?" [ref=e1067]
+                  - generic [ref=e1069]:
+                    - generic [ref=e1071]: Sleep
+                    - heading "Are you a 'lark' or an 'owl'?" [level=3] [ref=e1072]
+                    - generic [ref=e1073]:
+                      - img [ref=e1075]
+                      - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Could your dreams predict the future?":
+                    - /url: /reel/video/p08yxrlb/why-our-dreams-could-be-the-key-to-time-travel
+                    - generic:
+                      - img "Could your dreams predict the future?"
+                    - generic:
+                      - generic:
+                        - generic: Sleep
+                      - heading "Could your dreams predict the future?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Behind our strange lockdown dreams":
+                    - /url: /reel/video/p08b12jt/coronavirus-why-are-people-having-lockdown-nightmares-
+                    - generic:
+                      - img "Behind our strange lockdown dreams"
+                    - generic:
+                      - generic:
+                        - generic: Sleep
+                      - heading "Behind our strange lockdown dreams" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why do we dream?":
+                    - /url: /reel/video/p06933l9/why-do-we-dream-
+                    - generic:
+                      - img "Why do we dream?"
+                    - generic:
+                      - generic:
+                        - generic: Sleep
+                      - heading "Why do we dream?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The link between sleep and memory loss":
+                    - /url: /reel/video/p07nmlxp/the-new-science-of-sleep-engineering
+                    - generic:
+                      - img "The link between sleep and memory loss"
+                    - generic:
+                      - generic:
+                        - generic: Sleep
+                      - heading "The link between sleep and memory loss" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The talent hidden in sleeping brains":
+                    - /url: /reel/video/p077t7x3/the-hidden-talents-of-your-sleeping-brain
+                    - generic:
+                      - img "The talent hidden in sleeping brains"
+                    - generic:
+                      - generic:
+                        - generic: Sleep
+                      - heading "The talent hidden in sleeping brains" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How to take control of your dreams":
+                    - /url: /reel/video/p076149f/an-easy-trick-to-make-the-most-of-your-time-asleep
+                    - generic:
+                      - img "How to take control of your dreams"
+                    - generic:
+                      - generic:
+                        - generic: Sleep
+                      - heading "How to take control of your dreams" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why most dreams are about money not sex":
+                    - /url: /reel/video/p06kzfyn/is-money-or-sex-more-common-in-dreams-
+                    - generic:
+                      - img "Why most dreams are about money not sex"
+                    - generic:
+                      - generic:
+                        - generic: Sleep
+                      - heading "Why most dreams are about money not sex" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+            - img [ref=e1078]
+            - img [ref=e1081]
+          - list [ref=e1085]:
+            - listitem [ref=e1086] [cursor=pointer]
+            - listitem [ref=e1087] [cursor=pointer]
+            - listitem [ref=e1088] [cursor=pointer]
+            - listitem [ref=e1089] [cursor=pointer]
+            - listitem [ref=e1090] [cursor=pointer]
+        - generic [ref=e1091]:
+          - generic [ref=e1093]:
+            - img [ref=e1094]
+            - text: 37 videos
+          - heading "Humanity" [level=2] [ref=e1098]
+          - paragraph [ref=e1100]: Stories about the human race.
+          - generic [ref=e1101]:
+            - region "Humanity" [ref=e1102]:
+              - listitem [ref=e1103]:
+                - link "Play video Decoding the 2023 crotch grab debate" [ref=e1105] [cursor=pointer]:
+                  - /url: /reel/video/p0h11grd/decoding-the-2023-crotch-grab-controversy
+                  - img "Decoding the 2023 crotch grab debate" [ref=e1108]
+                  - generic [ref=e1110]:
+                    - generic [ref=e1112]: Humanity
+                    - heading "Decoding the 2023 crotch grab debate" [level=3] [ref=e1113]
+                    - generic [ref=e1114]:
+                      - img [ref=e1116]
+                      - text: Watch now
+              - listitem [ref=e1118]:
+                - link "Play video Why are we scared of flying on planes?" [ref=e1120] [cursor=pointer]:
+                  - /url: /reel/video/p0gtw9w6/why-are-we-scared-of-flying-on-planes-
+                  - img "Why are we scared of flying on planes?" [ref=e1123]
+                  - generic [ref=e1125]:
+                    - generic [ref=e1127]: Humanity
+                    - heading "Why are we scared of flying on planes?" [level=3] [ref=e1128]
+                    - generic [ref=e1129]:
+                      - img [ref=e1131]
+                      - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video 'There's no one way to be autistic'":
+                    - /url: /reel/video/p0fqdsrd/-there-s-no-one-way-to-be-autistic-
+                    - generic:
+                      - img "'There's no one way to be autistic'"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "'There's no one way to be autistic'" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why do we value gold so much?":
+                    - /url: /reel/video/p0f1b3cz/why-do-we-value-gold-so-much-
+                    - generic:
+                      - img "Why do we value gold so much?"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "Why do we value gold so much?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video A Neanderthal, modern human hybrid?":
+                    - /url: /reel/video/p0f8khzt/lapedo-child-a-neanderthal-modern-human-hybrid-
+                    - generic:
+                      - img "A Neanderthal, modern human hybrid?"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "A Neanderthal, modern human hybrid?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Do we really want life after death?":
+                    - /url: /reel/video/p0f61ch8/why-are-humans-obsessed-with-the-afterlife-
+                    - generic:
+                      - img "Do we really want life after death?"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "Do we really want life after death?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The power of dance":
+                    - /url: /reel/video/p0dyj8xw/why-dancing-is-key-to-our-humanity
+                    - generic:
+                      - img "The power of dance"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "The power of dance" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Do blondes have it easier?":
+                    - /url: /reel/video/p0clq1yy/do-blonde-people-have-a-happier-and-easier-life-
+                    - generic:
+                      - img "Do blondes have it easier?"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "Do blondes have it easier?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How we’ll die in the future":
+                    - /url: /reel/video/p0c7x8pp/six-surprising-ways-to-immortalise-the-dead
+                    - generic:
+                      - img "How we’ll die in the future"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "How we’ll die in the future" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why are so many people moving home?":
+                    - /url: /reel/video/p0c55jsp/why-are-so-many-people-moving-back-home-
+                    - generic:
+                      - img "Why are so many people moving home?"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "Why are so many people moving home?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Is this the end of anthropocentrism?":
+                    - /url: /reel/video/p0c7mwdn/are-we-entering-a-post-anthropocentric-era-
+                    - generic:
+                      - img "Is this the end of anthropocentrism?"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "Is this the end of anthropocentrism?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The extraordinary power of kindness":
+                    - /url: /reel/video/p0bt6c4j/the-extraordinary-power-of-kindness
+                    - generic:
+                      - img "The extraordinary power of kindness"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "The extraordinary power of kindness" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The African philosophy of Ubuntu":
+                    - /url: /reel/video/p0bqvs1f/the-philosophy-that-can-change-how-you-look-at-life
+                    - generic:
+                      - img "The African philosophy of Ubuntu"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "The African philosophy of Ubuntu" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Homeless in the mansions of the rich":
+                    - /url: /reel/video/p0bggk07/pop-up-homeless-shelters-in-the-homes-of-the-rich
+                    - generic:
+                      - img "Homeless in the mansions of the rich"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "Homeless in the mansions of the rich" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How to count to 1,000 on your hands":
+                    - /url: /reel/video/p09sflpk/how-the-way-you-count-reveals-where-you-re-from
+                    - generic:
+                      - img "How to count to 1,000 on your hands"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "How to count to 1,000 on your hands" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Are rich people heartless?":
+                    - /url: /reel/video/p07vts5j/the-surprising-psychology-behind-being-rich
+                    - generic:
+                      - img "Are rich people heartless?"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "Are rich people heartless?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video 'Three-day evacuation lasted 35 years'":
+                    - /url: /reel/video/p09fkzvd/returning-home-to-a-nuclear-disaster-zone
+                    - generic:
+                      - img "'Three-day evacuation lasted 35 years'"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "'Three-day evacuation lasted 35 years'" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video 'We found a fortune inside a whale'":
+                    - /url: /reel/video/p09jyntg/-we-found-a-fortune-in-the-belly-of-a-whale-
+                    - generic:
+                      - img "'We found a fortune inside a whale'"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "'We found a fortune inside a whale'" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why do humans laugh?":
+                    - /url: /reel/video/p09df6l6/why-do-humans-laugh-
+                    - generic:
+                      - img "Why do humans laugh?"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "Why do humans laugh?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How ten teenagers experience time":
+                    - /url: /reel/video/p09b3nx3/how-ten-teenagers-experience-time-and-love
+                    - generic:
+                      - img "How ten teenagers experience time"
+                    - generic:
+                      - generic:
+                        - generic: Humanity
+                      - heading "How ten teenagers experience time" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+            - img [ref=e1134]
+            - img [ref=e1137]
+          - list [ref=e1141]:
+            - listitem [ref=e1142] [cursor=pointer]
+            - listitem [ref=e1143] [cursor=pointer]
+            - listitem [ref=e1144] [cursor=pointer]
+            - listitem [ref=e1145] [cursor=pointer]
+            - listitem [ref=e1146] [cursor=pointer]
+            - listitem [ref=e1147] [cursor=pointer]
+            - listitem [ref=e1148] [cursor=pointer]
+            - listitem [ref=e1149] [cursor=pointer]
+            - listitem [ref=e1150] [cursor=pointer]
+            - listitem [ref=e1151] [cursor=pointer]
+        - generic [ref=e1152]:
+          - generic [ref=e1154]:
+            - img [ref=e1155]
+            - text: 53 videos
+          - heading "Culture" [level=2] [ref=e1159]
+          - paragraph [ref=e1161]: A global view of film, books, art, music and people.
+          - generic [ref=e1162]:
+            - region "Culture" [ref=e1163]:
+              - listitem [ref=e1164]:
+                - link "Play video Where did daylight savings come from?" [ref=e1166] [cursor=pointer]:
+                  - /url: /reel/video/p0kwwlv7/the-strange-origins-of-daylight-savings-time
+                  - img "Where did daylight savings come from?" [ref=e1169]
+                  - generic [ref=e1171]:
+                    - generic [ref=e1173]: Culture
+                    - heading "Where did daylight savings come from?" [level=3] [ref=e1174]
+                    - generic [ref=e1175]:
+                      - img [ref=e1177]
+                      - text: Watch now
+              - listitem [ref=e1179]:
+                - link "Play video Keira Knightley play song on her teeth" [ref=e1181] [cursor=pointer]:
+                  - /url: /reel/video/p0k7vxgg/watch-keira-knightley-play-cher-s-believe-on-her-teeth
+                  - img "Keira Knightley play song on her teeth" [ref=e1184]
+                  - generic [ref=e1186]:
+                    - generic [ref=e1188]: Culture
+                    - heading "Keira Knightley play song on her teeth" [level=3] [ref=e1189]
+                    - generic [ref=e1190]:
+                      - img [ref=e1192]
+                      - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Inside the harem of Orientalism":
+                    - /url: /reel/video/p0gr0gs7/inside-the-harem-where-east-meets-west
+                    - generic:
+                      - img "Inside the harem of Orientalism"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "Inside the harem of Orientalism" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The spectacular 'data sculptures'":
+                    - /url: /reel/video/p0gqzz0z/the-spectacular-world-of-data-sculpture-
+                    - generic:
+                      - img "The spectacular 'data sculptures'"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "The spectacular 'data sculptures'" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video What is Barbenheimer?":
+                    - /url: /reel/video/p0g1kzz6/what-is-barbenheimer-and-why-should-we-care-
+                    - generic:
+                      - img "What is Barbenheimer?"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "What is Barbenheimer?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The trap of tourism":
+                    - /url: /reel/video/p0c58s79/road-to-modernity-the-untold-marrakesh
+                    - generic:
+                      - img "The trap of tourism"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "The trap of tourism" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Eight of Tina Turner's legendary songs":
+                    - /url: /reel/video/p0fq6wd4/eight-of-tina-turner-s-most-legendary-songs
+                    - generic:
+                      - img "Eight of Tina Turner's legendary songs"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "Eight of Tina Turner's legendary songs" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video A dive into a historical Eurovision win":
+                    - /url: /reel/video/p0fmtpbx/a-deep-dive-into-a-historical-eurovision-win
+                    - generic:
+                      - img "A dive into a historical Eurovision win"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "A dive into a historical Eurovision win" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Brazil’s oldest martial art":
+                    - /url: /reel/video/p0fccnq3/capoeira-brazil-s-oldest-martial-art
+                    - generic:
+                      - img "Brazil’s oldest martial art"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "Brazil’s oldest martial art" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Horror monsters reveal society's fears":
+                    - /url: /reel/video/p0f9x668/what-horror-films-reveal-about-society-s-deepest-fears
+                    - generic:
+                      - img "Horror monsters reveal society's fears"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "Horror monsters reveal society's fears" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The greatest poet who never lived":
+                    - /url: /reel/video/p0f3h03g/ern-malley-the-influential-australian-poet-who-never-lived
+                    - generic:
+                      - img "The greatest poet who never lived"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "The greatest poet who never lived" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Why is Christmas in winter?":
+                    - /url: /reel/video/p0dl578j/the-astonishing-pagan-origin-of-christmas
+                    - generic:
+                      - img "Why is Christmas in winter?"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "Why is Christmas in winter?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The secret language men don't know":
+                    - /url: /reel/video/p0ddgjv4/nushu-the-secret-chinese-language-men-don-t-know
+                    - generic:
+                      - img "The secret language men don't know"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "The secret language men don't know" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The secret gallery for the super rich":
+                    - /url: /reel/video/p0d0tjv5/the-secret-gallery-where-the-super-rich-can-buy-dinosaurs
+                    - generic:
+                      - img "The secret gallery for the super rich"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "The secret gallery for the super rich" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video A treaty still held after six centuries":
+                    - /url: /reel/video/p0ctf7c3/the-treaty-still-enforced-after-six-centuries
+                    - generic:
+                      - img "A treaty still held after six centuries"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "A treaty still held after six centuries" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The training school for 'demons'":
+                    - /url: /reel/video/p0crbwt0/the-school-continuing-an-explosive-heritage
+                    - generic:
+                      - img "The training school for 'demons'"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "The training school for 'demons'" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Istanbul's Bosphorus obsession":
+                    - /url: /reel/video/p0bs3mpt/the-one-obsession-all-people-in-istanbul-have
+                    - generic:
+                      - img "Istanbul's Bosphorus obsession"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "Istanbul's Bosphorus obsession" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video A very Spanish obsession":
+                    - /url: /reel/video/p0brp3k4/why-can-t-spaniards-get-rid-of-their-blinds-
+                    - generic:
+                      - img "A very Spanish obsession"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "A very Spanish obsession" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The outspoken 'traitors' of Putin":
+                    - /url: /reel/video/p0bh47sd/what-it-s-like-to-be-a-traitor-of-vladimir-putin
+                    - generic:
+                      - img "The outspoken 'traitors' of Putin"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "The outspoken 'traitors' of Putin" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Inside the House of Soviets":
+                    - /url: /reel/video/p0bfsd4y/the-soviet-palace-that-people-love-to-hate
+                    - generic:
+                      - img "Inside the House of Soviets"
+                    - generic:
+                      - generic:
+                        - generic: Culture
+                      - heading "Inside the House of Soviets" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+            - img [ref=e1195]
+            - img [ref=e1198]
+          - list [ref=e1202]:
+            - listitem [ref=e1203] [cursor=pointer]
+            - listitem [ref=e1204] [cursor=pointer]
+            - listitem [ref=e1205] [cursor=pointer]
+            - listitem [ref=e1206] [cursor=pointer]
+            - listitem [ref=e1207] [cursor=pointer]
+            - listitem [ref=e1208] [cursor=pointer]
+            - listitem [ref=e1209] [cursor=pointer]
+            - listitem [ref=e1210] [cursor=pointer]
+            - listitem [ref=e1211] [cursor=pointer]
+            - listitem [ref=e1212] [cursor=pointer]
+        - generic [ref=e1213]:
+          - generic [ref=e1215]:
+            - img [ref=e1216]
+            - text: 220 videos
+          - heading "History" [level=2] [ref=e1220]
+          - paragraph [ref=e1222]: Exploring the past.
+          - generic [ref=e1223]:
+            - region "History" [ref=e1224]:
+              - listitem [ref=e1225]:
+                - link "Play video Why Roman concrete still defies time" [ref=e1227] [cursor=pointer]:
+                  - /url: /reel/video/p0mk1gdc/why-ancient-roman-buildings-last-for-millennia
+                  - img "Why Roman concrete still defies time" [ref=e1230]
+                  - generic [ref=e1232]:
+                    - generic [ref=e1234]: History
+                    - heading "Why Roman concrete still defies time" [level=3] [ref=e1235]
+                    - generic [ref=e1236]:
+                      - img [ref=e1238]
+                      - text: Watch now
+              - listitem [ref=e1240]:
+                - link "Play video The secret childhood of Princess Diana" [ref=e1242] [cursor=pointer]:
+                  - /url: /reel/video/p0lt06tl/the-secret-childhood-of-princess-diana
+                  - img "The secret childhood of Princess Diana" [ref=e1245]
+                  - generic [ref=e1247]:
+                    - generic [ref=e1249]: History
+                    - heading "The secret childhood of Princess Diana" [level=3] [ref=e1250]
+                    - generic [ref=e1251]:
+                      - img [ref=e1253]
+                      - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Rare footage of a Nazi airship crash":
+                    - /url: /reel/video/p0lsvc5q/rare-footage-of-the-ww2-nazi-hindenburg-airship-crash
+                    - generic:
+                      - img "Rare footage of a Nazi airship crash"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "Rare footage of a Nazi airship crash" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video What happened at Hiroshima?":
+                    - /url: /reel/video/p0lvdqmt/what-happened-at-hiroshima-
+                    - generic:
+                      - img "What happened at Hiroshima?"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "What happened at Hiroshima?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The legend of the woman pope":
+                    - /url: /reel/video/p0l8lcnr/pope-joan-the-woman-who-fooled-the-church
+                    - generic:
+                      - img "The legend of the woman pope"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "The legend of the woman pope" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The secret anti-nazi magazine":
+                    - /url: /reel/video/p0l7yjfy/the-secret-ww2-magazine-ridiculing-hitler-s-mother
+                    - generic:
+                      - img "The secret anti-nazi magazine"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "The secret anti-nazi magazine" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Behind Lady Diana's 'first' picture":
+                    - /url: /reel/video/p0kr3tk9/how-the-first-sensational-picture-of-lady-diana-came-about
+                    - generic:
+                      - img "Behind Lady Diana's 'first' picture"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "Behind Lady Diana's 'first' picture" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video A 'sour' Victorian-era Valentine craze":
+                    - /url: /reel/video/p0kr30jw/the-insulting-vinegar-valentine-of-victorian-england
+                    - generic:
+                      - img "A 'sour' Victorian-era Valentine craze"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "A 'sour' Victorian-era Valentine craze" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Putting pigeons in charge of missiles":
+                    - /url: /reel/video/p0kl5kcz/the-ww2-experiment-to-make-pigeon-guided-missiles
+                    - generic:
+                      - img "Putting pigeons in charge of missiles"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "Putting pigeons in charge of missiles" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The curious case of Mary Mallon":
+                    - /url: /reel/video/p0k4x9jb/mary-mallon-the-most-dangerous-woman-in-america-
+                    - generic:
+                      - img "The curious case of Mary Mallon"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "The curious case of Mary Mallon" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Europe's 'iron harvest' of war":
+                    - /url: /reel/video/p0k3vzf7/world-war-one-relics-live-on-in-the-fields-of-europe
+                    - generic:
+                      - img "Europe's 'iron harvest' of war"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "Europe's 'iron harvest' of war" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The history of the bison skulls photo":
+                    - /url: /reel/video/p0jzg8m7/the-picture-that-tells-a-lesser-known-chapter-of-us-history
+                    - generic:
+                      - img "The history of the bison skulls photo"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "The history of the bison skulls photo" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The history of swing states":
+                    - /url: /reel/video/p0jyrzsg/the-history-of-swing-states-in-the-us
+                    - generic:
+                      - img "The history of swing states"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "The history of swing states" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The curious cargo of 180,000 mummies":
+                    - /url: /reel/video/p0jr4z6k/why-tonnes-of-mummified-cats-ended-up-in-england
+                    - generic:
+                      - img "The curious cargo of 180,000 mummies"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "The curious cargo of 180,000 mummies" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The giant model of St Paul's Cathedral":
+                    - /url: /reel/video/p0jnkzzy/the-giant-350-year-old-model-of-st-paul-s-cathedral
+                    - generic:
+                      - img "The giant model of St Paul's Cathedral"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "The giant model of St Paul's Cathedral" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The US federal border's origin":
+                    - /url: /reel/video/p0jjgsd6/texas-fever-the-lesser-known-history-of-the-us-border
+                    - generic:
+                      - img "The US federal border's origin"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "The US federal border's origin" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The first view into Tutankhamun's tomb":
+                    - /url: /reel/video/p0j8gcmv/tutankhamun-the-first-ever-view-inside-the-tomb
+                    - generic:
+                      - img "The first view into Tutankhamun's tomb"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "The first view into Tutankhamun's tomb" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The oldest recording of a human voice":
+                    - /url: /reel/video/p0j7x5f7/listen-to-the-oldest-known-recording-of-a-human-voice
+                    - generic:
+                      - img "The oldest recording of a human voice"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "The oldest recording of a human voice" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Veteran remembers D-Day":
+                    - /url: /reel/video/p0j2f3nz/d-day-veteran-remembers-we-didn-t-have-time-to-be-scared
+                    - generic:
+                      - img "Veteran remembers D-Day"
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - heading "Veteran remembers D-Day" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - 'link "Play video King Charles: A year since Coronation"':
+                    - /url: /reel/video/p0hvp7vh/king-charles-one-year-since-the-coronation
+                    - generic:
+                      - 'img "King Charles: A year since Coronation"'
+                    - generic:
+                      - generic:
+                        - generic: History
+                      - 'heading "King Charles: A year since Coronation" [level=3]'
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+            - img [ref=e1256]
+            - img [ref=e1259]
+          - list [ref=e1263]:
+            - listitem [ref=e1264] [cursor=pointer]
+            - listitem [ref=e1265] [cursor=pointer]
+            - listitem [ref=e1266] [cursor=pointer]
+            - listitem [ref=e1267] [cursor=pointer]
+            - listitem [ref=e1268] [cursor=pointer]
+            - listitem [ref=e1269] [cursor=pointer]
+            - listitem [ref=e1270] [cursor=pointer]
+            - listitem [ref=e1271] [cursor=pointer]
+            - listitem [ref=e1272] [cursor=pointer]
+            - listitem [ref=e1273] [cursor=pointer]
+        - generic [ref=e1274]:
+          - generic [ref=e1276]:
+            - img [ref=e1277]
+            - text: 21 videos
+          - heading "Space" [level=2] [ref=e1281]
+          - paragraph [ref=e1283]: Explore our Universe and beyond.
+          - generic [ref=e1284]:
+            - region "Space" [ref=e1285]:
+              - listitem [ref=e1286]:
+                - link "Play video Hear the Sun's 'roar'" [ref=e1288] [cursor=pointer]:
+                  - /url: /reel/video/p0lh9vm3/listen-to-the-sun-like-never-before
+                  - img "Hear the Sun's 'roar'" [ref=e1291]
+                  - generic [ref=e1293]:
+                    - generic [ref=e1295]: Space
+                    - heading "Hear the Sun's 'roar'" [level=3] [ref=e1296]
+                    - generic [ref=e1297]:
+                      - img [ref=e1299]
+                      - text: Watch now
+              - listitem [ref=e1301]:
+                - link "Play video How space changed my body" [ref=e1303] [cursor=pointer]:
+                  - /url: /reel/video/p0hxbksd/astronaut-peggy-whitson-how-space-changed-my-body
+                  - img "How space changed my body" [ref=e1306]
+                  - generic [ref=e1308]:
+                    - generic [ref=e1310]: Space
+                    - heading "How space changed my body" [level=3] [ref=e1311]
+                    - generic [ref=e1312]:
+                      - img [ref=e1314]
+                      - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Jupiter stuns in new Nasa pictures":
+                    - /url: /reel/video/p0k6x7q8/see-nasa-s-spectacular-new-images-of-jupiter
+                    - generic:
+                      - img "Jupiter stuns in new Nasa pictures"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "Jupiter stuns in new Nasa pictures" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Listen to the sound of the Universe":
+                    - /url: /reel/video/p0jlbpl3/new-nasa-sonifications-listen-to-the-sound-of-the-universe
+                    - generic:
+                      - img "Listen to the sound of the Universe"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "Listen to the sound of the Universe" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video What living in space could look like":
+                    - /url: /reel/video/p0hxszh2/are-inflatable-habitats-the-future-of-life-in-space-
+                    - generic:
+                      - img "What living in space could look like"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "What living in space could look like" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video A rare star explosion is coming":
+                    - /url: /reel/video/p0hvn69l/we-re-about-to-witness-a-once-in-a-lifetime-star-explosion
+                    - generic:
+                      - img "A rare star explosion is coming"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "A rare star explosion is coming" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How Venus lost its water":
+                    - /url: /reel/video/p0hwd5ts/this-is-why-venus-is-bone-dry
+                    - generic:
+                      - img "How Venus lost its water"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "How Venus lost its water" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - 'link "Play video Eclipse 2024: What makes it so special?"':
+                    - /url: /reel/video/p0hnm0b6/eclipse-2024-what-makes-it-so-special-
+                    - generic:
+                      - 'img "Eclipse 2024: What makes it so special?"'
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - 'heading "Eclipse 2024: What makes it so special?" [level=3]'
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The eclipse that proved Einstein right":
+                    - /url: /reel/video/p0gkw3wb/the-eclipse-that-proved-einstein-right
+                    - generic:
+                      - img "The eclipse that proved Einstein right"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "The eclipse that proved Einstein right" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Three lunar mysteries":
+                    - /url: /reel/video/p0g8d11j/three-unsolved-mysteries-of-the-moon
+                    - generic:
+                      - img "Three lunar mysteries"
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: ADVERTISEMENT
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "Three lunar mysteries" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How old is the Universe?":
+                    - /url: /reel/video/p0g1v4pq/the-age-of-the-universe-might-be-drastically-wrong
+                    - generic:
+                      - img "How old is the Universe?"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "How old is the Universe?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Are we alone in the Universe?":
+                    - /url: /reel/video/p0fyqh5s/fermi-paradox-are-we-alone-in-the-universe-
+                    - generic:
+                      - img "Are we alone in the Universe?"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "Are we alone in the Universe?" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The cosmonaut who fell to Earth":
+                    - /url: /reel/video/p0dm6362/vladimir-komarov-the-cosmonaut-who-fell-to-earth
+                    - generic:
+                      - img "The cosmonaut who fell to Earth"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "The cosmonaut who fell to Earth" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The Moon hoax that fooled the world":
+                    - /url: /reel/video/p0d9wxy9/the-great-moon-hoax-that-fooled-the-world
+                    - generic:
+                      - img "The Moon hoax that fooled the world"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "The Moon hoax that fooled the world" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video What Mars and Iceland have in common":
+                    - /url: /reel/video/p0b76v9d/why-mars-bound-astronauts-may-go-to-iceland-first
+                    - generic:
+                      - img "What Mars and Iceland have in common"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "What Mars and Iceland have in common" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video How our view of the Universe changed":
+                    - /url: /reel/video/p072n3vj/three-women-who-changed-the-way-we-see-the-universe
+                    - generic:
+                      - img "How our view of the Universe changed"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "How our view of the Universe changed" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The man who 'killed' Pluto":
+                    - /url: /reel/video/p09qn2p6/the-man-who-killed-pluto
+                    - generic:
+                      - img "The man who 'killed' Pluto"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "The man who 'killed' Pluto" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video The objects that defy our understanding":
+                    - /url: /reel/video/p09n83q7/the-objects-that-show-physics-we-don-t-understand
+                    - generic:
+                      - img "The objects that defy our understanding"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "The objects that defy our understanding" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Sixty years of Mars landings":
+                    - /url: /reel/video/p0976126/mars-landings-that-did-and-didn-t-go-to-plan
+                    - generic:
+                      - img "Sixty years of Mars landings"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "Sixty years of Mars landings" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+              - listitem:
+                - generic:
+                  - link "Play video Blasting 3,500-watt lasers at Mars":
+                    - /url: /reel/video/p08ybh5t/-we-re-blasting-3-500-watt-lasers-at-mars-
+                    - generic:
+                      - img "Blasting 3,500-watt lasers at Mars"
+                    - generic:
+                      - generic:
+                        - generic: Space
+                      - heading "Blasting 3,500-watt lasers at Mars" [level=3]
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Watch now
+            - img [ref=e1317]
+            - img [ref=e1320]
+          - list [ref=e1324]:
+            - listitem [ref=e1325] [cursor=pointer]
+            - listitem [ref=e1326] [cursor=pointer]
+            - listitem [ref=e1327] [cursor=pointer]
+            - listitem [ref=e1328] [cursor=pointer]
+            - listitem [ref=e1329] [cursor=pointer]
+            - listitem [ref=e1330] [cursor=pointer]
+            - listitem [ref=e1331] [cursor=pointer]
+            - listitem [ref=e1332] [cursor=pointer]
+            - listitem [ref=e1333] [cursor=pointer]
+            - listitem [ref=e1334] [cursor=pointer]
+  - generic [ref=e566]:
+    - complementary [ref=e567]:
+      - navigation "BBC" [ref=e569]:
+        - heading "Explore the BBC" [level=2] [ref=e570]
+        - navigation [ref=e572]:
+          - list [ref=e573]:
+            - listitem [ref=e574]:
+              - link "Home" [ref=e575] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk
+            - listitem [ref=e576]:
+              - link "News" [ref=e577] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/news
+            - listitem [ref=e578]:
+              - link "Sport" [ref=e579] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/sport
+            - listitem [ref=e580]:
+              - link "Weather" [ref=e581] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/weather
+            - listitem [ref=e582]:
+              - link "iPlayer" [ref=e583] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/iplayer
+            - listitem [ref=e584]:
+              - link "Sounds" [ref=e585] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/sounds
+            - listitem [ref=e586]:
+              - link "Bitesize" [ref=e587] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/bitesize
+            - listitem [ref=e588]:
+              - link "CBeebies" [ref=e589] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/cbeebies
+            - listitem [ref=e590]:
+              - link "CBBC" [ref=e591] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/cbbc
+            - listitem [ref=e592]:
+              - link "Food" [ref=e593] [cursor=pointer]:
+                - /url: https://www.bbc.co.uk/food
+    - contentinfo [ref=e594]:
+      - generic [ref=e597]:
+        - list [ref=e598]:
+          - listitem [ref=e599]:
+            - link "Terms of Use" [ref=e600] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/terms/
+          - listitem [ref=e601]:
+            - link "About the BBC" [ref=e602] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/aboutthebbc
+          - listitem [ref=e603]:
+            - link "Privacy Policy" [ref=e604] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/privacy/
+          - listitem [ref=e605]:
+            - link "Cookies" [ref=e606] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/usingthebbc/cookies/
+          - listitem [ref=e607]:
+            - link "Accessibility Help" [ref=e608] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/accessibility/
+          - listitem [ref=e609]:
+            - link "Parental Guidance" [ref=e610] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/guidance
+          - listitem [ref=e611]:
+            - link "Contact the BBC" [ref=e612] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/contact
+          - listitem [ref=e613]:
+            - link "Make an editorial complaint" [ref=e614] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/contact/complaints/
+          - listitem [ref=e615]:
+            - link "BBC emails for you" [ref=e616] [cursor=pointer]:
+              - /url: https://www.bbc.co.uk/bbcnewsletter
+        - generic [ref=e617]:
+          - emphasis [ref=e618]: Copyright © 2026 BBC.
+          - text: The BBC is not responsible for the content of external sites.
+          - link "Read about our approach to external linking." [ref=e620] [cursor=pointer]:
+            - /url: https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links
