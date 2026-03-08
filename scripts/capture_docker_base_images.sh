@@ -112,11 +112,11 @@ done < <(find "$REPO_ROOT" -maxdepth 4 -name 'Dockerfile*' -print | sort)
       esac
     fi
 
-    printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' \
+    row="$(printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s' \
       "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
       "$img" "$os" "$arch" "$image_id" "$repo_digests" "$created" "$size_bytes" \
-      "${img_to_dockerfiles[$img]:-}" \
-      | sed -E 's#/home/kj/strix-halo-inference#\\$REPO_ROOT#g'
+      "${img_to_dockerfiles[$img]:-}")"
+    printf '%s\n' "${row//$REPO_ROOT/\$REPO_ROOT}"
   done
 } >"$OUT_PATH"
 

@@ -19,11 +19,12 @@ Covered (working scripts + evidence logs):
 - Vision: object detection + pose keypoints, and privacy-safe face matching.
 - Multi-view 3D reconstruction + browser viewer.
 
-![Model output collage](docs/images/strix-halo-model-collage-2026-02-15-12.png)
-Caption: Combined preview of selected outputs generated in this repository (12 tiles: `Qwen-Image-2512`, `Qwen-Image`, `Playground v2.5`, `FLUX.2-klein-9B`, `diffusers/FLUX.2-dev-bnb-4bit`, `Qwen-Image-Edit-2511 (multi)`, `SD3.5 Medium`, `SD x4 Upscaler`, `YOLO26 detect`, `VGGT-1B`, `Wan2.1-T2V`, `UltraFace+ArcFace`).
+![Model output collage](docs/images/strix-halo-model-collage-2026-03-08-12.png)
+Caption: Combined preview of selected outputs generated in this repository (12 tiles: `Qwen-Image-2512`, `Qwen-Image`, `Playground v2.5`, `FLUX.2-klein-9B (20 steps)`, `diffusers/FLUX.2-dev-bnb-4bit (20 steps)`, `Qwen-Image-Edit-2511 (20 steps, multi)`, `SD3.5 Medium`, `SD x4 Upscaler`, `YOLO26 detect`, `VGGT-1B`, `Wan2.1-T2V`, `UltraFace+ArcFace`).
 
 ## Contents
 
+- [Quick Find](#quick-find)
 - [Tested Models: Base Info and Test Overview](#tested-models-base-info-and-test-overview)
 - [Text to Image](#text-to-image)
   - [Qwen-Image-2512 (latest)](#qwen-image-2512-latest)
@@ -45,12 +46,16 @@ Caption: Combined preview of selected outputs generated in this repository (12 t
   - [SD x4 Upscaler](#sd-x4-upscaler)
 - [Image to Text](#image-to-text)
   - [Qwen2.5-VL-7B-Instruct](#qwen25-vl-7b-instruct)
+  - [Qwen3.5 VLM suite (cross-links)](#qwen35-vlm-suite-cross-links)
 - [Detection and Pose](#detection-and-pose)
   - [YOLO26n (detect)](#yolo26n-detect)
   - [YOLO26n-pose](#yolo26n-pose)
 - [Face Recognition](#face-recognition)
   - [UltraFace and ArcFace (ONNX)](#ultraface-and-arcface-onnx)
 - [Coding and General Chat](#coding-and-general-chat)
+  - [Qwen3.5-9B Q8_0 (GGUF, VLM)](#qwen35-9b-q8_0-gguf-vlm)
+  - [Qwen3.5-27B Q8_0 (GGUF, VLM)](#qwen35-27b-q8_0-gguf-vlm)
+  - [Qwen3.5-122B-A10B Q4_K_M (GGUF, VLM)](#qwen35-122b-a10b-q4_k_m-gguf-vlm)
   - [Qwen3-Next-80B-A3B (GGUF)](#qwen3-next-80b-a3b-gguf)
   - [Qwen3-Coder-Next (GGUF)](#qwen3-coder-next-gguf)
   - [Qwen2.5-Coder-32B (GGUF)](#qwen25-coder-32b-gguf)
@@ -69,6 +74,7 @@ Caption: Combined preview of selected outputs generated in this repository (12 t
   - [VGGT-1B](#vggt-1b)
 - [Video](#video)
   - [Wan2.1-T2V-1.3B](#wan21-t2v-13b)
+  - [Wan2.1-T2V-1.3B (V2V from one/two frames)](#wan21-t2v-13b-v2v-from-onetwo-frames)
 - [LLM Quantization and Fine-Tuning Demos](#llm-quantization-and-fine-tuning-demos)
   - [Quantization demo (GGUF)](#quantization-demo-gguf)
   - [Fine-tuning demo (CPU LoRA)](#fine-tuning-demo-cpu-lora)
@@ -83,6 +89,17 @@ Caption: Combined preview of selected outputs generated in this repository (12 t
 - [Cleanup Policy](#cleanup-policy)
 - [Passwordless sudo and Non-root copy](#passwordless-sudo-and-non-root-copy)
 
+## Quick Find
+
+- Looking for one-line model capabilities/timings/licenses: go to [Tested Models: Base Info and Test Overview](#tested-models-base-info-and-test-overview).
+- Looking for text-to-image generation: go to [Text to Image](#text-to-image).
+- Looking for image edits or multi-image composition: go to [Image to Image](#image-to-image).
+- Looking for image captioning / visual understanding: start at [Image to Text](#image-to-text), then see [Qwen3.5 VLM suite (cross-links)](#qwen35-vlm-suite-cross-links).
+- Looking for coding/chat LLMs: go to [Coding and General Chat](#coding-and-general-chat).
+- Looking for detection, pose, and face matching: go to [Detection and Pose](#detection-and-pose) and [Face Recognition](#face-recognition).
+- Looking for audio, video, and 3D: go to [Audio](#audio), [Video](#video), and [3D Reconstruction](#3d-reconstruction).
+- Looking for setup/build/download steps: go to [Containers](#containers), [Model Downloads](#model-downloads), and [Cleanup Policy](#cleanup-policy).
+
 ## Tested Models: Base Info and Test Overview
 
 This table summarizes the publish-day rerun (strict memory limits, scripted and containerized):
@@ -95,22 +112,27 @@ Times are approximate wall-clock durations and include pre/post cleanup wrapper 
 | Qwen-Image-2512 (latest) | text-to-image | `20B` | `2025-12-30` | `512x512`, `steps=20`, `bf16` | `~3m` | GPU | `apache-2.0` | [`Qwen/Qwen-Image-2512`](https://huggingface.co/Qwen/Qwen-Image-2512) | `reports/publish/qwen_image_2512_512.log`, `qwen-image/out/qwen_image_2512_512_2026-02-11.png` |
 | Qwen-Image (extra run) | text-to-image | `20B` | `2025-08-02` | `512x512`, `steps=30`, `bf16` | `~3.5m` | GPU | `apache-2.0` | [`Qwen/Qwen-Image`](https://huggingface.co/Qwen/Qwen-Image) | `reports/publish/qwen_image_512.log`, `qwen-image/out/qwen_image_512_75g_retest2.png` |
 | Qwen-Image | text-to-image | `20B` | `2025-08-02` | `1024x1024`, `steps=30`, `bf16` | `~17.5m` | GPU | `apache-2.0` | [`Qwen/Qwen-Image`](https://huggingface.co/Qwen/Qwen-Image) | `reports/publish/qwen_image_1024.log`, `qwen-image/out/qwen_image_1024_75g_retest2.png` |
-| Qwen-Image-Edit (single-image API compatibility check) | image-to-image | `20B` | `2025-08-17` | `256x256`, `steps=4`, `strength=0.6`, `bf16` | `~7.5m` | GPU | `apache-2.0` | [`Qwen/Qwen-Image-Edit`](https://huggingface.co/Qwen/Qwen-Image-Edit) | `reports/publish/qwen_image_edit_base_256_compat.log`, `qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png` |
-| Qwen-Image-Edit-2511 (latest, single-image) | image-to-image | `20B` | `2025-12-17` | `512x512`, `steps=4`, `bf16`, seq-offload, `max_sequence_length=128`, `true_cfg_scale=1.0`, `swap=140g` | `~6.5m` | GPU + CPU offload | `apache-2.0` | [`Qwen/Qwen-Image-Edit-2511`](https://huggingface.co/Qwen/Qwen-Image-Edit-2511) | `reports/publish/qwen_image_edit_2511_single_512.log`, `qwen-image-edit/out/qwen_image_edit_2511_single_512_seqoffload_bf16_75g_swap140_test.png` |
+| Qwen-Image-Edit (single-image API compatibility check) | image-to-image | `20B` | `2025-08-17` | `256x256`, `steps=20`, `strength=0.6`, `bf16` | `~22m` | GPU | `apache-2.0` | [`Qwen/Qwen-Image-Edit`](https://huggingface.co/Qwen/Qwen-Image-Edit) | `reports/publish/qwen_image_edit_base_256_compat_steps20_2026-03-08.log`, `qwen-image-edit/out/qwen_image_edit_single_compat_256_steps20_2026-03-08.png` |
+| Qwen-Image-Edit-2511 (latest, single-image) | image-to-image | `20B` | `2025-12-17` | `512x512`, `steps=20`, `bf16`, seq-offload, `max_sequence_length=128`, `true_cfg_scale=2.0`, `swap=140g` | `~9.5m` | GPU + CPU offload | `apache-2.0` | [`Qwen/Qwen-Image-Edit-2511`](https://huggingface.co/Qwen/Qwen-Image-Edit-2511) | `reports/publish/qwen_image_edit_2511_single_512_steps20_clean_2026-03-08.log`, `qwen-image-edit/out/qwen_image_edit_2511_single_512_steps20_clean_2026-03-08.png` |
 | Qwen-Image-Edit-2509 (single-image) | image-to-image | `20B` | `2025-09-22` | `512x512`, `steps=4`, `bf16`, seq-offload, `max_sequence_length=128`, `true_cfg_scale=1.0`, `swap=140g` | `~6.5m` | GPU + CPU offload | `apache-2.0` | [`Qwen/Qwen-Image-Edit-2509`](https://huggingface.co/Qwen/Qwen-Image-Edit-2509) | `reports/publish/qwen_image_edit_2509_single_512.log`, `qwen-image-edit/out/qwen_image_edit_2509_single_512_seqoffload_bf16_75g_test.png` |
-| Qwen-Image-Edit-2511 (latest, multi-image) | image-to-image | `20B` | `2025-12-17` | `2 input images`, `512x512`, `steps=12`, `bf16`, seq-offload, `max_sequence_length=128`, `true_cfg_scale=2.0`, `seed=3456`, `swap=140g` | `~11m` | GPU + CPU offload | `apache-2.0` | [`Qwen/Qwen-Image-Edit-2511`](https://huggingface.co/Qwen/Qwen-Image-Edit-2511) | `reports/publish/qwen_image_edit_2511_multi_512_move_person.log`, `qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps12_cfg2_seed3456_75g_swap140_2026-02-13.png` |
-| Qwen-Image-Edit-2509 (multi-image) | image-to-image | `20B` | `2025-09-22` | `2 input images`, `512x512`, `steps=8`, `bf16`, seq-offload, `max_sequence_length=128`, `true_cfg_scale=1.0`, `swap=140g` | `~9m` | GPU + CPU offload | `apache-2.0` | [`Qwen/Qwen-Image-Edit-2509`](https://huggingface.co/Qwen/Qwen-Image-Edit-2509) | `reports/publish/qwen_image_edit_2509_multi_512.log`, `qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png` |
-| FLUX.2-klein-base-4B | text-to-image | `4B` | `2026-01-14` | `512x512`, `steps=4`, `guidance=1.0`, `fp32` | `~3m` | GPU | `apache-2.0` | [`black-forest-labs/FLUX.2-klein-base-4B`](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-4B) | `reports/publish/flux2_klein_base_4b_512.log`, `stable-diffusion/out/flux2_klein_base_4b_512_2026-02-11.png` |
-| FLUX.2-klein-9B | text-to-image | `9B` | `2026-01-14` | `512x512`, `steps=4`, `guidance=1.0`, `bf16`, CPU offload | `~2.5m` | GPU + CPU offload | `flux-non-commercial-license` | [`black-forest-labs/FLUX.2-klein-9B`](https://huggingface.co/black-forest-labs/FLUX.2-klein-9B) | `reports/publish/flux2_klein_9b_512_t2i.log`, `stable-diffusion/out/flux2_klein_9b_512_t2i_reconfirm_2026-02-12.png` |
-| diffusers/FLUX.2-dev-bnb-4bit | text-to-image + image-to-image | `32B` | `2025-11-24` | `512x512`, `steps=4`, `guidance=3.0`, `bf16`, CPU offload (`max_sequence_length=128`) | `~3-3.5m` | GPU + CPU offload | `flux-dev-non-commercial-license` | [`diffusers/FLUX.2-dev-bnb-4bit`](https://huggingface.co/diffusers/FLUX.2-dev-bnb-4bit) | `reports/publish/flux2_dev_bnb4_512_t2i.log`, `stable-diffusion/out/flux2_dev_bnb4_512_t2i_reconfirm_2026-02-12.png`, `reports/publish/flux2_dev_bnb4_512_i2i.log`, `stable-diffusion/out/flux2_dev_bnb4_512_i2i_reconfirm_2026-02-12.png`, `reports/publish/flux2_dev_bnb4_512_multi.log`, `stable-diffusion/out/flux2_dev_bnb4_512_multi_reconfirm_2026-02-12.png` |
+| Qwen-Image-Edit-2511 (latest, multi-image) | image-to-image | `20B` | `2025-12-17` | `2 input images`, `512x512`, `steps=20`, `bf16`, seq-offload, `max_sequence_length=128`, `true_cfg_scale=2.0`, `seed=3456`, `swap=140g` | `~13m` | GPU + CPU offload | `apache-2.0` | [`Qwen/Qwen-Image-Edit-2511`](https://huggingface.co/Qwen/Qwen-Image-Edit-2511) | `reports/publish/qwen_image_edit_2511_multi_512_steps20_2026-03-08.log`, `qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps20_cfg2_seed3456_2026-03-08.png` |
+| Qwen-Image-Edit-2509 (multi-image) | image-to-image | `20B` | `2025-09-22` | `2 input images`, `512x512`, `steps=20`, `bf16`, seq-offload, `max_sequence_length=128`, `true_cfg_scale=2.0`, `seed=3456`, `swap=140g` | `~13m` | GPU + CPU offload | `apache-2.0` | [`Qwen/Qwen-Image-Edit-2509`](https://huggingface.co/Qwen/Qwen-Image-Edit-2509) | `reports/publish/qwen_image_edit_2509_multi_512_steps20_cfg2_seed3456_2026-03-08.log`, `qwen-image-edit/out/qwen_image_edit_2509_multi_512_steps20_cfg2_seed3456_2026-03-08.png` |
+| FLUX.2-klein-base-4B | text-to-image | `4B` | `2026-01-14` | `512x512`, `steps=20`, `guidance=1.0`, `fp32` | `~4.5m` | GPU | `apache-2.0` | [`black-forest-labs/FLUX.2-klein-base-4B`](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-4B) | `reports/publish/flux2_klein_base_4b_512_steps20_2026-03-08.log`, `stable-diffusion/out/flux2_klein_base_4b_512_steps20_2026-03-08.png` |
+| FLUX.2-klein-9B | text-to-image | `9B` | `2026-01-14` | `512x512`, `steps=20`, `guidance=1.0`, `bf16`, CPU offload | `~3m` | GPU + CPU offload | `flux-non-commercial-license` | [`black-forest-labs/FLUX.2-klein-9B`](https://huggingface.co/black-forest-labs/FLUX.2-klein-9B) | `reports/publish/flux2_klein_9b_512_t2i_steps20_2026-03-08.log`, `stable-diffusion/out/flux2_klein_9b_512_t2i_steps20_2026-03-08.png` |
+| diffusers/FLUX.2-dev-bnb-4bit | text-to-image + image-to-image | `32B` | `2025-11-24` | t2i: `512x512`, `steps=20`, `guidance=3.0`, `bf16`, CPU offload; i2i/multi: `512x512`, `steps=4` | `~4m` (t2i) | GPU + CPU offload | `flux-dev-non-commercial-license` | [`diffusers/FLUX.2-dev-bnb-4bit`](https://huggingface.co/diffusers/FLUX.2-dev-bnb-4bit) | `reports/publish/flux2_dev_bnb4_512_t2i_steps20_2026-03-08.log`, `stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps20_2026-03-08.png`, `reports/publish/flux2_dev_bnb4_512_i2i.log`, `stable-diffusion/out/flux2_dev_bnb4_512_i2i_reconfirm_2026-02-12.png`, `reports/publish/flux2_dev_bnb4_512_multi.log`, `stable-diffusion/out/flux2_dev_bnb4_512_multi_reconfirm_2026-02-12.png` |
+| diffusers/FLUX.2-dev-bnb-4bit (recommended-step profile) | text-to-image | `32B` | `2025-11-24` | `512x512`, `steps=30`, `guidance=3.5`, `bf16`, CPU offload (`max_sequence_length=256`, `timeout=45m`) | `~5m` | GPU + CPU offload | `flux-dev-non-commercial-license` | [`diffusers/FLUX.2-dev-bnb-4bit`](https://huggingface.co/diffusers/FLUX.2-dev-bnb-4bit) | `reports/publish/flux2_dev_bnb4_512_t2i_steps30_2026-03-07.log`, `stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps30_2026-03-07.png` |
 | FLUX.2-dev-NVFP4 | text-to-image | `32B` | `2025-12-31` | `512x512`, `steps=4` load attempt | `~0.5m` (expected fail) | n/a (format mismatch) | `flux-dev-non-commercial-license` | [`black-forest-labs/FLUX.2-dev-NVFP4`](https://huggingface.co/black-forest-labs/FLUX.2-dev-NVFP4) | `reports/publish/flux2_dev_nvfp4_expected_fail.log` |
 | SD3.5 Medium | text-to-image | `2.5B` | `2024-10-29` | `512x512`, `steps=40`, `guidance=4.5` | `~8m` | GPU | `other` | [`stabilityai/stable-diffusion-3.5-medium`](https://huggingface.co/stabilityai/stable-diffusion-3.5-medium) | `reports/publish/sd35_medium_512.log`, `stable-diffusion/out/sd35_sample_best_retest.png` |
 | SD3.5 Large | text-to-image | `8.1B` | `2024-10-22` | `512x512`, `steps=20`, `guidance=3.5` | `~16m` | GPU | `other` | [`stabilityai/stable-diffusion-3.5-large`](https://huggingface.co/stabilityai/stable-diffusion-3.5-large) | `reports/publish/sd35_large_512.log`, `stable-diffusion/out/sd35_large_512_best_attempt.png` |
 | SDXL Base | text-to-image | `3.5B` | `2023-07-25` | `512x512`, `steps=50`, `guidance=5.0` | `~5m` | GPU | `openrail++` | [`stabilityai/stable-diffusion-xl-base-1.0`](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | `reports/publish/sdxl_base_512.log`, `stable-diffusion/out/sdxl_base_best_retest.png` |
+| SDXL Base (photoreal comparison prompt) | text-to-image | `3.5B` | `2023-07-25` | `512x512`, `steps=50`, `guidance=5.0`, photoreal prompt + negative prompt | `~4.5m` | GPU | `openrail++` | [`stabilityai/stable-diffusion-xl-base-1.0`](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | `reports/publish/sdxl_base_512_photoreal_2026-03-08.log`, `stable-diffusion/out/sdxl_base_photoreal_512_2026-03-08.png` |
 | Playground v2.5 (SDXL fine-tune) | text-to-image | `3.5B` | `2024-02-16` | `1024x1024`, `steps=20`, `guidance=3.0`, `fp16`, `vae_tiling=1` | `~11.5m` | GPU | `playground-v2dot5-community` | [`playgroundai/playground-v2.5-1024px-aesthetic`](https://huggingface.co/playgroundai/playground-v2.5-1024px-aesthetic) | `reports/publish/playground_v25_1024.log`, `stable-diffusion/out/playground_v25_1024_2026-02-12.png` |
 | FLUX.2-klein-4B | text-to-image | `4B` | `2026-01-14` | `512x512`, `steps=4`, `guidance=1.0` | `~3m` | GPU | `apache-2.0` | [`black-forest-labs/FLUX.2-klein-4B`](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) | `reports/publish/flux2_klein_4b_512.log`, `stable-diffusion/out/flux2_klein_best_retest.png` |
 | SD x4 Upscaler | upscaler | `0.869B` | `2022-11-23` | `512 -> 2048`, `steps=8`, `guidance=6.0`, `noise=10`, `fp16`, `aotriton`, `sdp` | `~21m` | GPU | `openrail++` | [`stabilityai/stable-diffusion-x4-upscaler`](https://huggingface.co/stabilityai/stable-diffusion-x4-upscaler) | `reports/publish/sd_x4_upscale_512_to_2048.log`, `stable-diffusion/out/qwen_image_upscaled_2048_best_retest.png`, `reports/research/sd_x4_upscaler_param_count.json` |
 | Qwen2.5-VL-7B | image-to-text | `7B` | `2025-01-26` | `image=512x512`, `max_new_tokens=256` | `~1.5m` | CPU fallback | `apache-2.0` | [`Qwen/Qwen2.5-VL-7B-Instruct`](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) | `reports/publish/qwen_vl_7b_cpu.log`, `qwen-vl/out/qwen_vl_describe_75g_retest2.txt` |
+| Qwen3.5-9B Q8_0 (GGUF) | vlm (vision + summarization + coding) | `9B` | `2026-02-28` | task suite (`image=512x512`, summarization prompt, coding prompt), `ctx=32768`; simple-text ctx probe max: `ctx=131072`, `max_tokens=256` | `~1.5m` (suite) + `~1m` (ctx probe) | GPU (Vulkan) | `apache-2.0` | [`unsloth/Qwen3.5-9B-GGUF`](https://huggingface.co/unsloth/Qwen3.5-9B-GGUF) | `reports/publish/qwen35_9b_q8_task_suite_2026-03-08b.log`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_vision.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_summarization.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_coding.json`, `reports/publish/qwen35_ctx_text/qwen35_9b_q8_ctx131072.log`, `llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_9b_q8_ctx131072_2026-03-08.json` |
+| Qwen3.5-27B Q8_0 (GGUF) | vlm (vision + summarization + coding) | `27B` | `2026-02-24` | task suite (`image=512x512`, summarization prompt, coding prompt), `ctx=16384`; simple-text ctx probe max: `ctx=131072`, `max_tokens=256` | `~4m` (suite) + `~1.5m` (ctx probe) | GPU (Vulkan) | `apache-2.0` | [`unsloth/Qwen3.5-27B-GGUF`](https://huggingface.co/unsloth/Qwen3.5-27B-GGUF) | `reports/publish/qwen35_27b_q8_task_suite_2026-03-08b.log`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_vision.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_summarization.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_coding.json`, `reports/publish/qwen35_ctx_text/qwen35_27b_q8_ctx131072.log`, `llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_27b_q8_ctx131072_2026-03-08.json` |
+| Qwen3.5-122B-A10B Q4_K_M (GGUF) | vlm (vision + summarization + coding) | `122B total / 10B active` | `2026-02-24` | task suite (`image=512x512`, summarization prompt, coding prompt), `ctx=8192`; simple-text ctx probe max: `ctx=131072`, `max_tokens=128` | `~6.5m` (suite) + `~2m` (ctx probe) | CPU fallback | `apache-2.0` | [`unsloth/Qwen3.5-122B-A10B-GGUF`](https://huggingface.co/unsloth/Qwen3.5-122B-A10B-GGUF) | `reports/publish/qwen35_122b_a10b_q4km_task_suite_2026-03-08b.log`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_vision.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_summarization.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_coding.json`, `reports/publish/qwen35_ctx_text/qwen35_122b_a10b_q4km_ctx131072.log`, `llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_122b_a10b_q4km_ctx131072_2026-03-08.json` |
 | VGGT-1B | 3d-reconstruction | `1B` | `2025-03-11` | `12 photos -> 200k-point .ply`, `load=768`, `model=448` | `~3m` | GPU | `cc-by-nc-4.0` | [`facebook/VGGT-1B`](https://huggingface.co/facebook/VGGT-1B) | `reports/publish/vggt_reconstruct.log`, `reconstruction-3d/out/south_building/south_building_points.ply` |
 | YOLO26n (detect) | vision-detection | `~0.004B` | `n/a` | `bus.jpg`, `conf=0.25`, `imgsz=640` | `~0.5m` | CPU | `agpl-3.0` | [`Ultralytics YOLO26`](https://docs.ultralytics.com/models/yolo26/) | `reports/publish/yolo26n_detect_bus.log`, `vision-detection/out/yolo26n_detect_bus_postpatch2_2026-02-11.jpg`, `vision-detection/out/yolo26n_detect_bus_postpatch2_2026-02-11.json` |
 | YOLO26n-pose (keypoints) | vision-pose | `~0.004B` | `n/a` | `bus.jpg`, `conf=0.25`, `imgsz=640` | `~0.5m` | CPU | `agpl-3.0` | [`Ultralytics Pose Task`](https://docs.ultralytics.com/tasks/pose/) | `reports/publish/yolo26n_pose_bus.log`, `vision-detection/out/yolo26n_pose_bus_postpatch2_2026-02-11.jpg`, `vision-detection/out/yolo26n_pose_bus_postpatch2_2026-02-11.json` |
@@ -123,6 +145,7 @@ Times are approximate wall-clock durations and include pre/post cleanup wrapper 
 | faster-whisper (small) | audio-stt | `0.244B` | `2022-09-26` | `~157.9s` audio -> `.srt` (`39` segments) | `~2m` | CPU | `apache-2.0` | [`openai/whisper-small`](https://huggingface.co/openai/whisper-small) | `reports/publish/audio_faster_whisper_subtitles.log`, `audio/out/podcast_kokoro_best_retest.srt` |
 | Voxtral-Mini-3B-2507 | audio-stt | `3B` | `2025-07-01` | `30s` clip transcription, `max_new_tokens=512` | `~0.5m` | GPU | `apache-2.0` | [`mistralai/Voxtral-Mini-3B-2507`](https://huggingface.co/mistralai/Voxtral-Mini-3B-2507) | `reports/publish/audio_voxtral_mini_3b_transcribe.log`, `audio/out/voxtral_mini_3b_2507_transcript.txt` |
 | Wan2.1-T2V-1.3B | video-gen | `1.3B` | `2025-03-01` | `672x384`, `17` frames, `steps=8`, `fps=8` | `~7.5m` | GPU + CPU offload | `apache-2.0` | [`Wan-AI/Wan2.1-T2V-1.3B-Diffusers`](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B-Diffusers) | `reports/publish/wan21_t2v.log`, `video/out/wan21_t2v_sample.mp4` |
+| Wan2.1-T2V-1.3B (V2V from still frame(s)) | video-gen | `1.3B` | `2025-03-01` | single-frame conditioning: `512x512`, `17` frames, `steps=8`, `strength=0.45`; two-frame conditioning (same-subject pair): `512x512`, `17` frames, `steps=8`, `strength=0.45` | `~7.5m` per run | GPU + CPU offload | `apache-2.0` | [`Wan-AI/Wan2.1-T2V-1.3B-Diffusers`](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B-Diffusers) | `reports/publish/wan21_v2v_singleframe_2026-03-08.log`, `video/out/wan21_v2v_singleframe_sample_2026-03-08.mp4`, `reports/publish/wan21_v2v_twoframe_tuned_2026-03-08.log`, `video/out/wan21_v2v_twoframe_tuned_sample_2026-03-08.mp4` |
 
 Non-model workflow retests (MCP + agentic demo) are tracked in:
 - `reports/publish/summary_final.tsv` (see `category=mcp` and `category=agentic`)
@@ -208,21 +231,21 @@ Modern diffusion baseline (small enough to run comfortably; good quality per ste
 Model card: [`black-forest-labs/FLUX.2-klein-base-4B`](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-4B)
 Docker image: `stable-diffusion-rocm:latest` (build: see [Containers](#containers)).
 
-Reproduce (validated `512x512`, `steps=4`, `guidance=1.0`):
+Reproduce (validated `512x512`, `steps=20`, `guidance=1.0`):
 
 ```bash
 $REPO_ROOT/scripts/run_memsafe.sh \
-  env MODEL_ID=$MODEL_ROOT/flux2-klein-base-4b DTYPE=float32 HEIGHT=512 WIDTH=512 STEPS=4 GUIDANCE=1.0 \
-      OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_klein_base_4b_512_2026-02-11.png \
+  env MODEL_ID=$MODEL_ROOT/flux2-klein-base-4b DTYPE=float32 HEIGHT=512 WIDTH=512 STEPS=20 GUIDANCE=1.0 \
+      OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_klein_base_4b_512_steps20_2026-03-08.png \
   bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_klein_sample.sh
 ```
 
 Evidence:
-- `reports/publish/flux2_klein_base_4b_512.log`
-- `stable-diffusion/out/flux2_klein_base_4b_512_2026-02-11.png`
+- `reports/publish/flux2_klein_base_4b_512_steps20_2026-03-08.log`
+- `stable-diffusion/out/flux2_klein_base_4b_512_steps20_2026-03-08.png`
 
-![FLUX.2-klein-base-4B sample](stable-diffusion/out/flux2_klein_base_4b_512_2026-02-11.png)
-Caption: `FLUX.2-klein-base-4B` | `512x512` | `steps=4` | `guidance=1.0`
+![FLUX.2-klein-base-4B sample](stable-diffusion/out/flux2_klein_base_4b_512_steps20_2026-03-08.png)
+Caption: `FLUX.2-klein-base-4B` | `512x512` | `steps=20` | `guidance=1.0`
 
 ### FLUX.2-klein-4B
 
@@ -261,21 +284,21 @@ $REPO_ROOT/scripts/run_memsafe.sh \
   bash $REPO_ROOT/stable-diffusion/scripts/download_flux2_klein_9b.sh
 ```
 
-Reproduce (validated `512x512`, `steps=4`, `guidance=1.0`, CPU offload):
+Reproduce (validated `512x512`, `steps=20`, `guidance=1.0`, CPU offload):
 
 ```bash
 $REPO_ROOT/scripts/run_memsafe.sh \
-  env MODEL_ID=$MODEL_ROOT/flux2-klein-9b HEIGHT=512 WIDTH=512 STEPS=4 GUIDANCE=1.0 MODEL_CPU_OFFLOAD=1 \
-      OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_klein_9b_512_t2i_reconfirm_2026-02-12.png \
+  env MODEL_ID=$MODEL_ROOT/flux2-klein-9b HEIGHT=512 WIDTH=512 STEPS=20 GUIDANCE=1.0 MODEL_CPU_OFFLOAD=1 \
+      OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_klein_9b_512_t2i_steps20_2026-03-08.png \
   bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_klein_probe.sh
 ```
 
 Evidence:
-- `reports/publish/flux2_klein_9b_512_t2i.log`
-- `stable-diffusion/out/flux2_klein_9b_512_t2i_reconfirm_2026-02-12.png`
+- `reports/publish/flux2_klein_9b_512_t2i_steps20_2026-03-08.log`
+- `stable-diffusion/out/flux2_klein_9b_512_t2i_steps20_2026-03-08.png`
 
-![FLUX.2-klein-9B sample](stable-diffusion/out/flux2_klein_9b_512_t2i_reconfirm_2026-02-12.png)
-Caption: `FLUX.2-klein-9B` | `512x512` | `steps=4` | `guidance=1.0` | `bf16 + CPU offload`
+![FLUX.2-klein-9B sample](stable-diffusion/out/flux2_klein_9b_512_t2i_steps20_2026-03-08.png)
+Caption: `FLUX.2-klein-9B` | `512x512` | `steps=20` | `guidance=1.0` | `bf16 + CPU offload`
 
 ### FLUX.2-dev-bnb-4bit (diffusers)
 
@@ -291,13 +314,13 @@ $REPO_ROOT/scripts/run_memsafe.sh \
   bash $REPO_ROOT/stable-diffusion/scripts/download_flux2_dev_bnb4.sh
 ```
 
-Reproduce (validated text-to-image `512x512`, `steps=4`, `guidance=3.0`, CPU offload):
+Reproduce (validated text-to-image `512x512`, `steps=20`, `guidance=3.0`, CPU offload):
 
 ```bash
 $REPO_ROOT/scripts/run_memsafe.sh \
-  env MODEL_ID=$MODEL_ROOT/flux2-dev-bnb4 HEIGHT=512 WIDTH=512 STEPS=4 GUIDANCE=3.0 DTYPE=bfloat16 \
+  env MODEL_ID=$MODEL_ROOT/flux2-dev-bnb4 HEIGHT=512 WIDTH=512 STEPS=20 GUIDANCE=3.0 DTYPE=bfloat16 \
       MODEL_CPU_OFFLOAD=1 USE_REMOTE_TEXT_ENCODER=0 MAX_SEQUENCE_LENGTH=128 \
-      OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_dev_bnb4_512_t2i_reconfirm_2026-02-12.png \
+      OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps20_2026-03-08.png \
   bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_dev_bnb4_probe.sh
 ```
 
@@ -326,18 +349,43 @@ $REPO_ROOT/scripts/run_memsafe.sh \
 ```
 
 Evidence:
-- `reports/publish/flux2_dev_bnb4_512_t2i.log`, `stable-diffusion/out/flux2_dev_bnb4_512_t2i_reconfirm_2026-02-12.png`
+- `reports/publish/flux2_dev_bnb4_512_t2i_steps20_2026-03-08.log`, `stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps20_2026-03-08.png`
 - `reports/publish/flux2_dev_bnb4_512_i2i.log`, `stable-diffusion/out/flux2_dev_bnb4_512_i2i_reconfirm_2026-02-12.png`
 - `reports/publish/flux2_dev_bnb4_512_multi.log`, `stable-diffusion/out/flux2_dev_bnb4_512_multi_reconfirm_2026-02-12.png`
 
-![FLUX.2-dev-bnb4 sample](stable-diffusion/out/flux2_dev_bnb4_512_t2i_reconfirm_2026-02-12.png)
-Caption: `FLUX.2-dev-bnb-4bit` (t2i) | `512x512` | `steps=4` | `guidance=3.0` | `bf16 + CPU offload`
+![FLUX.2-dev-bnb4 sample](stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps20_2026-03-08.png)
+Caption: `FLUX.2-dev-bnb-4bit` (t2i) | `512x512` | `steps=20` | `guidance=3.0` | `bf16 + CPU offload`
 
 ![FLUX.2-dev-bnb4 i2i sample](stable-diffusion/out/flux2_dev_bnb4_512_i2i_reconfirm_2026-02-12.png)
 Caption: `FLUX.2-dev-bnb-4bit` (i2i) | `512x512` | `steps=4` | `guidance=3.0` | init: `qwen-image/out/qwen_image_512_75g_retest2.png`
 
 ![FLUX.2-dev-bnb4 multi sample](stable-diffusion/out/flux2_dev_bnb4_512_multi_reconfirm_2026-02-12.png)
 Caption: `FLUX.2-dev-bnb-4bit` (multi) | `512x512` | `steps=4` | `guidance=3.0` | init: two Qwen-Image outputs
+
+Recommended-step profile run (newer quality-focused run):
+
+Official references:
+- BFL model card suggests `num_inference_steps=50` for FLUX.2-dev quality: [`black-forest-labs/FLUX.2-dev`](https://huggingface.co/black-forest-labs/FLUX.2-dev).
+- Official HF Space uses `28` as a practical speed/quality profile: [`black-forest-labs/FLUX.2-dev` Space app](https://huggingface.co/spaces/black-forest-labs/FLUX.2-dev/blob/main/app.py).
+
+This repo now includes an in-between profile (`steps=30`) with a `45m` hard timeout for stability.
+
+```bash
+timeout 2700 $REPO_ROOT/scripts/run_memsafe.sh \
+  env MODEL_ID=$MODEL_ROOT/flux2-dev-bnb4 HEIGHT=512 WIDTH=512 STEPS=30 GUIDANCE=3.5 DTYPE=bfloat16 \
+      MODEL_CPU_OFFLOAD=1 USE_REMOTE_TEXT_ENCODER=0 MAX_SEQUENCE_LENGTH=256 SEED=42 \
+      PROMPT='A cinematic, photoreal portrait of a friendly humanoid robot barista pouring latte art in a warm coffee shop, 85mm lens, shallow depth of field, natural skin-like materials, high detail, realistic lighting' \
+      OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps30_2026-03-07.png \
+  bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_dev_bnb4_probe.sh \
+  > $REPO_ROOT/reports/publish/flux2_dev_bnb4_512_t2i_steps30_2026-03-07.log 2>&1
+```
+
+Evidence:
+- `reports/publish/flux2_dev_bnb4_512_t2i_steps30_2026-03-07.log`
+- `stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps30_2026-03-07.png`
+
+![FLUX.2-dev-bnb4 30-step sample](stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps30_2026-03-07.png)
+Caption: `FLUX.2-dev-bnb-4bit` (t2i, recommended-step profile) | `512x512` | `steps=30` | `guidance=3.5` | `bf16 + CPU offload` | `timeout=45m`
 
 ### FLUX.2-dev-NVFP4 (fails in this stack)
 
@@ -393,6 +441,9 @@ Caption: `SD3.5 Large` | `512x512` | `steps=20` | `guidance=3.5`
 
 Model card: [`stabilityai/stable-diffusion-xl-base-1.0`](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0)
 Docker image: `stable-diffusion-rocm:latest` (build: see [Containers](#containers)).
+Prompting references used for this comparison run:
+- SDXL is 1024-native (official docs), but this repo keeps `512x512` here for fair runtime/workload comparison with other 512 tests: [`Diffusers SDXL guide`](https://huggingface.co/docs/diffusers/main/en/using-diffusers/sdxl).
+- Diffusers supports prompt + negative prompt conditioning in the same generation call: [`Diffusers text-to-image API`](https://huggingface.co/docs/diffusers/main/en/using-diffusers/text2img).
 
 Reproduce (validated `512x512`, `steps=50`, `guidance=5.0`):
 
@@ -402,12 +453,29 @@ $REPO_ROOT/scripts/run_memsafe.sh \
   bash $REPO_ROOT/stable-diffusion/scripts/test_sdxl_base_sample.sh
 ```
 
+Reproduce (photoreal comparison run, same workload):
+
+```bash
+$REPO_ROOT/scripts/run_memsafe.sh \
+  env PROMPT='Photorealistic golden-hour panorama of a dramatic alpine lake valley, rugged mountain ridges, crystal water reflections, pine trees in foreground, natural atmospheric haze, realistic color grading, full-frame DSLR photo, 35mm lens, high dynamic range, ultra-detailed textures.' \
+      NEGATIVE_PROMPT='cartoon, cgi, illustration, anime, painting, plastic skin, oversaturated, blurry, low detail, deformed geometry, watermark, text, logo' \
+      STEPS=50 GUIDANCE=5.0 HEIGHT=512 WIDTH=512 \
+      OUT_PATH=$REPO_ROOT/stable-diffusion/out/sdxl_base_photoreal_512_2026-03-08.png \
+  bash $REPO_ROOT/stable-diffusion/scripts/test_sdxl_base_sample.sh \
+  > $REPO_ROOT/reports/publish/sdxl_base_512_photoreal_2026-03-08.log 2>&1
+```
+
 Evidence:
 - `reports/publish/sdxl_base_512.log`
 - `stable-diffusion/out/sdxl_base_best_retest.png`
+- `reports/publish/sdxl_base_512_photoreal_2026-03-08.log`
+- `stable-diffusion/out/sdxl_base_photoreal_512_2026-03-08.png`
 
 ![SDXL Base sample](stable-diffusion/out/sdxl_base_best_retest.png)
 Caption: `SDXL Base` | `512x512` | `steps=50` | `guidance=5.0`
+
+![SDXL Base photoreal sample](stable-diffusion/out/sdxl_base_photoreal_512_2026-03-08.png)
+Caption: `SDXL Base` (photoreal comparison prompt) | `512x512` | `steps=50` | `guidance=5.0` | prompt tuned for photographic scene realism
 
 ### Playground v2.5 (SDXL fine-tune)
 
@@ -440,21 +508,21 @@ Qwen image editing (single-image input). This is the “base” edit model (not 
 Model card: [`Qwen/Qwen-Image-Edit`](https://huggingface.co/Qwen/Qwen-Image-Edit)
 Docker image: `qwen-image-edit-rocm:latest` (build: see [Containers](#containers)).
 
-Reproduce (single-image API compatibility check after multi-image API update; `256x256`, `steps=4`):
+Reproduce (single-image API compatibility check after multi-image API update; `256x256`, `steps=20`):
 
 ```bash
 $REPO_ROOT/scripts/run_memsafe.sh \
   env MODEL_ID=$MODEL_ROOT/qwen-image-edit INPUT_IMAGE=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png \
-      HEIGHT=256 WIDTH=256 STEPS=4 STRENGTH=0.6 DTYPE=bfloat16 \
-      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png \
+      HEIGHT=256 WIDTH=256 STEPS=20 STRENGTH=0.6 DTYPE=bfloat16 \
+      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_single_compat_256_steps20_2026-03-08.png \
   bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit.sh
 ```
 
 Evidence:
-- `reports/publish/qwen_image_edit_base_256_compat.log`, `qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png`
+- `reports/publish/qwen_image_edit_base_256_compat_steps20_2026-03-08.log`, `qwen-image-edit/out/qwen_image_edit_single_compat_256_steps20_2026-03-08.png`
 
-![Qwen-Image-Edit compat sample](qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png)
-Caption: `Qwen-Image-Edit` (compat check) | `256x256` | `steps=4` | `strength=0.6` | `bf16`
+![Qwen-Image-Edit compat sample](qwen-image-edit/out/qwen_image_edit_single_compat_256_steps20_2026-03-08.png)
+Caption: `Qwen-Image-Edit` (compat check) | `256x256` | `steps=20` | `strength=0.6` | `bf16`
 
 ### Qwen-Image-Edit-2509
 
@@ -473,27 +541,27 @@ $REPO_ROOT/scripts/run_memsafe.sh \
   bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
 ```
 
-Reproduce (validated multi-image `512x512`, `steps=8`):
+Reproduce (validated multi-image `512x512`, `steps=20`):
 
 ```bash
 $REPO_ROOT/scripts/run_memsafe.sh \
-  env MODE=multi MODEL_ID=$MODEL_ROOT/qwen-image-edit-2509 HEIGHT=512 WIDTH=512 STEPS=8 MEMORY_SWAP=140g \
-      INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png \
-      INPUT_IMAGE_B=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png \
-      PROMPT='Create one coherent scene by placing the human from image A into image B. Keep the person identity and face natural, match lighting and perspective, keep both subjects visible.' \
-      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png \
+  env MODE=multi MODEL_ID=$MODEL_ROOT/qwen-image-edit-2509 HEIGHT=512 WIDTH=512 STEPS=20 TRUE_CFG_SCALE=2.0 SEED=3456 MEMORY_SWAP=140g \
+      INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_a_512_seed1234.png \
+      INPUT_IMAGE_B=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png \
+      PROMPT='Take the person from image A and insert them into image B. Keep the original person from image B. Place the inserted person on the left side of image B, standing naturally near the other person. Preserve both faces, match lighting and perspective, keep the coffee shop background unchanged, sharp focus.' \
+      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2509_multi_512_steps20_cfg2_seed3456_2026-03-08.png \
   bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
 ```
 
 Evidence:
 - `reports/publish/qwen_image_edit_2509_single_512.log`, `qwen-image-edit/out/qwen_image_edit_2509_single_512_seqoffload_bf16_75g_test.png`
-- `reports/publish/qwen_image_edit_2509_multi_512.log`, `qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png`
+- `reports/publish/qwen_image_edit_2509_multi_512_steps20_cfg2_seed3456_2026-03-08.log`, `qwen-image-edit/out/qwen_image_edit_2509_multi_512_steps20_cfg2_seed3456_2026-03-08.png`
 
 ![Qwen-Image-Edit-2509 single sample](qwen-image-edit/out/qwen_image_edit_2509_single_512_seqoffload_bf16_75g_test.png)
 Caption: `Qwen-Image-Edit-2509` (single) | `512x512` | `steps=4` | `bf16 + sequential CPU offload`
 
-![Qwen-Image-Edit-2509 multi sample](qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png)
-Caption: `Qwen-Image-Edit-2509` (multi) | `512x512` | `steps=8` | `bf16 + sequential CPU offload`
+![Qwen-Image-Edit-2509 multi sample](qwen-image-edit/out/qwen_image_edit_2509_multi_512_steps20_cfg2_seed3456_2026-03-08.png)
+Caption: `Qwen-Image-Edit-2509` (multi) | `512x512` | `steps=20` | `true_cfg_scale=2.0` | `seed=3456` | `bf16 + sequential CPU offload`
 
 ### Qwen-Image-Edit-2511
 
@@ -502,34 +570,36 @@ Latest “Plus” edit model (supports multi-image composition). Like 2509, stab
 Model card: [`Qwen/Qwen-Image-Edit-2511`](https://huggingface.co/Qwen/Qwen-Image-Edit-2511)
 Docker image: `qwen-image-edit-rocm:latest` (build: see [Containers](#containers)).
 
-Reproduce (validated single-image `512x512`, `steps=4`, sequential CPU offload, `bf16`):
+Reproduce (validated single-image `512x512`, `steps=20`, sequential CPU offload, `bf16`):
 
 ```bash
 $REPO_ROOT/scripts/run_memsafe.sh \
-  env MODE=single MODEL_ID=$MODEL_ROOT/qwen-image-edit-2511 INPUT_IMAGE=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png \
-      HEIGHT=512 WIDTH=512 STEPS=4 MEMORY_SWAP=140g \
-      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_single_512_seqoffload_bf16_75g_swap140_test.png \
+  env MODE=single MODEL_ID=$MODEL_ROOT/qwen-image-edit-2511 \
+      INPUT_IMAGE=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png \
+      PROMPT='Edit this single image only: keep the same robot barista and same coffee shop scene, remove any extra background objects, keep one subject, improve sharpness and latte details.' \
+      HEIGHT=512 WIDTH=512 STEPS=20 TRUE_CFG_SCALE=2.0 MEMORY_SWAP=140g \
+      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_single_512_steps20_clean_2026-03-08.png \
   bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
 ```
 
-Reproduce (validated multi-image “move person A into photo B”, `512x512`, `steps=12`, `cfg=2.0`, `seed=3456`):
+Reproduce (validated multi-image “move person A into photo B”, `512x512`, `steps=20`, `cfg=2.0`, `seed=3456`):
 
 ```bash
 $REPO_ROOT/scripts/run_memsafe.sh \
-  env MODE=multi MODEL_ID=$MODEL_ROOT/qwen-image-edit-2511 HEIGHT=512 WIDTH=512 STEPS=12 TRUE_CFG_SCALE=2.0 SEED=3456 MEMORY_SWAP=140g \
+  env MODE=multi MODEL_ID=$MODEL_ROOT/qwen-image-edit-2511 HEIGHT=512 WIDTH=512 STEPS=20 TRUE_CFG_SCALE=2.0 SEED=3456 MEMORY_SWAP=140g \
       INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_a_512_seed1234.png \
       INPUT_IMAGE_B=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png \
       PROMPT='Take the person from image A and insert them into image B. Keep the original person from image B. Place the inserted person on the left side of image B, standing naturally near the other person. Preserve both faces, match lighting and perspective, keep the coffee shop background unchanged, sharp focus.' \
-      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps12_cfg2_seed3456_75g_swap140_2026-02-13.png \
+      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps20_cfg2_seed3456_2026-03-08.png \
   bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
 ```
 
 Evidence:
-- `reports/publish/qwen_image_edit_2511_single_512.log`, `qwen-image-edit/out/qwen_image_edit_2511_single_512_seqoffload_bf16_75g_swap140_test.png`
-- `reports/publish/qwen_image_edit_2511_multi_512_move_person.log`, `qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps12_cfg2_seed3456_75g_swap140_2026-02-13.png`
+- `reports/publish/qwen_image_edit_2511_single_512_steps20_clean_2026-03-08.log`, `qwen-image-edit/out/qwen_image_edit_2511_single_512_steps20_clean_2026-03-08.png`
+- `reports/publish/qwen_image_edit_2511_multi_512_steps20_2026-03-08.log`, `qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps20_cfg2_seed3456_2026-03-08.png`
 
-![Qwen-Image-Edit-2511 single sample](qwen-image-edit/out/qwen_image_edit_2511_single_512_seqoffload_bf16_75g_swap140_test.png)
-Caption: `Qwen-Image-Edit-2511` (single) | `512x512` | `steps=4` | `bf16 + sequential CPU offload`
+![Qwen-Image-Edit-2511 single sample](qwen-image-edit/out/qwen_image_edit_2511_single_512_steps20_clean_2026-03-08.png)
+Caption: `Qwen-Image-Edit-2511` (single) | `512x512` | `steps=20` | `true_cfg_scale=2.0` | `bf16 + sequential CPU offload` | single-image prompt (no multi-image composition)
 
 ![Qwen-Image-Edit-2511 multi input A](qwen-image-edit/input/qwen_image_2512_person_a_512_seed1234.png)
 Caption: input A | `Qwen-Image-2512` | `512x512` | `steps=20` | `seed=1234`
@@ -537,8 +607,8 @@ Caption: input A | `Qwen-Image-2512` | `512x512` | `steps=20` | `seed=1234`
 ![Qwen-Image-Edit-2511 multi input B](qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png)
 Caption: input B | `Qwen-Image-2512` | `512x512` | `steps=20` | `seed=2345`
 
-![Qwen-Image-Edit-2511 multi sample](qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps12_cfg2_seed3456_75g_swap140_2026-02-13.png)
-Caption: `Qwen-Image-Edit-2511` (multi) | `512x512` | `steps=12` | `true_cfg_scale=2.0` | `seed=3456` | `bf16 + sequential CPU offload`
+![Qwen-Image-Edit-2511 multi sample](qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps20_cfg2_seed3456_2026-03-08.png)
+Caption: `Qwen-Image-Edit-2511` (multi) | `512x512` | `steps=20` | `true_cfg_scale=2.0` | `seed=3456` | `bf16 + sequential CPU offload`
 
 Note: `FLUX.2-dev-bnb-4bit` also supports i2i and multi-image composition. See [FLUX.2-dev-bnb-4bit (diffusers)](#flux2-dev-bnb-4bit-diffusers).
 
@@ -590,6 +660,14 @@ $REPO_ROOT/scripts/run_memsafe.sh \
 Evidence:
 - `reports/publish/qwen_vl_7b_cpu.log`
 - `qwen-vl/out/qwen_vl_describe_75g_retest2.txt`
+
+### Qwen3.5 VLM suite (cross-links)
+
+The Qwen3.5 models were validated with a 3-task suite that includes image-to-text (`vision.json`) plus summarization and coding outputs.
+
+- [Qwen3.5-9B Q8_0 (GGUF, VLM)](#qwen35-9b-q8_0-gguf-vlm)
+- [Qwen3.5-27B Q8_0 (GGUF, VLM)](#qwen35-27b-q8_0-gguf-vlm)
+- [Qwen3.5-122B-A10B Q4_K_M (GGUF, VLM)](#qwen35-122b-a10b-q4_k_m-gguf-vlm)
 
 ## Detection and Pose
 
@@ -672,6 +750,120 @@ Evidence:
 Caption: synthetic `2x2` collage | `hit_rate=0.75` (`3/4`) | CPU-only ONNX
 
 ## Coding and General Chat
+
+### Qwen3.5-9B Q8_0 (GGUF, VLM)
+
+Quantized Qwen3.5 vision-language model validated here with one scripted three-task suite:
+1) visual understanding (image description), 2) text summarization, 3) coding generation.
+
+Model card: [`unsloth/Qwen3.5-9B-GGUF`](https://huggingface.co/unsloth/Qwen3.5-9B-GGUF)
+Docker image: `llama-cpp-vulkan:latest` (build: see [Containers](#containers)).
+
+Reproduce:
+
+```bash
+$REPO_ROOT/scripts/run_memsafe.sh \
+  env MODEL_PATH=$MODEL_ROOT/qwen3.5-9b-gguf/Qwen3.5-9B-Q8_0.gguf \
+      MMPROJ_PATH=$MODEL_ROOT/qwen3.5-9b-gguf/mmproj-F16.gguf \
+      PORT=8131 MODEL_TAG=qwen35_9b_q8_2026_03_08b CTX_SIZE=32768 MAX_TOKENS=768 \
+      GPU_LAYERS=999 MEM_LIMIT=75g MEMORY_SWAP=75g MEM_RESERVATION=67g \
+      LLAMA_DEVICE=Vulkan0 REASONING_BUDGET=0 REASONING_FORMAT=none \
+  bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_qwen35_vlm_task_suite.sh
+```
+
+Evidence:
+- `reports/publish/qwen35_9b_q8_task_suite_2026-03-08b.log`
+- `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_vision.json`
+- `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_summarization.json`
+- `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_coding.json`
+- `reports/research/qwen35_9b_q8_verify.json`
+
+Simple-text context probe (`4k, 8k, 16k, 32k, 64k, 128k`; descending with skip-after-first-success) hit `ctx=131072`.
+
+```bash
+bash $REPO_ROOT/llama-cpp-vulkan/scripts/check_qwen35_ctx_text_matrix.sh
+```
+
+Context evidence:
+- `reports/publish/qwen35_ctx_text_matrix_2026-03-08.tsv`
+- `reports/publish/qwen35_ctx_text_matrix_latest_2026-03-08.tsv`
+- `reports/publish/qwen35_ctx_text_max_2026-03-08.tsv`
+- `reports/publish/qwen35_ctx_text/qwen35_9b_q8_ctx131072.log`
+- `llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_9b_q8_ctx131072_2026-03-08.json`
+
+### Qwen3.5-27B Q8_0 (GGUF, VLM)
+
+Same three-task suite as above, with higher-capacity quantized weights.
+
+Model card: [`unsloth/Qwen3.5-27B-GGUF`](https://huggingface.co/unsloth/Qwen3.5-27B-GGUF)
+Docker image: `llama-cpp-vulkan:latest` (build: see [Containers](#containers)).
+
+Reproduce:
+
+```bash
+$REPO_ROOT/scripts/run_memsafe.sh \
+  env MODEL_PATH=$MODEL_ROOT/qwen3.5-27b-gguf/Qwen3.5-27B-Q8_0.gguf \
+      MMPROJ_PATH=$MODEL_ROOT/qwen3.5-27b-gguf/mmproj-F16.gguf \
+      PORT=8132 MODEL_TAG=qwen35_27b_q8_2026_03_08b CTX_SIZE=16384 MAX_TOKENS=768 \
+      GPU_LAYERS=999 MEM_LIMIT=75g MEMORY_SWAP=75g MEM_RESERVATION=67g \
+      LLAMA_DEVICE=Vulkan0 REASONING_BUDGET=0 REASONING_FORMAT=none \
+  bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_qwen35_vlm_task_suite.sh
+```
+
+Evidence:
+- `reports/publish/qwen35_27b_q8_task_suite_2026-03-08b.log`
+- `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_vision.json`
+- `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_summarization.json`
+- `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_coding.json`
+- `reports/research/qwen35_27b_q8_verify.json`
+
+Simple-text context probe max: `ctx=131072`.
+
+Context evidence:
+- `reports/publish/qwen35_ctx_text/qwen35_27b_q8_ctx131072.log`
+- `llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_27b_q8_ctx131072_2026-03-08.json`
+
+### Qwen3.5-122B-A10B Q4_K_M (GGUF, VLM)
+
+Mixture-of-experts Qwen3.5 variant validated with the same three-task suite.  
+On this host/profile, this run is documented in CPU fallback mode (`GPU_LAYERS=0`) for stability.
+
+Model card: [`unsloth/Qwen3.5-122B-A10B-GGUF`](https://huggingface.co/unsloth/Qwen3.5-122B-A10B-GGUF)
+Docker image: `llama-cpp-vulkan:latest` (build: see [Containers](#containers)).
+
+Reproduce:
+
+```bash
+$REPO_ROOT/scripts/run_memsafe.sh \
+  env MODEL_PATH=$MODEL_ROOT/qwen3.5-122b-a10b-gguf/Q4_K_M/Qwen3.5-122B-A10B-Q4_K_M-00001-of-00003.gguf \
+      MMPROJ_PATH=$MODEL_ROOT/qwen3.5-122b-a10b-gguf/mmproj-F16.gguf \
+      PORT=8133 MODEL_TAG=qwen35_122b_a10b_q4km_2026_03_08b CTX_SIZE=8192 MAX_TOKENS=512 \
+      GPU_LAYERS=0 MEM_LIMIT=85g MEMORY_SWAP=85g MEM_RESERVATION=76g \
+      LLAMA_DEVICE=Vulkan0 REASONING_BUDGET=0 REASONING_FORMAT=none \
+  bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_qwen35_vlm_task_suite.sh
+```
+
+Evidence:
+- `reports/publish/qwen35_122b_a10b_q4km_task_suite_2026-03-08b.log`
+- `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_vision.json`
+- `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_summarization.json`
+- `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_coding.json`
+- `reports/research/qwen35_122b_a10b_q4km_verify.json`
+
+Simple-text context probe max: `ctx=131072`.
+
+Context evidence:
+- `reports/publish/qwen35_ctx_text/qwen35_122b_a10b_q4km_ctx131072.log`
+- `llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_122b_a10b_q4km_ctx131072_2026-03-08.json`
+
+Full-GPU confirmation (`GPU_LAYERS=999`, Vulkan, no CPU-fallback) was tested for both requested contexts and failed during model load:
+- `ctx=65536`: `reports/publish/qwen35_122b_a10b_q4km_ctx65536_gpu999_min12_short_watchdog.log`
+- `ctx=131072`: `reports/publish/qwen35_122b_a10b_q4km_ctx131072_gpu999_min12_short_watchdog.log`
+
+Observed error pattern in both logs:
+- `llama_params_fit: ... n_gpu_layers already set by user to 999, abort`
+- `.radv/amdgpu: Not enough memory for command submission`
+- `vk::Queue::submit: ErrorDeviceLost`
 
 ### Qwen3-Next-80B-A3B (GGUF)
 
@@ -927,6 +1119,61 @@ Evidence:
 
 ![Wan2.1-T2V first frame](video/out/wan21_t2v_sample_frame0.png)
 Caption: `Wan2.1-T2V-1.3B` | `672x384`, `17` frames, `fps=8`, `steps=8`
+
+### Wan2.1-T2V-1.3B (V2V from one/two frames)
+
+Using the same `Wan2.1-T2V-1.3B` checkpoint, I tested frame-conditioned generation through Diffusers `WanVideoToVideoPipeline` by constructing a short conditioning clip from one or two existing still images.
+Direct Wan I2V/FLF2V checkpoints also exist upstream, but in larger variants; this repo run used the already downloaded `1.3B` checkpoint path for reproducible local testing.
+
+Model card: [`Wan-AI/Wan2.1-T2V-1.3B-Diffusers`](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B-Diffusers)  
+Diffusers reference: [`WanVideoToVideoPipeline` docs](https://huggingface.co/docs/diffusers/main/en/api/pipelines/wan#video-to-video-generation)  
+Docker image: uses `stable-diffusion-rocm:latest` (see `video/README.md`).
+
+Reproduce (single-image conditioning):
+
+```bash
+$REPO_ROOT/scripts/run_memsafe.sh \
+  env MODE=single MODEL_ID=$MODEL_ROOT/wan21-t2v-1.3b-diffusers \
+      INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png \
+      PROMPT='Keep the same person and coffee shop composition; add gentle camera drift and natural blinking, realistic detail, stable face, smooth motion.' \
+      WIDTH=512 HEIGHT=512 NUM_FRAMES=17 FPS=8 STEPS=8 GUIDANCE=5.0 STRENGTH=0.45 \
+      OUT_PATH=$REPO_ROOT/video/out/wan21_v2v_singleframe_sample_2026-03-08.mp4 \
+      OUT_FRAME0=$REPO_ROOT/video/out/wan21_v2v_singleframe_sample_frame0_2026-03-08.png \
+      OUT_INPUT_PREVIEW=$REPO_ROOT/video/out/wan21_v2v_singleframe_input_preview_2026-03-08.png \
+  bash $REPO_ROOT/video/scripts/test_wan21_v2v_from_frames.sh
+```
+
+Reproduce (two-image conditioning):
+
+```bash
+$REPO_ROOT/scripts/run_memsafe.sh \
+  env MODE=two MODEL_ID=$MODEL_ROOT/wan21-t2v-1.3b-diffusers \
+      INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png \
+      INPUT_IMAGE_B=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_single_512_steps20_clean_2026-03-08.png \
+      PROMPT='Keep the same person and cafe scene; add slight cinematic camera sway and natural micro-movements while preserving identity and composition.' \
+      WIDTH=512 HEIGHT=512 NUM_FRAMES=17 FPS=8 STEPS=8 GUIDANCE=5.0 STRENGTH=0.45 \
+      OUT_PATH=$REPO_ROOT/video/out/wan21_v2v_twoframe_tuned_sample_2026-03-08.mp4 \
+      OUT_FRAME0=$REPO_ROOT/video/out/wan21_v2v_twoframe_tuned_sample_frame0_2026-03-08.png \
+      OUT_INPUT_PREVIEW=$REPO_ROOT/video/out/wan21_v2v_twoframe_tuned_input_preview_2026-03-08.png \
+  bash $REPO_ROOT/video/scripts/test_wan21_v2v_from_frames.sh
+```
+
+Evidence:
+- `reports/publish/wan21_v2v_singleframe_2026-03-08.log`
+- `video/out/wan21_v2v_singleframe_sample_2026-03-08.mp4`
+- `video/out/wan21_v2v_singleframe_sample_frame0_2026-03-08.png`
+- `reports/publish/wan21_v2v_twoframe_tuned_2026-03-08.log`
+- `video/out/wan21_v2v_twoframe_tuned_sample_2026-03-08.mp4`
+- `video/out/wan21_v2v_twoframe_tuned_sample_frame16_2026-03-08.png`
+
+![Wan2.1 V2V single input preview](video/out/wan21_v2v_singleframe_input_preview_2026-03-08.png)
+Caption: `Wan2.1-T2V-1.3B` V2V input (single-frame mode, frame repeated) | `512x512`
+
+![Wan2.1 V2V single output frame](video/out/wan21_v2v_singleframe_sample_frame0_2026-03-08.png)
+Caption: `Wan2.1-T2V-1.3B` V2V output (single-frame conditioning) | `512x512` | `17` frames | `steps=8` | `strength=0.45`
+
+![Wan2.1 V2V two-frame output frame16](video/out/wan21_v2v_twoframe_tuned_sample_frame16_2026-03-08.png)
+Caption: `Wan2.1-T2V-1.3B` V2V output (two-frame conditioning) | `512x512` | `17` frames | `steps=8` | `strength=0.45` | works but shows temporal/composition artifacts on this small checkpoint
 
 ## LLM Quantization and Fine-Tuning Demos
 
@@ -1230,6 +1477,45 @@ $REPO_ROOT/llama-cpp-vulkan/scripts/download_qwen3_32b_q6.sh
 $REPO_ROOT/llama-cpp-vulkan/scripts/download_qwen3_coder_30b_q8.sh
 $REPO_ROOT/llama-cpp-vulkan/scripts/download_qwen25_coder_32b.sh
 ```
+
+Qwen3.5 VLM quantized bundle (requested `9B 8-bit`, `27B 8-bit`, `122B-A10B 4-bit`), with checksum verification:
+
+```bash
+$REPO_ROOT/llama-cpp-vulkan/scripts/download_qwen35_vlm_quant_bundle.sh
+```
+
+The script downloads these GGUF + mmproj pairs:
+- `unsloth/Qwen3.5-9B-GGUF` (`Qwen3.5-9B-Q8_0.gguf` + `mmproj-F16.gguf`)
+- `unsloth/Qwen3.5-27B-GGUF` (`Qwen3.5-27B-Q8_0.gguf` + `mmproj-F16.gguf`)
+- `unsloth/Qwen3.5-122B-A10B-GGUF` (`Q4_K_M` shard set + `mmproj-F16.gguf`)
+These are pre-quantized GGUF files from HF; there is no local quantization/conversion step in this flow.
+
+Verification reports are written under `reports/research/`:
+- `reports/research/qwen35_9b_q8_verify.json`
+- `reports/research/qwen35_27b_q8_verify.json`
+- `reports/research/qwen35_122b_a10b_q4km_verify.json`
+
+After download, run the task matrix (`visual understanding`, `text summarization`, `coding`) for all three:
+
+```bash
+$REPO_ROOT/llama-cpp-vulkan/scripts/run_qwen35_quant_task_matrix.sh
+```
+
+Default runtime profile in the matrix script:
+- `9B Q8_0`: `ctx=32768`, `n_gpu_layers=999`, `mem=75g`
+- `27B Q8_0`: `ctx=16384`, `n_gpu_layers=999`, `mem=75g`
+- `122B-A10B Q4_K_M`: `ctx=8192`, `n_gpu_layers=0` (CPU-fallback for stability), `mem=85g`
+These can be overridden via environment variables (e.g., `CTX_122B`, `GPU_LAYERS_122B`, `MEM_LIMIT_122B`).
+
+Separate simple-text context sweep (`4k..128k`, descending) is scripted in:
+- `llama-cpp-vulkan/scripts/check_qwen35_ctx_text_matrix.sh`
+Latest run evidence:
+- `reports/publish/qwen35_ctx_text_max_2026-03-08.tsv`
+
+Container compatibility note:
+- No new Docker image is required for these quantized runs; they are intended for the existing `llama-cpp-vulkan:latest` container.
+- Visual understanding uses GGUF + `mmproj` (`--mmproj` passed via `EXTRA_ARGS`).
+- If parsing/loading fails on a stale image, rebuild `llama-cpp-vulkan:latest` from current `master` (this repo Dockerfile builds `llama.cpp` from source).
 
 Bigger diffusion model (SDXL base):
 

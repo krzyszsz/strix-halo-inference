@@ -153,11 +153,17 @@ For Qwen2.5-Coder GGUF, no explicit sampling defaults are listed in the model ca
 - `scripts/download_qwen3_32b_q6.sh`: download Qwen3-32B GGUF (Q6_K).
 - `scripts/download_qwen3_coder_30b_q8.sh`: download Qwen3-Coder-30B GGUF (Q8_0).
 - `scripts/download_qwen25_coder_32b.sh`: download Qwen2.5-Coder 32B GGUF (Q4_K_M).
+- `scripts/download_qwen35_vlm_quant_bundle.sh`: download requested Qwen3.5 quantized VLM bundle (`9B Q8_0`, `27B Q8_0`, `122B-A10B Q4_K_M`) + verify SHA256 via HF metadata. This flow downloads pre-quantized GGUF files (no local conversion).
 - `scripts/test_qwen3_next_80b.sh`: start server, query chat, save output JSON.
 - `scripts/test_qwen3_coder_next_q5.sh`: start server, query coder prompt, save output JSON.
 - `scripts/test_qwen3_32b_q6.sh`: start server, query general prompt, save output JSON.
 - `scripts/test_qwen3_coder_30b_q8.sh`: start server, query coder prompt, save output JSON.
 - `scripts/test_qwen25_coder_32b.sh`: start server, query coder prompt, save output JSON.
+- `scripts/run_qwen35_vlm_task_suite.sh`: run one Qwen3.5 VLM model through visual-understanding + summarization + coding prompts.
+  - Defaults to final-answer mode (`--reasoning-budget 0 --reasoning-format none`) so responses are in `choices[0].message.content`.
+- `scripts/run_qwen35_quant_task_matrix.sh`: run the task suite against all three requested Qwen3.5 quantized models.
+  - The matrix defaults to a safer profile for this host: `122B-A10B` uses CPU fallback (`GPU_LAYERS_122B=0`) and `MEM_LIMIT_122B=85g`.
+  - The suite explicitly targets Vulkan device `Vulkan0` by default (`LLAMA_DEVICE=Vulkan0`).
 - `scripts/write_continue_config.sh`: emit a Continue config example.
 
 Notes:

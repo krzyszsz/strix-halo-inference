@@ -1,0 +1,10 @@
+[2026-03-08T14:05:58Z] watchdog start max_seconds=3600 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh env MODE=multi MODEL_ID=/mnt/hf/models/qwen-image-edit-2509 HEIGHT=512 WIDTH=512 STEPS=20 MEMORY_SWAP=140g INPUT_IMAGE_A=/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png INPUT_IMAGE_B=/home/kj/strix-halo-inference/qwen-image/out/qwen_image_512_75g_retest2.png PROMPT=Create one coherent scene by placing the human from image A into image B. Keep the person identity and face natural, match lighting and perspective, keep both subjects visible. OUT_PATH=/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_2509_multi_512_steps20_2026-03-08.png CURL_MAX_TIME=3600 bash /home/kj/strix-halo-inference/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
+watchdog: log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T14-05-58Z.log
+watchdog: running elapsed=120s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T14-05-58Z.log
+watchdog: running elapsed=240s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T14-05-58Z.log
+watchdog: running elapsed=360s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T14-05-58Z.log
+watchdog: running elapsed=480s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T14-05-58Z.log
+watchdog: running elapsed=600s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T14-05-58Z.log
+watchdog: running elapsed=720s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T14-05-58Z.log
+[2026-03-08T14:18:58Z] watchdog finished cmd_status=0
+ELAPSED_SECONDS=780.48

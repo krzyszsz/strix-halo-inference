@@ -20,13 +20,20 @@ CONTAINER="sdxl-base-test"
 OUT_DIR="$REPO_ROOT/stable-diffusion/out"
 OUT_PATH="${OUT_PATH:-$OUT_DIR/sdxl_base_sample.png}"
 RESP_DIR="$REPO_ROOT/reports/retest_$(date +%F)/post"
+PROMPT="${PROMPT:-A futuristic city skyline at dusk, reflective water, ultra-detailed}"
+NEGATIVE_PROMPT="${NEGATIVE_PROMPT:-}"
+STEPS="${STEPS:-50}"
+GUIDANCE="${GUIDANCE:-5.0}"
+HEIGHT="${HEIGHT:-512}"
+WIDTH="${WIDTH:-512}"
 MEM_LIMIT="${MEM_LIMIT:-75g}"
 MEMORY_SWAP="${MEMORY_SWAP:-75g}"
 MEM_RESERVATION="${MEM_RESERVATION:-67g}"
 OOM_SCORE_ADJ="${OOM_SCORE_ADJ:-500}"
 RESP_JSON="$RESP_DIR/sdxl_base_response.json"
 HTTP_STATUS="$(mktemp "${TMPDIR:-/tmp}/sdxl_base_http.XXXXXX")"
-trap 'rm -f "$HTTP_STATUS"; docker rm -f "$CONTAINER" >/dev/null 2>&1 || true' EXIT
+REQ_JSON="$(mktemp "${TMPDIR:-/tmp}/sdxl_base_req.XXXXXX.json")"
+trap 'rm -f "$HTTP_STATUS" "$REQ_JSON"; docker rm -f "$CONTAINER" >/dev/null 2>&1 || true' EXIT
 
 mkdir -p "$OUT_DIR"
 mkdir -p "$RESP_DIR"
@@ -63,20 +70,32 @@ if [ "$code" != "200" ]; then
   exit 1
 fi
 
+export MODEL_ID PROMPT NEGATIVE_PROMPT STEPS GUIDANCE HEIGHT WIDTH
+python - <<'PY' > "$REQ_JSON"
+import json
+import os
+
+payload = {
+    "model": os.environ["MODEL_ID"],
+    "prompt": os.environ["PROMPT"],
+    "parameters": {
+        "num_inference_steps": int(float(os.environ.get("STEPS", "50"))),
+        "guidance_scale": float(os.environ.get("GUIDANCE", "5.0")),
+        "height": int(float(os.environ.get("HEIGHT", "512"))),
+        "width": int(float(os.environ.get("WIDTH", "512"))),
+    },
+}
+negative = os.environ.get("NEGATIVE_PROMPT", "").strip()
+if negative:
+    payload["parameters"]["negative_prompt"] = negative
+print(json.dumps(payload))
+PY
+
 curl -sS --connect-timeout 10 --max-time "${CURL_MAX_TIME:-900}" \
   -w "%{http_code}" \
   "http://127.0.0.1:${PORT}/v1/images/generations" \
   -H "Content-Type: application/json" \
-  -d '{
-    "model": "'"${MODEL_ID}"'",
-    "prompt": "A futuristic city skyline at dusk, reflective water, ultra-detailed",
-    "parameters": {
-      "num_inference_steps": 50,
-      "guidance_scale": 5.0,
-      "height": 512,
-      "width": 512
-    }
-  }' > "$RESP_JSON" 2>/dev/null || {
+  -d @"$REQ_JSON" > "$RESP_JSON" 2>/dev/null || {
   echo "Generation request failed (transport error). Container logs:" >&2
   docker logs --tail 200 "$CONTAINER" || true
   exit 1

@@ -114,8 +114,8 @@ curl -s http://127.0.0.1:8002/v1/images/edits \
     "prompt": "Combine both source images into one coherent scene.",
     "images_b64": ["'"$IMAGE_A_B64"'", "'"$IMAGE_B_B64"'"],
     "parameters": {
-      "num_inference_steps": 8,
-      "true_cfg_scale": 1.0,
+      "num_inference_steps": 20,
+      "true_cfg_scale": 2.0,
       "max_sequence_length": 128,
       "height": 512,
       "width": 512
@@ -127,27 +127,30 @@ Repeatable script for tuned Plus profile (single or multi):
 
 ```bash
 $REPO_ROOT/scripts/run_memsafe.sh \
-  env MODE=single MODEL_ID=$MODEL_ROOT/qwen-image-edit-2511 HEIGHT=512 WIDTH=512 STEPS=4 \
-      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_single_512_seqoffload_bf16_75g_swap140_test.png \
+  env MODE=single MODEL_ID=$MODEL_ROOT/qwen-image-edit-2511 \
+      INPUT_IMAGE=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png \
+      PROMPT='Edit this single image only: keep the same robot barista and same coffee shop scene, remove any extra background objects, keep one subject, improve sharpness and latte details.' \
+      HEIGHT=512 WIDTH=512 STEPS=20 TRUE_CFG_SCALE=2.0 MEMORY_SWAP=140g \
+      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_single_512_steps20_clean_2026-03-08.png \
   bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
 
 $REPO_ROOT/scripts/run_memsafe.sh \
-  env MODE=multi MODEL_ID=$MODEL_ROOT/qwen-image-edit-2509 HEIGHT=512 WIDTH=512 STEPS=8 \
-      INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png \
-      INPUT_IMAGE_B=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png \
-      PROMPT='Create one coherent scene by placing the human from image A into image B. Keep the person identity and face natural, match lighting and perspective, keep both subjects visible.' \
-      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png \
+  env MODE=multi MODEL_ID=$MODEL_ROOT/qwen-image-edit-2509 HEIGHT=512 WIDTH=512 STEPS=20 TRUE_CFG_SCALE=2.0 SEED=3456 MEMORY_SWAP=140g \
+      INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_a_512_seed1234.png \
+      INPUT_IMAGE_B=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png \
+      PROMPT='Take the person from image A and insert them into image B. Keep the original person from image B. Place the inserted person on the left side of image B, standing naturally near the other person. Preserve both faces, match lighting and perspective, keep the coffee shop background unchanged, sharp focus.' \
+      OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2509_multi_512_steps20_cfg2_seed3456_2026-03-08.png \
   bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
 ```
 
 Saved test outputs:
 - Base model:
-  - `qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png`
+  - `qwen-image-edit/out/qwen_image_edit_single_compat_256_steps20_2026-03-08.png`
 - Plus models (`2509/2511`):
   - `qwen-image-edit/out/qwen_image_edit_2509_single_512_seqoffload_bf16_75g_test.png`
-  - `qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png`
-  - `qwen-image-edit/out/qwen_image_edit_2511_single_512_seqoffload_bf16_75g_swap140_test.png`
-  - `qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps12_cfg2_seed3456_75g_swap140_2026-02-13.png`
+  - `qwen-image-edit/out/qwen_image_edit_2509_multi_512_steps20_cfg2_seed3456_2026-03-08.png`
+  - `qwen-image-edit/out/qwen_image_edit_2511_single_512_steps20_clean_2026-03-08.png`
+  - `qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps20_cfg2_seed3456_2026-03-08.png`
 
 ### SCRIPTS
 
@@ -166,6 +169,6 @@ Notes:
 - Models with suffix `-2511` or `-2509` use the newer “Plus” pipeline; the container selects this automatically.
 - Recommended baseline parameters:
   - Base model (`Qwen-Image-Edit`): `num_inference_steps=50`, `true_cfg_scale=4.0`, `negative_prompt=" "`.
-  - Plus models (`2509/2511`) on this host: `num_inference_steps=4..8`, `true_cfg_scale=1.0`, no negative prompt, `max_sequence_length=128`, `bfloat16`, and sequential CPU offload.
+  - Plus models (`2509/2511`) on this host: for publish-quality evidence, `num_inference_steps=20`, `true_cfg_scale=2.0` (multi) or `2.0` (single cleanup run), no negative prompt, `max_sequence_length=128`, `bfloat16`, and sequential CPU offload.
 - To avoid long silent waits during startup diagnostics, use:
   - `HEALTH_RETRIES` and `HEALTH_SLEEP` in test scripts (`test_qwen_image_edit.sh`, `test_qwen_image_edit_multi_input.sh`).

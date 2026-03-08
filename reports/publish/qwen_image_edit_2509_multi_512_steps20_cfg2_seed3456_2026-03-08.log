@@ -1,0 +1,9 @@
+[2026-03-08T16:31:25Z] watchdog start max_seconds=3600 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh env MODE=multi MODEL_ID=/mnt/hf/models/qwen-image-edit-2509 HEIGHT=512 WIDTH=512 STEPS=20 TRUE_CFG_SCALE=2.0 SEED=3456 MEMORY_SWAP=140g INPUT_IMAGE_A=/home/kj/strix-halo-inference/qwen-image-edit/input/qwen_image_2512_person_a_512_seed1234.png INPUT_IMAGE_B=/home/kj/strix-halo-inference/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png PROMPT=Take the person from image A and insert them into image B. Keep the original person from image B. Place the inserted person on the left side of image B, standing naturally near the other person. Preserve both faces, match lighting and perspective, keep the coffee shop background unchanged, sharp focus. OUT_PATH=/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_2509_multi_512_steps20_cfg2_seed3456_2026-03-08.png CURL_MAX_TIME=3600 bash /home/kj/strix-halo-inference/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
+watchdog: log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-31-25Z.log
+watchdog: running elapsed=120s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-31-25Z.log
+watchdog: running elapsed=240s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-31-25Z.log
+watchdog: running elapsed=360s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-31-25Z.log
+watchdog: running elapsed=480s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-31-25Z.log
+watchdog: running elapsed=600s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-31-25Z.log
+watchdog: running elapsed=720s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-31-25Z.log
+[2026-03-08T16:44:25Z] watchdog finished cmd_status=0

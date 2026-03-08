@@ -1,0 +1,12 @@
+[2026-03-08T15:33:01Z] watchdog start max_seconds=2700 idle_seconds=1200 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh env MODEL_PATH=/mnt/hf/models/qwen3.5-122b-a10b-gguf/Q4_K_M/Qwen3.5-122B-A10B-Q4_K_M-00001-of-00003.gguf PORT=8143 CTX_SIZE=131072 MAX_TOKENS=128 PROMPT_MODE=text PROMPT_TEXT=/no_think Write three short bullet points on why reproducible local LLM benchmarks matter. THREADS=8 GPU_LAYERS=0 EXTRA_ARGS=--jinja --reasoning-budget 0 --reasoning-format none MEM_LIMIT=85g MEMORY_SWAP=85g MEM_RESERVATION=76g OOM_SCORE_ADJ=500 OUT_JSON=/home/kj/strix-halo-inference/llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_122b_a10b_q4km_ctx131072_2026-03-08.json CONTAINER=llama-qwen35-ctx-8143 READY_ATTEMPTS=240 CURL_MAX_TIME=1800 bash /home/kj/strix-halo-inference/llama-cpp-vulkan/scripts/probe_ctx_once.sh
+[2026-03-08T15:33:01Z] Starting container=llama-qwen35-ctx-8143 ctx=131072 max_tokens=128 mem=85g swap=85g reservation=76g
+[2026-03-08T15:33:02Z] Container started id=ca07dc48e434e2cc78629fe763c8357a033fb6d569c5a8dc2df1f8a130b23957
+[2026-03-08T15:33:27Z] Waiting for server readiness on port=8143 attempt=6/240 http=503
+[2026-03-08T15:33:32Z] Server ready on port=8143; submitting chat request (curl_max_time=1800s)
+[2026-03-08T15:34:02Z] Chat request still running (elapsed=30s ctx=131072)
+[2026-03-08T15:34:32Z] Chat request still running (elapsed=60s ctx=131072)
+[2026-03-08T15:34:32Z] Chat request completed successfully
+/home/kj/strix-halo-inference/llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_122b_a10b_q4km_ctx131072_2026-03-08.json bytes=1363
+[2026-03-08T15:34:32Z] Probe completed and artifact saved: /home/kj/strix-halo-inference/llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_122b_a10b_q4km_ctx131072_2026-03-08.json
+CTX probe success: model=/mnt/hf/models/qwen3.5-122b-a10b-gguf/Q4_K_M/Qwen3.5-122B-A10B-Q4_K_M-00001-of-00003.gguf ctx=131072 max_tokens=128 out=/home/kj/strix-halo-inference/llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_122b_a10b_q4km_ctx131072_2026-03-08.json
+[2026-03-08T15:35:01Z] watchdog finished cmd_status=0

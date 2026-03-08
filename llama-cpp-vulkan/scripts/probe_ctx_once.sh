@@ -154,7 +154,8 @@ if not choices:
 
 msg = choices[0].get("message", {})
 content = msg.get("content", "")
-if not str(content).strip():
+reasoning_content = msg.get("reasoning_content", "")
+if not str(content).strip() and not str(reasoning_content).strip():
     print(f"Empty content in response: {resp}", file=sys.stderr)
     sys.exit(1)
 

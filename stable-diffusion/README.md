@@ -114,6 +114,18 @@ curl -s http://127.0.0.1:8001/v1/images/generations \
   }' | jq -r '.data[0].b64_json' | base64 -d > sd35.png
 ```
 
+Run the SDXL base script with a photoreal prompt override:
+
+```bash
+$REPO_ROOT/scripts/run_memsafe.sh \
+  env PROMPT='Photorealistic golden-hour panorama of a dramatic alpine lake valley, rugged mountain ridges, crystal water reflections, pine trees in foreground, natural atmospheric haze, realistic color grading, full-frame DSLR photo, 35mm lens, high dynamic range, ultra-detailed textures.' \
+      NEGATIVE_PROMPT='cartoon, cgi, illustration, anime, painting, plastic skin, oversaturated, blurry, low detail, deformed geometry, watermark, text, logo' \
+      STEPS=50 GUIDANCE=5.0 HEIGHT=512 WIDTH=512 \
+      OUT_PATH=$REPO_ROOT/stable-diffusion/out/sdxl_base_photoreal_512_2026-03-08.png \
+  bash $REPO_ROOT/stable-diffusion/scripts/test_sdxl_base_sample.sh \
+  > $REPO_ROOT/reports/publish/sdxl_base_512_photoreal_2026-03-08.log 2>&1
+```
+
 Recommended settings (model card / pipeline defaults):
 - SD3.5 Medium: `num_inference_steps=40`, `guidance_scale=4.5`.
 - SD3.5 Large: `num_inference_steps=28`, `guidance_scale=4.5` (on this host `512×512` is validated with fewer steps; `1024×1024` is not recommended).
@@ -126,6 +138,7 @@ Saved test outputs:
 - `$REPO_ROOT/stable-diffusion/out/sd35_sample_best_retest.png`
 - `$REPO_ROOT/stable-diffusion/out/sd35_large_512_best_attempt.png`
 - `$REPO_ROOT/stable-diffusion/out/sdxl_base_best_retest.png`
+- `$REPO_ROOT/stable-diffusion/out/sdxl_base_photoreal_512_2026-03-08.png`
 - `$REPO_ROOT/stable-diffusion/out/playground_v25_1024_2026-02-12.png`
 - `$REPO_ROOT/stable-diffusion/out/flux2_klein_best_retest.png`
 - `$REPO_ROOT/stable-diffusion/out/flux2_klein_base_4b_512_2026-02-11.png`
@@ -133,13 +146,15 @@ Saved test outputs:
 - `$REPO_ROOT/stable-diffusion/out/flux2_dev_bnb4_512_t2i_reconfirm_2026-02-12.png`
 - `$REPO_ROOT/stable-diffusion/out/flux2_dev_bnb4_512_i2i_reconfirm_2026-02-12.png`
 - `$REPO_ROOT/stable-diffusion/out/flux2_dev_bnb4_512_multi_reconfirm_2026-02-12.png`
+- `$REPO_ROOT/stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps30_2026-03-07.png`
 
 ### SCRIPTS
 
 - `scripts/run_server.sh`: start the container with specified model and dtype.
 - `scripts/test_sd35_sample.sh`: start server, generate a small SD3.5 image, save output.
-- `scripts/test_sdxl_base_sample.sh`: start server, generate a small SDXL image, save output.
+- `scripts/test_sdxl_base_sample.sh`: start server, generate a small SDXL image, save output (supports env overrides for `PROMPT`, `NEGATIVE_PROMPT`, `STEPS`, `GUIDANCE`, `HEIGHT`, `WIDTH`, `OUT_PATH`).
 - `scripts/test_flux2_klein_sample.sh`: start server, generate a Flux2 image, save output.
+- `scripts/test_flux2_dev_bnb4_probe.sh`: direct pipeline probe for FLUX.2-dev-bnb-4bit (text-to-image, image-to-image, and multi-image).
 - `scripts/test_playground_v25_sample.sh`: start server, generate a Playground v2.5 image (`1024×1024`), save output.
 - `scripts/download_sd35_medium.sh`: download SD3.5 medium weights.
 - `scripts/download_sd35_large.sh`: download SD3.5 large weights.
@@ -155,11 +170,11 @@ Notes:
 - For slow networks, prefer local paths under `$MODEL_ROOT`.
 - Default dtype is FP16 (`DTYPE=float16`). On RDNA3.5/ROCm, FP16 can fail with type mismatch; set `DTYPE=float32` or let the API auto-fallback to FP32 when it detects the mismatch.
 - Diffusers is installed from Git in this image to support newer pipelines like Flux2; rebuild the image after changing dependencies.
-- The test scripts use smaller resolutions (e.g., 512–768) and fewer steps to keep runtime reasonable on Strix Halo. Increase to 1024+ and the recommended steps above for best quality.
+- Most test scripts use smaller resolutions (e.g., 512–768) and fewer steps to keep runtime reasonable on Strix Halo. A higher-quality FLUX.2-dev profile is also documented (`steps=30`, `guidance=3.5`, `timeout=45m`).
 - SD3.5‑large is slower and less predictable than SD3.5‑medium on this host; keep steps modest and prefer SD3.5‑medium / SDXL / FLUX.2 for reliability.
 - `FLUX.2-klein-base-4B` was tested successfully on this host under the `75g` policy (`reports/publish/flux2_klein_base_4b_512.log`).
 - `FLUX.2-klein-9B` and `FLUX.2-dev` are gated on HF. With authenticated access on this machine:
   - `FLUX.2-klein-9B` was validated at `512x512` (`STEPS=4`, bf16, CPU offload) under the `75g` policy.
   - Full `FLUX.2-dev` is currently not stable on this host (remote text-encoder 503s, local path triggers host OOM even at tiny sizes).
-  - Practical `dev`-family option: `diffusers/FLUX.2-dev-bnb-4bit` (saved under `$MODEL_ROOT/flux2-dev-bnb4`) validated at `512x512` for text-to-image, image-to-image, and multi-image composition.
+  - Practical `dev`-family option: `diffusers/FLUX.2-dev-bnb-4bit` (saved under `$MODEL_ROOT/flux2-dev-bnb4`) validated at `512x512` for text-to-image, image-to-image, multi-image composition, and a quality-focused run (`steps=30`).
 - `FLUX.2-dev-NVFP4` downloads, but this container currently expects a full diffusers directory (it does not load checkpoint-only repos directly).

@@ -117,11 +117,11 @@ run_case \
   "env MODEL_ID=$MODEL_ROOT/qwen-image WIDTH=1024 HEIGHT=1024 STEPS=30 DTYPE=bfloat16 CURL_MAX_TIME=2400 OUT_PATH=$REPO_ROOT/qwen-image/out/qwen_image_1024_75g_retest2.png bash $REPO_ROOT/qwen-image/scripts/test_qwen_image.sh"
 
 run_case \
-  "flux2_klein_base_4b_512" "text-to-image" "512x512 steps=4 guidance=1.0 fp32" \
-  "stable-diffusion/out/flux2_klein_base_4b_512_2026-02-11.png" \
-  "Flux2 klein-base 4B" \
+  "flux2_klein_base_4b_512" "text-to-image" "512x512 steps=20 guidance=1.0 fp32" \
+  "stable-diffusion/out/flux2_klein_base_4b_512_steps20_2026-03-08.png" \
+  "Flux2 klein-base 4B (steps20 rerun)" \
   "$RUN_IDLE_SECONDS_DEFAULT" "$RUN_MAX_SECONDS_DEFAULT" \
-  "env MODEL_ID=$MODEL_ROOT/flux2-klein-base-4b DTYPE=float32 HEIGHT=512 WIDTH=512 STEPS=4 GUIDANCE=1.0 OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_klein_base_4b_512_2026-02-11.png bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_klein_sample.sh"
+  "env MODEL_ID=$MODEL_ROOT/flux2-klein-base-4b DTYPE=float32 HEIGHT=512 WIDTH=512 STEPS=20 GUIDANCE=1.0 OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_klein_base_4b_512_steps20_2026-03-08.png bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_klein_sample.sh"
 
 run_case \
   "flux2_klein_4b_512" "text-to-image" "512x512 steps=4 guidance=1.0 fp32" \
@@ -131,18 +131,25 @@ run_case \
   "env MODEL_ID=$MODEL_ROOT/flux2-klein-4b DTYPE=float32 HEIGHT=512 WIDTH=512 STEPS=4 GUIDANCE=1.0 OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_klein_best_retest.png bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_klein_sample.sh"
 
 run_case \
-  "flux2_klein_9b_512_t2i" "text-to-image" "512x512 steps=4 guidance=1.0 bf16 cpu-offload" \
-  "stable-diffusion/out/flux2_klein_9b_512_t2i_reconfirm_2026-02-12.png" \
-  "Flux2 klein 9B probe" \
+  "flux2_klein_9b_512_t2i" "text-to-image" "512x512 steps=20 guidance=1.0 bf16 cpu-offload" \
+  "stable-diffusion/out/flux2_klein_9b_512_t2i_steps20_2026-03-08.png" \
+  "Flux2 klein 9B probe (steps20 rerun)" \
   "$RUN_IDLE_SECONDS_SLOW" "$RUN_MAX_SECONDS_DEFAULT" \
-  "env MODEL_ID=$MODEL_ROOT/flux2-klein-9b HEIGHT=512 WIDTH=512 STEPS=4 GUIDANCE=1.0 MODEL_CPU_OFFLOAD=1 OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_klein_9b_512_t2i_reconfirm_2026-02-12.png bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_klein_probe.sh"
+  "env MODEL_ID=$MODEL_ROOT/flux2-klein-9b HEIGHT=512 WIDTH=512 STEPS=20 GUIDANCE=1.0 MODEL_CPU_OFFLOAD=1 OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_klein_9b_512_t2i_steps20_2026-03-08.png bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_klein_probe.sh"
 
 run_case \
-  "flux2_dev_bnb4_512_t2i" "text-to-image" "512x512 steps=4 guidance=3.0 bf16 cpu-offload" \
-  "stable-diffusion/out/flux2_dev_bnb4_512_t2i_reconfirm_2026-02-12.png" \
-  "diffusers/FLUX.2-dev-bnb-4bit (t2i)" \
+  "flux2_dev_bnb4_512_t2i" "text-to-image" "512x512 steps=20 guidance=3.0 bf16 cpu-offload" \
+  "stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps20_2026-03-08.png" \
+  "diffusers/FLUX.2-dev-bnb-4bit (t2i, steps20 rerun)" \
   "$RUN_IDLE_SECONDS_SLOW" "$RUN_MAX_SECONDS_DEFAULT" \
-  "env MODEL_ID=$MODEL_ROOT/flux2-dev-bnb4 HEIGHT=512 WIDTH=512 STEPS=4 GUIDANCE=3.0 DTYPE=bfloat16 MODEL_CPU_OFFLOAD=1 USE_REMOTE_TEXT_ENCODER=0 MAX_SEQUENCE_LENGTH=128 OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_dev_bnb4_512_t2i_reconfirm_2026-02-12.png bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_dev_bnb4_probe.sh"
+  "env MODEL_ID=$MODEL_ROOT/flux2-dev-bnb4 HEIGHT=512 WIDTH=512 STEPS=20 GUIDANCE=3.0 DTYPE=bfloat16 MODEL_CPU_OFFLOAD=1 USE_REMOTE_TEXT_ENCODER=0 MAX_SEQUENCE_LENGTH=128 OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps20_2026-03-08.png bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_dev_bnb4_probe.sh"
+
+run_case \
+  "flux2_dev_bnb4_512_t2i_steps30" "text-to-image" "512x512 steps=30 guidance=3.5 bf16 cpu-offload timeout=2700" \
+  "stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps30_2026-03-07.png" \
+  "diffusers/FLUX.2-dev-bnb-4bit (recommended-step profile)" \
+  "$RUN_IDLE_SECONDS_SLOW" 2700 \
+  "env MODEL_ID=$MODEL_ROOT/flux2-dev-bnb4 HEIGHT=512 WIDTH=512 STEPS=30 GUIDANCE=3.5 DTYPE=bfloat16 MODEL_CPU_OFFLOAD=1 USE_REMOTE_TEXT_ENCODER=0 MAX_SEQUENCE_LENGTH=256 SEED=42 PROMPT='A cinematic, photoreal portrait of a friendly humanoid robot barista pouring latte art in a warm coffee shop, 85mm lens, shallow depth of field, natural skin-like materials, high detail, realistic lighting' OUT_PATH=$REPO_ROOT/stable-diffusion/out/flux2_dev_bnb4_512_t2i_steps30_2026-03-07.png bash $REPO_ROOT/stable-diffusion/scripts/test_flux2_dev_bnb4_probe.sh"
 
 run_case \
   "flux2_dev_bnb4_512_i2i" "image-to-image" "512x512 steps=4 guidance=3.0 bf16 cpu-offload" \
@@ -198,11 +205,11 @@ run_case \
 # -----------------
 
 run_case \
-  "qwen_image_edit_base_256_compat" "image-to-image" "256x256 steps=4 strength=0.6 bf16" \
-  "qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png" \
-  "Single-image API compatibility check" \
+  "qwen_image_edit_base_256_compat" "image-to-image" "256x256 steps=20 strength=0.6 bf16" \
+  "qwen-image-edit/out/qwen_image_edit_single_compat_256_steps20_2026-03-08.png" \
+  "Single-image API compatibility check (steps20 rerun)" \
   "$RUN_IDLE_SECONDS_SLOW" "$RUN_MAX_SECONDS_DEFAULT" \
-  "env MODEL_ID=$MODEL_ROOT/qwen-image-edit INPUT_IMAGE=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png HEIGHT=256 WIDTH=256 STEPS=4 STRENGTH=0.6 DTYPE=bfloat16 OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit.sh"
+  "env MODEL_ID=$MODEL_ROOT/qwen-image-edit INPUT_IMAGE=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png HEIGHT=256 WIDTH=256 STEPS=20 STRENGTH=0.6 DTYPE=bfloat16 OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_single_compat_256_steps20_2026-03-08.png bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit.sh"
 
 run_case \
   "qwen_image_edit_2509_single_512" "image-to-image" "512x512 steps=4 bf16 seq-offload swap=140g" \
@@ -212,25 +219,25 @@ run_case \
   "env MODE=single MODEL_ID=$MODEL_ROOT/qwen-image-edit-2509 INPUT_IMAGE=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png HEIGHT=512 WIDTH=512 STEPS=4 MEMORY_SWAP=140g OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2509_single_512_seqoffload_bf16_75g_test.png bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh"
 
 run_case \
-  "qwen_image_edit_2509_multi_512" "multi-image" "2 inputs 512x512 steps=8 bf16 seq-offload swap=140g" \
-  "qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png" \
-  "Qwen-Image-Edit-2509 plus (multi)" \
+  "qwen_image_edit_2509_multi_512" "multi-image" "2 inputs 512x512 steps=20 bf16 seq-offload swap=140g" \
+  "qwen-image-edit/out/qwen_image_edit_2509_multi_512_steps20_2026-03-08.png" \
+  "Qwen-Image-Edit-2509 plus (multi, steps20 rerun)" \
   "$RUN_IDLE_SECONDS_SLOW" "$RUN_MAX_SECONDS_DEFAULT" \
-  "env MODE=multi MODEL_ID=$MODEL_ROOT/qwen-image-edit-2509 HEIGHT=512 WIDTH=512 STEPS=8 MEMORY_SWAP=140g INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png INPUT_IMAGE_B=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png PROMPT='Create one coherent scene by placing the human from image A into image B. Keep the person identity and face natural, match lighting and perspective, keep both subjects visible.' OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2509_multi_512_human_insert_steps8_75g_swap140.png bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh"
+  "env MODE=multi MODEL_ID=$MODEL_ROOT/qwen-image-edit-2509 HEIGHT=512 WIDTH=512 STEPS=20 MEMORY_SWAP=140g INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_single_compat_2026-02-11.png INPUT_IMAGE_B=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png PROMPT='Create one coherent scene by placing the human from image A into image B. Keep the person identity and face natural, match lighting and perspective, keep both subjects visible.' OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2509_multi_512_steps20_2026-03-08.png bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh"
 
 run_case \
-  "qwen_image_edit_2511_single_512" "image-to-image" "512x512 steps=4 bf16 seq-offload swap=140g" \
-  "qwen-image-edit/out/qwen_image_edit_2511_single_512_seqoffload_bf16_75g_swap140_test.png" \
-  "Qwen-Image-Edit-2511 plus (single)" \
+  "qwen_image_edit_2511_single_512" "image-to-image" "512x512 steps=20 bf16 seq-offload swap=140g" \
+  "qwen-image-edit/out/qwen_image_edit_2511_single_512_steps20_2026-03-08.png" \
+  "Qwen-Image-Edit-2511 plus (single, steps20 rerun)" \
   "$RUN_IDLE_SECONDS_SLOW" "$RUN_MAX_SECONDS_DEFAULT" \
-  "env MODE=single MODEL_ID=$MODEL_ROOT/qwen-image-edit-2511 INPUT_IMAGE=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png HEIGHT=512 WIDTH=512 STEPS=4 MEMORY_SWAP=140g OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_single_512_seqoffload_bf16_75g_swap140_test.png bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh"
+  "env MODE=single MODEL_ID=$MODEL_ROOT/qwen-image-edit-2511 INPUT_IMAGE=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png HEIGHT=512 WIDTH=512 STEPS=20 MEMORY_SWAP=140g OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_single_512_steps20_2026-03-08.png bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh"
 
 run_case \
-  "qwen_image_edit_2511_multi_512_move_person" "multi-image" "2 inputs 512x512 steps=12 cfg=2.0 seed=3456 bf16 seq-offload swap=140g" \
-  "qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps12_cfg2_seed3456_75g_swap140_2026-02-13.png" \
-  "Qwen-Image-Edit-2511 plus (multi move-person)" \
+  "qwen_image_edit_2511_multi_512_move_person" "multi-image" "2 inputs 512x512 steps=20 cfg=2.0 seed=3456 bf16 seq-offload swap=140g" \
+  "qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps20_cfg2_seed3456_2026-03-08.png" \
+  "Qwen-Image-Edit-2511 plus (multi move-person, steps20 rerun)" \
   "$RUN_IDLE_SECONDS_SLOW" "$RUN_MAX_SECONDS_DEFAULT" \
-  "env MODE=multi MODEL_ID=$MODEL_ROOT/qwen-image-edit-2511 HEIGHT=512 WIDTH=512 STEPS=12 TRUE_CFG_SCALE=2.0 SEED=3456 MEMORY_SWAP=140g INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_a_512_seed1234.png INPUT_IMAGE_B=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png PROMPT='Take the person from image A and insert them into image B. Keep the original person from image B. Place the inserted person on the left side of image B, standing naturally near the other person. Preserve both faces, match lighting and perspective, keep the coffee shop background unchanged, sharp focus.' OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps12_cfg2_seed3456_75g_swap140_2026-02-13.png bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh"
+  "env MODE=multi MODEL_ID=$MODEL_ROOT/qwen-image-edit-2511 HEIGHT=512 WIDTH=512 STEPS=20 TRUE_CFG_SCALE=2.0 SEED=3456 MEMORY_SWAP=140g INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_a_512_seed1234.png INPUT_IMAGE_B=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png PROMPT='Take the person from image A and insert them into image B. Keep the original person from image B. Place the inserted person on the left side of image B, standing naturally near the other person. Preserve both faces, match lighting and perspective, keep the coffee shop background unchanged, sharp focus.' OUT_PATH=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_multi_move_person_512_steps20_cfg2_seed3456_2026-03-08.png bash $REPO_ROOT/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh"
 
 # -----------------
 # Upscaling
@@ -253,6 +260,27 @@ run_case \
   "Qwen2.5-VL CPU fallback" \
   "$RUN_IDLE_SECONDS_DEFAULT" 2400 \
   "env FORCE_CPU=1 MAX_NEW_TOKENS=256 INPUT_IMAGE=$REPO_ROOT/qwen-image/out/qwen_image_512_75g_retest2.png OUT_PATH=$REPO_ROOT/qwen-vl/out/qwen_vl_describe_75g_retest2.txt bash $REPO_ROOT/qwen-vl/scripts/test_qwen_vl_7b.sh"
+
+run_case \
+  "qwen35_9b_q8_task_suite_2026_03_08b" "vlm-suite" "vision+summarization+coding ctx=32768 max_tokens=768 reasoning_budget=0" \
+  "llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_vision.json, llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_summarization.json, llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_coding.json" \
+  "Qwen3.5-9B-Q8_0 task suite (Vulkan)" \
+  "$RUN_IDLE_SECONDS_DEFAULT" 3600 \
+  "env MODEL_PATH=$MODEL_ROOT/qwen3.5-9b-gguf/Qwen3.5-9B-Q8_0.gguf MMPROJ_PATH=$MODEL_ROOT/qwen3.5-9b-gguf/mmproj-F16.gguf PORT=8131 MODEL_TAG=qwen35_9b_q8_2026_03_08b CTX_SIZE=32768 MAX_TOKENS=768 GPU_LAYERS=999 MEM_LIMIT=75g MEMORY_SWAP=75g MEM_RESERVATION=67g LLAMA_DEVICE=Vulkan0 REASONING_BUDGET=0 REASONING_FORMAT=none bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_qwen35_vlm_task_suite.sh"
+
+run_case \
+  "qwen35_27b_q8_task_suite_2026_03_08b" "vlm-suite" "vision+summarization+coding ctx=16384 max_tokens=768 reasoning_budget=0" \
+  "llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_vision.json, llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_summarization.json, llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_coding.json" \
+  "Qwen3.5-27B-Q8_0 task suite (Vulkan)" \
+  "$RUN_IDLE_SECONDS_DEFAULT" 3600 \
+  "env MODEL_PATH=$MODEL_ROOT/qwen3.5-27b-gguf/Qwen3.5-27B-Q8_0.gguf MMPROJ_PATH=$MODEL_ROOT/qwen3.5-27b-gguf/mmproj-F16.gguf PORT=8132 MODEL_TAG=qwen35_27b_q8_2026_03_08b CTX_SIZE=16384 MAX_TOKENS=768 GPU_LAYERS=999 MEM_LIMIT=75g MEMORY_SWAP=75g MEM_RESERVATION=67g LLAMA_DEVICE=Vulkan0 REASONING_BUDGET=0 REASONING_FORMAT=none bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_qwen35_vlm_task_suite.sh"
+
+run_case \
+  "qwen35_122b_a10b_q4km_task_suite_2026_03_08b" "vlm-suite" "vision+summarization+coding ctx=8192 max_tokens=512 reasoning_budget=0 gpu_layers=0" \
+  "llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_vision.json, llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_summarization.json, llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_coding.json" \
+  "Qwen3.5-122B-A10B-Q4_K_M task suite (CPU fallback)" \
+  "$RUN_IDLE_SECONDS_DEFAULT" 3600 \
+  "env MODEL_PATH=$MODEL_ROOT/qwen3.5-122b-a10b-gguf/Q4_K_M/Qwen3.5-122B-A10B-Q4_K_M-00001-of-00003.gguf MMPROJ_PATH=$MODEL_ROOT/qwen3.5-122b-a10b-gguf/mmproj-F16.gguf PORT=8133 MODEL_TAG=qwen35_122b_a10b_q4km_2026_03_08b CTX_SIZE=8192 MAX_TOKENS=512 GPU_LAYERS=0 MEM_LIMIT=85g MEMORY_SWAP=85g MEM_RESERVATION=76g LLAMA_DEVICE=Vulkan0 REASONING_BUDGET=0 REASONING_FORMAT=none bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_qwen35_vlm_task_suite.sh"
 
 # -----------------
 # Detection / Pose

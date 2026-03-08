@@ -1,0 +1,15 @@
+[2026-03-08T15:53:03Z] watchdog start max_seconds=2700 idle_seconds=1200 poll_seconds=30 watch_path=<none> min_available_gb=12 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh env MODEL_PATH=/mnt/hf/models/qwen3.5-122b-a10b-gguf/Q4_K_M/Qwen3.5-122B-A10B-Q4_K_M-00001-of-00003.gguf PORT=8144 CTX_SIZE=65536 MAX_TOKENS=64 PROMPT_MODE=text PROMPT_TEXT=/no_think Write exactly three short bullet points on reproducible local benchmarks. THREADS=8 GPU_LAYERS=999 EXTRA_ARGS=--jinja --reasoning-budget 0 --reasoning-format none --device Vulkan0 MEM_LIMIT=85g MEMORY_SWAP=85g MEM_RESERVATION=76g OOM_SCORE_ADJ=500 OUT_JSON=/home/kj/strix-halo-inference/llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_122b_a10b_q4km_ctx65536_gpu999_min12_2026-03-08.json CONTAINER=llama-qwen35-ctx-8144 READY_ATTEMPTS=240 CURL_MAX_TIME=1800 bash /home/kj/strix-halo-inference/llama-cpp-vulkan/scripts/probe_ctx_once.sh
+[2026-03-08T15:53:03Z] Starting container=llama-qwen35-ctx-8144 ctx=65536 max_tokens=64 mem=85g swap=85g reservation=76g
+[2026-03-08T15:53:04Z] Container started id=852b87a5bb7550b719946b55c2d15229f1ac0a8be050b0ee22606c3775b4373d
+[2026-03-08T15:53:29Z] Waiting for server readiness on port=8144 attempt=6/240 http=503
+[2026-03-08T15:53:59Z] Waiting for server readiness on port=8144 attempt=12/240 http=000
+[2026-03-08T15:54:29Z] Waiting for server readiness on port=8144 attempt=18/240 http=000
+[2026-03-08T15:54:59Z] Waiting for server readiness on port=8144 attempt=24/240 http=000
+[2026-03-08T15:55:29Z] Waiting for server readiness on port=8144 attempt=30/240 http=000
+[2026-03-08T15:55:59Z] Waiting for server readiness on port=8144 attempt=36/240 http=000
+[2026-03-08T15:56:29Z] Waiting for server readiness on port=8144 attempt=42/240 http=000
+[2026-03-08T15:56:59Z] Waiting for server readiness on port=8144 attempt=48/240 http=000
+[2026-03-08T15:57:29Z] Waiting for server readiness on port=8144 attempt=54/240 http=000
+[2026-03-08T15:57:59Z] Waiting for server readiness on port=8144 attempt=60/240 http=000
+[2026-03-08T15:58:29Z] Waiting for server readiness on port=8144 attempt=66/240 http=000
+Terminated                 "$@"

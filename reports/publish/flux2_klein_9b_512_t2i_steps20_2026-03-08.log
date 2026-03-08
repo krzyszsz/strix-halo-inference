@@ -1,0 +1,5 @@
+[2026-03-08T13:33:06Z] watchdog start max_seconds=3600 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh env MODEL_ID=/mnt/hf/models/flux2-klein-9b HEIGHT=512 WIDTH=512 STEPS=20 GUIDANCE=1.0 MODEL_CPU_OFFLOAD=1 OUT_PATH=/home/kj/strix-halo-inference/stable-diffusion/out/flux2_klein_9b_512_t2i_steps20_2026-03-08.png bash /home/kj/strix-halo-inference/stable-diffusion/scripts/test_flux2_klein_probe.sh
+watchdog: log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T13-33-06Z.log
+watchdog: running elapsed=120s idle=60s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T13-33-06Z.log
+[2026-03-08T13:36:06Z] watchdog finished cmd_status=0
+ELAPSED_SECONDS=180.12

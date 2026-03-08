@@ -1,0 +1,4 @@
+model_alias	max_success_ctx	status	log_path	artifact_json
+qwen35_122b_a10b_q4km	131072	ok	reports/publish/qwen35_ctx_text/qwen35_122b_a10b_q4km_ctx131072.log	llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_122b_a10b_q4km_ctx131072_2026-03-08.json
+qwen35_27b_q8	131072	ok	reports/publish/qwen35_ctx_text/qwen35_27b_q8_ctx131072.log	llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_27b_q8_ctx131072_2026-03-08.json
+qwen35_9b_q8	131072	ok	reports/publish/qwen35_ctx_text/qwen35_9b_q8_ctx131072.log	llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_9b_q8_ctx131072_2026-03-08.json

@@ -50,8 +50,6 @@ Output JSON includes person boxes and per-person keypoints (`x`, `y`, `confidenc
 
 ## Evidence from this repo
 
-- Build log:
-  - `reports/publish/build_vision_yolo.log`
 - Detection logs/artifacts:
   - `reports/publish/yolo26n_detect_bus.log`
   - `vision-detection/out/yolo26n_detect_bus_postpatch2_2026-02-11.json`

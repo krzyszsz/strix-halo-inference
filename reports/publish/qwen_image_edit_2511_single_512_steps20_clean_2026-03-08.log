@@ -1,0 +1,7 @@
+[2026-03-08T16:20:10Z] watchdog start max_seconds=3600 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh env MODE=single MODEL_ID=/mnt/hf/models/qwen-image-edit-2511 INPUT_IMAGE=/home/kj/strix-halo-inference/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png PROMPT=Edit this single image only: keep the same robot barista and same coffee shop scene, remove any extra background objects, keep one subject, improve sharpness and latte details. HEIGHT=512 WIDTH=512 STEPS=20 TRUE_CFG_SCALE=2.0 MEMORY_SWAP=140g OUT_PATH=/home/kj/strix-halo-inference/qwen-image-edit/out/qwen_image_edit_2511_single_512_steps20_clean_2026-03-08.png CURL_MAX_TIME=3600 bash /home/kj/strix-halo-inference/qwen-image-edit/scripts/test_qwen_image_edit_plus_stable.sh
+watchdog: log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-20-10Z.log
+watchdog: running elapsed=120s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-20-10Z.log
+watchdog: running elapsed=240s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-20-10Z.log
+watchdog: running elapsed=360s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-20-10Z.log
+watchdog: running elapsed=480s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T16-20-10Z.log
+[2026-03-08T16:29:40Z] watchdog finished cmd_status=0

@@ -1,0 +1,6 @@
+[2026-03-08T11:57:58Z] watchdog start max_seconds=3600 idle_seconds=600 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=/home/kj/strix-halo-inference/scripts/run_test_with_cleanup.sh env MODEL_PATH=/mnt/hf/models/qwen3.5-27b-gguf/Qwen3.5-27B-Q8_0.gguf MMPROJ_PATH=/mnt/hf/models/qwen3.5-27b-gguf/mmproj-F16.gguf PORT=8132 MODEL_TAG=qwen35_27b_q8_2026_03_08b CTX_SIZE=16384 GPU_LAYERS=999 MAX_TOKENS=768 MEM_LIMIT=75g MEMORY_SWAP=75g MEM_RESERVATION=67g LLAMA_DEVICE=Vulkan0 REASONING_BUDGET=0 REASONING_FORMAT=none bash llama-cpp-vulkan/scripts/run_qwen35_vlm_task_suite.sh
+watchdog: log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T11-57-58Z.log
+watchdog: running elapsed=120s idle=90s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T11-57-58Z.log
+watchdog: running elapsed=240s idle=0s log=/home/kj/strix-halo-inference/reports/watchdog/run_2026-03-08T11-57-58Z.log
+[2026-03-08T12:01:58Z] watchdog finished cmd_status=0
+ELAPSED_SECONDS=240.13
