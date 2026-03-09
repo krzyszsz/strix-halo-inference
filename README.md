@@ -74,7 +74,6 @@ Caption: Combined preview of selected outputs generated in this repository (12 t
   - [VGGT-1B](#vggt-1b)
 - [Video](#video)
   - [Wan2.1-T2V-1.3B](#wan21-t2v-13b)
-  - [Wan2.1-T2V-1.3B (V2V from one/two frames)](#wan21-t2v-13b-v2v-from-onetwo-frames)
 - [LLM Quantization and Fine-Tuning Demos](#llm-quantization-and-fine-tuning-demos)
   - [Quantization demo (GGUF)](#quantization-demo-gguf)
   - [Fine-tuning demo (CPU LoRA)](#fine-tuning-demo-cpu-lora)
@@ -145,7 +144,6 @@ Times are approximate wall-clock durations and include pre/post cleanup wrapper 
 | faster-whisper (small) | audio-stt | `0.244B` | `2022-09-26` | `~157.9s` audio -> `.srt` (`39` segments) | `~2m` | CPU | `apache-2.0` | [`openai/whisper-small`](https://huggingface.co/openai/whisper-small) | `reports/publish/audio_faster_whisper_subtitles.log`, `audio/out/podcast_kokoro_best_retest.srt` |
 | Voxtral-Mini-3B-2507 | audio-stt | `3B` | `2025-07-01` | `30s` clip transcription, `max_new_tokens=512` | `~0.5m` | GPU | `apache-2.0` | [`mistralai/Voxtral-Mini-3B-2507`](https://huggingface.co/mistralai/Voxtral-Mini-3B-2507) | `reports/publish/audio_voxtral_mini_3b_transcribe.log`, `audio/out/voxtral_mini_3b_2507_transcript.txt` |
 | Wan2.1-T2V-1.3B | video-gen | `1.3B` | `2025-03-01` | `672x384`, `17` frames, `steps=8`, `fps=8` | `~7.5m` | GPU + CPU offload | `apache-2.0` | [`Wan-AI/Wan2.1-T2V-1.3B-Diffusers`](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B-Diffusers) | `reports/publish/wan21_t2v.log`, `video/out/wan21_t2v_sample.mp4` |
-| Wan2.1-T2V-1.3B (V2V from still frame(s)) | video-gen | `1.3B` | `2025-03-01` | single-frame conditioning: `512x512`, `17` frames, `steps=8`, `strength=0.45`; two-frame conditioning (same-subject pair): `512x512`, `17` frames, `steps=8`, `strength=0.45` | `~7.5m` per run | GPU + CPU offload | `apache-2.0` | [`Wan-AI/Wan2.1-T2V-1.3B-Diffusers`](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B-Diffusers) | `reports/publish/wan21_v2v_singleframe_2026-03-08.log`, `video/out/wan21_v2v_singleframe_sample_2026-03-08.mp4`, `reports/publish/wan21_v2v_twoframe_tuned_2026-03-08.log`, `video/out/wan21_v2v_twoframe_tuned_sample_2026-03-08.mp4` |
 
 Non-model workflow retests (MCP + agentic demo) are tracked in:
 - `reports/publish/summary_final.tsv` (see `category=mcp` and `category=agentic`)
@@ -1119,61 +1117,6 @@ Evidence:
 
 ![Wan2.1-T2V first frame](video/out/wan21_t2v_sample_frame0.png)
 Caption: `Wan2.1-T2V-1.3B` | `672x384`, `17` frames, `fps=8`, `steps=8`
-
-### Wan2.1-T2V-1.3B (V2V from one/two frames)
-
-Using the same `Wan2.1-T2V-1.3B` checkpoint, I tested frame-conditioned generation through Diffusers `WanVideoToVideoPipeline` by constructing a short conditioning clip from one or two existing still images.
-Direct Wan I2V/FLF2V checkpoints also exist upstream, but in larger variants; this repo run used the already downloaded `1.3B` checkpoint path for reproducible local testing.
-
-Model card: [`Wan-AI/Wan2.1-T2V-1.3B-Diffusers`](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B-Diffusers)  
-Diffusers reference: [`WanVideoToVideoPipeline` docs](https://huggingface.co/docs/diffusers/main/en/api/pipelines/wan#video-to-video-generation)  
-Docker image: uses `stable-diffusion-rocm:latest` (see `video/README.md`).
-
-Reproduce (single-image conditioning):
-
-```bash
-$REPO_ROOT/scripts/run_memsafe.sh \
-  env MODE=single MODEL_ID=$MODEL_ROOT/wan21-t2v-1.3b-diffusers \
-      INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png \
-      PROMPT='Keep the same person and coffee shop composition; add gentle camera drift and natural blinking, realistic detail, stable face, smooth motion.' \
-      WIDTH=512 HEIGHT=512 NUM_FRAMES=17 FPS=8 STEPS=8 GUIDANCE=5.0 STRENGTH=0.45 \
-      OUT_PATH=$REPO_ROOT/video/out/wan21_v2v_singleframe_sample_2026-03-08.mp4 \
-      OUT_FRAME0=$REPO_ROOT/video/out/wan21_v2v_singleframe_sample_frame0_2026-03-08.png \
-      OUT_INPUT_PREVIEW=$REPO_ROOT/video/out/wan21_v2v_singleframe_input_preview_2026-03-08.png \
-  bash $REPO_ROOT/video/scripts/test_wan21_v2v_from_frames.sh
-```
-
-Reproduce (two-image conditioning):
-
-```bash
-$REPO_ROOT/scripts/run_memsafe.sh \
-  env MODE=two MODEL_ID=$MODEL_ROOT/wan21-t2v-1.3b-diffusers \
-      INPUT_IMAGE_A=$REPO_ROOT/qwen-image-edit/input/qwen_image_2512_person_b_512_seed2345.png \
-      INPUT_IMAGE_B=$REPO_ROOT/qwen-image-edit/out/qwen_image_edit_2511_single_512_steps20_clean_2026-03-08.png \
-      PROMPT='Keep the same person and cafe scene; add slight cinematic camera sway and natural micro-movements while preserving identity and composition.' \
-      WIDTH=512 HEIGHT=512 NUM_FRAMES=17 FPS=8 STEPS=8 GUIDANCE=5.0 STRENGTH=0.45 \
-      OUT_PATH=$REPO_ROOT/video/out/wan21_v2v_twoframe_tuned_sample_2026-03-08.mp4 \
-      OUT_FRAME0=$REPO_ROOT/video/out/wan21_v2v_twoframe_tuned_sample_frame0_2026-03-08.png \
-      OUT_INPUT_PREVIEW=$REPO_ROOT/video/out/wan21_v2v_twoframe_tuned_input_preview_2026-03-08.png \
-  bash $REPO_ROOT/video/scripts/test_wan21_v2v_from_frames.sh
-```
-
-Evidence:
-- `reports/publish/wan21_v2v_singleframe_2026-03-08.log`
-- `video/out/wan21_v2v_singleframe_sample_2026-03-08.mp4`
-- `video/out/wan21_v2v_singleframe_sample_frame0_2026-03-08.png`
-- `reports/publish/wan21_v2v_twoframe_tuned_2026-03-08.log`
-- `video/out/wan21_v2v_twoframe_tuned_sample_2026-03-08.mp4`
-- `video/out/wan21_v2v_twoframe_tuned_sample_frame16_2026-03-08.png`
-
-![Wan2.1 V2V single input preview](video/out/wan21_v2v_singleframe_input_preview_2026-03-08.png)
-Caption: `Wan2.1-T2V-1.3B` V2V input (single-frame mode, frame repeated) | `512x512`
-
-![Wan2.1 V2V single output frame](video/out/wan21_v2v_singleframe_sample_frame0_2026-03-08.png)
-Caption: `Wan2.1-T2V-1.3B` V2V output (single-frame conditioning) | `512x512` | `17` frames | `steps=8` | `strength=0.45`
-
-![Wan2.1 V2V two-frame output frame16](video/out/wan21_v2v_twoframe_tuned_sample_frame16_2026-03-08.png)
-Caption: `Wan2.1-T2V-1.3B` V2V output (two-frame conditioning) | `512x512` | `17` frames | `steps=8` | `strength=0.45` | works but shows temporal/composition artifacts on this small checkpoint
 
 ## LLM Quantization and Fine-Tuning Demos
 

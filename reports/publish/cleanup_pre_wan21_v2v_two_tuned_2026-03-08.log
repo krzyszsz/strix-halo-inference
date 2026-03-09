@@ -1,8 +1,0 @@
-[2026-03-08T17:33:35Z] Cleanup start
-[2026-03-08T17:33:35Z] Scanning processes above 5120MB RSS
-[2026-03-08T17:33:35Z] Cleaning up inference/test containers
-[2026-03-08T17:33:35Z] Memory snapshot after cleanup:
-[2026-03-08T17:33:35Z] Active swap devices after cleanup:
-[2026-03-08T17:33:35Z] Top memory consumers after cleanup:
-[2026-03-08T17:33:35Z] Cleanup done; log=/home/kj/strix-halo-inference/reports/cleanup/cleanup_2026-03-08T17-33-35Z.log
-/home/kj/strix-halo-inference/reports/cleanup/cleanup_2026-03-08T17-33-35Z.log

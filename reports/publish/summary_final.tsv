@@ -33,8 +33,6 @@ audio_faster_whisper_subtitles	audio-stt	wav -> srt	0	120	reports/publish/audio_
 audio_voxtral_mini_3b_transcribe	audio-stt	30s clip -> transcript	0	30	reports/publish/audio_voxtral_mini_3b_transcribe.log	audio/out/voxtral_mini_3b_2507_transcript.txt	Voxtral 3B fallback (slow but works)
 vggt_reconstruct	3d-reconstruction	12 photos -> ply	0	180	reports/publish/vggt_reconstruct.log	reconstruction-3d/out/south_building/south_building_points.ply	VGGT-1B small demo
 wan21_t2v	video-gen	672x384 17 frames steps=8	0	450	reports/publish/wan21_t2v.log	video/out/wan21_t2v_sample.mp4	Wan2.1 T2V sample
-wan21_v2v_singleframe	video-gen	512x512 17 frames steps=8 strength=0.45 mode=single (one input frame repeated)	0	451	reports/publish/wan21_v2v_singleframe_2026-03-08.log	video/out/wan21_v2v_singleframe_sample_2026-03-08.mp4	Wan2.1 V2V from single existing image
-wan21_v2v_twoframe_tuned	video-gen	512x512 17 frames steps=8 strength=0.45 mode=two (two input frames)	0	450	reports/publish/wan21_v2v_twoframe_tuned_2026-03-08.log	video/out/wan21_v2v_twoframe_tuned_sample_2026-03-08.mp4	Wan2.1 V2V from two existing images (artifact-prone)
 llm_quantize_demo	llm-tools	fp16 gguf -> q4 + smoke test	0	30	reports/publish/llm_quantize_demo.log	reports/quantize/quantize_outputs.json	Quantization in container (rerun after fix)
 llm_finetune_demo	llm-tools	cpu lora sft	0	331	reports/publish/llm_finetune_demo.log	reports/finetune/finetune_comparison.json	Fine-tuning in container
 mcp_playwright_bbc_scrape	mcp	bbc scrape + screenshots (may stop on CAPTCHA)	0	30	reports/publish/mcp_playwright_bbc_scrape.log	mcp/out/bbc_2026-02-15/summary.json	Network-dependent; expected to stop if blocked
