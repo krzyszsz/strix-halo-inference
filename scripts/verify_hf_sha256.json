@@ -1,0 +1,60 @@
+[
+  {
+    "repo_id": "Qwen/Qwen3-Next-80B-A3B-Instruct-GGUF",
+    "local_dir": "/mnt/hf/models/qwen3-next-80b-a3b-instruct-gguf"
+  },
+  {
+    "repo_id": "Qwen/Qwen3-Coder-Next-GGUF",
+    "local_dir": "/mnt/hf/models/qwen3-coder-next-gguf",
+    "include": ["Qwen3-Coder-Next-Q5_K_M/*.gguf"]
+  },
+  {
+    "repo_id": "mradermacher/Qwen3-Coder-30B-A3B-Instruct-GGUF",
+    "local_dir": "/mnt/hf/models/qwen3-coder-30b-a3b-gguf"
+  },
+  {
+    "repo_id": "gaianet/Qwen3-32B-GGUF",
+    "local_dir": "/mnt/hf/models/qwen3-32b-gguf"
+  },
+  {
+    "repo_id": "Qwen/Qwen2.5-Coder-32B-Instruct-GGUF",
+    "local_dir": "/mnt/hf/models/qwen2.5-coder-32b-instruct-gguf"
+  },
+  {
+    "repo_id": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+    "local_dir": "/mnt/hf/models/qwen2.5-1.5b-instruct-gguf"
+  },
+  {
+    "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+    "local_dir": "/mnt/hf/models/qwen2.5-7b-instruct",
+    "optional": true
+  },
+  {
+    "repo_id": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "local_dir": "/mnt/hf/models/qwen2.5-vl-7b-instruct"
+  },
+  {
+    "repo_id": "Qwen/Qwen-Image",
+    "local_dir": "/mnt/hf/models/qwen-image"
+  },
+  {
+    "repo_id": "Qwen/Qwen-Image-Edit",
+    "local_dir": "/mnt/hf/models/qwen-image-edit"
+  },
+  {
+    "repo_id": "stabilityai/stable-diffusion-3.5-medium",
+    "local_dir": "/mnt/hf/models/sd35-medium"
+  },
+  {
+    "repo_id": "stabilityai/stable-diffusion-3.5-large",
+    "local_dir": "/mnt/hf/models/sd35-large"
+  },
+  {
+    "repo_id": "stabilityai/stable-diffusion-xl-base-1.0",
+    "local_dir": "/mnt/hf/models/sdxl-base-1.0"
+  },
+  {
+    "repo_id": "black-forest-labs/FLUX.2-klein-4B",
+    "local_dir": "/mnt/hf/models/flux2-klein-4b"
+  }
+]

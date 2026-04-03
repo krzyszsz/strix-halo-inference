@@ -1,0 +1,27 @@
+{
+  "component_files": [
+    {
+      "file_bytes": 1361597018,
+      "path": "/mnt/hf/models/sd-x4-upscaler/text_encoder/model.safetensors",
+      "tensor_count": 373,
+      "total_elements": 340387917
+    },
+    {
+      "file_bytes": 1893675621,
+      "path": "/mnt/hf/models/sd-x4-upscaler/unet/diffusion_pytorch_model.safetensors",
+      "tensor_count": 687,
+      "total_elements": 473398020
+    },
+    {
+      "file_bytes": 221326504,
+      "path": "/mnt/hf/models/sd-x4-upscaler/vae/diffusion_pytorch_model.safetensors",
+      "tensor_count": 204,
+      "total_elements": 55325927
+    }
+  ],
+  "model": "stabilityai/stable-diffusion-x4-upscaler",
+  "note": "Counted as sum of diffusers components (text_encoder + unet + vae) from .safetensors headers; excludes x4-upscaler-ema.safetensors checkpoint to avoid double-counting.",
+  "tensor_count_total": 1264,
+  "total_elements": 869111864,
+  "total_elements_billion": 0.869111864
+}

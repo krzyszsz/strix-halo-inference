@@ -1,0 +1,13 @@
+Create a minimal ASP.NET Core API (net8.0) with one GET endpoint:
+
+  GET /sum?x=3&y=4
+
+It should return JSON like: {"sum": 7}.
+
+Include:
+- Program.cs using minimal API.
+- A .csproj targeting net8.0.
+- A Dockerfile that builds and runs the app on port 8080.
+- A brief README.md with run instructions.
+
+Make sure the Dockerfile uses multi-stage build with the official mcr.microsoft.com/dotnet/sdk and aspnet runtime images.

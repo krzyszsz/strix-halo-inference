@@ -1,0 +1,33 @@
+
+Loading model... |-\| 
+
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b8022-3bb78133a
+model      : qwen2.5-0.5b-instruct-q4_k_m-local.gguf
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read               add a text file
+
+
+> Write a 4-line poem about Vulkan on AMD Strix Halo.
+
+| In the realm of Vulkan, AMD Strix Halo shines,
+A technology so pure and so true.
+Its memory is vast and its power so strong,
+On AMD Strix Halo, you can go where you will.
+
+[ Prompt: 985.1 t/s | Generation: 136.0 t/s ]
+
+Exiting...

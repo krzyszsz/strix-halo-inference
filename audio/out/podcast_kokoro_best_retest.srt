@@ -1,0 +1,151 @@
+1
+00:00:00,000 --> 00:00:04,000
+Welcome to this local AI engineering podcast session.
+
+2
+00:00:04,000 --> 00:00:08,000
+Today, we are documenting practical inference workflows
+
+3
+00:00:08,000 --> 00:00:14,000
+on an AMD Strix Halo machine with 96 gigabytes of unified memory.
+
+4
+00:00:14,000 --> 00:00:17,000
+The focus is not only peak benchmark numbers,
+
+5
+00:00:17,000 --> 00:00:20,000
+but repeatable operations, stable scripts,
+
+6
+00:00:20,000 --> 00:00:23,000
+and logs that can be reviewed later.
+
+7
+00:00:23,000 --> 00:00:26,000
+In this episode, we summarize the current stack.
+
+8
+00:00:26,000 --> 00:00:32,000
+Image generation is handled by QnImage and multiple diffusion pipelines.
+
+9
+00:00:32,000 --> 00:00:37,000
+Vision language analysis is covered by Qn2.5VL.
+
+10
+00:00:37,000 --> 00:00:44,000
+Coding and chat endpoints are served through Lama.CPP with Vulkan Acceleration.
+
+11
+00:00:44,000 --> 00:00:49,000
+MCP examples demonstrate browser automation, spreadsheet operations,
+
+12
+00:00:49,000 --> 00:00:52,000
+and local Python plus shell execution.
+
+13
+00:00:52,000 --> 00:00:56,000
+A key reliability practice is resource cleanup.
+
+14
+00:00:56,000 --> 00:00:59,000
+Before each heavy run, we clear stale containers
+
+15
+00:00:59,000 --> 00:01:03,000
+and terminate non-essential high-memory leftovers.
+
+16
+00:01:03,000 --> 00:01:06,000
+After each test, we do the same cleanup again,
+
+17
+00:01:06,000 --> 00:01:09,000
+so one run does not poison the next run.
+
+18
+00:01:09,000 --> 00:01:12,000
+This sounds simple, but it is usually the difference
+
+19
+00:01:12,000 --> 00:01:16,000
+between stable overnight testing and random crashes.
+
+20
+00:01:16,000 --> 00:01:21,000
+For image quality, one interesting direction is post-processing.
+
+21
+00:01:21,000 --> 00:01:26,000
+Base generations can look plastic in skin texture and lighting.
+
+22
+00:01:26,000 --> 00:01:29,000
+A diffusion upskiller can improve detail,
+
+23
+00:01:29,000 --> 00:01:35,000
+but the safest configuration is often lower input size and conservative denoising.
+
+24
+00:01:35,000 --> 00:01:38,000
+When instability appears, we reduce step count,
+
+25
+00:01:38,000 --> 00:01:43,000
+disable risky attention paths, and keep every retry fully logged.
+
+26
+00:01:43,000 --> 00:01:48,000
+On the coding side, we are also testing staged, agentic workflows.
+
+27
+00:01:48,000 --> 00:01:52,000
+The pattern is to define interfaces first, then tests,
+
+28
+00:01:52,000 --> 00:01:56,000
+then skeleton methods, and only then implementation.
+
+29
+00:01:56,000 --> 00:02:01,000
+That structure keeps goals explicit and makes progress auditable.
+
+30
+00:02:01,000 --> 00:02:04,000
+It also reduces wasted token budget
+
+31
+00:02:04,000 --> 00:02:08,000
+because each iteration has a concrete pass or fail target.
+
+32
+00:02:08,000 --> 00:02:14,000
+Finally, this transcript itself is part of the reproducibility process.
+
+33
+00:02:14,000 --> 00:02:18,000
+We use it to generate a synthetic podcast-style audio sample,
+
+34
+00:02:18,000 --> 00:02:22,000
+then run speech-to-text and export subtitles as SRT.
+
+35
+00:02:22,000 --> 00:02:27,000
+That gives us an end-to-end, fully local validation path
+
+36
+00:02:27,000 --> 00:02:31,000
+for long-form audio generation and subtitle extraction.
+
+37
+00:02:31,000 --> 00:02:35,000
+If you can replay this exact pipeline from Scripps alone,
+
+38
+00:02:35,000 --> 00:02:38,000
+the documentation is doing its job.

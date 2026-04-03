@@ -1,0 +1,33 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Here's a thread-safe C# utility for computing median and percentile values, followed by algorithmic complexity analysis.\n\n```csharp\nusing System;\nusing System.Linq;\nusing System.Threading;\n\npublic static class StatisticsUtils\n{\n    // Thread-safe cache for sorted arrays to avoid repeated sorting\n    private static readonly ReaderWriterLockSlim _lock = new ReaderWriterLockSlim();\n    private static readonly Cache _cache = new Cache();\n\n    public static double Median(double[] data)\n    {\n        if (data == null) throw new ArgumentNullException(nameof(data));\n        if (data.Length == 0) throw new ArgumentException(\"Array cannot be empty.\", nameof(data));\n        \n        return Percentile(data, 50);\n    }\n\n    public static double Percentile(double[] data, double percentile)\n    {\n        if (data == null) throw new ArgumentNullException(nameof(data));\n        if (data.Length == 0) throw new ArgumentException(\"Array cannot be empty.\", nameof(data));\n        if (percentile < 0 || percentile > 100) \n            throw new ArgumentOutOfRangeException(nameof(percentile), \"Percentile must be between 0 and 100.\");\n\n        // Use cache if available (thread-safe)\n        _lock.EnterUpgradeableReadLock();\n        try\n        {\n            if (_cache.TryGetValue(data, out double[] cachedSorted))\n            {\n                return CalculatePercentile(cachedSorted, percentile);\n            }\n        }\n        finally\n        {\n            _lock.ExitUpgradeableReadLock();\n        }\n\n        // Need to sort - use write lock\n        _lock.EnterWriteLock();\n        try\n        {\n            // Double-check after acquiring write lock\n            if (!_cache.TryGetValue(data, out double[] sorted))\n            {\n                sorted = (double[])data.Clone();\n                Array.Sort(sorted);\n                _cache.Add(data, sorted);\n            }\n            return CalculatePercentile(sorted, percentile);\n        }\n        finally\n        {\n            _lock.ExitWriteLock();\n        }\n    }\n\n    private static double CalculatePercentile(double[] sortedData, double percentile)\n    {\n        if (sortedData.Length == 1)\n            return sortedData[0];\n\n        // Use linear interpolation method (default in many statistical packages)\n        double index = (percentile / 100) * (sortedData.Length - 1);\n        int lowerIndex = (int)Math.Floor(index);\n        int upperIndex = (int)Math.Ceiling(index);\n\n        if (lowerIndex == upperIndex)\n            return sortedData[lowerIndex];\n\n        double fraction = index - lowerIndex;\n        return sortedData[lowerIndex] + fraction * (sortedData[upperIndex] - sortedData[lowerIndex]);\n    }\n\n    // Simple cache implementation (in production, consider using ConcurrentDictionary)\n    private class Cache\n    {\n        private readonly System.Collections.Generic.Dictionary<double[], double[]> _cache = \n            new System.Collections.Generic.Dictionary<double[], double[]>(ReferenceEqualityComparer.Instance);\n\n        public bool TryGetValue(double[] key, out double[] value) => \n            _cache.TryGetValue(key, out value);\n\n        public void Add(double[] key, double[] value) => \n            _cache[key] = value;\n    }\n\n    // Custom comparer for reference equality (for caching purposes)\n    private class ReferenceEqualityComparer : System.Collections.Generic.IEqualityComparer<double[]>\n    {\n        public static readonly ReferenceEqualityComparer Instance = new ReferenceEqualityComparer();\n\n        public bool Equals(double[] x, double[] y) => ReferenceEquals(x, y);\n        public int GetHashCode(double[] obj) => RuntimeHelpers.GetHashCode(obj);\n    }\n}\n```\n\n## Algorithmic Complexity Analysis (6 bullet points)\n\n- **Sorting complexity**: The dominant operation is `Array.Sort()`, which uses an optimized quicksort/introspective sort hybrid with *O(n log n)* average and worst-case time complexity for the initial sort operation.\n\n- **Median as special case**: Computing the median (50th percentile) has the same *O(n log n)* complexity as other percentiles because it requires full sorting of the data, despite median-specific algorithms like Quickselect being *O(n)* on average.\n\n- **Cache efficiency**: For repeated calls with the same array reference, subsequent percentile calculations are *O(1)* since they use the pre-sorted cached array, avoiding redundant sorting operations.\n\n- **Memory overhead**: The caching mechanism requires *O(n)* additional space to store sorted copies of input arrays, where *n* is the length of the input array.\n\n- **Percentile calculation**: Once the array is sorted, computing any percentile using linear interpolation is *O(1)* time complexity, involving only a few arithmetic operations and array accesses.\n\n- **Thread safety cost**: The `ReaderWriterLockSlim` introduces *O(1)* overhead for lock acquisition/release, but in high-contention scenarios, threads may experience blocking delays proportional to the number of concurrent operations and lock hold times."
+      }
+    }
+  ],
+  "created": 1771173781,
+  "model": "Qwen3-Coder-Next-Q5_K_M-00001-of-00004.gguf",
+  "system_fingerprint": "b7972-e06088da0",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 987,
+    "prompt_tokens": 49,
+    "total_tokens": 1036
+  },
+  "id": "chatcmpl-xL7tZHSNWxDSwqpCNnFgVIDSivc2seMJ",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 49,
+    "prompt_ms": 507.851,
+    "prompt_per_token_ms": 10.36430612244898,
+    "prompt_per_second": 96.48499264548066,
+    "predicted_n": 987,
+    "predicted_ms": 26399.117,
+    "predicted_per_token_ms": 26.746825734549137,
+    "predicted_per_second": 37.387614138760775
+  }
+}

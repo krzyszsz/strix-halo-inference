@@ -1,0 +1,11 @@
+{
+  "model_id": "mistralai/Voxtral-Mini-3B-2507",
+  "device": "cuda",
+  "dtype": "torch.bfloat16",
+  "input_audio": "audio/out/podcast_kokoro_best_retest.wav",
+  "clip_audio": "audio/out/voxtral_mini_3b_2507_transcript.clip.wav",
+  "clip_seconds": 30.0,
+  "elapsed_seconds": 19.92,
+  "transcript_chars": 386,
+  "out_text": "audio/out/voxtral_mini_3b_2507_transcript.txt"
+}

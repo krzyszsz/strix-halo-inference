@@ -1,0 +1,21 @@
+FROM rocm/pytorch:rocm7.2_ubuntu24.04_py3.12_pytorch_release_2.9.1
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git ca-certificates libgl1 \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN python -m pip install -U pip setuptools wheel
+RUN python -m pip install \
+    "numpy>=1.26,<2" \
+    pillow \
+    huggingface_hub \
+    einops \
+    safetensors \
+    trimesh \
+    matplotlib
+RUN python -m pip install git+https://github.com/facebookresearch/vggt.git
+
+WORKDIR /workspace

@@ -1,0 +1,36 @@
+{
+  "page_selection": {
+    "raw": "<|channel>thought<channel|><channel|>{\"pages\":[{\"title\":\"Mona Lisa\",\"url\":\"https://en.wikipedia.org/wiki/Mona_Lisa\"},{\"title\":\"The Starry Night\",\"url\":\"https://en.wikipedia.org/wiki/The_Starry_Night\"},{\"title\":\"The Persistence of Memory\",\"url\":\"https://en.wikipedia.org/wiki/The_Persistence_of_Memory\"},{\"title\":\"Girl with a Pearl Earring\",\"url\":\"https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring\"}]}",
+    "parsed": {
+      "pages": [
+        {
+          "title": "Mona Lisa",
+          "url": "https://en.wikipedia.org/wiki/Mona_Lisa"
+        },
+        {
+          "title": "The Starry Night",
+          "url": "https://en.wikipedia.org/wiki/The_Starry_Night"
+        },
+        {
+          "title": "The Persistence of Memory",
+          "url": "https://en.wikipedia.org/wiki/The_Persistence_of_Memory"
+        },
+        {
+          "title": "Girl with a Pearl Earring",
+          "url": "https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring"
+        }
+      ]
+    }
+  },
+  "resize_plan": {
+    "raw": "<|channel>thought<channel|><channel|>{\"tool\":\"run_shell\",\"args\":{\"operation\":\"resize_images\",\"max_side\":1024,\"timeout\":900}}",
+    "parsed": {
+      "tool": "run_shell",
+      "args": {
+        "operation": "resize_images",
+        "max_side": 1024,
+        "timeout": 900
+      }
+    }
+  }
+}

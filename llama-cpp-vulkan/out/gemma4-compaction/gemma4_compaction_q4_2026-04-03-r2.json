@@ -1,0 +1,97 @@
+{
+  "ts_utc": "2026-04-03T02:26:59Z",
+  "api_base": "http://127.0.0.1:8152/v1",
+  "model": "local-gguf",
+  "scenarios": [
+    {
+      "scenario": "coding_long_history",
+      "brief": "Long coding coordination history with many constraints.",
+      "baseline": {
+        "latency_s": 10.109,
+        "prompt_chars": 1543,
+        "prompt_tokens_est": 339,
+        "response": "<|channel>thought<channel|>### Implementation Plan: Deterministic Genetic Optimizer (C#)\n\n**Objective:** Develop a high-performance, thread-safe, and reproducible genetic algorithm (GA) optimized for minimizing the Rosenbrock function in 20 dimensions.\n\n#### 1. Core Architecture\n*   **Engine:** Implement a GA loop using a fixed-seed `System.Random` (or a custom Xorshift) to ensure bit-for-bit reproducibility.\n*   **Concurrency:** Use `Parallel.ForEach` with `MaxDegreeOfParallelism` to evaluate fitness.\n*   **State Management:** Use `Interlocked.CompareExchange` to update the global best individual and score without heavy locking.\n*   **Constraints:** Implement `CancellationToken` support and a `MaxGenerations` exit condition.\n\n#### 2. Feature Modules\n*   **Optimization Logic:** Implement selection, crossover, and mutation operators optimized for `double[]` chromosomes.\n*   **Persistence:** A JSON-based checkpoint system including schema versioning to save/load population state and best-found solutions.\n*   **Benchmarking:** A dedicated fixture targeting the 20D Rosenbrock function with a strict execution timeout.\n*   **Observability:** Structured logging of generation metrics (best fitness, average fitness, convergence rate).\n\n#### 3. Technical Documentation\n*   **Complexity Analysis:** Document $O(G \\cdot P \\cdot D)$ time complexity (Generations, Population, Dimensions).\n*   **Memory Profile:** Document $O(P \\cdot D)$ space complexity and allocation behavior during mutation.\n\n---\n\n### Acceptance Criteria\n\n| Category | Requirement |\n| :--- | :--- |\n| **Determinism** | Identical `seed` input must produce identical `double[]` results across multiple runs. |\n| **Thread-Safety** | Global best score updates must be atomic and free of race conditions using lock-free primitives. |\n| **Execution Control** | Algorithm must terminate gracefully via `CancellationToken` or upon reaching `MaxGenerations`. |\n| **Persistence** | Checkpoint files must be successfully saved to and loaded from JSON, maintaining full state parity. |\n| **Performance** | Fitness evaluations must utilize parallel workers with a bounded degree of parallelism. |\n| **Validation** | **Unit Tests must pass for:** <br>1. Seed-driven reproducibility.<br>2. Checkpoint roundtrip (Save $\\rightarrow$ Load $\\",
+        "keyword_eval": {
+          "score": 1.0,
+          "found": [
+            "seed",
+            "thread",
+            "generation",
+            "checkpoint",
+            "test"
+          ],
+          "missing": []
+        }
+      },
+      "compact": {
+        "latency_s": 9.746,
+        "prompt_chars": 1096,
+        "prompt_tokens_est": 243,
+        "response": "<|channel>thought\n<channel|>### Implementation Plan: Deterministic Evolutionary Optimizer\n\n**Objective:** Implement a robust, thread-safe evolutionary algorithm with deterministic reproducibility, checkpointing capabilities, and high-performance parallel execution.\n\n#### 1. Core Architecture\n*   **Engine:** Parallelized Genetic Algorithm (GA) using `Parallel.ForEach` with `MaxDegreeOfParallelism` control.\n*   **Randomness:** Global `Random` instance initialized via a mandatory `int seed` parameter to ensure 100% deterministic trajectories across runs.\n*   **Concurrency:** \n    *   Use `Interlocked.CompareExchange` for updating the global \"Best Individual\" to avoid heavy locking.\n    *   Implement `CancellationToken` support for graceful mid-generation termination.\n*   **Population Management:** Fixed small-scale configuration (Pop: 48, Elite: 6) to ensure low-overhead execution on local/single-core environments.\n\n#### 2. Features & Constraints\n*   **Termination Logic:** Hard cap on `MaxGenerations` and `TimeSpan` timeout.\n*   **Persistence:** \n    *   JSON-based checkpointing system.\n    *   Must include: `Seed`, `CurrentGeneration`, `BestFitness`, `BestGenome`, and `SchemaVersion`.\n    *   Must support \"Roundtrip Integrity\" (Loading a checkpoint must yield identical results when resumed).\n*   **Logging:** Structured generation logs (Generation #, Best Fitness, Time Elapsed).\n\n#### 3. Technical Specifications\n*   **Complexity:** \n    *   Time: $O(\\text{Generations} \\times \\text{Population} \\times \\text{FitnessEvalCost})$.\n    *   Space: $O(\\text{Population} \\times \\text{GenomeDimension})$.\n*   **Memory Management:** Minimize allocations within the generation loop; reuse genome buffers where possible to reduce GC pressure.\n\n#### 4. Acceptance Criteria (AC)\n| ID | Requirement | Verification Method |\n| :--- | :--- | :--- |\n| **AC-1** | **Determinism** | Two runs with identical `seed` must produce identical `BestFitness` and `BestGenome` at `MaxGenerations`. |\n| **AC-2** | **Thread-Safety** | Stress test with high `MaxDegreeOfParallelism` to ensure no race conditions in best-score updates. |\n| **AC-",
+        "keyword_eval": {
+          "score": 1.0,
+          "found": [
+            "seed",
+            "thread",
+            "generation",
+            "checkpoint",
+            "test"
+          ],
+          "missing": []
+        },
+        "memory_blocks_chars": 483,
+        "recent_turn_count": 4
+      },
+      "reduction": {
+        "prompt_chars_reduction_pct": 28.97,
+        "prompt_tokens_reduction_pct": 28.32
+      }
+    },
+    {
+      "scenario": "reasoning_long_history",
+      "brief": "Long non-coding planning/problem-solving history.",
+      "baseline": {
+        "latency_s": 9.913,
+        "prompt_chars": 1327,
+        "prompt_tokens_est": 311,
+        "response": "<|channel>thought<channel|>### 30-Day Migration Action Plan: Cloud to Local AI Workstation\n\n**Objective:** Transition workloads to local infrastructure while ensuring data security, system stability, and developer productivity.\n\n---\n\n#### **Phase 1: Foundation & Security (Days 1\u20137)**\n*Focus: Data safety and infrastructure setup.*\n*   **Data Isolation Protocol:** Implement local-only storage zones. Establish redaction workflows for any metadata that must be reviewed externally.\n*   **Environment Standardization:** Deploy Docker-based environments to mitigate GPU driver inconsistencies.\n*   **Auditability Setup:** Implement a version-control system for models and configurations. Every deployment must be tagged with a unique hash, Docker tag, and config snapshot.\n*   **Inventory Completion:** Finalize the list of workloads to be migrated, categorized by sensitivity and resource requirements.\n\n#### **Phase 2: Stability & Resilience (Days 8\u201315)**\n*Focus: Fallback strategies and crash management.*\n*   **Watchdog Implementation:** Deploy a monitoring harness to detect GPU hangs and driver failures.\n*   **Crash Runbook Development:**\n    *   **Triage Flow:** Step-by-step guide for identifying deadlocks vs. driver crashes.\n    *   **Recovery Scripts:** Automated restart scripts and log-collection utilities.\n*   **Fallback Paths:** Define \"Safe Mode\" execution paths (e.g., reduced precision or CPU-only) for when GPU drivers fail.\n\n#### **Phase 3: Developer Enablement (Days 16\u201322)**\n*Focus: Onboarding and operational continuity.*\n*   **One-Command Harness:** Create a simplified CLI or script to pull environments and run baseline inference tests.\n*   **Documentation & Examples:** Publish a library of \"Golden Examples\" (working notebooks) to serve as templates for new developers.\n*   **Failure Tracking System:** Launch the Weekly Summary Template. Every failure must be logged with: *Root Cause, Mitigation, and Owner.*\n\n#### **Phase 4: Optimization & Validation (Days 23\u201330)**\n*Focus: Performance tuning and KPI measurement.*\n*   **Inference Optimization:** Refine local models to prioritize inference quality and reproducibility over raw training speed.\n*   **KPI Audit:** Evaluate the first 30 days against the following success metrics:\n    *   **Crash Rate:** Frequency of GPU/driver-related failures.\n    *   **R",
+        "keyword_eval": {
+          "score": 1.0,
+          "found": [
+            "data",
+            "fallback",
+            "runbook",
+            "audit",
+            "onboarding",
+            "kpi"
+          ],
+          "missing": []
+        }
+      },
+      "compact": {
+        "latency_s": 9.077,
+        "prompt_chars": 1098,
+        "prompt_tokens_est": 265,
+        "response": "<|channel>thought\n<channel|>### 30-Day Implementation Plan\n\n**Objective:** Establish a stable, secure, and auditable development environment with automated recovery and low-friction onboarding.\n\n#### **Phase 1: Foundation & Data Security (Days 1\u201310)**\n*Focus: Establishing the \"Local-First\" constraint and security protocols.*\n*   **Security Lockdown:** Implement automated redaction scripts for all logs and telemetry to ensure no sensitive data leaves the local network.\n*   **Auditability Setup:** Deploy a centralized logging system that captures configuration snapshots, Docker tags, and data hashes for every run.\n*   **Onboarding Launch:** Release the \"One-Command Harness\" (e.g., `make setup` or `docker-compose up`) and a library of minimal, functional examples to minimize developer friction.\n\n#### **Phase 2: Resilience & Recovery (Days 11\u201320)**\n*Focus: Mitigating GPU instability and implementing automated fallback.*\n*   **Watchdog Deployment:** Implement a watchdog harness to monitor GPU driver health and automatically trigger restart scripts upon detection of hangs or crashes.\n*   **Fallback Logic:** Program automated fallback paths (e.g., switching to CPU or lower-precision models) when hardware-specific errors are detected.\n*   **Runbook Creation:** Finalize the \"Crash & Deadlock Runbook,\" documenting specific triage steps for common failure modes identified in the watchdog logs.\n\n#### **Phase 3: Optimization & Measurement (Days 21\u201330)**\n*Focus: Refining performance and establishing long-term KPIs.*\n*   **KPI Dashboard Implementation:** Deploy a monitoring dashboard to track the following 30-day success metrics:\n    *   **Crash Rate:** Frequency of hardware/driver-related failures.\n    *   **Rerun Success Rate:** Percentage of automated watchdog restarts that result in a completed task.\n    *   **Response Latency:** Inference speed stability.\n*   **Audit Review:** Conduct the first weekly \"Failure/Fix Summary\" review (Root Cause $\\rightarrow$ Mitigation $\\rightarrow$ Owner) to refine the triage process.\n*   **Final Review:** Validate that all new developers can successfully run the harness without manual configuration.",
+        "keyword_eval": {
+          "score": 1.0,
+          "found": [
+            "data",
+            "fallback",
+            "runbook",
+            "audit",
+            "onboarding",
+            "kpi"
+          ],
+          "missing": []
+        },
+        "memory_blocks_chars": 570,
+        "recent_turn_count": 4
+      },
+      "reduction": {
+        "prompt_chars_reduction_pct": 17.26,
+        "prompt_tokens_reduction_pct": 14.79
+      }
+    }
+  ]
+}

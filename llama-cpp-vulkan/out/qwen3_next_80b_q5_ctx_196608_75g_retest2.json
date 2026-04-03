@@ -1,0 +1,33 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "- **Use fixed hardware & environment**: Lock CPU/GPU model, RAM, OS, driver, and CUDA/cuDNN versions to eliminate hardware/software variance.\n\n- **Pin exact software versions**: Freeze LLM framework (e.g., vLLM, TGI), Python, and dependencies via `requirements.txt` or `conda-env.yml`.\n\n- **Seed all randomness**: Set Python, NumPy, PyTorch, and framework-specific random seeds (e.g., `seed=42`) for deterministic token generation.\n\n- **Use identical input prompts**: Predefine a fixed, representative prompt set (e.g., 100 prompts) and hash it for verification across runs.\n\n- **Disable caching & optimizations**: Turn off KV cache reuse, speculative decoding, and dynamic batching unless explicitly testing them.\n\n- **Measure end-to-end latency per request**: Record time from input receipt to final token output (not just token generation speed), averaged over 100+ inferences.\n\n- **Monitor system resources**: Log CPU/GPU utilization, memory usage, and power during benchmarking to detect throttling or interference.\n\n- **Repeat and validate**: Run 3+ identical trials; use statistical measures (mean, std dev) and verify results are within <5% variance across runs."
+      }
+    }
+  ],
+  "created": 1771173641,
+  "model": "Qwen3-Next-80B-A3B-Instruct-Q5_K_M.gguf",
+  "system_fingerprint": "b7972-e06088da0",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 260,
+    "prompt_tokens": 43,
+    "total_tokens": 303
+  },
+  "id": "chatcmpl-1cT69RSx7TSwxGAzND1dWtgcguGltVXS",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 43,
+    "prompt_ms": 486.247,
+    "prompt_per_token_ms": 11.30806976744186,
+    "prompt_per_second": 88.43242220517556,
+    "predicted_n": 260,
+    "predicted_ms": 6782.934,
+    "predicted_per_token_ms": 26.088207692307694,
+    "predicted_per_second": 38.3314948958666
+  }
+}
