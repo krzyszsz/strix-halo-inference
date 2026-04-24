@@ -41,6 +41,7 @@ READY_SLEEP_SECS="${READY_SLEEP_SECS:-5}"
 READY_LOG_EVERY="${READY_LOG_EVERY:-6}"
 REQUEST_HEARTBEAT_SECS="${REQUEST_HEARTBEAT_SECS:-30}"
 EXTRA_ARGS="${EXTRA_ARGS:-}"
+USE_DRI="${USE_DRI:-1}"
 
 mkdir -p "$(dirname "$OUT_JSON")"
 
@@ -72,6 +73,11 @@ payload = {
 print(json.dumps(payload))
 PY
 
+DOCKER_DEVICE_ARGS=()
+if [ "$USE_DRI" = "1" ]; then
+  DOCKER_DEVICE_ARGS+=(--device=/dev/dri)
+fi
+
 docker rm -f "$CONTAINER" >/dev/null 2>&1 || true
 log "Starting container=${CONTAINER} ctx=${CTX_SIZE} max_tokens=${MAX_TOKENS} mem=${MEM_LIMIT} swap=${MEMORY_SWAP} reservation=${MEM_RESERVATION}"
 cid="$(docker run -d --name "$CONTAINER" \
@@ -79,7 +85,7 @@ cid="$(docker run -d --name "$CONTAINER" \
   --memory-swap="$MEMORY_SWAP" \
   --memory-reservation="$MEM_RESERVATION" \
   --oom-score-adj="$OOM_SCORE_ADJ" \
-  --device=/dev/dri \
+  "${DOCKER_DEVICE_ARGS[@]}" \
   --security-opt label=disable \
   --ipc=host --network=host \
   -v "$HF_ROOT:$HF_ROOT" \

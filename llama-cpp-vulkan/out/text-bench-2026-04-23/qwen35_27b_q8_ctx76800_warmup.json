@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n</think>\n\n1. **Fix Environment**: Freeze all dependencies (Python, vLL"
+      }
+    }
+  ],
+  "created": 1776991939,
+  "model": "Qwen3.5-27B-Q8_0.gguf",
+  "system_fingerprint": "b8642-7c7d6ce5c",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 44,
+    "total_tokens": 60,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-A9mWCsha5f2GOyxSZDTpPH53lzZpu6DZ",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 44,
+    "prompt_ms": 636.317,
+    "prompt_per_token_ms": 14.46175,
+    "prompt_per_second": 69.14792469791,
+    "predicted_n": 16,
+    "predicted_ms": 1954.046,
+    "predicted_per_token_ms": 122.127875,
+    "predicted_per_second": 8.18813886674111
+  }
+}

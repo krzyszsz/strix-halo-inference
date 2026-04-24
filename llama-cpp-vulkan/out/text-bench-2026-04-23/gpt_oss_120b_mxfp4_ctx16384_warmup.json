@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<|channel|>analysis<|message|>The user wants an explanation of how to benchmark a local LLM"
+      }
+    }
+  ],
+  "created": 1777004810,
+  "model": "gpt-oss-120b-mxfp4-00001-of-00003.gguf",
+  "system_fingerprint": "b8642-7c7d6ce5c",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 102,
+    "total_tokens": 118,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-9J4FwNNcHJEilWCh9qkmv2HINlRFGoYn",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 102,
+    "prompt_ms": 994.369,
+    "prompt_per_token_ms": 9.74871568627451,
+    "prompt_per_second": 102.57761454751707,
+    "predicted_n": 16,
+    "predicted_ms": 294.507,
+    "predicted_per_token_ms": 18.4066875,
+    "predicted_per_second": 54.32808048705124
+  }
+}

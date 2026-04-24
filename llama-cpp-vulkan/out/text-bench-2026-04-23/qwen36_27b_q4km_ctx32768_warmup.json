@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n</think>\n\nHere are 8 concise bullet points for reproducibly benchmarking a local"
+      }
+    }
+  ],
+  "created": 1776985608,
+  "model": "Qwen-Qwen3.6-27B-Q4_K_M.gguf",
+  "system_fingerprint": "b8642-7c7d6ce5c",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 44,
+    "total_tokens": 60,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-dwAHpCmaPxUzMxM4XhBUmrY2yNcVCuBg",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 44,
+    "prompt_ms": 516.839,
+    "prompt_per_token_ms": 11.746340909090911,
+    "prompt_per_second": 85.13289438297032,
+    "predicted_n": 16,
+    "predicted_ms": 1216.089,
+    "predicted_per_token_ms": 76.0055625,
+    "predicted_per_second": 13.156931770618764
+  }
+}

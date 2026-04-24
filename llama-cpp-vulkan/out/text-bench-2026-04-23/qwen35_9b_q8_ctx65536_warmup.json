@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n</think>\n\n*   **Isolate Environment:** Use a clean Docker container or virtual"
+      }
+    }
+  ],
+  "created": 1776989090,
+  "model": "Qwen3.5-9B-Q8_0.gguf",
+  "system_fingerprint": "b8642-7c7d6ce5c",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 44,
+    "total_tokens": 60,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-kWNaAHwExZSjOORnHhiqQPqkX66zFTmJ",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 44,
+    "prompt_ms": 208.57,
+    "prompt_per_token_ms": 4.740227272727273,
+    "prompt_per_second": 210.9603490434866,
+    "predicted_n": 16,
+    "predicted_ms": 621.625,
+    "predicted_per_token_ms": 38.8515625,
+    "predicted_per_second": 25.73899054896441
+  }
+}

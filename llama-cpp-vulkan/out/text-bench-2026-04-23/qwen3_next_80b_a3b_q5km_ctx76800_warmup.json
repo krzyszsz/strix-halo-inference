@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "- **Use identical hardware and OS**: Benchmark on the same machine with fixed CPU"
+      }
+    }
+  ],
+  "created": 1776997090,
+  "model": "Qwen3-Next-80B-A3B-Instruct-Q5_K_M.gguf",
+  "system_fingerprint": "b8642-7c7d6ce5c",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 43,
+    "total_tokens": 59,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-dBp9zBzeekx1W02oD1wmNoVxwFwKCnvs",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 43,
+    "prompt_ms": 519.019,
+    "prompt_per_token_ms": 12.070209302325582,
+    "prompt_per_second": 82.8486047716943,
+    "predicted_n": 16,
+    "predicted_ms": 322.729,
+    "predicted_per_token_ms": 20.1705625,
+    "predicted_per_second": 49.5771994459748
+  }
+}

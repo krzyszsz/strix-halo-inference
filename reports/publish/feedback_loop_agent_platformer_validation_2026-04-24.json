@@ -1,0 +1,58 @@
+{
+  "url": "http://127.0.0.1:41265/index.html",
+  "initial": {
+    "player": {
+      "x": 98,
+      "y": 66
+    },
+    "savepointActivated": false,
+    "savepoints": [
+      {
+        "id": "savepoint-0",
+        "x": 258,
+        "y": 66
+      }
+    ],
+    "actors": {
+      "total": 2,
+      "friend": 1,
+      "enemy": 1,
+      "labels": [
+        "enemy: patrol",
+        "friend: checkpoint hint"
+      ]
+    },
+    "message": "ready"
+  },
+  "final": {
+    "player": {
+      "x": 626,
+      "y": 66
+    },
+    "savepointActivated": true,
+    "savepoints": [
+      {
+        "id": "savepoint-0",
+        "x": 258,
+        "y": 66
+      }
+    ],
+    "actors": {
+      "total": 2,
+      "friend": 1,
+      "enemy": 1,
+      "labels": [
+        "enemy: patrol",
+        "friend: checkpoint hint"
+      ]
+    },
+    "message": "savepoint:savepoint-0"
+  },
+  "player_moved_right": true,
+  "savepoint_activated": true,
+  "has_friend": true,
+  "has_enemy": true,
+  "screenshot_initial": "/workspace/project/out/playwright/platformer_initial.png",
+  "screenshot_final": "/workspace/project/out/playwright/platformer_final.png",
+  "vl_review_hint": "Screenshot should show blue player, cyan/green savepoint, red enemy, green NPC friend, gold goal, and HUD text."
+}

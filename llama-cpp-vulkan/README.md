@@ -91,6 +91,14 @@ CTX_SIZE=2048 GPU_LAYERS=999 THREADS=8 \
   $REPO_ROOT/llama-cpp-vulkan/scripts/run_server.sh
 ```
 
+Download Qwen3.6-27B (`Q4_K_M` + `mmproj`) and run the VLM task suite:
+
+```bash
+$REPO_ROOT/llama-cpp-vulkan/scripts/download_qwen36_27b_gguf.sh
+$REPO_ROOT/scripts/run_memsafe.sh \
+  bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_qwen36_vlm_task_suite.sh
+```
+
 Fallback coder (Qwen2.5-Coder 32B, Q4_K_M):
 
 ```bash
@@ -102,9 +110,11 @@ Run Qwen2.5-Coder 32B:
 ```bash
 PORT=8004 \
 MODEL=$MODEL_ROOT/qwen2.5-coder-32b-instruct-gguf/qwen2.5-coder-32b-instruct-q4_k_m.gguf \
-CTX_SIZE=2048 GPU_LAYERS=999 THREADS=8 \
+CTX_SIZE=2048 GPU_LAYERS=0 USE_DRI=0 THREADS=8 \
   $REPO_ROOT/llama-cpp-vulkan/scripts/run_server.sh
 ```
+
+Note: a full-Vulkan benchmark warmup for Qwen2.5-Coder-32B (`GPU_LAYERS=999`) triggered an AMDGPU reset failure on this kernel/profile. The root README keeps the diagnosis and uses CPU/no-DRI fallback for the benchmark row.
 
 OpenAI-style chat example:
 
@@ -122,6 +132,8 @@ curl -s http://127.0.0.1:8003/v1/chat/completions \
 Saved test outputs (publish-day rerun artifacts):
 - `$REPO_ROOT/llama-cpp-vulkan/out/qwen3_next_80b_q5_ctx_196608_75g_retest2.json`
 - `$REPO_ROOT/llama-cpp-vulkan/out/qwen3_coder_next_q5_ctx_196608_75g_retest2.json`
+- `$REPO_ROOT/llama-cpp-vulkan/out/qwen36-task-suite/`
+- `$REPO_ROOT/llama-cpp-vulkan/out/text-bench-2026-04-23/`
 - `$REPO_ROOT/llama-cpp-vulkan/out/qwen25_coder_32b_q4_ctx_131072_75g_retest2.json`
 - `$REPO_ROOT/llama-cpp-vulkan/out/gpt_oss_120b_mxfp4_ctx_131072_75g_retest2.json`
 
@@ -153,7 +165,10 @@ For Qwen2.5-Coder GGUF, no explicit sampling defaults are listed in the model ca
 - `scripts/download_qwen3_32b_q6.sh`: download Qwen3-32B GGUF (Q6_K).
 - `scripts/download_qwen3_coder_30b_q8.sh`: download Qwen3-Coder-30B GGUF (Q8_0).
 - `scripts/download_qwen25_coder_32b.sh`: download Qwen2.5-Coder 32B GGUF (Q4_K_M).
+- `scripts/download_qwen36_27b_gguf.sh`: download Qwen3.6-27B GGUF (`Q4_K_M`) + `mmproj`, then verify SHA256 via HF metadata.
 - `scripts/download_qwen35_vlm_quant_bundle.sh`: download requested Qwen3.5 quantized VLM bundle (`9B Q8_0`, `27B Q8_0`, `122B-A10B Q4_K_M`) + verify SHA256 via HF metadata. This flow downloads pre-quantized GGUF files (no local conversion).
+- `scripts/run_qwen36_vlm_task_suite.sh`: run Qwen3.6 image-description, summarization, and coding tasks.
+- `scripts/run_text_model_benchmark_matrix.sh`: resumable long-context coding/summarization speed matrix.
 - `scripts/test_qwen3_next_80b.sh`: start server, query chat, save output JSON.
 - `scripts/test_qwen3_coder_next_q5.sh`: start server, query coder prompt, save output JSON.
 - `scripts/test_qwen3_32b_q6.sh`: start server, query general prompt, save output JSON.

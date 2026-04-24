@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n</think>\n\nHere are 8 concise bullet points for reproducible local LLM benchmark"
+      }
+    }
+  ],
+  "created": 1776986012,
+  "model": "Qwen-Qwen3.6-27B-Q4_K_M.gguf",
+  "system_fingerprint": "b8642-7c7d6ce5c",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 44,
+    "total_tokens": 60,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-WQGKHBHeTWfCytRnqKXN6DbCQTuQaNFs",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 44,
+    "prompt_ms": 508.059,
+    "prompt_per_token_ms": 11.546795454545455,
+    "prompt_per_second": 86.60411487642183,
+    "predicted_n": 16,
+    "predicted_ms": 1210.005,
+    "predicted_per_token_ms": 75.6253125,
+    "predicted_per_second": 13.223085855017127
+  }
+}

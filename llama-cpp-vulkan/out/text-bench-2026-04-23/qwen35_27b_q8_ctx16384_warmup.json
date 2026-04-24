@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n</think>\n\n*   **Fix Random Seeds:** Set `seed` parameters in both"
+      }
+    }
+  ],
+  "created": 1776989733,
+  "model": "Qwen3.5-27B-Q8_0.gguf",
+  "system_fingerprint": "b8642-7c7d6ce5c",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 44,
+    "total_tokens": 60,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-JsWf0yBaOXgTFbqqwbC6BDdJekRrc4B2",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 44,
+    "prompt_ms": 703.315,
+    "prompt_per_token_ms": 15.98443181818182,
+    "prompt_per_second": 62.56087243980292,
+    "predicted_n": 16,
+    "predicted_ms": 1960.881,
+    "predicted_per_token_ms": 122.5550625,
+    "predicted_per_second": 8.159597650239867
+  }
+}

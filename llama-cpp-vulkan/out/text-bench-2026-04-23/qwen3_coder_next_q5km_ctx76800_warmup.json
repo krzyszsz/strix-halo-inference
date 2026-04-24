@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "- **Freeze environment**: Pin software versions (e.g., `transformers"
+      }
+    }
+  ],
+  "created": 1776998685,
+  "model": "Qwen3-Coder-Next-Q5_K_M-00001-of-00004.gguf",
+  "system_fingerprint": "b8642-7c7d6ce5c",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 43,
+    "total_tokens": 59,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-cZ7fwNWk4VqHXpFQSh0BEYWFFM6o8Tct",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 43,
+    "prompt_ms": 513.514,
+    "prompt_per_token_ms": 11.942186046511628,
+    "prompt_per_second": 83.73676277569842,
+    "predicted_n": 16,
+    "predicted_ms": 319.594,
+    "predicted_per_token_ms": 19.974625,
+    "predicted_per_second": 50.06351808857488
+  }
+}

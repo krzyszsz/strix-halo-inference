@@ -22,13 +22,25 @@ MEM_LIMIT="${MEM_LIMIT:-75g}"
 MEMORY_SWAP="${MEMORY_SWAP:-75g}"
 MEM_RESERVATION="${MEM_RESERVATION:-67g}"
 OOM_SCORE_ADJ="${OOM_SCORE_ADJ:-500}"
+EXTRA_ARGS="${EXTRA_ARGS:-}"
+USE_DRI="${USE_DRI:-1}"
 
-exec docker run --rm -it \
+DOCKER_DEVICE_ARGS=()
+if [ "$USE_DRI" = "1" ]; then
+  DOCKER_DEVICE_ARGS+=(--device=/dev/dri)
+fi
+
+DOCKER_TTY_ARGS=()
+if [ -t 0 ]; then
+  DOCKER_TTY_ARGS=(-it)
+fi
+
+exec docker run --rm "${DOCKER_TTY_ARGS[@]}" \
   --memory="$MEM_LIMIT" \
   --memory-swap="$MEMORY_SWAP" \
   --memory-reservation="$MEM_RESERVATION" \
   --oom-score-adj="$OOM_SCORE_ADJ" \
-  --device=/dev/dri \
+  "${DOCKER_DEVICE_ARGS[@]}" \
   --security-opt label=disable \
   --ipc=host --network=host \
   -v "$HF_ROOT:$HF_ROOT" \
@@ -37,4 +49,5 @@ exec docker run --rm -it \
   -e CTX_SIZE="$CTX_SIZE" \
   -e GPU_LAYERS="$GPU_LAYERS" \
   -e THREADS="$THREADS" \
+  -e EXTRA_ARGS="$EXTRA_ARGS" \
   llama-cpp-vulkan:latest

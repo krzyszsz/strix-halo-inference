@@ -1,0 +1,10 @@
+[
+  {
+    "repo_id": "batiai/Qwen3.6-27B-GGUF",
+    "status": "ok",
+    "ok": 2,
+    "missing": 0,
+    "mismatched": 0,
+    "skipped": 6
+  }
+]

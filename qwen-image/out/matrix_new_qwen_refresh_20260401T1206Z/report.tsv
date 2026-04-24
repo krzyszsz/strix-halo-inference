@@ -1,4 +1,0 @@
-case	width	height	steps	status	elapsed_seconds	output_path
-tiny_256_s4	256	256	4	ok	60	$REPO_ROOT/qwen-image/out/matrix_new_qwen_refresh_20260401T1206Z/tiny_256_s4.png
-small_384_s8	384	384	8	ok	360	$REPO_ROOT/qwen-image/out/matrix_new_qwen_refresh_20260401T1206Z/small_384_s8.png
-medium_512_s12	512	512	12	ok	310	$REPO_ROOT/qwen-image/out/matrix_new_qwen_refresh_20260401T1206Z/medium_512_s12.png

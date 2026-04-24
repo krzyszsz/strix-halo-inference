@@ -1,0 +1,94 @@
+Qwen2.5-Coder-32B full-Vulkan freeze diagnosis
+Date: 2026-04-24
+
+Summary:
+- The system freeze occurred during the text benchmark warmup for qwen25_coder_32b_q4km at ctx=16384, GPU_LAYERS=999.
+- Container memory projection was well below the Docker limit, so this does not look like ordinary userspace OOM.
+- Previous-boot kernel logs show AMDGPU SMU stalls, GFX ring timeout, failed MES reset, and GPU reset failure.
+- Decision: do not retry this exact full-Vulkan path in the benchmark matrix; use GPU_LAYERS=0 and USE_DRI=0 CPU fallback for Qwen2.5-Coder-32B.
+
+Relevant previous-boot kernel lines:
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: SE 2, SH per SE 2, CU per SH 10, active_cu_number 40
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring comp_1.2.0 uses VM inv eng 6 on hub 0
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring comp_1.3.0 uses VM inv eng 7 on hub 0
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring comp_1.0.1 uses VM inv eng 8 on hub 0
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring comp_1.1.1 uses VM inv eng 9 on hub 0
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring comp_1.2.1 uses VM inv eng 10 on hub 0
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring comp_1.3.1 uses VM inv eng 11 on hub 0
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring sdma0 uses VM inv eng 12 on hub 0
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring vcn_unified_1 uses VM inv eng 1 on hub 8
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring jpeg_dec_0 uses VM inv eng 4 on hub 8
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring jpeg_dec_1 uses VM inv eng 6 on hub 8
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring mes_kiq_3.1.0 uses VM inv eng 13 on hub 0
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring vpe uses VM inv eng 7 on hub 8
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Runtime PM not available
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: [drm] Registered 4 planes with drm panic
+Apr 23 22:19:19 fedora kernel: [drm] Initialized amdgpu 3.64.0 for 0000:c6:00.0 on minor 1
+Apr 23 22:19:19 fedora kernel: fbcon: amdgpudrmfb (fb0) is primary device
+Apr 23 22:19:19 fedora kernel: amdgpu 0000:c6:00.0: [drm] fb0: amdgpudrmfb frame buffer device
+Apr 23 22:19:20 fedora systemd[1]: Reached target cryptsetup.target - Local Encrypted Volumes.
+Apr 23 22:19:20 fedora systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+Apr 23 22:19:20 fedora systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+Apr 23 22:19:20 fedora systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+Apr 23 22:19:20 fedora systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+Apr 23 22:19:20 fedora systemd-journald[847]: Collecting audit messages is enabled.
+Apr 23 22:19:20 fedora kernel: r8169 0000:c1:00.0 eth0: jumbo features [frames: 16362 bytes, tx checksumming: ko]
+Apr 23 22:19:20 fedora kernel: snd_hda_intel 0000:c6:00.1: bound 0000:c6:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+Apr 24 02:25:25 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: SMU: I'm not done with your previous command: SMN_C2PMSG_66:0x00000032 SMN_C2PMSG_82:0x00000000
+Apr 24 02:25:25 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Failed to power gate VPE!
+Apr 24 02:25:25 fedora kernel: [drm:vpe_set_powergating_state [amdgpu]] *ERROR* Dpm disable vpe failed, ret = -62.
+Apr 24 02:25:30 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: SMU: I'm not done with your previous command: SMN_C2PMSG_66:0x00000032 SMN_C2PMSG_82:0x00000000
+Apr 24 02:25:30 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Failed to power gate VCN instance 0!
+Apr 24 02:25:30 fedora kernel: [drm:vcn_v4_0_5_stop [amdgpu]] *ERROR* Dpm disable uvd failed, ret = -62. 
+Apr 24 02:25:31 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Dumping IP State
+Apr 24 02:25:36 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: SMU: I'm not done with your previous command: SMN_C2PMSG_66:0x00000032 SMN_C2PMSG_82:0x00000000
+Apr 24 02:25:36 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Failed to disable gfxoff!
+Apr 24 02:25:41 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: SMU: I'm not done with your previous command: SMN_C2PMSG_66:0x00000032 SMN_C2PMSG_82:0x00000000
+Apr 24 02:25:41 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Failed to disable gfxoff!
+Apr 24 02:25:46 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: SMU: I'm not done with your previous command: SMN_C2PMSG_66:0x00000032 SMN_C2PMSG_82:0x00000000
+Apr 24 02:25:46 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Failed to disable gfxoff!
+Apr 24 02:25:51 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: SMU: I'm not done with your previous command: SMN_C2PMSG_66:0x00000032 SMN_C2PMSG_82:0x00000000
+Apr 24 02:25:51 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Failed to disable gfxoff!
+Apr 24 02:25:51 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Dumping IP State Completed
+Apr 24 02:25:51 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: [drm] AMDGPU device coredump file has been created
+Apr 24 02:25:51 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: [drm] Check your /sys/class/drm/card1/device/devcoredump/data
+Apr 24 02:25:51 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: ring gfx_0.0.0 timeout, signaled seq=994677, emitted seq=994679
+Apr 24 02:25:51 fedora kernel: amdgpu 0000:c6:00.0: amdgpu:  Process ptyxis pid 7266 thread ptyxis pid 7266
+Apr 24 02:25:51 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Starting gfx_0.0.0 ring reset
+Apr 24 02:25:54 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: MES failed to respond to msg=RESET
+Apr 24 02:25:54 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: failed to reset legacy queue
+Apr 24 02:25:54 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: reset via MES failed and try pipe reset -110
+Apr 24 02:25:54 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: The CPFW hasn't support pipe reset yet.
+Apr 24 02:25:54 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Ring gfx_0.0.0 reset failed
+Apr 24 02:25:54 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: GPU reset begin!. Source:  1
+Apr 24 02:25:59 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: SMU: I'm not done with your previous command: SMN_C2PMSG_66:0x00000032 SMN_C2PMSG_82:0x00000000
+Apr 24 02:25:59 fedora kernel: amdgpu 0000:c6:00.0: amdgpu: Failed to disable gfxoff!
+Apr 24 02:26:23 fedora kernel: WARNING: CPU: 4 PID: 30969 at drivers/gpu/drm/amd/amdgpu/../display/dc/clk_mgr/dcn35/dcn35_smu.c:175 dcn35_smu_send_msg_with_param+0x166/0x190 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  kvm_amd(E) btmtk(E) btrtl(E) btbcm(E) mac80211(E) btintel(E) kvm(E) spd5118(E) bluetooth(E) irqbypass(E) joydev(E) cfg80211(E) r8169(E) rapl(E) wmi_bmof(E) i2c_piix4(E) rfkill(E) pcspkr(E) libarc4(E) realtek(E) i2c_smbus(E) k10temp(E) amd_pmc(E) loop(E) nfnetlink(E) zram(E) lz4hc_compress(E) lz4_compress(E) hid_multitouch(E) amdgpu(E) amdxcp(E) i2c_algo_bit(E) drm_ttm_helper(E) ttm(E) sdhci_pci(E) drm_exec(E) nvme(E) drm_panel_backlight_quirks(E) sdhci_uhs2(E) drm_suballoc_helper(E) drm_buddy(E) sdhci(E) nvme_core(E) polyval_clmulni(E) amdxdna(E) drm_display_helper(E) cqhci(E) nvme_keyring(E) ghash_clmulni_intel(E) thunderbolt(E) cec(E) gpu_sched(E) video(E) mmc_core(E) nvme_auth(E) hkdf(E) sp5100_tco(E) wmi(E) serio_raw(E) i2c_dev(E) fuse(E)
+Apr 24 02:26:23 fedora kernel: CPU: 4 UID: 0 PID: 30969 Comm: kworker/u128:0 Tainted: G            E       6.18.19-mesfix1 #1 PREEMPT(lazy) 
+Apr 24 02:26:23 fedora kernel: Workqueue: amdgpu-reset-dev drm_sched_job_timedout [gpu_sched]
+Apr 24 02:26:23 fedora kernel: RIP: 0010:dcn35_smu_send_msg_with_param+0x166/0x190 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  dcn35_smu_enable_pme_wa+0x23/0x50 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  link_set_dpms_off+0x11f/0x400 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  dcn31_reset_back_end_for_pipe.isra.0+0x139/0x360 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  dcn31_reset_hw_ctx_wrap+0xea/0x210 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  dce110_apply_ctx_to_hw+0x6b/0x350 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  dc_commit_state_no_check+0x37e/0xe30 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  dc_commit_streams+0x314/0x6e0 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  dm_suspend+0x270/0x320 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  amdgpu_ip_block_suspend+0x27/0x50 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  amdgpu_device_ip_suspend_phase1+0x92/0xf0 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  amdgpu_device_ip_suspend+0x2c/0x80 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  amdgpu_device_pre_asic_reset+0xed/0x510 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  amdgpu_device_asic_reset+0x40/0x1e1 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  amdgpu_device_gpu_recover.cold+0x243/0x2e5 [amdgpu]
+Apr 24 02:26:23 fedora kernel:  amdgpu_job_timedout.cold+0x1fb/0x23b [amdgpu]
+Apr 24 02:26:47 fedora kernel: amdgpu 0000:c6:00.0: [drm] SMU response after wait: 0, msg id = 13
+
+Benchmark artifacts:
+- reports/publish/text_bench_2026-04-23/qwen25_coder_32b_q4km_ctx16384_server.log
+- reports/publish/text_bench_2026-04-23/qwen25_coder_32b_q4km_ctx16384_watchdog.log

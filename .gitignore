@@ -15,6 +15,9 @@ __pycache__/
 *.lock
 .aider*
 
+# Generated agent workspaces
+agentic/feedback-loop-agent/workspaces/
+
 # Published evidence logs (referenced from README).
 !reports/**/*.log
 !**/out/**/*.log

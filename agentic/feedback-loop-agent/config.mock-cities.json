@@ -1,0 +1,54 @@
+{
+  "implementation_model": {
+    "name": "qwen3.6-27b-q4km",
+    "base_url": "http://127.0.0.1:8161/v1",
+    "api_key": "not-needed",
+    "model": "local-gguf",
+    "context_window": 76800,
+    "max_tokens": 2048,
+    "temperature": 0.25
+  },
+  "feedback_model": null,
+  "mcp_tools": {
+    "terminal": true,
+    "web_scraping": true,
+    "web_interaction": true
+  },
+  "runtime": {
+    "docker_isolation": true,
+    "docker_image": "feedback-loop-agent:local",
+    "workspace": "agentic/feedback-loop-agent/workspaces/mock-cities",
+    "command_timeout_seconds": 30
+  },
+  "context_compaction": {
+    "enabled": true,
+    "threshold_ratio": 0.8,
+    "keep_recent_turns": 8,
+    "summary_max_tokens": 1024
+  },
+  "loop": {
+    "max_iterations": 3,
+    "stop_when_review_clean": true
+  },
+  "project_design": {
+    "title": "Wikipedia city image collection",
+    "prompt": "Non-development task: use web-scraping style workflow to collect image candidates for big cities from Wikipedia. Figure out the city list yourself, produce a manifest, document live-vs-fixture behavior, and validate the output."
+  },
+  "phases": {
+    "requirements_refinement": {
+      "max_iterations": 2
+    },
+    "plan_validation": {
+      "max_iterations": 2
+    },
+    "implementation": {
+      "max_iterations": 3
+    }
+  },
+  "resolution_policy": {
+    "max_same_error_repeats": 2,
+    "allow_requirement_dilution": true,
+    "allow_skip_with_note": true,
+    "stop_on_cannot_resolve": false
+  }
+}

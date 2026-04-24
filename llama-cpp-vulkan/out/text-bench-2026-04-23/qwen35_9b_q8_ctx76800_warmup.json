@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n</think>\n\n*   **Fix Dependencies**: Pin all Python versions and library versions ("
+      }
+    }
+  ],
+  "created": 1776989370,
+  "model": "Qwen3.5-9B-Q8_0.gguf",
+  "system_fingerprint": "b8642-7c7d6ce5c",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 44,
+    "total_tokens": 60,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-gcCC6nu2bTV64Lbj6KVXdn9BZc1PlEQ3",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 44,
+    "prompt_ms": 212.196,
+    "prompt_per_token_ms": 4.822636363636364,
+    "prompt_per_second": 207.35546381647157,
+    "predicted_n": 16,
+    "predicted_ms": 623.16,
+    "predicted_per_token_ms": 38.9475,
+    "predicted_per_second": 25.67558893382117
+  }
+}

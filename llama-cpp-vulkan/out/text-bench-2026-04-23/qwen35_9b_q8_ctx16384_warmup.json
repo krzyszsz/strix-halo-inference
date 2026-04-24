@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n</think>\n\n*   **Use Standardized Tools:** Run `llama-bench"
+      }
+    }
+  ],
+  "created": 1776988516,
+  "model": "Qwen3.5-9B-Q8_0.gguf",
+  "system_fingerprint": "b8642-7c7d6ce5c",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 44,
+    "total_tokens": 60,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-2SDJinOTrQZVybBfKoE62dTcadWn8toF",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 44,
+    "prompt_ms": 202.142,
+    "prompt_per_token_ms": 4.5941363636363635,
+    "prompt_per_second": 217.6687675000742,
+    "predicted_n": 16,
+    "predicted_ms": 619.914,
+    "predicted_per_token_ms": 38.744625,
+    "predicted_per_second": 25.81003171407647
+  }
+}

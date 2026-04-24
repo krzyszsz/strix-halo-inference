@@ -1,0 +1,4 @@
+[2026-04-23T22:57:19Z] watchdog start max_seconds=3600 idle_seconds=900 poll_seconds=30 watch_path=<none> min_available_gb=16 max_swap_used_gb=24 cmd=$REPO_ROOT/scripts/run_test_with_cleanup.sh env PORT=8161 MODEL_TAG=qwen36_27b_q4km_2026_04_23 CTX_SIZE=32768 MAX_TOKENS=768 GPU_LAYERS=999 MEM_LIMIT=75g MEMORY_SWAP=75g MEM_RESERVATION=67g bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_qwen36_vlm_task_suite.sh
+watchdog: log=$REPO_ROOT/reports/watchdog/qwen36_task_suite_rerun_2026-04-23T22-57-19Z.log
+watchdog: running elapsed=120s idle=0s log=$REPO_ROOT/reports/watchdog/qwen36_task_suite_rerun_2026-04-23T22-57-19Z.log
+[2026-04-23T22:59:19Z] watchdog finished cmd_status=0
