@@ -65,6 +65,12 @@ def _safe_relpath(path_text: str) -> Path:
 
 
 def write_files(workspace: Path, files: list[dict]) -> list[str]:
+    """Apply complete-file edits requested by the implementation model.
+
+    The harness deliberately accepts whole-file content only. That keeps each
+    agent turn easy to replay from JSON logs and avoids patch-format ambiguity
+    when a local model is tired, verbose, or creatively wrong.
+    """
     written: list[str] = []
     for item in files:
         rel = _safe_relpath(str(item["path"]))
@@ -76,6 +82,12 @@ def write_files(workspace: Path, files: list[dict]) -> list[str]:
 
 
 def run_commands(workspace: Path, commands: list[list[str]], timeout_seconds: int) -> list[dict]:
+    """Run bounded validation commands inside the workspace.
+
+    Command results are fed directly to the feedback agent, so stdout/stderr are
+    truncated to keep long sessions compact while preserving enough failure text
+    for useful critique.
+    """
     results: list[dict] = []
     for command in commands:
         if not command:
@@ -147,6 +159,20 @@ def write_requirements_doc(workspace: Path, requirements: dict[str, Any], review
                 lines.append(f"- {item}")
     else:
         lines.append("- None recorded.")
+    confirmation = requirements.get("planning_confirmation")
+    if isinstance(confirmation, dict):
+        lines.append("")
+        lines.append("## Planning Confirmation")
+        lines.append(f"- Feasible: {confirmation.get('is_feasible')}")
+        lines.append(f"- Clear: {confirmation.get('is_clear')}")
+        lines.append(f"- Verifiable: {confirmation.get('is_verifiable')}")
+        if confirmation.get("verification_strategy"):
+            lines.append(f"- Verification strategy: {confirmation['verification_strategy']}")
+        risks = confirmation.get("remaining_risks") or []
+        if risks:
+            lines.append("- Remaining risks:")
+            for risk in risks:
+                lines.append(f"  - {risk}")
     if review:
         lines.append("")
         lines.append("## Last Requirements Review")
@@ -187,6 +213,21 @@ def write_plan_doc(
                 lines.append(f"- {item}")
     else:
         lines.append("- None recorded.")
+    confirmation = requirements.get("planning_confirmation")
+    if isinstance(confirmation, dict):
+        lines.append("")
+        lines.append("## Planning Confirmation")
+        lines.append("")
+        lines.append(f"- Feasible: {confirmation.get('is_feasible')}")
+        lines.append(f"- Clear: {confirmation.get('is_clear')}")
+        lines.append(f"- Verifiable: {confirmation.get('is_verifiable')}")
+        if confirmation.get("verification_strategy"):
+            lines.append(f"- Verification strategy: {confirmation['verification_strategy']}")
+        risks = confirmation.get("remaining_risks") or []
+        if risks:
+            lines.append("- Remaining risks:")
+            for risk in risks:
+                lines.append(f"  - {risk}")
     lines.append("")
     lines.append("## Ordered Tasks")
     lines.append("")

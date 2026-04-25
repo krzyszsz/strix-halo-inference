@@ -82,9 +82,24 @@ class MockClient:
             return "platformer"
         if "city" in text or "wikipedia" in text:
             return "cities"
-        if "game" in text or "website" in text or "browser" in text:
+        if "static website" in text or "multi-page browser demo" in text or "clicker" in text:
             return "website"
         return "tracker"
+
+    def _planning_confirmation(self, scenario: str) -> dict:
+        return {
+            "is_feasible": True,
+            "is_clear": True,
+            "is_verifiable": True,
+            "verification_strategy": (
+                "Execute each ordered step separately, run its validation command, "
+                "inspect the generated files/reports, and reject the step if evidence "
+                "does not match its acceptance criteria."
+            ),
+            "remaining_risks": [
+                f"Mock {scenario} validation is deterministic; real-model runs may need extra retries for ambiguous outputs."
+            ],
+        }
 
     def _requirements(self, scenario: str) -> str:
         self.requirements_calls += 1
@@ -96,6 +111,13 @@ class MockClient:
                     {"question": "How should success be verified?", "resolution_strategy": "ask_or_assume", "decision": "Need explicit validation commands."},
                     {"question": "What should be skipped if external access fails?", "resolution_strategy": "defer", "decision": "Need fallback policy."},
                 ],
+                "planning_confirmation": {
+                    "is_feasible": False,
+                    "is_clear": False,
+                    "is_verifiable": False,
+                    "verification_strategy": "",
+                    "remaining_risks": ["Plan is intentionally too broad in the first mock pass."],
+                },
                 "plan": [
                     {"id": "S1", "title": "Build everything", "description": "Too broad initial plan.", "depends_on": [], "acceptance_criteria": ["Something exists"], "validation_commands": []}
                 ],
@@ -113,6 +135,7 @@ class MockClient:
                     "Mock harness uses fixture data so tests are deterministic; real runs may replace it with live Wikipedia/API calls.",
                     "The output is a collection manifest, not a polished gallery website.",
                 ],
+                "planning_confirmation": self._planning_confirmation(scenario),
                 "plan": [
                     {"id": "S1", "title": "Create city-image collection manifest", "description": "Select cities and write deterministic manifest/notes.", "depends_on": [], "acceptance_criteria": ["At least four cities", "Each item has city, country, page, image_url, and local_filename"], "validation_commands": [["python", "scripts/validate_manifest.py"]]},
                     {"id": "S2", "title": "Add reproducible collection script", "description": "Add a script showing the live/fixture collection flow.", "depends_on": ["S1"], "acceptance_criteria": ["Script can run in fixture mode", "README explains live vs fixture mode"], "validation_commands": [["python", "scripts/collect_city_images.py", "--fixture"]]},
@@ -132,6 +155,7 @@ class MockClient:
                     "This smoke test uses a small DOM/CSS platformer rather than a full canvas engine so screenshots are easy for a VLM to inspect.",
                     "Visual-model analysis is represented by screenshot-friendly markers and a deterministic Playwright report; a real VLM can be plugged into the report later.",
                 ],
+                "planning_confirmation": self._planning_confirmation(scenario),
                 "plan": [
                     {"id": "S1", "title": "Scaffold external-level platformer", "description": "Create HTML/CSS/JS skeleton plus an external text level file and first validation script.", "depends_on": [], "acceptance_criteria": ["Level text file exists", "Player/savepoint/goal are visible with test IDs", "Playwright can load the page and capture a screenshot"], "validation_commands": [["python", "scripts/playwright_game_check.py"]]},
                     {"id": "S2", "title": "Add controllable movement and savepoints", "description": "Implement deterministic keyboard control, collision-ish movement, savepoint activation, and state export for tests.", "depends_on": ["S1"], "acceptance_criteria": ["Arrow keys move the player", "Savepoint can be activated", "Validation report records player movement and savepoint status"], "validation_commands": [["python", "scripts/playwright_game_check.py"]]},
@@ -151,6 +175,7 @@ class MockClient:
                     "The smoke harness validates DOM/text structure; full Playwright screenshots are optional for real-model runs.",
                     "No external npm dependencies are needed for the demo.",
                 ],
+                "planning_confirmation": self._planning_confirmation(scenario),
                 "plan": [
                     {"id": "S1", "title": "Scaffold static site", "description": "Create pages, shared stylesheet, and navigation.", "depends_on": [], "acceptance_criteria": ["index/about/game pages exist", "Navigation links all pages", "Shared stylesheet is referenced"], "validation_commands": [["python", "scripts/check_site.py"]]},
                     {"id": "S2", "title": "Add browser interaction", "description": "Add a tiny clicker game and validation hook.", "depends_on": ["S1"], "acceptance_criteria": ["Game button exists", "JavaScript increments score", "Validation script checks required IDs"], "validation_commands": [["python", "scripts/check_site.py"]]},
@@ -164,6 +189,7 @@ class MockClient:
                 "Provide unit tests for JSON round-trip behavior.",
             ],
             "assumptions": ["Command-line polish is secondary to small testable core behavior."],
+            "planning_confirmation": self._planning_confirmation(scenario),
             "plan": [
                 {"id": "S1", "title": "Implement task tracker core", "description": "Create module with state operations.", "depends_on": [], "acceptance_criteria": ["Core methods exist", "Blank titles fail"], "validation_commands": [["python", "-m", "py_compile", "task_tracker.py"]]},
                 {"id": "S2", "title": "Add persistence tests", "description": "Add unittest coverage for save/load.", "depends_on": ["S1"], "acceptance_criteria": ["Round-trip test passes"], "validation_commands": [["python", "-m", "unittest", "-v"]]},

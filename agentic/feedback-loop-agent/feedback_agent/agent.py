@@ -27,6 +27,13 @@ Return strict JSON only:
   "refined_requirements": ["clear requirement"],
   "assumptions": ["explicit assumption or gap resolution"],
   "open_questions": [{"question": "gap", "resolution_strategy": "ask|assume|dilute|skip", "decision": "chosen resolution"}],
+  "planning_confirmation": {
+    "is_feasible": true,
+    "is_clear": true,
+    "is_verifiable": true,
+    "verification_strategy": "how the plan will be checked step by step",
+    "remaining_risks": ["risk or limitation"]
+  },
   "plan": [
     {
       "id": "S1",
@@ -64,7 +71,26 @@ REVIEW_STATUSES = {
 }
 
 
+FEEDBACK_SYSTEM_PROMPT = """
+You are the feedback/review agent in a two-agent development loop.
+Read the full transcript, including implementation attempts, prior feedback,
+requirements decisions, plan updates, command results, screenshots/reports when
+listed, and unresolved risks. Be strict but bounded: push quality forward, ask
+concrete cross-check questions, and decide whether the current phase is resolved,
+needs rework, needs a plan/requirements change, or cannot be resolved.
+Return strict JSON only.
+"""
+
+
 class FeedbackLoopAgent:
+    """Orchestrates a phased two-agent workflow over one durable transcript.
+
+    The implementation and feedback clients may point at the same local model or
+    two different OpenAI-compatible endpoints. The orchestration layer owns the
+    phase boundaries, file writes, validation commands, retry limits, and the
+    transcript discipline that keeps long sessions coherent.
+    """
+
     def __init__(self, config: AgentConfig, *, mock: bool = False):
         self.config = config
         self.workspace = config.runtime.workspace
@@ -91,13 +117,59 @@ class FeedbackLoopAgent:
                 (
                     "You are an agentic coding/workflow model. Work in explicit phases: "
                     "requirements refinement, plan validation, then one implementation feedback loop per plan step. "
-                    "Maintain PLAN.md and REQUIREMENTS.md. Keep all work inside the project workspace."
+                    "Maintain PLAN.md and REQUIREMENTS.md. Keep all work inside the project workspace. "
+                    "This transcript is durable chat memory: IMPLEMENTATION_AGENT_REQUEST/RESPONSE and "
+                    "FEEDBACK_AGENT_REQUEST/RESPONSE blocks are cumulative context, not isolated prompts."
                 ),
             )
             self.conversation.append(
                 "user",
                 f"PROJECT DESIGN: {self.config.project_design.title}\n\n{self.config.project_design.prompt}",
             )
+
+    def _implementation_chat(self, prompt: str) -> str:
+        """Append a request, call the implementation model, then persist its reply.
+
+        Keeping the request itself in the transcript matters. Without it, later
+        turns see model answers but not the exact task/review that caused them,
+        which makes long local-model sessions drift quickly.
+        """
+        maybe_compact(
+            self.conversation,
+            self.config,
+            self.impl_client,
+            context_window=self.config.implementation_model.context_window,
+        )
+        self.conversation.append("user", "IMPLEMENTATION_AGENT_REQUEST:\n" + prompt)
+        raw = self.impl_client.chat(self.conversation.messages())
+        self.conversation.append("assistant", "IMPLEMENTATION_AGENT_RESPONSE:\n" + raw)
+        return raw
+
+    def _feedback_chat(self, prompt: str, *, temperature: float = 0.1) -> str:
+        """Run the feedback model against the same durable transcript.
+
+        Feedback replies are stored as user-visible transcript blocks so the
+        implementation model treats them as external critique on the next turn.
+        The feedback model still receives the entire history, including its own
+        previous reviews, which gives it continuity across loops.
+        """
+        feedback_cfg = self.config.feedback_model or self.config.implementation_model
+        maybe_compact(
+            self.conversation,
+            self.config,
+            self.feedback_client,
+            context_window=feedback_cfg.context_window,
+        )
+        self.conversation.append("user", "FEEDBACK_AGENT_REQUEST:\n" + prompt)
+        raw = self.feedback_client.chat(
+            [
+                {"role": "system", "content": FEEDBACK_SYSTEM_PROMPT},
+                *self.conversation.messages(system_as_user=True),
+            ],
+            temperature=temperature,
+        )
+        self.conversation.append("user", "FEEDBACK_AGENT_RESPONSE:\n" + raw)
+        return raw
 
     def run(self) -> dict:
         self.initialize()
@@ -120,19 +192,20 @@ class FeedbackLoopAgent:
         return summary
 
     def _requirements_refinement_phase(self, extra_context: str | None = None) -> dict:
+        """Turn an underspecified project brief into requirements and a draft plan."""
         iterations: list[dict[str, Any]] = []
         latest: dict[str, Any] = {}
         review: dict[str, Any] = {}
         for index in range(1, self.config.phases.requirements_refinement.max_iterations + 1):
-            maybe_compact(self.conversation, self.config, self.impl_client)
             prompt = (
                 f"REQUIREMENTS_REFINEMENT_PHASE iteration={index}\n"
                 "Refine the project requirements before implementation. Fill gaps, record assumptions, "
-                "and create a first ordered plan. Do not write project files yet.\n"
+                "and create a first ordered plan. Do not write project files yet. "
+                "Before returning, answer the planning_confirmation fields: is the plan feasible, clear, "
+                "and verifiable, and what exact verification strategy will later be enforced?\n"
                 f"Extra context: {extra_context or 'none'}\n\n{REQUIREMENTS_CONTRACT}"
             )
-            raw = self.impl_client.chat([*self.conversation.messages(), {"role": "user", "content": prompt}])
-            self.conversation.append("assistant", raw)
+            raw = self._implementation_chat(prompt)
             latest = extract_json_object(raw)
             self.requirements = latest
             self.plan_steps = normalize_plan_steps(latest.get("plan", []))
@@ -146,13 +219,14 @@ class FeedbackLoopAgent:
                 write_requirements_doc(self.workspace, self.requirements, review)
                 append_plan_note(self.workspace, f"[requirements] resolved after iteration {index}: {review.get('summary', '')}")
                 return {"status": "resolved", "iterations": iterations}
-            self.conversation.append("user", "Revise requirements using this review:\n" + json.dumps(review, indent=2))
+            self.conversation.append("user", "REQUIREMENTS_REWORK_DIRECTIVE:\nRevise requirements using this review:\n" + json.dumps(review, indent=2))
         fallback = self._fallback_resolution("requirements", review)
         self.requirements.setdefault("assumptions", []).append(fallback["note"])
         write_requirements_doc(self.workspace, self.requirements, review)
         return {"status": fallback["status"], "iterations": iterations, "resolution": fallback}
 
     def _requirements_review(self, index: int, requirements: dict[str, Any]) -> dict:
+        """Ask the feedback agent whether requirements are actionable enough."""
         prompt = {
             "phase": "REQUIREMENTS_REVIEW_PHASE",
             "iteration": index,
@@ -163,16 +237,21 @@ class FeedbackLoopAgent:
                 "needs_rework": True,
                 "summary": "short review",
                 "required_changes": ["specific change"],
+                "cross_check_questions": ["requirement question the next pass must answer"],
             },
         }
-        raw = self.feedback_client.chat([
-            {"role": "system", "content": "You are a strict requirements reviewer. Return strict JSON only."},
-            {"role": "user", "content": json.dumps(prompt)},
-        ], temperature=0.1)
+        raw = self._feedback_chat(
+            "REQUIREMENTS_REVIEW_PHASE\n"
+            "Check whether the requirements are complete enough to support a distinct, verifiable plan. "
+            "Reject vague requirements, missing gap decisions, and missing verification strategy.\n"
+            + json.dumps(prompt),
+            temperature=0.1,
+        )
         review = extract_json_object(raw)
         return self._normalize_review(review)
 
     def _plan_validation_phase(self) -> dict:
+        """Block implementation until the ordered plan is executable and checkable."""
         iterations: list[dict[str, Any]] = []
         review: dict[str, Any] = {}
         for index in range(1, self.config.phases.plan_validation.max_iterations + 1):
@@ -190,32 +269,47 @@ class FeedbackLoopAgent:
         return {"status": fallback["status"], "iterations": iterations, "resolution": fallback}
 
     def _plan_validation_review(self, index: int) -> dict:
+        """Combine deterministic plan checks with model-based plan critique."""
+        structural_findings = self._plan_structural_findings()
         prompt = {
             "phase": "PLAN_VALIDATION_PHASE",
             "iteration": index,
             "requirements": self.requirements,
             "plan": self.plan_steps,
+            "deterministic_structural_findings": structural_findings,
             "checks": [
                 "each step is distinct",
                 "dependencies are explicit",
                 "each step has acceptance criteria",
                 "each step has validation commands or an explicit non-command validation method",
                 "the sequence can be executed one step at a time",
+                "planning_confirmation says the plan is feasible, clear, and verifiable",
+                "the reviewer can name exactly how each step will be verified later",
             ],
             "expected_json": {
                 "status": "resolved|needs_plan_change|needs_requirements_change|cannot_resolve",
                 "needs_rework": True,
                 "summary": "short review",
                 "required_changes": ["specific change"],
+                "planning_confirmation": {
+                    "feasible": True,
+                    "clear": True,
+                    "verifiable": True,
+                    "verification_matrix": [{"step_id": "S1", "how_verified": "command or explicit review method"}],
+                },
             },
         }
-        raw = self.feedback_client.chat([
-            {"role": "system", "content": "You are a strict implementation-plan reviewer. Return strict JSON only."},
-            {"role": "user", "content": json.dumps(prompt)},
-        ], temperature=0.1)
+        raw = self._feedback_chat(
+            "PLAN_VALIDATION_PHASE\n"
+            "Before implementation starts, explicitly confirm whether the plan is feasible, clear, "
+            "and verifiable. If any step cannot be independently verified, return needs_plan_change.\n"
+            + json.dumps(prompt),
+            temperature=0.1,
+        )
         return self._normalize_review(extract_json_object(raw))
 
     def _plan_refinement_pass(self, index: int, review: dict[str, Any]) -> dict:
+        """Let the implementation model repair the plan while preserving context."""
         prompt = (
             f"PLAN_REFINEMENT_PHASE iteration={index}\n"
             "Revise only the ordered plan so every step is distinct, sequential, and verifiable. "
@@ -224,8 +318,7 @@ class FeedbackLoopAgent:
             f"Current plan: {json.dumps(self.plan_steps)}\n"
             f"Review: {json.dumps(review)}\n\n{REQUIREMENTS_CONTRACT}"
         )
-        raw = self.impl_client.chat([*self.conversation.messages(), {"role": "user", "content": prompt}])
-        self.conversation.append("assistant", raw)
+        raw = self._implementation_chat(prompt)
         payload = extract_json_object(raw)
         if payload.get("refined_requirements"):
             self.requirements = payload
@@ -235,6 +328,7 @@ class FeedbackLoopAgent:
         return payload
 
     def _implementation_loop_for_step(self, step: dict[str, Any]) -> dict:
+        """Run bounded implement/review attempts for one validated plan step."""
         attempts: list[dict[str, Any]] = []
         same_error_count = 0
         last_summary = ""
@@ -266,7 +360,8 @@ class FeedbackLoopAgent:
                 return {"step_id": step["id"], "status": resolution["status"], "attempts": attempts, "resolution": resolution}
             self.conversation.append(
                 "user",
-                "Apply this step review in the next attempt. Keep previous requirements, plan validation, and this step context in mind:\n"
+                "NEXT_IMPLEMENTATION_DIRECTIVE:\nApply this step review in the next attempt. "
+                "Keep previous requirements, plan validation, and this step context in mind:\n"
                 + json.dumps(review, indent=2),
             )
         resolution = self._fallback_resolution(f"step {step['id']}", attempts[-1]["review"] if attempts else {})
@@ -274,16 +369,17 @@ class FeedbackLoopAgent:
         return {"step_id": step["id"], "status": resolution["status"], "attempts": attempts, "resolution": resolution}
 
     def _implementation_pass(self, step: dict[str, Any], attempt: int) -> dict:
+        """Ask for complete-file edits and run the model-requested validations."""
         prompt = (
             f"IMPLEMENT_PLAN_STEP_PHASE step_id={step['id']} attempt={attempt}\n"
             "Work on this single plan step only. Do not silently jump ahead. If the step is impossible, "
-            "use resolution_request and explain why.\n"
+            "use resolution_request and explain why. Cross-check your edits against this step's acceptance "
+            "criteria and include validation commands that prove the step whenever terminal tools are enabled.\n"
             f"Refined requirements: {json.dumps(self.requirements)}\n"
             f"Full validated plan: {json.dumps(self.plan_steps)}\n"
             f"Current step: {json.dumps(step)}\n\n{IMPLEMENTATION_CONTRACT}"
         )
-        raw = self.impl_client.chat([*self.conversation.messages(), {"role": "user", "content": prompt}])
-        self.conversation.append("assistant", raw)
+        raw = self._implementation_chat(prompt)
         payload = extract_json_object(raw)
         written = write_files(self.workspace, payload.get("files", []))
         command_results = []
@@ -298,6 +394,7 @@ class FeedbackLoopAgent:
         return {"written": written, "commands": command_results, "raw": payload}
 
     def _step_review_pass(self, step: dict[str, Any], attempt: int, implementation: dict[str, Any]) -> dict:
+        """Critique one step using files, command results, and prior transcript."""
         plan_text = (self.workspace / "PLAN.md").read_text(encoding="utf-8")
         prompt = {
             "phase": "STEP_REVIEW_PHASE",
@@ -310,6 +407,9 @@ class FeedbackLoopAgent:
             "files": collect_workspace_files(self.workspace),
             "review_instructions": [
                 "Run-result failures, timeouts, missing files, broken UI hooks, and weak validation must be called out.",
+                "Ask concrete cross-check questions against the refined requirements and the current step acceptance criteria.",
+                "Use command results and workspace files as evidence; do not accept a step just because files were written.",
+                "For browser/game work, require Playwright-style interaction evidence and screenshot/report artifacts when configured.",
                 "Return needs_plan_change if this step cannot be independently verified as written.",
                 "Return needs_requirements_change if the requirements are contradictory or impossible.",
                 "Return cannot_resolve only when bounded retries are unlikely to help.",
@@ -319,16 +419,54 @@ class FeedbackLoopAgent:
                 "needs_rework": True,
                 "summary": "short review",
                 "required_changes": ["specific change"],
+                "cross_check_questions": ["question answered by code/commands/files"],
+                "verification_evidence": ["command/file/screenshot/report checked"],
             },
         }
-        raw = self.feedback_client.chat([
-            {"role": "system", "content": "You are a critical verifier for exactly one plan step. Return strict JSON only."},
-            {"role": "user", "content": json.dumps(prompt)},
-        ], temperature=0.1)
+        raw = self._feedback_chat(
+            "STEP_REVIEW_PHASE\n"
+            "Critically verify exactly one plan step. Use the whole transcript to avoid repeating old mistakes, "
+            "but judge only the current step against its acceptance criteria.\n"
+            + json.dumps(prompt),
+            temperature=0.1,
+        )
         review = self._normalize_review(extract_json_object(raw))
-        self.conversation.append("user", f"Review for {step['id']} attempt {attempt}:\n" + json.dumps(review, indent=2))
         append_plan_note(self.workspace, f"[{step['id']} attempt {attempt}] review: {review.get('summary', 'no summary')}")
         return review
+
+    def _plan_structural_findings(self) -> list[str]:
+        """Cheap deterministic guardrails before the model-based plan review.
+
+        The reviewer still makes the judgment call, but these findings prevent
+        obvious misses such as empty validation commands or broken dependencies
+        from slipping through just because a model review was too generous.
+        """
+        findings: list[str] = []
+        if not self.plan_steps:
+            return ["Plan has no steps."]
+        seen_ids: set[str] = set()
+        for step in self.plan_steps:
+            step_id = str(step.get("id") or "<missing>")
+            if step_id in seen_ids:
+                findings.append(f"Duplicate step id: {step_id}.")
+            seen_ids.add(step_id)
+            if not step.get("acceptance_criteria"):
+                findings.append(f"{step_id} has no acceptance criteria.")
+            if not step.get("validation_commands"):
+                findings.append(f"{step_id} has no validation commands or explicit validation method.")
+            for dep in step.get("depends_on", []):
+                if dep not in seen_ids:
+                    findings.append(f"{step_id} depends on {dep}, which has not appeared earlier in the ordered plan.")
+        confirmation = self.requirements.get("planning_confirmation") if isinstance(self.requirements, dict) else None
+        if not isinstance(confirmation, dict):
+            findings.append("Requirements are missing planning_confirmation.")
+        else:
+            for key in ("is_feasible", "is_clear", "is_verifiable"):
+                if confirmation.get(key) is not True:
+                    findings.append(f"planning_confirmation.{key} is not true.")
+            if not confirmation.get("verification_strategy"):
+                findings.append("planning_confirmation.verification_strategy is empty.")
+        return findings
 
     def _status(self, review: dict[str, Any]) -> str:
         status = str(review.get("status") or "").strip()
@@ -348,6 +486,7 @@ class FeedbackLoopAgent:
         return review
 
     def _fallback_resolution(self, scope: str, review: dict[str, Any]) -> dict[str, str]:
+        """Choose a bounded outcome when retries stop making progress."""
         summary = review.get("summary", "No final review summary.") if review else "No review was produced."
         if self.config.resolution_policy.allow_skip_with_note:
             status = "skipped_with_note"

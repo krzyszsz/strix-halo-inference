@@ -1457,10 +1457,10 @@ Artifacts:
 
 ### Feedback-loop agent harness
 
-This subproject is a configurable agentic coding/workflow harness for long-running local-model work. It now runs in distinct phases instead of one generic loop:
+This subproject is a configurable agentic coding/workflow harness for long-running local-model work. It keeps a durable chat transcript: every requirements prompt, plan review, implementation attempt, feedback review, and rework directive is appended to `.agent_state/conversation.jsonl`. The implementation model sees the original design plus previous critique, and the feedback model sees the prior transcript before reviewing the next phase or step. When the context grows too large, older turns are compacted into durable memory and recent turns remain verbatim. It now runs in distinct phases instead of one generic loop:
 
 1. **Requirements refinement** - the model fills gaps, records assumptions, and drafts an ordered work plan.
-2. **Plan validation** - the feedback model checks that each step is distinct, ordered, dependent only on previous steps, and verifiable before implementation starts.
+2. **Plan validation** - the feedback model checks that each step is distinct, ordered, dependent only on previous steps, and verifiable before implementation starts. The planner must explicitly confirm that the plan is feasible, clear, and has a verification strategy.
 3. **Per-step implementation loops** - the implementation model works one plan step at a time. The feedback model reviews only that step using the refined requirements, plan, files, and command results. Reviews can return `resolved`, `needs_rework`, `needs_plan_change`, `needs_requirements_change`, `cannot_resolve`, or `skipped_with_note`.
 4. **Bounded resolution** - repeated failures stop after configured limits and are recorded rather than looping forever.
 
@@ -1495,7 +1495,7 @@ cp $REPO_ROOT/agentic/feedback-loop-agent/config.example.json \
 2. Edit `agentic/feedback-loop-agent/config.my-project.json`.
 
 The important fields are:
-- `runtime.workspace`: where the generated project will live. Use a unique folder under `agentic/feedback-loop-agent/workspaces/`.
+- `runtime.workspace`: where the generated project will live. Use a unique folder under the ignored workspace area shown in the example config.
 - `project_design.title`: short name for the task.
 - `project_design.prompt`: the real project brief. Include goals, constraints, expected deliverables, preferred technologies, and any validation hints.
 - `phases`: retry limits for requirements refinement, plan validation, and each implementation step.
@@ -1600,7 +1600,7 @@ Outcome:
 - The in-process unit suite passed all phased scenarios.
 - Docker-isolated mock website run refined vague requirements, rejected/cleaned the plan, then built a three-page static site with a clicker interaction. Final status: `resolved`.
 - Docker-isolated mock city run used the same workflow for a non-development task: it produced a Wikipedia-style city image manifest, fixture-mode collection script, and validation script. Final status: `resolved`.
-- Docker-isolated mock platformer run used a more demanding browser-game brief: external text level, JSON-scripted enemy/NPC friend, savepoint, keyboard control, Chromium/Playwright validation, and screenshot evidence. The first draft was rejected as not controllable/inspectable enough; a later pass produced a passing validation report. Final status: `resolved`.
+- Docker-isolated mock platformer run used a more demanding browser-game brief: external text level, JSON-scripted enemy/NPC friend, savepoint, keyboard control, Chromium/Playwright validation, and screenshot evidence. Requirements refinement rejected the first vague pass, plan validation required one cleanup pass, and the first implementation step needed one rework before the final validation report passed. Final status: `resolved`.
 - Real Qwen3.6 smoke generated `arithmetic_box.py` plus `unittest` coverage inside the isolated workspace; `9` tests passed. That earlier smoke used the same container isolation path but predates the expanded phased mock evidence.
 
 Evidence:
@@ -1608,14 +1608,14 @@ Evidence:
 - `reports/publish/feedback_loop_agent_phased_mock_website_summary_2026-04-24.json`
 - `reports/publish/feedback_loop_agent_phased_mock_cities_2026-04-24.log`
 - `reports/publish/feedback_loop_agent_phased_mock_cities_summary_2026-04-24.json`
-- `reports/publish/feedback_loop_agent_phased_mock_platformer_2026-04-24.log`
-- `reports/publish/feedback_loop_agent_phased_mock_platformer_summary_2026-04-24.json`
-- `reports/publish/feedback_loop_agent_platformer_validation_2026-04-24.json`
-- `reports/publish/feedback_loop_agent_platformer_playwright_2026-04-24.png`
+- `reports/publish/feedback_loop_agent_phased_mock_platformer_2026-04-25.log`
+- `reports/publish/feedback_loop_agent_phased_mock_platformer_summary_2026-04-25.json`
+- `reports/publish/feedback_loop_agent_platformer_validation_2026-04-25.json`
+- `reports/publish/feedback_loop_agent_platformer_playwright_2026-04-25.png`
 - `reports/publish/feedback_loop_agent_qwen36_smoke_2026-04-24.log`
 - `reports/publish/feedback_loop_agent_mock_2026-04-23.log`
 
-![Feedback-loop platformer Playwright validation screenshot](reports/publish/feedback_loop_agent_platformer_playwright_2026-04-24.png)
+![Feedback-loop platformer Playwright validation screenshot](reports/publish/feedback_loop_agent_platformer_playwright_2026-04-25.png)
 Caption: Feedback-loop agent platformer stress test | Docker-isolated mock agents | external `levels/level1.txt` + `actors/level1.json` | Playwright moved the player from `x=98` to `x=626`, activated the savepoint, and captured this `960x540` screenshot for visual review.
 
 ## Tested Environment (Actual Values)

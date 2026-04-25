@@ -4,11 +4,11 @@ from .config import AgentConfig
 from .conversation import Conversation
 
 
-def maybe_compact(conversation: Conversation, config: AgentConfig, client) -> bool:
+def maybe_compact(conversation: Conversation, config: AgentConfig, client, *, context_window: int | None = None) -> bool:
     cfg = config.context_compaction
     if not cfg.enabled:
         return False
-    limit = int(config.implementation_model.context_window * cfg.threshold_ratio)
+    limit = int((context_window or config.implementation_model.context_window) * cfg.threshold_ratio)
     if conversation.estimated_tokens() < limit:
         return False
     old_turns = conversation.turns[:-cfg.keep_recent_turns]

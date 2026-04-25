@@ -3,14 +3,14 @@
 This experiment is a configurable agentic coding/workflow harness for long-running local model work.
 The intended default implementation model is Qwen3.6-27B served by `llama-cpp-vulkan`, with optional separate feedback/review model support.
 
-The harness keeps one continuous implementation conversation history. Requirements, plan reviews, implementation attempts, and critical reviews are appended back into that history, so the implementation model sees the original design plus previous critique instead of receiving isolated one-off feedback.
+The harness keeps one continuous durable conversation history. Requirements prompts, plan reviews, implementation attempts, critical feedback, and rework directives are appended to `.agent_state/conversation.jsonl`. The implementation model sees the original design plus previous critique; the feedback model also sees the prior transcript before reviewing the next phase or step. When the configured context threshold is reached, older turns are compacted into a durable memory block and recent turns stay verbatim.
 
 ## Workflow
 
 The workflow is deliberately phased:
 
 1. **Requirements refinement** - the model fills gaps, records assumptions, and creates `REQUIREMENTS.md` plus a draft ordered plan.
-2. **Plan validation** - the feedback model checks that every task is distinct, ordered, dependency-aware, and verifiable before implementation starts.
+2. **Plan validation** - the feedback model checks that every task is distinct, ordered, dependency-aware, and verifiable before implementation starts. The planner must explicitly confirm that the plan is feasible, clear, and has a verification strategy.
 3. **Per-step implementation loops** - the model works one validated plan step at a time. Feedback reviews only that step using requirements, plan, files, and command results.
 4. **Resolution handling** - reviews can return `resolved`, `needs_rework`, `needs_plan_change`, `needs_requirements_change`, `cannot_resolve`, or `skipped_with_note`. Bounded retries prevent infinite loops.
 
@@ -26,7 +26,7 @@ Every project workspace has both `REQUIREMENTS.md` and `PLAN.md`. The generated 
 - `feedback_agent/` - Python implementation.
 - `scripts/run_agent.sh` - run directly or through a Docker container, depending on config.
 - `tests/` - unit and mock integration tests.
-- `workspaces/` - generated project workspaces (ignored by git).
+- Generated workspaces are written under the ignored workspace directory configured in `.gitignore`; they are not published.
 
 ## Config Knobs
 
@@ -63,7 +63,7 @@ In this harness, terminal commands run inside the isolated agent container/works
 Copy `config.example.json` to a task-specific config, for example `config.my-project.json`.
 Edit these fields first:
 
-- `runtime.workspace`: a unique generated workspace, normally under `agentic/feedback-loop-agent/workspaces/`.
+- `runtime.workspace`: a unique generated workspace, normally under the ignored workspace area shown in the example config.
 - `project_design.title`: short task name.
 - `project_design.prompt`: the full brief, including deliverables, constraints, preferred stack, and validation hints.
 - `phases`: retry limits for requirements refinement, plan validation, and each implementation step.
@@ -145,10 +145,10 @@ Published evidence from this repo:
 - `../../reports/publish/feedback_loop_agent_phased_mock_website_summary_2026-04-24.json`
 - `../../reports/publish/feedback_loop_agent_phased_mock_cities_2026-04-24.log`
 - `../../reports/publish/feedback_loop_agent_phased_mock_cities_summary_2026-04-24.json`
-- `../../reports/publish/feedback_loop_agent_phased_mock_platformer_2026-04-24.log`
-- `../../reports/publish/feedback_loop_agent_phased_mock_platformer_summary_2026-04-24.json`
-- `../../reports/publish/feedback_loop_agent_platformer_validation_2026-04-24.json`
-- `../../reports/publish/feedback_loop_agent_platformer_playwright_2026-04-24.png`
+- `../../reports/publish/feedback_loop_agent_phased_mock_platformer_2026-04-25.log`
+- `../../reports/publish/feedback_loop_agent_phased_mock_platformer_summary_2026-04-25.json`
+- `../../reports/publish/feedback_loop_agent_platformer_validation_2026-04-25.json`
+- `../../reports/publish/feedback_loop_agent_platformer_playwright_2026-04-25.png`
 - `../../reports/publish/feedback_loop_agent_qwen36_smoke_2026-04-24.log`
 
 The phased mock evidence confirms:
@@ -158,9 +158,9 @@ The phased mock evidence confirms:
 - Implementation proceeds one step at a time with separate feedback loops.
 - Command failures/timeouts are captured in structured review context.
 - The same machinery works for a non-development workflow, not only code generation.
-- The platformer stress run validates browser interactivity with Chromium/Playwright: keyboard input moved the player, activated a savepoint, confirmed enemy/NPC actor data, and saved a screenshot for visual review.
+- The platformer stress run validates browser interactivity with Chromium/Playwright: requirements refinement rejected the vague first pass, plan validation required one cleanup pass, keyboard input moved the player, activated a savepoint, confirmed enemy/NPC actor data, and saved a screenshot for visual review.
 
-![Platformer Playwright validation screenshot](../../reports/publish/feedback_loop_agent_platformer_playwright_2026-04-24.png)
+![Platformer Playwright validation screenshot](../../reports/publish/feedback_loop_agent_platformer_playwright_2026-04-25.png)
 Caption: Docker-isolated platformer stress scenario; final Playwright screenshot after deterministic controls and savepoint activation.
 
 ## Safety Model

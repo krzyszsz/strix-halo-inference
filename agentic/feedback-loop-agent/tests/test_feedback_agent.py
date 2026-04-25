@@ -72,6 +72,12 @@ class FeedbackLoopAgentTests(unittest.TestCase):
             self.assertTrue((workspace / "PLAN.md").exists())
             self.assertTrue((workspace / "task_tracker.py").exists())
             self.assertTrue((workspace / "test_task_tracker.py").exists())
+            transcript = (workspace / ".agent_state" / "conversation.jsonl").read_text()
+            self.assertIn("IMPLEMENTATION_AGENT_REQUEST", transcript)
+            self.assertIn("IMPLEMENTATION_AGENT_RESPONSE", transcript)
+            self.assertIn("FEEDBACK_AGENT_REQUEST", transcript)
+            self.assertIn("FEEDBACK_AGENT_RESPONSE", transcript)
+            self.assertIn("planning_confirmation", transcript)
 
     def test_mock_website_scenario_builds_browser_artifacts(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

@@ -12,6 +12,13 @@ class Turn:
 
 
 class Conversation:
+    """Durable chat transcript shared by the implementation and feedback agents.
+
+    The harness stores every prompt and response instead of rebuilding isolated
+    one-shot prompts. That is intentional: local models are much better at long
+    agentic work when each new request is appended to a visible conversation.
+    """
+
     def __init__(self, path: Path):
         self.path = path
         self.turns: list[Turn] = []
@@ -28,8 +35,14 @@ class Conversation:
         with self.path.open("a", encoding="utf-8") as f:
             f.write(json.dumps(asdict(turn), ensure_ascii=False) + "\n")
 
-    def messages(self) -> list[dict[str, str]]:
-        return [asdict(t) for t in self.turns]
+    def messages(self, *, system_as_user: bool = False) -> list[dict[str, str]]:
+        messages: list[dict[str, str]] = []
+        for turn in self.turns:
+            if system_as_user and turn.role == "system":
+                messages.append({"role": "user", "content": "TRANSCRIPT_SYSTEM_NOTE:\n" + turn.content})
+            else:
+                messages.append(asdict(turn))
+        return messages
 
     def estimated_tokens(self) -> int:
         return max(1, sum(len(t.content) for t in self.turns) // 4)

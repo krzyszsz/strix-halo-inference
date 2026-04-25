@@ -22,6 +22,15 @@
               "decision": "Need fallback policy."
             }
           ],
+          "planning_confirmation": {
+            "is_feasible": false,
+            "is_clear": false,
+            "is_verifiable": false,
+            "verification_strategy": "",
+            "remaining_risks": [
+              "Plan is intentionally too broad in the first mock pass."
+            ]
+          },
           "plan": [
             {
               "id": "S1",
@@ -61,6 +70,15 @@
             "This smoke test uses a small DOM/CSS platformer rather than a full canvas engine so screenshots are easy for a VLM to inspect.",
             "Visual-model analysis is represented by screenshot-friendly markers and a deterministic Playwright report; a real VLM can be plugged into the report later."
           ],
+          "planning_confirmation": {
+            "is_feasible": true,
+            "is_clear": true,
+            "is_verifiable": true,
+            "verification_strategy": "Execute each ordered step separately, run its validation command, inspect the generated files/reports, and reject the step if evidence does not match its acceptance criteria.",
+            "remaining_risks": [
+              "Mock platformer validation is deterministic; real-model runs may need extra retries for ambiguous outputs."
+            ]
+          },
           "plan": [
             {
               "id": "S1",
@@ -215,6 +233,15 @@
             "This smoke test uses a small DOM/CSS platformer rather than a full canvas engine so screenshots are easy for a VLM to inspect.",
             "Visual-model analysis is represented by screenshot-friendly markers and a deterministic Playwright report; a real VLM can be plugged into the report later."
           ],
+          "planning_confirmation": {
+            "is_feasible": true,
+            "is_clear": true,
+            "is_verifiable": true,
+            "verification_strategy": "Execute each ordered step separately, run its validation command, inspect the generated files/reports, and reject the step if evidence does not match its acceptance criteria.",
+            "remaining_risks": [
+              "Mock platformer validation is deterministic; real-model runs may need extra retries for ambiguous outputs."
+            ]
+          },
           "plan": [
             {
               "id": "S1",
@@ -421,8 +448,8 @@
                   "scripts/playwright_game_check.py"
                 ],
                 "returncode": 0,
-                "stdout": "{\n  \"url\": \"http://127.0.0.1:36001/index.html\",\n  \"initial\": {\n    \"player\": {\n      \"x\": 98,\n      \"y\": 66\n    },\n    \"savepointActivated\": false,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"ready\"\n  },\n  \"final\": {\n    \"player\": {\n      \"x\": 626,\n      \"y\": 66\n    },\n    \"savepointActivated\": true,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"savepoint:savepoint-0\"\n  },\n  \"player_moved_right\": true,\n  \"savepoint_activated\": true,\n  \"has_friend\": true,\n  \"has_enemy\": true,\n  \"screenshot_initial\": \"/workspace/project/out/playwright/platformer_initial.png\",\n  \"screenshot_final\": \"/workspace/project/out/playwright/platformer_final.png\",\n  \"vl_review_hint\": \"Screenshot should show blue player, cyan/green savepoint, red enemy, green NPC friend, gold goal, and HUD text.\"\n}\n",
-                "stderr": "127.0.0.1 - - [24/Apr/2026 19:24:48] \"GET /index.html HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:48] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:48] \"GET /game.js HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:48] \"GET /levels/level1.txt HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:48] \"GET /actors/level1.json HTTP/1.1\" 200 -\n",
+                "stdout": "{\n  \"url\": \"http://127.0.0.1:41383/index.html\",\n  \"initial\": {\n    \"player\": {\n      \"x\": 98,\n      \"y\": 66\n    },\n    \"savepointActivated\": false,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"ready\"\n  },\n  \"final\": {\n    \"player\": {\n      \"x\": 626,\n      \"y\": 66\n    },\n    \"savepointActivated\": true,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"savepoint:savepoint-0\"\n  },\n  \"player_moved_right\": true,\n  \"savepoint_activated\": true,\n  \"has_friend\": true,\n  \"has_enemy\": true,\n  \"screenshot_initial\": \"/workspace/project/out/playwright/platformer_initial.png\",\n  \"screenshot_final\": \"/workspace/project/out/playwright/platformer_final.png\",\n  \"vl_review_hint\": \"Screenshot should show blue player, cyan/green savepoint, red enemy, green NPC friend, gold goal, and HUD text.\"\n}\n",
+                "stderr": "127.0.0.1 - - [25/Apr/2026 17:17:07] \"GET /index.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:07] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:07] \"GET /game.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:07] \"GET /levels/level1.txt HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:07] \"GET /actors/level1.json HTTP/1.1\" 200 -\n",
                 "timed_out": false
               }
             ],
@@ -498,8 +525,8 @@
                   "scripts/playwright_game_check.py"
                 ],
                 "returncode": 0,
-                "stdout": "{\n  \"url\": \"http://127.0.0.1:39813/index.html\",\n  \"initial\": {\n    \"player\": {\n      \"x\": 98,\n      \"y\": 66\n    },\n    \"savepointActivated\": false,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"ready\"\n  },\n  \"final\": {\n    \"player\": {\n      \"x\": 626,\n      \"y\": 66\n    },\n    \"savepointActivated\": true,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"savepoint:savepoint-0\"\n  },\n  \"player_moved_right\": true,\n  \"savepoint_activated\": true,\n  \"has_friend\": true,\n  \"has_enemy\": true,\n  \"screenshot_initial\": \"/workspace/project/out/playwright/platformer_initial.png\",\n  \"screenshot_final\": \"/workspace/project/out/playwright/platformer_final.png\",\n  \"vl_review_hint\": \"Screenshot should show blue player, cyan/green savepoint, red enemy, green NPC friend, gold goal, and HUD text.\"\n}\n",
-                "stderr": "127.0.0.1 - - [24/Apr/2026 19:24:50] \"GET /index.html HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:50] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:50] \"GET /game.js HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:50] \"GET /levels/level1.txt HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:50] \"GET /actors/level1.json HTTP/1.1\" 200 -\n",
+                "stdout": "{\n  \"url\": \"http://127.0.0.1:44933/index.html\",\n  \"initial\": {\n    \"player\": {\n      \"x\": 98,\n      \"y\": 66\n    },\n    \"savepointActivated\": false,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"ready\"\n  },\n  \"final\": {\n    \"player\": {\n      \"x\": 626,\n      \"y\": 66\n    },\n    \"savepointActivated\": true,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"savepoint:savepoint-0\"\n  },\n  \"player_moved_right\": true,\n  \"savepoint_activated\": true,\n  \"has_friend\": true,\n  \"has_enemy\": true,\n  \"screenshot_initial\": \"/workspace/project/out/playwright/platformer_initial.png\",\n  \"screenshot_final\": \"/workspace/project/out/playwright/platformer_final.png\",\n  \"vl_review_hint\": \"Screenshot should show blue player, cyan/green savepoint, red enemy, green NPC friend, gold goal, and HUD text.\"\n}\n",
+                "stderr": "127.0.0.1 - - [25/Apr/2026 17:17:09] \"GET /index.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:09] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:09] \"GET /game.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:09] \"GET /levels/level1.txt HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:09] \"GET /actors/level1.json HTTP/1.1\" 200 -\n",
                 "timed_out": false
               }
             ],
@@ -575,8 +602,8 @@
                   "scripts/playwright_game_check.py"
                 ],
                 "returncode": 0,
-                "stdout": "{\n  \"url\": \"http://127.0.0.1:41265/index.html\",\n  \"initial\": {\n    \"player\": {\n      \"x\": 98,\n      \"y\": 66\n    },\n    \"savepointActivated\": false,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"ready\"\n  },\n  \"final\": {\n    \"player\": {\n      \"x\": 626,\n      \"y\": 66\n    },\n    \"savepointActivated\": true,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"savepoint:savepoint-0\"\n  },\n  \"player_moved_right\": true,\n  \"savepoint_activated\": true,\n  \"has_friend\": true,\n  \"has_enemy\": true,\n  \"screenshot_initial\": \"/workspace/project/out/playwright/platformer_initial.png\",\n  \"screenshot_final\": \"/workspace/project/out/playwright/platformer_final.png\",\n  \"vl_review_hint\": \"Screenshot should show blue player, cyan/green savepoint, red enemy, green NPC friend, gold goal, and HUD text.\"\n}\n",
-                "stderr": "127.0.0.1 - - [24/Apr/2026 19:24:52] \"GET /index.html HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:52] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:52] \"GET /game.js HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:52] \"GET /levels/level1.txt HTTP/1.1\" 200 -\n127.0.0.1 - - [24/Apr/2026 19:24:52] \"GET /actors/level1.json HTTP/1.1\" 200 -\n",
+                "stdout": "{\n  \"url\": \"http://127.0.0.1:46351/index.html\",\n  \"initial\": {\n    \"player\": {\n      \"x\": 98,\n      \"y\": 66\n    },\n    \"savepointActivated\": false,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"ready\"\n  },\n  \"final\": {\n    \"player\": {\n      \"x\": 626,\n      \"y\": 66\n    },\n    \"savepointActivated\": true,\n    \"savepoints\": [\n      {\n        \"id\": \"savepoint-0\",\n        \"x\": 258,\n        \"y\": 66\n      }\n    ],\n    \"actors\": {\n      \"total\": 2,\n      \"friend\": 1,\n      \"enemy\": 1,\n      \"labels\": [\n        \"enemy: patrol\",\n        \"friend: checkpoint hint\"\n      ]\n    },\n    \"message\": \"savepoint:savepoint-0\"\n  },\n  \"player_moved_right\": true,\n  \"savepoint_activated\": true,\n  \"has_friend\": true,\n  \"has_enemy\": true,\n  \"screenshot_initial\": \"/workspace/project/out/playwright/platformer_initial.png\",\n  \"screenshot_final\": \"/workspace/project/out/playwright/platformer_final.png\",\n  \"vl_review_hint\": \"Screenshot should show blue player, cyan/green savepoint, red enemy, green NPC friend, gold goal, and HUD text.\"\n}\n",
+                "stderr": "127.0.0.1 - - [25/Apr/2026 17:17:11] \"GET /index.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:11] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:11] \"GET /game.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:11] \"GET /levels/level1.txt HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Apr/2026 17:17:11] \"GET /actors/level1.json HTTP/1.1\" 200 -\n",
                 "timed_out": false
               }
             ],
