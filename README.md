@@ -86,7 +86,7 @@ Caption: Combined preview of selected outputs generated in this repository (12 t
 - [Agentic Coding Experiments](#agentic-coding-experiments)
   - [Aider and local coder model demo](#aider-and-local-coder-model-demo)
   - [Staged GA optimizer demo (with MCP)](#staged-ga-optimizer-demo-with-mcp)
-  - [Feedback-loop agent harness](#feedback-loop-agent-harness)
+  - [Feedback-loop agent harness (migrated)](#feedback-loop-agent-harness-migrated)
 - [Tested Environment (Actual Values)](#tested-environment-actual-values)
 - [Host Setup (Fedora 43 / Strix Halo)](#host-setup-fedora-43--strix-halo)
 - [Initial Machine Configuration (Fedora 43 + Kernel 6.18)](#initial-machine-configuration-fedora-43--kernel-618)
@@ -137,8 +137,8 @@ Times are approximate wall-clock durations and include pre/post cleanup wrapper 
 | FLUX.2-klein-4B | text-to-image | `4B` | `2026-01-14` | `512x512`, `steps=4`, `guidance=1.0` | `~3m` | GPU | `apache-2.0` | [`black-forest-labs/FLUX.2-klein-4B`](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) | `reports/publish/flux2_klein_4b_512.log`, `stable-diffusion/out/flux2_klein_best_retest.png` |
 | SD x4 Upscaler | upscaler | `0.869B` | `2022-11-23` | `512 -> 2048`, `steps=8`, `guidance=6.0`, `noise=10`, `fp16`, `aotriton`, `sdp` | `~21m` | GPU | `openrail++` | [`stabilityai/stable-diffusion-x4-upscaler`](https://huggingface.co/stabilityai/stable-diffusion-x4-upscaler) | `reports/publish/sd_x4_upscale_512_to_2048.log`, `stable-diffusion/out/qwen_image_upscaled_2048_best_retest.png`, `reports/research/sd_x4_upscaler_param_count.json` |
 | Qwen2.5-VL-7B | image-to-text | `7B` | `2025-01-26` | `image=512x512`, `max_new_tokens=256` | `~1.5m` | CPU fallback | `apache-2.0` | [`Qwen/Qwen2.5-VL-7B-Instruct`](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) | `reports/publish/qwen_vl_7b_cpu.log`, `qwen-vl/out/qwen_vl_describe_75g_retest2.txt` |
-| Gemma 4 26B-A4B (GGUF, Q4_K_M) | vlm + mcp tool-use (chat + coding + image description + detection JSON + Playwright/wiki + docker-shell image ops) | `26B total / 4B active` | `2026-04-02` | task suite (`ctx=32768`, `max_tokens=768`, `image=512x512`) + context sweep max (`ctx=262144`, `max_tokens=256`) + compaction demo (coding + non-coding) + MCP tool-use demo (`4` Wikipedia painting pages -> docker resize + contact sheet) | `~1m` (suite) + `~5m` (ctx sweep) + `~1m` (compaction) + `~1m` (MCP demo) | GPU (Vulkan) | `apache-2.0` | [`google/gemma-4-26b-a4b-it`](https://huggingface.co/google/gemma-4-26b-a4b-it) + [`ggml-org/gemma-4-26b-a4b-it-GGUF`](https://huggingface.co/ggml-org/gemma-4-26b-a4b-it-GGUF) | `reports/publish/gemma4_vlm_task_suite_q4_2026-04-03_r3.log`, `llama-cpp-vulkan/out/gemma4-task-suite/gemma-4-26B-A4B-it-Q4_K_M_2026-04-03q4r3_vision_describe.json`, `llama-cpp-vulkan/out/gemma4-task-suite/gemma-4-26B-A4B-it-Q4_K_M_2026-04-03q4r3_vision_detect.json`, `reports/publish/gemma4_ctx_text_matrix_2026-04-03.tsv`, `reports/publish/gemma4_context_compaction_q4_2026-04-03_r2.log`, `reports/publish/gemma4_mcp_wiki_paintings_2026-04-03_r10.log`, `mcp/out/wiki_paintings_2026-04-03-r10/summary.json` |
-| Qwen3.6-27B Q4_K_M (GGUF) | vlm + coding/chat | `27B` | `2026-04-22` | task suite (`image=512x512`, summarization prompt, coding prompt), `ctx=32768`; speed benchmark max: `ctx=76800`, `4` tasks | `~2m` (suite); `44-194s/task` (speed matrix) | GPU (Vulkan) | `apache-2.0` | [`Qwen/Qwen3.6-27B`](https://huggingface.co/Qwen/Qwen3.6-27B) + [`batiai/Qwen3.6-27B-GGUF`](https://huggingface.co/batiai/Qwen3.6-27B-GGUF) | `reports/publish/qwen36_27b_q4km_task_suite_2026-04-23.log`, `llama-cpp-vulkan/out/qwen36-task-suite/qwen36_27b_q4km_2026_04_23_vision.json`, `llama-cpp-vulkan/out/qwen36-task-suite/qwen36_27b_q4km_2026_04_23_summarization.json`, `llama-cpp-vulkan/out/qwen36-task-suite/qwen36_27b_q4km_2026_04_23_coding.json`, `reports/publish/text_model_speed_bench_2026-04-23.tsv` |
+| Gemma 4 26B-A4B (GGUF, Q4_K_M + Q8_0 speed check) | vlm + mcp tool-use (chat + coding + image description + detection JSON + Playwright/wiki + docker-shell image ops) | `26B total / 4B active` | `2026-04-02` | task suite (`ctx=32768`, `max_tokens=768`, `image=512x512`) + context sweep max (`ctx=262144`, `max_tokens=256`) + compaction demo (coding + non-coding) + MCP tool-use demo (`4` Wikipedia painting pages -> docker resize + contact sheet) + Q8 speed spot-check (`ctx=32768,76800`, `2` tasks) | `~1m` (suite) + `~5m` (ctx sweep) + `~1m` (compaction) + `~1m` (MCP demo); Q8 spot-check `24-57s/task` | GPU (Vulkan) | `apache-2.0` | [`google/gemma-4-26b-a4b-it`](https://huggingface.co/google/gemma-4-26b-a4b-it) + [`ggml-org/gemma-4-26b-a4b-it-GGUF`](https://huggingface.co/ggml-org/gemma-4-26b-a4b-it-GGUF) | `reports/publish/gemma4_vlm_task_suite_q4_2026-04-03_r3.log`, `llama-cpp-vulkan/out/gemma4-task-suite/gemma-4-26B-A4B-it-Q4_K_M_2026-04-03q4r3_vision_describe.json`, `llama-cpp-vulkan/out/gemma4-task-suite/gemma-4-26B-A4B-it-Q4_K_M_2026-04-03q4r3_vision_detect.json`, `reports/publish/gemma4_ctx_text_matrix_2026-04-03.tsv`, `reports/publish/gemma4_context_compaction_q4_2026-04-03_r2.log`, `reports/publish/gemma4_mcp_wiki_paintings_2026-04-03_r10.log`, `mcp/out/wiki_paintings_2026-04-03-r10/summary.json`, `reports/research/gemma4_q8_verify_2026-05-07.json`, `reports/publish/text_model_speed_bench_2026-05-07.tsv` |
+| Qwen3.6-27B Q4_K_M (GGUF) + Q8_0 speed check | vlm + coding/chat | `27B` | `2026-04-22` | task suite (`image=512x512`, summarization prompt, coding prompt), `ctx=32768`; Q4 speed benchmark max: `ctx=76800`, `4` tasks; Q8 speed spot-check: `ctx=32768,76800`, `2` tasks | `~2m` (suite); Q4 `44-194s/task`; Q8 `98-234s/task` | GPU (Vulkan) | `apache-2.0` | [`Qwen/Qwen3.6-27B`](https://huggingface.co/Qwen/Qwen3.6-27B) + [`batiai/Qwen3.6-27B-GGUF`](https://huggingface.co/batiai/Qwen3.6-27B-GGUF) + [`eaddario/Qwen3.6-27B-GGUF`](https://huggingface.co/eaddario/Qwen3.6-27B-GGUF) | `reports/publish/qwen36_27b_q4km_task_suite_2026-04-23.log`, `llama-cpp-vulkan/out/qwen36-task-suite/qwen36_27b_q4km_2026_04_23_vision.json`, `llama-cpp-vulkan/out/qwen36-task-suite/qwen36_27b_q4km_2026_04_23_summarization.json`, `llama-cpp-vulkan/out/qwen36-task-suite/qwen36_27b_q4km_2026_04_23_coding.json`, `reports/publish/text_model_speed_bench_2026-04-23.tsv`, `reports/research/qwen36_27b_q8_verify_2026-05-07.json`, `reports/publish/text_model_speed_bench_2026-05-07.tsv` |
 | Qwen3.5-9B Q8_0 (GGUF) | vlm (vision + summarization + coding) | `9B` | `2026-02-28` | task suite (`image=512x512`, summarization prompt, coding prompt), `ctx=32768`; simple-text ctx probe max: `ctx=131072`; speed benchmark max: `ctx=76800`, `4` tasks | `~1.5m` (suite) + `~1m` (ctx probe); `18-66s/task` (speed matrix) | GPU (Vulkan) | `apache-2.0` | [`unsloth/Qwen3.5-9B-GGUF`](https://huggingface.co/unsloth/Qwen3.5-9B-GGUF) | `reports/publish/qwen35_9b_q8_task_suite_2026-03-08b.log`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_vision.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_summarization.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_9b_q8_2026_03_08b_coding.json`, `reports/publish/qwen35_ctx_text/qwen35_9b_q8_ctx131072.log`, `llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_9b_q8_ctx131072_2026-03-08.json`, `reports/publish/text_model_speed_bench_2026-04-23.tsv` |
 | Qwen3.5-27B Q8_0 (GGUF) | vlm (vision + summarization + coding) | `27B` | `2026-02-24` | task suite (`image=512x512`, summarization prompt, coding prompt), `ctx=16384`; simple-text ctx probe max: `ctx=131072`; speed benchmark max: `ctx=76800`, `4` tasks | `~4m` (suite) + `~1.5m` (ctx probe); `64-221s/task` (speed matrix) | GPU (Vulkan) | `apache-2.0` | [`unsloth/Qwen3.5-27B-GGUF`](https://huggingface.co/unsloth/Qwen3.5-27B-GGUF) | `reports/publish/qwen35_27b_q8_task_suite_2026-03-08b.log`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_vision.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_summarization.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_27b_q8_2026_03_08b_coding.json`, `reports/publish/qwen35_ctx_text/qwen35_27b_q8_ctx131072.log`, `llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_27b_q8_ctx131072_2026-03-08.json`, `reports/publish/text_model_speed_bench_2026-04-23.tsv` |
 | Qwen3.5-122B-A10B Q4_K_M (GGUF) | vlm (vision + summarization + coding) | `122B total / 10B active` | `2026-02-24` | task suite (`image=512x512`, summarization prompt, coding prompt), `ctx=8192`; simple-text ctx probe max: `ctx=131072`; speed benchmark max: `ctx=76800` summary row | `~6.5m` (suite) + `~2m` (ctx probe); `207-1190s/task` (CPU speed matrix) | CPU fallback | `apache-2.0` | [`unsloth/Qwen3.5-122B-A10B-GGUF`](https://huggingface.co/unsloth/Qwen3.5-122B-A10B-GGUF) | `reports/publish/qwen35_122b_a10b_q4km_task_suite_2026-03-08b.log`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_vision.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_summarization.json`, `llama-cpp-vulkan/out/qwen35-task-suite/qwen35_122b_a10b_q4km_2026_03_08b_coding.json`, `reports/publish/qwen35_ctx_text/qwen35_122b_a10b_q4km_ctx131072.log`, `llama-cpp-vulkan/out/qwen35-ctx-text/qwen35_122b_a10b_q4km_ctx131072_2026-03-08.json`, `reports/publish/text_model_speed_bench_2026-04-23.tsv` |
@@ -777,11 +777,12 @@ Caption: synthetic `2x2` collage | `hit_rate=0.75` (`3/4`) | CPU-only ONNX
 
 ### Qwen3.6-27B Q4_K_M (GGUF, VLM)
 
-Recent Qwen3.6 vision-language model validated here with the same practical task shape used for Qwen3.5: image description, text summarization, and coding generation. The GGUF quantization used here is `Q4_K_M`; no local conversion was required.
+Recent Qwen3.6 vision-language model validated here with the same practical task shape used for Qwen3.5: image description, text summarization, and coding generation. The main task suite uses `Q4_K_M`; a later `Q8_0` speed spot-check was added because Q8 can sometimes be faster on Strix Halo despite larger weights. In this harness, Q8 was verified successfully but was slower than `Q4_K_M`.
 
 Model cards:
 - [`Qwen/Qwen3.6-27B`](https://huggingface.co/Qwen/Qwen3.6-27B)
 - [`batiai/Qwen3.6-27B-GGUF`](https://huggingface.co/batiai/Qwen3.6-27B-GGUF)
+- [`eaddario/Qwen3.6-27B-GGUF`](https://huggingface.co/eaddario/Qwen3.6-27B-GGUF) (`Q8_0` speed check)
 
 Docker image: `llama-cpp-vulkan:latest` (build: see [Containers](#containers)).
 
@@ -790,6 +791,13 @@ Download + checksum verification:
 ```bash
 HF_TOKEN_FILE=$HOME/hf.key \
   bash $REPO_ROOT/llama-cpp-vulkan/scripts/download_qwen36_27b_gguf.sh
+```
+
+Optional Q8 speed-check download:
+
+```bash
+HF_TOKEN_FILE=$HOME/hf.key \
+  bash $REPO_ROOT/llama-cpp-vulkan/scripts/download_q8_speed_check_models.sh
 ```
 
 Task suite reproduce (`vision`, `summarization`, `coding`, `ctx=32768`):
@@ -806,14 +814,19 @@ Outcome on this host:
 - The task suite passed using the existing `llama-cpp-vulkan` image; no new container image was needed.
 - The image-description response correctly identified the robot-barista scene used across these tests.
 - The separate speed matrix passed all requested benchmark contexts from `16k` through `75k` (`ctx=76800`) with four tasks per context.
+- Q8 speed spot-check (`ctx=32768,76800`, `coding_api` and `summary_plan`) also passed under the same `75g` memory cap, but it was slower than Q4_K_M in every comparable row:
+  - `ctx=32768`: Q4 `87s/75s`, Q8 `121s/98s`
+  - `ctx=76800`: Q4 `191s/175s`, Q8 `234s/219s`
 
 Evidence:
 - `reports/research/qwen36_27b_q4km_verify.json`
+- `reports/research/qwen36_27b_q8_verify_2026-05-07.json`
 - `reports/publish/qwen36_27b_q4km_task_suite_2026-04-23.log`
 - `llama-cpp-vulkan/out/qwen36-task-suite/qwen36_27b_q4km_2026_04_23_vision.json`
 - `llama-cpp-vulkan/out/qwen36-task-suite/qwen36_27b_q4km_2026_04_23_summarization.json`
 - `llama-cpp-vulkan/out/qwen36-task-suite/qwen36_27b_q4km_2026_04_23_coding.json`
 - `reports/publish/text_model_speed_bench_2026-04-23.tsv`
+- `reports/publish/text_model_speed_bench_2026-05-07.tsv`
 
 ### Gemma 4 26B-A4B (GGUF, VLM)
 
@@ -834,6 +847,13 @@ Download + checksum verification (GGUF + mmproj):
 ```bash
 DOWNLOAD_Q8=1 DOWNLOAD_Q4=1 USE_ARIA2=1 \
   bash $REPO_ROOT/llama-cpp-vulkan/scripts/download_gemma4_26b_a4b_gguf.sh
+```
+
+Optional Q8 speed-check download:
+
+```bash
+HF_TOKEN_FILE=$HOME/hf.key \
+  bash $REPO_ROOT/llama-cpp-vulkan/scripts/download_q8_speed_check_models.sh
 ```
 
 Task suite reproduce (`Q4_K_M`, `ctx=32768`):
@@ -874,14 +894,16 @@ Key outcomes on this host:
 - Compaction demo (v2 profile) reduced prompt size while preserving keyword coverage:
   - coding scenario: `-28.97%` chars (`-28.32%` token estimate), keyword score `1.0 -> 1.0`
   - non-coding scenario: `-17.26%` chars (`-14.79%` token estimate), keyword score `1.0 -> 1.0`
-- `Q8_0` reached expected file size but still failed SHA256 verification on this host after resume attempts; published runtime results remain based on verified `Q4_K_M`.
+- `Q8_0` was re-downloaded cleanly on `2026-05-07` and passed SHA256 verification. A targeted speed spot-check (`ctx=32768,76800`, `coding_api` and `summary_plan`) also passed under the same `75g` memory cap, but did not beat `Q4_K_M` in this harness:
+  - `ctx=32768`: Q4 `23s/22s`, Q8 `28s/24s`
+  - `ctx=76800`: Q4 `54s/53s`, Q8 `57s/54s`
 - Separate MCP/tool-use workflow with the same model also passed:
   - Playwright MCP browsing + snapshots of selected Wikipedia painting pages.
   - Gemma-generated shell plan executed through MCP shell server, but commands ran only inside a dedicated docker image (`mcp-image-tools:1.0`) mapped to an `mcp/out/` subdirectory.
 
 Evidence:
 - `reports/publish/gemma4_q4_mmproj_verify_2026-04-03.json`
-- `reports/publish/gemma4_q8_q4_mmproj_verify_2026-04-03.json`
+- `reports/research/gemma4_q8_verify_2026-05-07.json`
 - `reports/publish/gemma4_vlm_task_suite_q4_2026-04-03_r3.log`
 - `llama-cpp-vulkan/out/gemma4-task-suite/gemma-4-26B-A4B-it-Q4_K_M_2026-04-03q4r3_chat.json`
 - `llama-cpp-vulkan/out/gemma4-task-suite/gemma-4-26B-A4B-it-Q4_K_M_2026-04-03q4r3_coding.json`
@@ -892,6 +914,7 @@ Evidence:
 - `llama-cpp-vulkan/out/gemma4-compaction/gemma4_compaction_q4_2026-04-03-r2.json`
 - `reports/publish/gemma4_mcp_wiki_paintings_2026-04-03_r10.log`
 - `mcp/out/wiki_paintings_2026-04-03-r10/summary.json`
+- `reports/publish/text_model_speed_bench_2026-05-07.tsv`
 
 ### Qwen3.5-9B Q8_0 (GGUF, VLM)
 
@@ -1066,8 +1089,6 @@ DATE_TAG=2026-04-23 MODEL_FILTER=qwen25_coder_32b_q4km_cpu \
 
 Evidence:
 - `reports/publish/text_model_speed_bench_2026-04-23.tsv`
-- `reports/publish/text_bench_2026-04-23/qwen25_coder_32b_q4km_cpu_ctx16384_coding_api.log`
-- `reports/publish/text_bench_2026-04-23/qwen25_coder_32b_q4km_cpu_ctx16384_summary_report.log`
 - `reports/research/qwen25_coder_32b_full_vulkan_freeze_2026-04-24.txt`
 - `reports/publish/llama_qwen25_coder_32b_ctx131072.log`
 - `llama-cpp-vulkan/out/qwen25_coder_32b_q4_ctx_131072_75g_retest2.json`
@@ -1115,19 +1136,50 @@ DATE_TAG=2026-04-23 MODEL_FILTER=qwen36_27b_q4km \
   bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_text_model_benchmark_matrix.sh
 ```
 
+Q8 speed spot-check used for the Qwen3.6/Gemma comparison:
+
+```bash
+DATE_TAG=2026-05-07 MODEL_FILTER=qwen36_27b_q8 \
+  CONTEXTS_CSV=32768,76800 TASKS_CSV=coding_api,summary_plan \
+  bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_text_model_benchmark_matrix.sh
+
+DATE_TAG=2026-05-07 MODEL_FILTER=gemma4_26b_a4b_q8 \
+  CONTEXTS_CSV=32768,76800 TASKS_CSV=coding_api,summary_plan \
+  bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_text_model_benchmark_matrix.sh
+```
+
 Summary of the completed rows:
 
 | Model alias | Contexts covered | Rows / tasks | Duration range | Highest-context duration |
 | --- | --- | --- | --- | --- |
 | `qwen36_27b_q4km` | `16k-75k` | `20 rows / 4 tasks` | `44-194s` | `175-194s` |
+| `qwen36_27b_q8` | `32k,75k` | `4 rows / 2 tasks` | `98-234s` | `219-234s` |
 | `qwen35_9b_q8` | `16k-75k` | `20 rows / 4 tasks` | `18-66s` | `57-66s` |
 | `qwen35_27b_q8` | `16k-75k` | `20 rows / 4 tasks` | `64-221s` | `202-221s` |
 | `qwen35_122b_a10b_q4km` | `16k-75k` | `8 rows / 2 tasks` | `207-1190s` | `1190s` |
 | `gemma4_26b_a4b_q4km` | `16k-75k` | `20 rows / 4 tasks` | `14-54s` | `53-54s` |
+| `gemma4_26b_a4b_q8` | `32k,75k` | `4 rows / 2 tasks` | `24-57s` | `54-57s` |
 | `qwen3_next_80b_a3b_q5km` | `16k-75k` | `20 rows / 4 tasks` | `15-61s` | `60-61s` |
 | `qwen3_coder_next_q5km` | `16k-75k` | `20 rows / 4 tasks` | `19-71s` | `68-71s` |
 | `gpt_oss_120b_mxfp4` | `16k-75k` | `20 rows / 4 tasks` | `23-99s` | `95-99s` |
 | `qwen25_coder_32b_q4km_cpu` | `16k` | `2 rows / 2 tasks` | `466-480s` | `466-480s` |
+
+Direct Q4-vs-Q8 rows on this host:
+
+| Model | Context | Task | Q4_K_M duration | Q8_0 duration | Q8 result |
+| --- | --- | --- | --- | --- | --- |
+| Qwen3.6-27B | `32768` | `coding_api` | `87s` | `121s` | slower by `39.1%` |
+| Qwen3.6-27B | `32768` | `summary_plan` | `75s` | `98s` | slower by `30.7%` |
+| Qwen3.6-27B | `76800` | `coding_api` | `191s` | `234s` | slower by `22.5%` |
+| Qwen3.6-27B | `76800` | `summary_plan` | `175s` | `219s` | slower by `25.1%` |
+| Gemma 4 26B-A4B | `32768` | `coding_api` | `23s` | `28s` | slower by `21.7%` |
+| Gemma 4 26B-A4B | `32768` | `summary_plan` | `22s` | `24s` | slower by `9.1%` |
+| Gemma 4 26B-A4B | `76800` | `coding_api` | `54s` | `57s` | slower by `5.6%` |
+| Gemma 4 26B-A4B | `76800` | `summary_plan` | `53s` | `54s` | slower by `1.9%` |
+
+Evidence:
+- `reports/publish/text_model_speed_bench_2026-04-23.tsv`
+- `reports/publish/text_model_speed_bench_2026-05-07.tsv`
 
 Important stability note:
 - `qwen25_coder_32b_q4km` full-Vulkan (`GPU_LAYERS=999`) was not retried after the machine froze during benchmark warmup at `ctx=16384`. Previous-boot logs show `amdgpu` SMU stalls, `ring gfx_0.0.0 timeout`, failed MES reset, and failed GPU reset. The benchmark matrix now records this as an unsafe GPU profile and uses CPU/no-DRI fallback for Qwen2.5-Coder-32B.
@@ -1135,7 +1187,6 @@ Important stability note:
 
 Evidence:
 - `reports/publish/text_model_speed_bench_2026-04-23.tsv`
-- `reports/publish/text_bench_2026-04-23/`
 - `llama-cpp-vulkan/out/text-bench-2026-04-23/`
 - `reports/research/qwen25_coder_32b_full_vulkan_freeze_2026-04-24.txt`
 
@@ -1455,168 +1506,13 @@ Artifacts:
 - `reports/publish/agentic_ga_optimizer_tests.log`
 - `agentic/ga-optimizer-demo/out/tests_post_impl_recheck_publish.log`
 
-### Feedback-loop agent harness
+### Feedback-loop agent harness (migrated)
 
-This subproject is a configurable agentic coding/workflow harness for long-running local-model work. It keeps a durable chat transcript: every requirements prompt, plan review, implementation attempt, feedback review, and rework directive is appended to `.agent_state/conversation.jsonl`. The implementation model sees the original design plus previous critique, and the feedback model sees the prior transcript before reviewing the next phase or step. When the context grows too large, older turns are compacted into durable memory and recent turns remain verbatim. It now runs in distinct phases instead of one generic loop:
+The feedback-loop coding harness was spun out into its own repository after it grew beyond the scope of this inference-stack notebook.
 
-1. **Requirements refinement** - the model fills gaps, records assumptions, and drafts an ordered work plan.
-2. **Plan validation** - the feedback model checks that each step is distinct, ordered, dependent only on previous steps, and verifiable before implementation starts. The planner must explicitly confirm that the plan is feasible, clear, and has a verification strategy.
-3. **Per-step implementation loops** - the implementation model works one plan step at a time. The feedback model reviews only that step using the refined requirements, plan, files, and command results. Reviews can return `resolved`, `needs_rework`, `needs_plan_change`, `needs_requirements_change`, `cannot_resolve`, or `skipped_with_note`.
-4. **Bounded resolution** - repeated failures stop after configured limits and are recorded rather than looping forever.
+Current project: [`krzyszsz/agenticFeedbackCoding`](https://github.com/krzyszsz/agenticFeedbackCoding)
 
-Subproject: `agentic/feedback-loop-agent/`
-
-Key files:
-- `agentic/feedback-loop-agent/config.example.json` - default settings; implementation model defaults to Qwen3.6.
-- `agentic/feedback-loop-agent/config.qwen36-smoke.json` - small real-model smoke config used for evidence.
-- `agentic/feedback-loop-agent/config.mock-website.json` - deterministic phased website/game scenario.
-- `agentic/feedback-loop-agent/config.mock-cities.json` - deterministic non-development city-image collection scenario.
-- `agentic/feedback-loop-agent/config.mock-platformer.json` - deterministic browser platformer stress scenario with Playwright screenshots.
-- `agentic/feedback-loop-agent/scripts/run_agent.sh` - host wrapper; re-enters a Docker container when `runtime.docker_isolation=true`.
-- `agentic/feedback-loop-agent/tests/test_feedback_agent.py` - deterministic tests covering phased requirements, plan validation, per-step loops, and non-development workflow.
-
-Safety model:
-- The agent container is `feedback-loop-agent:local`.
-- With Docker isolation enabled, only the configured workspace is mounted at `/workspace/project`.
-- The container uses host networking only to reach a local OpenAI-compatible llama.cpp server.
-- The Docker socket is not mounted.
-- Terminal commands requested by the model run inside the agent container/workspace, not on the host filesystem.
-- The container includes basic workflow tools (`python`, `chromium`, `curl`, `git`, `jq`, `playwright`, `requests`, `beautifulsoup4`) so small web/static-site/scraping tasks can be validated without polluting the host.
-
-Run your own agentic development task:
-
-1. Copy the example config instead of editing it directly:
-
-```bash
-cp $REPO_ROOT/agentic/feedback-loop-agent/config.example.json \
-   $REPO_ROOT/agentic/feedback-loop-agent/config.my-project.json
-```
-
-2. Edit `agentic/feedback-loop-agent/config.my-project.json`.
-
-The important fields are:
-- `runtime.workspace`: where the generated project will live. Use a unique folder under the ignored workspace area shown in the example config.
-- `project_design.title`: short name for the task.
-- `project_design.prompt`: the real project brief. Include goals, constraints, expected deliverables, preferred technologies, and any validation hints.
-- `phases`: retry limits for requirements refinement, plan validation, and each implementation step.
-- `resolution_policy`: what to do when a step keeps failing.
-- `feedback_model`: leave as `null` to use the implementation model for review, or configure a separate model endpoint.
-
-Minimal example:
-
-```json
-{
-  "runtime": {
-    "docker_isolation": true,
-    "docker_image": "feedback-loop-agent:local",
-    "workspace": "agentic/feedback-loop-agent/workspaces/my-static-site",
-    "command_timeout_seconds": 120
-  },
-  "phases": {
-    "requirements_refinement": {"max_iterations": 2},
-    "plan_validation": {"max_iterations": 2},
-    "implementation": {"max_iterations": 3}
-  },
-  "resolution_policy": {
-    "max_same_error_repeats": 2,
-    "allow_requirement_dilution": true,
-    "allow_skip_with_note": true,
-    "stop_on_cannot_resolve": false
-  },
-  "project_design": {
-    "title": "Small static website",
-    "prompt": "Build a tiny static website with three pages, shared CSS, and a small JavaScript interaction. Keep it dependency-free. The final result should include validation commands that prove all pages and expected DOM IDs exist."
-  }
-}
-```
-
-Keep the other top-level fields from `config.example.json` (`implementation_model`, `mcp_tools`, and `context_compaction`). The snippet above shows only the fields that are usually changed.
-
-3. Start a local OpenAI-compatible model server. This example uses the Qwen3.6 profile validated above:
-
-```bash
-RUN_WITH_WATCHDOG=0 $REPO_ROOT/scripts/run_memsafe.sh \
-  env PORT=8161 CTX_SIZE=32768 GPU_LAYERS=999 THREADS=8 \
-      MODEL=$MODEL_ROOT/qwen3.6-27b-gguf/Qwen-Qwen3.6-27B-Q4_K_M.gguf \
-      EXTRA_ARGS="--jinja --reasoning-budget 0 --reasoning-format none --no-context-shift" \
-  bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_server.sh
-```
-
-4. Run the agent in a second terminal:
-
-```bash
-$REPO_ROOT/scripts/run_test_with_cleanup.sh timeout 7200 \
-  $REPO_ROOT/agentic/feedback-loop-agent/scripts/run_agent.sh \
-    --config $REPO_ROOT/agentic/feedback-loop-agent/config.my-project.json
-```
-
-5. Inspect the generated workspace:
-- `REQUIREMENTS.md`: refined requirements and assumptions.
-- `PLAN.md`: validated ordered tasks, acceptance criteria, validation commands, and status.
-- `.agent_state/summary.json`: machine-readable run summary.
-- project files generated by the implementation steps.
-
-For a fresh run, delete or rename the configured `runtime.workspace` first. Reusing the same workspace intentionally preserves previous conversation state and project files.
-
-Unit test reproduce:
-
-```bash
-PYTHONPATH=$REPO_ROOT/agentic/feedback-loop-agent \
-  python3 -m unittest discover -s $REPO_ROOT/agentic/feedback-loop-agent/tests -v
-```
-
-Docker-isolated phased mock runs:
-
-```bash
-$REPO_ROOT/agentic/feedback-loop-agent/scripts/run_agent.sh \
-  --config $REPO_ROOT/agentic/feedback-loop-agent/config.mock-website.json \
-  --mock
-
-$REPO_ROOT/agentic/feedback-loop-agent/scripts/run_agent.sh \
-  --config $REPO_ROOT/agentic/feedback-loop-agent/config.mock-cities.json \
-  --mock
-
-$REPO_ROOT/agentic/feedback-loop-agent/scripts/run_agent.sh \
-  --config $REPO_ROOT/agentic/feedback-loop-agent/config.mock-platformer.json \
-  --mock
-```
-
-Real Qwen3.6 smoke reproduce:
-
-```bash
-# Terminal 1: local model server
-RUN_WITH_WATCHDOG=0 $REPO_ROOT/scripts/run_memsafe.sh \
-  env PORT=8161 CTX_SIZE=32768 GPU_LAYERS=999 THREADS=8 \
-      MODEL=$MODEL_ROOT/qwen3.6-27b-gguf/Qwen-Qwen3.6-27B-Q4_K_M.gguf \
-      EXTRA_ARGS="--jinja --reasoning-budget 0 --reasoning-format none --no-context-shift" \
-  bash $REPO_ROOT/llama-cpp-vulkan/scripts/run_server.sh
-
-# Terminal 2: isolated coding loop
-$REPO_ROOT/agentic/feedback-loop-agent/scripts/run_agent.sh \
-  --config $REPO_ROOT/agentic/feedback-loop-agent/config.qwen36-smoke.json
-```
-
-Outcome:
-- The in-process unit suite passed all phased scenarios.
-- Docker-isolated mock website run refined vague requirements, rejected/cleaned the plan, then built a three-page static site with a clicker interaction. Final status: `resolved`.
-- Docker-isolated mock city run used the same workflow for a non-development task: it produced a Wikipedia-style city image manifest, fixture-mode collection script, and validation script. Final status: `resolved`.
-- Docker-isolated mock platformer run used a more demanding browser-game brief: external text level, JSON-scripted enemy/NPC friend, savepoint, keyboard control, Chromium/Playwright validation, and screenshot evidence. Requirements refinement rejected the first vague pass, plan validation required one cleanup pass, and the first implementation step needed one rework before the final validation report passed. Final status: `resolved`.
-- Real Qwen3.6 smoke generated `arithmetic_box.py` plus `unittest` coverage inside the isolated workspace; `9` tests passed. That earlier smoke used the same container isolation path but predates the expanded phased mock evidence.
-
-Evidence:
-- `reports/publish/feedback_loop_agent_phased_mock_website_2026-04-24.log`
-- `reports/publish/feedback_loop_agent_phased_mock_website_summary_2026-04-24.json`
-- `reports/publish/feedback_loop_agent_phased_mock_cities_2026-04-24.log`
-- `reports/publish/feedback_loop_agent_phased_mock_cities_summary_2026-04-24.json`
-- `reports/publish/feedback_loop_agent_phased_mock_platformer_2026-04-25.log`
-- `reports/publish/feedback_loop_agent_phased_mock_platformer_summary_2026-04-25.json`
-- `reports/publish/feedback_loop_agent_platformer_validation_2026-04-25.json`
-- `reports/publish/feedback_loop_agent_platformer_playwright_2026-04-25.png`
-- `reports/publish/feedback_loop_agent_qwen36_smoke_2026-04-24.log`
-- `reports/publish/feedback_loop_agent_mock_2026-04-23.log`
-
-![Feedback-loop platformer Playwright validation screenshot](reports/publish/feedback_loop_agent_platformer_playwright_2026-04-25.png)
-Caption: Feedback-loop agent platformer stress test | Docker-isolated mock agents | external `levels/level1.txt` + `actors/level1.json` | Playwright moved the player from `x=98` to `x=626`, activated the savepoint, and captured this `960x540` screenshot for visual review.
+This repository intentionally no longer keeps a local copy. That avoids having two versions of the same agentic harness drift apart. The standalone project contains the current Docker-isolated agent workflow, chat-history handling, feedback loops, model-server scripts, and usage documentation.
 
 ## Tested Environment (Actual Values)
 
@@ -1768,7 +1664,6 @@ Each container has a dedicated README with build + usage details:
 - Qwen-VL (Vision): `qwen-vl/README.md`
 - Vision Detection + Pose: `vision-detection/README.md`
 - Video generation workflows: `video/README.md` (uses `stable-diffusion-rocm:latest`)
-- Feedback-loop agent: `agentic/feedback-loop-agent/README.md`
 
 Quick build commands:
 
@@ -1779,7 +1674,6 @@ cd $REPO_ROOT/stable-diffusion && DOCKER_BUILDKIT=1 docker build -t stable-diffu
 cd $REPO_ROOT/llama-cpp-vulkan && DOCKER_BUILDKIT=1 docker build -t llama-cpp-vulkan:latest .
 cd $REPO_ROOT/qwen-vl && DOCKER_BUILDKIT=1 docker build -f Dockerfile.qwen-vl.rocm -t qwen-vl-rocm:latest .
 cd $REPO_ROOT/vision-detection && DOCKER_BUILDKIT=1 docker build -t vision-yolo-rocm:latest .
-cd $REPO_ROOT/agentic/feedback-loop-agent && DOCKER_BUILDKIT=1 docker build -t feedback-loop-agent:local .
 ```
 
 ### Source Versions (Build-Time Notes)
@@ -1825,6 +1719,13 @@ Qwen3.6 27B GGUF (`Q4_K_M` + `mmproj`) with checksum verification:
 
 ```bash
 $REPO_ROOT/llama-cpp-vulkan/scripts/download_qwen36_27b_gguf.sh
+```
+
+Q8 speed-check GGUFs for Qwen3.6-27B and Gemma 4 26B-A4B:
+
+```bash
+HF_TOKEN_FILE=$HOME/hf.key \
+  $REPO_ROOT/llama-cpp-vulkan/scripts/download_q8_speed_check_models.sh
 ```
 
 Qwen3.5 VLM quantized bundle (requested `9B 8-bit`, `27B 8-bit`, `122B-A10B 4-bit`), with checksum verification:
@@ -1916,7 +1817,7 @@ Notes:
 This repo includes a small test harness used for the publish-day reruns to keep the host stable and avoid stale containers/processes skewing results. The same harness is useful for normal day-to-day runs as a “memory-safe wrapper” around any script.
 
 Cleanup scripts:
-- `scripts/cleanup_machine.sh` — kills non-essential high-RSS processes (default threshold `5GB`) and removes inference/test containers; writes logs under `$REPO_ROOT/reports/cleanup/`.
+- `scripts/cleanup_machine.sh` — kills non-essential high-RSS processes (default threshold `5GB`) and removes inference/test containers; writes local maintenance logs under `$REPO_ROOT/reports/cleanup/`, which is ignored and not part of the published evidence set.
 - `scripts/run_test_with_cleanup.sh` — wrapper that runs cleanup before and after any command.
 - `scripts/run_memsafe.sh` — reusable wrapper for production-style runs; exports memory-safe defaults, then calls `run_test_with_cleanup.sh`.
 - `scripts/preflight_memory_guard.sh` — aborts a run when host headroom/swap usage is unsafe.

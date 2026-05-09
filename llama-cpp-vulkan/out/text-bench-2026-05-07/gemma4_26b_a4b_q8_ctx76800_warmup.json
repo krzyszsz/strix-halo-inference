@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<|channel>thought<channel|>To benchmark a local LLM server reproducibly, you must control"
+      }
+    }
+  ],
+  "created": 1778119132,
+  "model": "gemma-4-26B-A4B-it-Q8_0.gguf",
+  "system_fingerprint": "b8642-7c7d6ce5c",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 44,
+    "total_tokens": 60,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-CUYb9PrQchp8InKAazr9zQgMHZSRU2jH",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 44,
+    "prompt_ms": 441.577,
+    "prompt_per_token_ms": 10.03584090909091,
+    "prompt_per_second": 99.64287089227926,
+    "predicted_n": 16,
+    "predicted_ms": 346.783,
+    "predicted_per_token_ms": 21.6739375,
+    "predicted_per_second": 46.1383631838931
+  }
+}

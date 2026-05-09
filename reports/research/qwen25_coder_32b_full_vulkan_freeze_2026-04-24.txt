@@ -90,5 +90,6 @@ Apr 24 02:26:23 fedora kernel:  amdgpu_job_timedout.cold+0x1fb/0x23b [amdgpu]
 Apr 24 02:26:47 fedora kernel: amdgpu 0000:c6:00.0: [drm] SMU response after wait: 0, msg id = 13
 
 Benchmark artifacts:
-- reports/publish/text_bench_2026-04-23/qwen25_coder_32b_q4km_ctx16384_server.log
-- reports/publish/text_bench_2026-04-23/qwen25_coder_32b_q4km_ctx16384_watchdog.log
+- reports/publish/text_model_speed_bench_2026-04-23.tsv
+
+Raw per-request benchmark logs were pruned before publication; the TSV keeps the recorded status and timing rows.

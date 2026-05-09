@@ -282,10 +282,12 @@ IFS=',' read -r -a TASKS <<< "$TASKS_CSV"
 
 MODELS=(
   "qwen36_27b_q4km|$MODEL_ROOT/qwen3.6-27b-gguf/Qwen-Qwen3.6-27B-Q4_K_M.gguf|8162|999|75g|75g|67g|1"
+  "qwen36_27b_q8|$MODEL_ROOT/qwen3.6-27b-q8-gguf/Qwen3.6-27B-Q8_0.gguf|8171|999|75g|75g|67g|1"
   "qwen35_9b_q8|$MODEL_ROOT/qwen3.5-9b-gguf/Qwen3.5-9B-Q8_0.gguf|8163|999|75g|75g|67g|1"
   "qwen35_27b_q8|$MODEL_ROOT/qwen3.5-27b-gguf/Qwen3.5-27B-Q8_0.gguf|8164|999|75g|75g|67g|1"
   "qwen35_122b_a10b_q4km|$MODEL_ROOT/qwen3.5-122b-a10b-gguf/Q4_K_M/Qwen3.5-122B-A10B-Q4_K_M-00001-of-00003.gguf|8165|0|85g|85g|76g|0"
   "gemma4_26b_a4b_q4km|$MODEL_ROOT/gemma4-26b-a4b-it-gguf/gemma-4-26B-A4B-it-Q4_K_M.gguf|8166|999|75g|75g|67g|1"
+  "gemma4_26b_a4b_q8|$MODEL_ROOT/gemma4-26b-a4b-it-gguf/gemma-4-26B-A4B-it-Q8_0.gguf|8172|999|75g|75g|67g|1"
   "qwen3_next_80b_a3b_q5km|$MODEL_ROOT/qwen3-next-80b-a3b-instruct-gguf/Qwen3-Next-80B-A3B-Instruct-Q5_K_M.gguf|8167|999|75g|75g|67g|1"
   "qwen3_coder_next_q5km|$MODEL_ROOT/qwen3-coder-next-gguf/Qwen3-Coder-Next-Q5_K_M/Qwen3-Coder-Next-Q5_K_M-00001-of-00004.gguf|8168|999|75g|75g|67g|1"
   "qwen25_coder_32b_q4km_cpu|$MODEL_ROOT/qwen2.5-coder-32b-instruct-gguf/qwen2.5-coder-32b-instruct-q4_k_m.gguf|8169|0|75g|75g|67g|0"
