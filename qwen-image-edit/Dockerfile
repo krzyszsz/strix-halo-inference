@@ -1,4 +1,4 @@
-ARG ROCM_BASE=rocm/pytorch:rocm7.2_ubuntu24.04_py3.12_pytorch_release_2.9.1
+ARG ROCM_BASE=rocm/pytorch:rocm7.2.4_ubuntu24.04_py3.12_pytorch_release_2.10.0
 FROM ${ROCM_BASE}
 
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     DTYPE=float16
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    git ca-certificates ffmpeg libgl1 \
+    git ca-certificates libgl1 \
  && rm -rf /var/lib/apt/lists/*
 
 RUN python -m pip install -U pip setuptools wheel
@@ -20,7 +20,7 @@ RUN python -m pip install -U \
   pillow opencv-python
 RUN python -m pip install -U \
   "transformers>=4.45.0,<5" "accelerate>=0.33.0" safetensors sentencepiece protobuf
-RUN python -m pip install -U "git+https://github.com/huggingface/diffusers"
+RUN python -m pip install -U "diffusers==0.36.0"
 
 WORKDIR /app
 COPY app.py /app/app.py

@@ -141,7 +141,7 @@ docker run --rm \
   --memory-reservation="$MEM_RESERVATION" \
   --oom-score-adj="$OOM_SCORE_ADJ" \
   --device=/dev/kfd \
-  --device=/dev/dri \
+  --device="${DRI_DEVICE:-/dev/dri/renderD128}" \
   --security-opt label=disable \
   --ipc=host \
   -v "$HF_ROOT:$HF_ROOT" \

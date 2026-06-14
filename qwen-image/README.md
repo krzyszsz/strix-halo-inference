@@ -17,7 +17,7 @@ DOCKER_BUILDKIT=1 docker build -f Dockerfile.qwen-image.rocm -t qwen-image-rocm:
 ```
 
 Current default base:
-- `rocm/pytorch:rocm7.2.1_ubuntu24.04_py3.14_pytorch_2.10.0`
+- `rocm/pytorch:rocm7.2.4_ubuntu24.04_py3.12_pytorch_release_2.10.0`
 
 ### HOST SETUP (Fedora 43 / Strix Halo)
 
@@ -116,7 +116,7 @@ Notes:
 - Recommended baseline parameters: `num_inference_steps=50`, `true_cfg_scale=4.0`, and `height/width=1024`. The test script defaults to 512×512 and 30 steps for runtime stability on this host; override `WIDTH/HEIGHT` and `STEPS` for full-size renders.
 - On this machine, 1024×1024 at 50 steps can stall; use the 512×512/30-step preset as a stable baseline.
 - `scripts/test_qwen_image.sh` supports `HEALTH_RETRIES` and `HEALTH_SLEEP` for startup diagnostics.
-- The refreshed ROCm 7.2.1 / PyTorch 2.10.0 image was validated locally with `Qwen-Image-2512` at:
+- The refreshed ROCm 7.2.4 / PyTorch 2.10.0 image was validated locally with `Qwen-Image-2512` at:
   - `256x256`, `4` steps: `60s`
   - `384x384`, `8` steps: `360s`
   - `512x512`, `12` steps: `310s`

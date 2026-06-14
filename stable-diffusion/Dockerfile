@@ -1,4 +1,4 @@
-ARG ROCM_BASE=rocm/pytorch:rocm7.2.1_ubuntu24.04_py3.14_pytorch_2.10.0
+ARG ROCM_BASE=rocm/pytorch:rocm7.2.4_ubuntu24.04_py3.12_pytorch_release_2.10.0
 FROM ${ROCM_BASE}
 ARG BNB_GIT_REF=main
 ARG BNB_ROCM_ARCH=gfx1151
@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     DTYPE=float16
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    git ca-certificates ffmpeg libgl1 cmake ninja-build pkg-config \
+    git ca-certificates libgl1 cmake ninja-build pkg-config \
  && rm -rf /var/lib/apt/lists/*
 
 RUN python -m pip install -U pip setuptools wheel
